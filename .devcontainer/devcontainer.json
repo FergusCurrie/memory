@@ -1,0 +1,55 @@
+{
+    "name": "memory-slim",
+    "dockerFile": "Dockerfile.dev",
+    "context": "..",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "mechatroner.rainbow-csv",
+                "zhang-renyang.vscode-react",
+                "ms-azuretools.vscode-docker",
+                "charliermarsh.ruff",
+                "esbenp.prettier-vscode",
+                "njpwerner.autodocstring",
+                "oouo-diogo-perdigao.docthis"
+            ],
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.formatOnSave": true,
+                "editor.defaultFormatter": null,
+                "[javascript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[javascriptreact]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[typescript]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[typescriptreact]": {
+                    "editor.defaultFormatter": "esbenp.prettier-vscode"
+                },
+                "[python]": {
+                    "editor.defaultFormatter": null,
+                    "editor.formatOnSave": true,
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll": true
+                    }
+                } 
+            }
+        }
+    },
+    "forwardPorts": [
+        8000
+    ],
+    "portsAttributes": {
+        "8000": {
+            "label": "dual"
+        }
+    },
+    "mounts": [
+        "source=/Users/ferguscurrie/memory_backups,target=/workspaces/memory/memory_backups,type=bind"
+    ]
+
+}

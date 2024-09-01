@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "memory-slim"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.0"
+numpy = "^1.26.3"
+typeguard = "^4.2.1"
+django = "^5.0.6"
+djangorestframework = "^3.15.1"
+python-dotenv = "^1.0.1"
+django-cors-headers = "^4.3.1"
+djangorestframework-simplejwt = "^5.3.1"
+gunicorn = "^22.0.0"
+whitenoise = "^6.6.0"
+django-environ = "^0.11.2"
+sympy = "^1.12.1"
+psycopg2-binary = "^2.9.9"
+graphviz = "^0.20.3"
+fastapi = "^0.112.2"
+uvicorn = "^0.30.6"
+pillow = "^10.4.0"
+pydantic = "^2.8.2"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+ 
+[tool.ruff]
+line-length = 120
+exclude = ['src/utils/db_functions.py']
+ 
+ 
+[tool.ruff.lint]
+select = [
+    "E", # pep8
+    "F", # flake8 (base)
+    "B", # flake8-bugbear
+    "SIM", # flake8-simplify -> better ways to code thing
+    "I", # flake8-imports: check order and formatting according to pep8
+    #"D", # flake8-docstrings
+    "T", # flake8-print - check for print statements left in code
+    "N", # pep8-naming,
+    "ANN", # flake8-annotations
+    "PD", # pandas-vet
+    "C", #flakeu-comprehensions
+    "PT", # flake8-pytest-style
+    "RET", # flake8-return
+    "TD", # flake8-todos
+    "TCH", # flake8-type-checking
+    "FBT", # flake8-boolean-trap
+]  
+ignore = ["D104"] # ignore docstring in __init__.py
+ 
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+ 
+[tool.ruff.format]
+line-ending = "lf"
+skip-magic-trailing-comma = true
+ 
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+no-sections = true

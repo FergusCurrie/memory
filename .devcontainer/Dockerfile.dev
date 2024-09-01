@@ -1,0 +1,32 @@
+# Step 2: Set Up Django Backend
+FROM python:3.12-slim
+
+# set workdir to /workspaces/<project_folder_name>
+ENV WORKDIR /workspaces/memory_slim
+
+# Set working directory
+WORKDIR ${WORKDIR}
+
+# Install CMake and other necessary build tools
+RUN apt-get update && apt-get install -y \
+    cmake \
+    build-essential \
+    pipx \ 
+    git \
+    curl \
+    graphviz
+
+RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+
+COPY pyproject.toml poetry.lock ${WORKDIR}
+
+RUN pip install poetry
+
+# RUN apt-get install -y nginx systemctl nano
+
+EXPOSE 8000
+# EXPOSE 80
+
+
+
