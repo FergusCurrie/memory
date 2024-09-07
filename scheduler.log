@@ -1,0 +1,50 @@
+2024-09-03 08:01:18,247 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
+2024-09-03 08:01:18,247 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
+2024-09-03 08:01:18,250 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
+2024-09-03 08:01:18,251 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:01:18,251 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:01:18,252 - scheduling.basic_scheduler - INFO - Processing card: {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}
+2024-09-03 08:01:18,252 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}]
+2024-09-03 08:01:18,252 - scheduling.basic_scheduler - INFO - Consecutive correct: 7
+2024-09-03 08:01:18,252 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:01:18,252 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:01:18,253 - scheduling.basic_scheduler - INFO - Processing card: {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}
+2024-09-03 08:01:18,253 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}]
+2024-09-03 08:01:18,253 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
+2024-09-03 08:01:18,253 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:01:18,254 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:01:18,254 - scheduling.basic_scheduler - INFO - Processing card: {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}
+2024-09-03 08:01:18,254 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}]
+2024-09-03 08:01:18,254 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
+2024-09-03 08:01:18,255 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:01:18,255 - scheduling.basic_scheduler - INFO - Interval: 3
+2024-09-03 08:01:18,255 - scheduling.basic_scheduler - INFO - Processing card: {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}
+2024-09-03 08:01:18,255 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}]
+2024-09-03 08:01:18,256 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
+2024-09-03 08:01:18,256 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:01:18,256 - scheduling.basic_scheduler - INFO - Interval: 3
+2024-09-03 08:03:28,052 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
+2024-09-03 08:03:28,052 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
+2024-09-03 08:03:28,056 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
+2024-09-03 08:03:28,056 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:03:28,056 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:03:28,057 - scheduling.basic_scheduler - INFO - Processing card: {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}
+2024-09-03 08:03:28,058 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}]
+2024-09-03 08:03:28,058 - scheduling.basic_scheduler - INFO - Consecutive correct: 7
+2024-09-03 08:03:28,058 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:03:28,058 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:03:28,059 - scheduling.basic_scheduler - INFO - Processing card: {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}
+2024-09-03 08:03:28,059 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}]
+2024-09-03 08:03:28,059 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
+2024-09-03 08:03:28,059 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:03:28,060 - scheduling.basic_scheduler - INFO - Interval: 0.0
+2024-09-03 08:03:28,060 - scheduling.basic_scheduler - INFO - Processing card: {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}
+2024-09-03 08:03:28,060 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}]
+2024-09-03 08:03:28,061 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
+2024-09-03 08:03:28,061 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:03:28,061 - scheduling.basic_scheduler - INFO - Interval: 3
+2024-09-03 08:03:28,061 - scheduling.basic_scheduler - INFO - Processing card: {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}
+2024-09-03 08:03:28,061 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}]
+2024-09-03 08:03:28,063 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
+2024-09-03 08:03:28,064 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
+2024-09-03 08:03:28,064 - scheduling.basic_scheduler - INFO - Interval: 3

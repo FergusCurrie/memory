@@ -1,22 +1,20 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+import logging
+from db.cards import create_card, create_review, delete_card_and_reviews, get_all_cards, get_all_reviews
+from db.sync import sync_db_to_azure
+from fastapi import BackgroundTasks, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import json
-import os
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from db.cards import create_card, get_all_cards, create_review, get_all_reviews
-import logging 
+from scheduling.basic_scheduler import get_todays_reviews
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", filename="app.log", filemode="a"
+)
 
 # Set up logging
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    filename='app.log',
-    filemode='a'
-)
+
 
 app = FastAPI()
 
@@ -31,17 +29,41 @@ app.add_middleware(
 # Mount the static directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+
 class CardCreate(BaseModel):
     question: str
     answer: str
+
 
 class ReviewCreate(BaseModel):
     card_id: int
     result: bool
 
+
 @app.get("/")
 def root():
-    return FileResponse("static/frontend/index.html")
+    return FileResponse("static/index.html")
+
+
+@app.post("/api/sync_db")
+async def sync_db(background_tasks: BackgroundTasks):
+    try:
+        background_tasks.add_task(sync_db_to_azure)
+        return {"message": "Database sync started in the background"}
+    except Exception as e:
+        logger.error(f"Error starting database sync: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.delete("/api/cards/{card_id}")
+async def delete_card(card_id: int):
+    logger.info(f"Deleting card {card_id}")
+    try:
+        delete_card_and_reviews(card_id)
+        return {"message": f"Card {card_id} and its reviews deleted successfully"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.post("/api/cards")
 async def add_card(card: CardCreate):
@@ -50,6 +72,7 @@ async def add_card(card: CardCreate):
         return {"id": card_id, "message": "Card created successfully"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
 
 @app.get("/api/cards")
 async def get_cards():
@@ -61,6 +84,18 @@ async def get_cards():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
+@app.get("/api/cards_to_review")
+async def get_cards_to_review():
+    logger.info("Getting cards to review")
+    try:
+        cards_to_review = get_todays_reviews(get_all_cards(), get_all_reviews())
+        logger.info(f"Cards to review: {cards_to_review}")
+        return {"cards": cards_to_review}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.get("/api/reviews")
 async def get_reviews():
     logger.info("Getting all reviews")
@@ -71,6 +106,7 @@ async def get_reviews():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
 @app.post("/api/reviews")
 async def create_review_route(review: ReviewCreate):
     try:
@@ -79,13 +115,15 @@ async def create_review_route(review: ReviewCreate):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+
 # Catch-all route for React Router
 @app.get("/{full_path:path}")
 async def serve_react_app(full_path: str):
-    return FileResponse("static/frontend/index.html")
+    logger.info(f"Serving React app for path: {full_path}")
+    return FileResponse("static/index.html")
 
-    
-    
+
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)

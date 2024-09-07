@@ -19,7 +19,8 @@ const Study: React.FC = () => {
 
   const fetchCards = async () => {
     try {
-      const response = await api.get('/api/cards');
+      const response = await api.get('/api/cards_to_review');
+      console.log(response);
       setCards(response.data.cards);
       pickRandomCard(response.data.cards);
     } catch (error) {
@@ -32,6 +33,9 @@ const Study: React.FC = () => {
       const randomIndex = Math.floor(Math.random() * cardArray.length);
       setCurrentCard(cardArray[randomIndex]);
       setShowAnswer(false);
+    } else {
+      // Handle the case when there are no more cards to review
+      setCurrentCard(null);
     }
   };
 
@@ -46,8 +50,12 @@ const Study: React.FC = () => {
           card_id: currentCard.id,
           result: result,
         });
-        // Move to next card
-        pickRandomCard(cards);
+
+        // Remove the current card from the cards array
+        setCards((prevCards) => prevCards.filter((card) => card.id !== currentCard.id));
+
+        // Pick a random card from the updated list
+        pickRandomCard(cards.filter((card) => card.id !== currentCard.id));
       } catch (error) {
         console.error('Error submitting review:', error);
       }

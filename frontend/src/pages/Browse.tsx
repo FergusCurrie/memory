@@ -10,7 +10,9 @@ import {
   Typography,
   Box,
   Button,
+  IconButton,
 } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
 import api from '../api';
 
 interface Card {
@@ -58,6 +60,26 @@ const BrowseCards: React.FC = () => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
   };
 
+  const handleDeleteCard = async (cardId: number, event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent row click event
+    if (
+      window.confirm(
+        'Are you sure you want to delete this card? This will also delete all related reviews.',
+      )
+    ) {
+      try {
+        await api.delete(`/api/cards/${cardId}`);
+        setCards(cards.filter((card) => card.id !== cardId));
+        setReviews(reviews.filter((review) => review.card_id !== cardId));
+        if (selectedCardId === cardId) {
+          setSelectedCardId(null);
+        }
+      } catch (error) {
+        console.error('Error deleting card:', error);
+      }
+    }
+  };
+
   const filteredReviews = selectedCardId
     ? reviews.filter((review) => review.card_id === selectedCardId)
     : reviews;
@@ -74,6 +96,7 @@ const BrowseCards: React.FC = () => {
               <TableCell>ID</TableCell>
               <TableCell>Question</TableCell>
               <TableCell>Answer</TableCell>
+              <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -90,6 +113,11 @@ const BrowseCards: React.FC = () => {
                 <TableCell>{card.id}</TableCell>
                 <TableCell>{card.question}</TableCell>
                 <TableCell>{card.answer}</TableCell>
+                <TableCell>
+                  <IconButton onClick={(e) => handleDeleteCard(card.id, e)} color="error">
+                    <DeleteIcon />
+                  </IconButton>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -120,7 +148,19 @@ const BrowseCards: React.FC = () => {
                 <TableCell>{review.id}</TableCell>
                 <TableCell>{review.card_id}</TableCell>
                 <TableCell>{review.result ? 'Correct' : 'Incorrect'}</TableCell>
-                <TableCell>{new Date(review.created_at).toLocaleString()}</TableCell>
+                <TableCell>
+                  {(() => {
+                    console.log('Review date:', review.created_at);
+                    if (!review.created_at) {
+                      return 'No date available';
+                    }
+                    const date = new Date(review.created_at);
+                    console.log('Parsed date:', date);
+                    return date.toString() !== 'Invalid Date'
+                      ? date.toLocaleString()
+                      : `Invalid Date: ${review.created_at}`;
+                  })()}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
