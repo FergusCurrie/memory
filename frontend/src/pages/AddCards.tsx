@@ -23,6 +23,7 @@ const AddCards: React.FC = () => {
   const [back, setBack] = useState('');
 
   const handleAddCard = async () => {
+    console.log('trying to add card');
     try {
       const response = await api.post('/api/cards', {
         question: front,
@@ -33,8 +34,8 @@ const AddCards: React.FC = () => {
       setBack('');
       alert('Card added successfully!');
     } catch (error) {
-      console.error('Error adding card:', error);
-      alert('Failed to add card. Please try again.');
+      console.log(error);
+      alert(error);
     }
   };
 

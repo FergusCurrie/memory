@@ -1,10 +1,11 @@
 import os
 from azure.storage.blob import BlobServiceClient
 from dotenv import load_dotenv
+from backend.config import DB_PATH
 
 load_dotenv()
 
-LOCAL_DB_PATH = "flashcards.db"
+LOCAL_DB_PATH = DB_PATH
 AZURE_BLOB_CONNECTION_STRING = os.getenv("azure_blob_connection_string")
 AZURE_BLOB_CONTAINER_NAME = os.getenv("azure_blob_container_name")
 AZURE_BLOB_DB_NAME = os.getenv("azure_blob_db_name")

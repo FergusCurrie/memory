@@ -2,8 +2,9 @@
 import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
+// must be http://0.0.0.0 for prd. cant use 8000 for prd.
 const api = axios.create({
-  baseURL: 'http://localhost:9898', // "https://dual3243242.azurewebsites.net" //"https://0.0.0.0:8000" //process.env.API_URL, // import anything inside .env
+  baseURL: 'http://0.0.0.0:9898', // "https://dual3243242.azurewebsites.net" //"https://0.0.0.0:8000" //process.env.API_URL, // import anything inside .env
 });
 
 function getCookie(name: string): string {

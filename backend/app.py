@@ -144,3 +144,4 @@ async def create_review_route(review: ReviewCreate):
 async def serve_react_app(full_path: str):
     logger.info(f"Serving React app for path: {full_path}")
     return FileResponse("static/index.html")
+

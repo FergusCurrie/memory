@@ -1,9 +1,9 @@
 import sqlite3
-
+from backend.config import DB_PATH
 
 # Initialize the database
 def init_db():
-    conn = sqlite3.connect("flashcards.db")
+    conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
     # Create Card table

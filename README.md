@@ -104,8 +104,12 @@ To create a production build of the Memory Slim application, follow these steps:
 
 5. Run the Docker container:
    ```
-   sudo docker run -p 9898:9898 memory-prd
+   sudo docker run -d -p 9898:9898 -v ~/docker_data/memory_slim_db:/app/db memory-prd
+   sudo docker run -p 9898:9898 -v ~/docker_data/memory_slim_db:/app/db memory-prd
    ```
+   -d is to run in detached mode.
+   -p is to map port 9898 to port 9898 on the host machine.
+   -v is to map the db directory to the host machine.
 
 The application will now be accessible at `http://localhost:9898`.
 

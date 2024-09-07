@@ -1,11 +1,14 @@
 import sqlite3
 
+import sqlite3
+from backend.config import DB_PATH
+
 # Helper function to get a database connection
 def get_db():
-    conn = sqlite3.connect('flashcards.db')
+    conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
-
+    
 def print_all_records():
     conn = get_db()
     cursor = conn.cursor()
