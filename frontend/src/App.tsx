@@ -39,7 +39,6 @@ const App = () => {
             {/* <Route path="/login" element={<Login />} />
             <Route path="/register" element={<RegisterAndLogout />} /> */}
           </Routes>
-          e
         </Box>
       </ThemeProvider>
     </BrowserRouter>

@@ -421,3 +421,89 @@ Response headers:
 2024-09-07 04:36:32,855 - __main__ - INFO - Serving React app for path: add_cards
 2024-09-07 04:36:41,029 - __main__ - INFO - Serving React app for path: add_cards
 2024-09-07 04:36:41,148 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:39:30,520 - __main__ - INFO - Serving React app for path: add_cards
+2024-09-07 04:39:31,688 - __main__ - INFO - Getting cards to review
+2024-09-07 04:39:31,692 - __main__ - INFO - Cards to review: []
+2024-09-07 04:39:41,556 - __main__ - INFO - Serving React app for path: study
+2024-09-07 04:39:41,719 - __main__ - INFO - Getting cards to review
+2024-09-07 04:39:41,720 - __main__ - INFO - Cards to review: []
+2024-09-07 04:41:46,033 - __main__ - INFO - Getting all cards
+2024-09-07 04:41:46,039 - __main__ - INFO - Cards: []
+2024-09-07 04:41:46,072 - __main__ - INFO - Getting all reviews
+2024-09-07 04:41:46,073 - __main__ - INFO - Reviews: []
+2024-09-07 04:47:58,578 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:49:01,109 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:49:03,024 - __main__ - INFO - Getting cards to review
+2024-09-07 04:49:03,028 - __main__ - INFO - Cards to review: []
+2024-09-07 04:54:03,343 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:55:57,957 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:56:01,863 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:56:01,929 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 04:58:10,197 - __main__ - INFO - Getting all cards
+2024-09-07 04:58:10,201 - __main__ - INFO - Cards: []
+2024-09-07 04:58:10,335 - __main__ - INFO - Getting all reviews
+2024-09-07 04:58:10,337 - __main__ - INFO - Reviews: []
+2024-09-07 04:58:20,063 - __main__ - INFO - Getting all cards
+2024-09-07 04:58:20,068 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 04:58:20,139 - __main__ - INFO - Getting all reviews
+2024-09-07 04:58:20,139 - __main__ - INFO - Reviews: []
+2024-09-07 04:58:46,007 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 04:58:46,183 - __main__ - INFO - Getting all reviews
+2024-09-07 04:58:46,184 - __main__ - INFO - Reviews: []
+2024-09-07 04:58:46,185 - __main__ - INFO - Getting all cards
+2024-09-07 04:58:46,186 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:01:57,478 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 05:01:57,615 - __main__ - INFO - Getting all cards
+2024-09-07 05:01:57,616 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:01:57,617 - __main__ - INFO - Getting all reviews
+2024-09-07 05:01:57,618 - __main__ - INFO - Reviews: []
+2024-09-07 05:02:00,982 - __main__ - INFO - Updating card 1
+2024-09-07 05:02:00,983 - __main__ - ERROR - Error updating card 1: name 'get_db_connection' is not defined
+2024-09-07 05:03:57,893 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 05:03:57,990 - __main__ - INFO - Getting all cards
+2024-09-07 05:03:57,991 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:03:57,992 - __main__ - INFO - Getting all reviews
+2024-09-07 05:03:57,993 - __main__ - INFO - Reviews: []
+2024-09-07 05:04:00,299 - __main__ - INFO - Updating card 1
+2024-09-07 05:04:06,627 - __main__ - INFO - Updating card 1
+2024-09-07 05:04:13,005 - __main__ - INFO - Updating card 1
+2024-09-07 05:04:14,680 - __main__ - INFO - Getting cards to review
+2024-09-07 05:04:14,683 - scheduling.basic_scheduler - INFO - Processing card: {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}
+2024-09-07 05:04:14,683 - scheduling.basic_scheduler - INFO - Card reviews: []
+2024-09-07 05:04:14,684 - scheduling.basic_scheduler - INFO - Card {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'} added to review
+2024-09-07 05:04:14,684 - __main__ - INFO - Cards to review: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:04:18,475 - __main__ - INFO - Getting all cards
+2024-09-07 05:04:18,478 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:04:18,553 - __main__ - INFO - Getting all reviews
+2024-09-07 05:04:18,554 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:05:28,571 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 05:05:28,737 - __main__ - INFO - Getting all reviews
+2024-09-07 05:05:28,738 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:05:28,739 - __main__ - INFO - Getting all cards
+2024-09-07 05:05:28,740 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:05:37,068 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 05:05:37,205 - __main__ - INFO - Getting all cards
+2024-09-07 05:05:37,207 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:05:37,227 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:05:37,277 - __main__ - INFO - Getting all reviews
+2024-09-07 05:05:37,277 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:06:20,220 - __main__ - INFO - Serving React app for path: browse
+2024-09-07 05:06:20,425 - __main__ - INFO - Getting all cards
+2024-09-07 05:06:20,427 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:06:20,509 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:20,554 - __main__ - INFO - Getting all reviews
+2024-09-07 05:06:20,556 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:06:34,604 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:51,012 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:52,543 - __main__ - INFO - Getting all cards
+2024-09-07 05:06:52,547 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-07 05:06:52,591 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:52,685 - __main__ - INFO - Getting all reviews
+2024-09-07 05:06:52,686 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:06:53,869 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:55,091 - __main__ - INFO - Getting cards to review
+2024-09-07 05:06:55,094 - scheduling.basic_scheduler - INFO - Processing card: {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}
+2024-09-07 05:06:55,094 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-07 05:06:55,099 - scheduling.basic_scheduler - INFO - Consecutive correct: 0
+2024-09-07 05:06:55,101 - __main__ - INFO - Serving React app for path: favicon.ico
+2024-09-07 05:06:55,447 - __main__ - INFO - Serving React app for path: favicon.ico

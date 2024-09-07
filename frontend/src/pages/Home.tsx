@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import api from '../api';
+import ReviewHeatmap from '../components/Heatmap';
 
 // Functional Component using React Hooks
 const Home = () => {

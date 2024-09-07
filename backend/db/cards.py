@@ -1,5 +1,5 @@
 import logging
-from db.db_helpers import get_db
+from .db_helpers import get_db
 
 logger = logging.getLogger(__name__)
 
@@ -28,6 +28,29 @@ def get_all_reviews():
     reviews = cursor.fetchall()
     conn.close()
     return [dict(review) for review in reviews]
+
+
+def update_card_in_db(card_id: int, question: str, answer: str):
+    conn = get_db()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("UPDATE cards SET question = ?, answer = ? WHERE id = ?", (question, answer, card_id))
+        conn.commit()
+
+        # Fetch the updated card
+        cursor.execute("SELECT id, question, answer FROM cards WHERE id = ?", (card_id,))
+        updated_card = cursor.fetchone()
+
+        if updated_card is None:
+            raise ValueError(f"Card with id {card_id} not found")
+
+        return {"id": updated_card[0], "question": updated_card[1], "answer": updated_card[2]}
+    except Exception as e:
+        conn.rollback()
+        logger.error(f"Error in update_card_in_db for card {card_id}: {str(e)}", exc_info=True)
+        raise e
+    finally:
+        conn.close()
 
 
 def get_all_cards():

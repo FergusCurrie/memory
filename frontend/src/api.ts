@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000', // "https://dual3243242.azurewebsites.net" //"https://0.0.0.0:8000" //process.env.API_URL, // import anything inside .env
+  baseURL: 'http://localhost:9898', // "https://dual3243242.azurewebsites.net" //"https://0.0.0.0:8000" //process.env.API_URL, // import anything inside .env
 });
 
 function getCookie(name: string): string {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Card, CardContent, Typography, Box } from '@mui/material';
+import { Button, Card, CardContent, Typography, Box, Paper } from '@mui/material';
 import api from '../api';
 
 interface FlashCard {
@@ -63,7 +63,15 @@ const Study: React.FC = () => {
   };
 
   if (!currentCard) {
-    return <Typography>No cards available. Add some cards to start studying!</Typography>;
+    return (
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+        <Paper elevation={3} sx={{ p: 3, maxWidth: 400 }}>
+          <Typography variant="h6" align="center">
+            All done!
+          </Typography>
+        </Paper>
+      </Box>
+    );
   }
 
   return (

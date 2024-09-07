@@ -31,6 +31,13 @@ module.exports = {
         test: /\.css$/, // New rule for CSS files
         use: ['style-loader', 'css-loader'],
       },
+      // Add this new rule
+      {
+        test: /\.m?js/,
+        resolve: {
+          fullySpecified: false,
+        },
+      },
     ],
   },
   optimization: {
@@ -49,9 +56,5 @@ module.exports = {
     fallback: {
       process: require.resolve('process/browser'),
     },
-    // fallback: {
-    //   stream: require.resolve('stream-browserify'),
-    //   crypto: require.resolve('crypto-browserify'),
-    // },
   },
 };

@@ -11,8 +11,14 @@ import {
   Box,
   Button,
   IconButton,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import api from '../api';
 
 interface Card {
@@ -25,13 +31,14 @@ interface Review {
   id: number;
   card_id: number;
   result: boolean;
-  created_at: string;
+  date: string;
 }
 
 const BrowseCards: React.FC = () => {
   const [cards, setCards] = useState<Card[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
+  const [editingCard, setEditingCard] = useState<Card | null>(null);
 
   useEffect(() => {
     fetchCards();
@@ -51,6 +58,7 @@ const BrowseCards: React.FC = () => {
     try {
       const response = await api.get('/api/reviews');
       setReviews(response.data.reviews);
+      console.log('Reviews:', response.data.reviews);
     } catch (error) {
       console.error('Error fetching reviews:', error);
     }
@@ -76,6 +84,22 @@ const BrowseCards: React.FC = () => {
         }
       } catch (error) {
         console.error('Error deleting card:', error);
+      }
+    }
+  };
+
+  const handleEditCard = (card: Card) => {
+    setEditingCard(card);
+  };
+
+  const handleSaveEdit = async () => {
+    if (editingCard) {
+      try {
+        await api.put(`/api/cards/${editingCard.id}`, editingCard);
+        setCards(cards.map((c) => (c.id === editingCard.id ? editingCard : c)));
+        setEditingCard(null);
+      } catch (error) {
+        console.error('Error updating card:', error);
       }
     }
   };
@@ -117,6 +141,9 @@ const BrowseCards: React.FC = () => {
                   <IconButton onClick={(e) => handleDeleteCard(card.id, e)} color="error">
                     <DeleteIcon />
                   </IconButton>
+                  <IconButton onClick={() => handleEditCard(card)} color="primary">
+                    <EditIcon />
+                  </IconButton>
                 </TableCell>
               </TableRow>
             ))}
@@ -150,11 +177,10 @@ const BrowseCards: React.FC = () => {
                 <TableCell>{review.result ? 'Correct' : 'Incorrect'}</TableCell>
                 <TableCell>
                   {(() => {
-                    console.log('Review date:', review.created_at);
-                    if (!review.created_at) {
+                    if (!review.date) {
                       return 'No date available';
                     }
-                    const date = new Date(review.created_at);
+                    const date = new Date(review.date);
                     console.log('Parsed date:', date);
                     return date.toString() !== 'Invalid Date'
                       ? date.toLocaleString()
@@ -166,6 +192,31 @@ const BrowseCards: React.FC = () => {
           </TableBody>
         </Table>
       </TableContainer>
+
+      <Dialog open={!!editingCard} onClose={() => setEditingCard(null)}>
+        <DialogTitle>Edit Card</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            label="Question"
+            fullWidth
+            value={editingCard?.question || ''}
+            onChange={(e) => setEditingCard((prev) => ({ ...prev!, question: e.target.value }))}
+          />
+          <TextField
+            margin="dense"
+            label="Answer"
+            fullWidth
+            value={editingCard?.answer || ''}
+            onChange={(e) => setEditingCard((prev) => ({ ...prev!, answer: e.target.value }))}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setEditingCard(null)}>Cancel</Button>
+          <Button onClick={handleSaveEdit}>Save</Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };
