@@ -1,37 +1,23 @@
 import React, { useState } from 'react';
 import api from '../api';
 
-// const postResult = async (id: string, correct: boolean) => {
-//     var data = JSON.stringify({
-//       card: id,
-//       result: correct,
-//     });
-//     console.log(data);
-//     try {
-//       const res = await api.post('/api/flashcard/put_result/', data, {
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//       });
-//     } catch (error) {
-//       alert(error);
-//     }
-//   };
-
 const AddCards: React.FC = () => {
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
+  const [cardType, setCardType] = useState('basic');
 
   const handleAddCard = async () => {
     console.log('trying to add card');
     try {
-      const response = await api.post('/api/cards', {
+      const response = await api.post('/api/card/cards', {
         question: front,
         answer: back,
+        type: cardType,
       });
       console.log('Card added:', response.data);
       setFront('');
       setBack('');
+      setCardType('basic');
       alert('Card added successfully!');
     } catch (error) {
       console.log(error);
@@ -50,6 +36,15 @@ const AddCards: React.FC = () => {
       }}
     >
       <h1>Add Cards</h1>
+      <select
+        value={cardType}
+        onChange={(e) => setCardType(e.target.value)}
+        style={{ padding: '10px', fontSize: '16px' }}
+      >
+        <option value="basic">Basic</option>
+        <option value="code">Code</option>
+        <option value="definition">Definition</option>
+      </select>
       <textarea
         value={front}
         onChange={(e) => setFront(e.target.value)}

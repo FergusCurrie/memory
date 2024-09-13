@@ -47,7 +47,7 @@ const BrowseCards: React.FC = () => {
 
   const fetchCards = async () => {
     try {
-      const response = await api.get('/api/cards');
+      const response = await api.get('/api/card/cards');
       setCards(response.data.cards);
     } catch (error) {
       console.error('Error fetching cards:', error);
@@ -56,7 +56,7 @@ const BrowseCards: React.FC = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await api.get('/api/reviews');
+      const response = await api.get('/api/card/reviews');
       setReviews(response.data.reviews);
       console.log('Reviews:', response.data.reviews);
     } catch (error) {
@@ -76,7 +76,7 @@ const BrowseCards: React.FC = () => {
       )
     ) {
       try {
-        await api.delete(`/api/cards/${cardId}`);
+        await api.delete(`/api/card/cards/${cardId}`);
         setCards(cards.filter((card) => card.id !== cardId));
         setReviews(reviews.filter((review) => review.card_id !== cardId));
         if (selectedCardId === cardId) {
@@ -95,7 +95,7 @@ const BrowseCards: React.FC = () => {
   const handleSaveEdit = async () => {
     if (editingCard) {
       try {
-        await api.put(`/api/cards/${editingCard.id}`, editingCard);
+        await api.put(`/api/card/cards/${editingCard.id}`, editingCard);
         setCards(cards.map((c) => (c.id === editingCard.id ? editingCard : c)));
         setEditingCard(null);
       } catch (error) {

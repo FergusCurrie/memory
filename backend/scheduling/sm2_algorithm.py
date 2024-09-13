@@ -48,7 +48,8 @@ def sm2_algorithm(cards, reviews):
     try:
         cards_to_review = []
         for card in cards:
-            card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+            # filter revies to be in note ids
+            card_reviews = [review for review in reviews if review["note_id"] == card["note_id"]]
             if sm2_check_card(card, card_reviews):
                 cards_to_review.append(card)
         return cards_to_review

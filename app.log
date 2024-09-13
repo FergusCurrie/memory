@@ -1,246 +1,450 @@
-2024-09-13 00:52:40,187 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:52:40,447 - backend.app - INFO - Getting cards to review
-2024-09-13 00:52:40,450 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:53:22,455 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:53:22,609 - backend.app - INFO - Getting cards to review
-2024-09-13 00:53:22,611 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:53:22,611 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:53:22,611 - backend.app - INFO - Cards to review: None
-2024-09-13 00:53:24,555 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:53:24,584 - backend.app - INFO - Getting cards to review
-2024-09-13 00:53:24,587 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:53:24,587 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:53:24,588 - backend.app - INFO - Cards to review: None
-2024-09-13 00:53:25,751 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:53:25,851 - backend.app - INFO - Getting cards to review
-2024-09-13 00:53:25,853 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:53:25,853 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:53:25,853 - backend.app - INFO - Cards to review: None
-2024-09-13 00:53:26,913 - backend.app - INFO - Getting cards to review
-2024-09-13 00:53:26,914 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:53:26,914 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:53:26,915 - backend.app - INFO - Cards to review: None
-2024-09-13 00:57:30,991 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:57:31,164 - backend.app - INFO - Getting cards to review
-2024-09-13 00:57:31,167 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:57:31,167 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:57:31,167 - backend.app - INFO - Cards to review: None
-2024-09-13 00:57:35,440 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:57:35,572 - backend.app - INFO - Getting cards to review
-2024-09-13 00:57:35,574 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:57:35,574 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:57:35,575 - backend.app - INFO - Cards to review: None
-2024-09-13 00:57:36,567 - backend.app - INFO - Getting cards to review
-2024-09-13 00:57:36,569 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:57:36,569 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
-2024-09-13 00:57:36,569 - backend.app - INFO - Cards to review: None
-2024-09-13 00:58:14,703 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:58:14,973 - backend.app - INFO - Getting cards to review
-2024-09-13 00:58:14,975 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:58:14,981 - backend.scheduling.sm2_algorithm - INFO - list index out of range
-2024-09-13 00:58:14,981 - backend.app - INFO - Cards to review: None
-2024-09-13 00:58:16,993 - backend.app - INFO - Getting cards to review
-2024-09-13 00:58:16,995 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:58:16,995 - backend.scheduling.sm2_algorithm - INFO - list index out of range
-2024-09-13 00:58:16,995 - backend.app - INFO - Cards to review: None
-2024-09-13 00:58:18,152 - backend.app - INFO - Serving React app for path: study
-2024-09-13 00:58:18,264 - backend.app - INFO - Getting cards to review
-2024-09-13 00:58:18,270 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:58:18,270 - backend.scheduling.sm2_algorithm - INFO - list index out of range
-2024-09-13 00:58:18,271 - backend.app - INFO - Cards to review: None
-2024-09-13 00:59:32,604 - backend.app - INFO - Getting cards to review
-2024-09-13 00:59:32,606 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 00:59:32,608 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 05:46:39,062 - backend.app - INFO - Serving React app for path: study
+2024-09-13 05:46:39,404 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 05:46:39,477 - backend.app - INFO - Getting cards to review
+2024-09-13 05:46:39,480 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 05:46:39,480 - backend.app - INFO - Cards to review: []
+2024-09-13 05:46:43,236 - backend.app - INFO - Getting cards to review
+2024-09-13 05:46:43,238 - backend.app - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 05:47:01,314 - backend.code_completion.check_code - INFO - result = (
+    df
+    .group_by('Brand')
+    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
+)
+2024-09-13 05:47:01,352 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0   Wide World Importers             3922
+1               A. Datum              555
+2       Adventure Works                30
+3      Northwind Traders              638
+4                Litware              875
+5      The Phone Company             6519
+6          Tailspin Toys             2732
+7               Litware               161
+8             Fabrikam                332
+9       Southridge Video             6749
+10               Contoso            11132
+11              Fabrikam             1516
+12       Adventure Works             4616
+13             Proseware             2763
+14              Contoso               977
+2024-09-13 05:47:01,356 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0               Contoso               977
+1          Tailspin Toys             2732
+2               Fabrikam             1516
+3                Litware              875
+4       Southridge Video             6749
+5                Contoso            11132
+6      The Phone Company             6519
+7               Litware               161
+8       Adventure Works                30
+9               A. Datum              555
+10             Proseware             2763
+11            Fabrikam                332
+12     Northwind Traders              638
+13       Adventure Works             4616
+14  Wide World Importers             3922
+2024-09-13 06:05:31,642 - backend.app - INFO - Serving React app for path: study
+2024-09-13 06:05:32,017 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:05:32,113 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:05:33,632 - backend.app - INFO - Serving React app for path: api/code_to_review
+2024-09-13 06:05:35,311 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:05:59,097 - backend.app - INFO - Serving React app for path: study
+2024-09-13 06:05:59,103 - backend.app - INFO - Serving React app for path: study
+2024-09-13 06:05:59,426 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:05:59,506 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:07:16,883 - backend.app - INFO - Serving React app for path: study
+2024-09-13 06:07:17,222 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:17,305 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:07:17,958 - backend.app - INFO - Serving React app for path: api/code_to_review
+2024-09-13 06:07:19,498 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:07:21,632 - backend.app - INFO - Serving React app for path: api/cards
+2024-09-13 06:07:21,729 - backend.app - INFO - Serving React app for path: api/reviews
+2024-09-13 06:07:21,729 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:22,996 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:24,273 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:25,445 - backend.app - INFO - Serving React app for path: add_cards
+2024-09-13 06:07:25,678 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:58,446 - backend.app - INFO - Serving React app for path: add_cards
+2024-09-13 06:07:58,972 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:59,707 - backend.app - INFO - Serving React app for path: api/reviews
+2024-09-13 06:07:59,707 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:07:59,746 - backend.app - INFO - Serving React app for path: api/cards
+2024-09-13 06:12:20,347 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:12:21,179 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:12:21,286 - backend.app - INFO - Serving React app for path: api/reviews
+2024-09-13 06:12:21,288 - backend.app - INFO - Serving React app for path: api/cards
+2024-09-13 06:12:36,226 - backend.app - INFO - Serving React app for path: browse
+2024-09-13 06:12:36,557 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:12:36,630 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 06:12:36,633 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 06:12:36,670 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 06:12:36,671 - backend.routes.card_routes - INFO - Cards: []
+2024-09-13 06:13:37,330 - backend.app - INFO - Serving React app for path: browse
+2024-09-13 06:13:37,636 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:13:37,739 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 06:13:37,743 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 06:13:37,781 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 06:13:37,782 - backend.routes.card_routes - INFO - Cards: []
+2024-09-13 06:13:38,496 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:13:39,003 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:13:39,079 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:13:40,317 - backend.app - INFO - Serving React app for path: card/code_to_review
+2024-09-13 06:13:41,724 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:17:48,412 - backend.app - INFO - Serving React app for path: study
+2024-09-13 06:17:48,790 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 06:17:48,904 - backend.app - INFO - Serving React app for path: api/cards_to_review
+2024-09-13 06:21:49,777 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:22:30,770 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:23:36,996 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:26:06,935 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:26:42,607 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:27:08,181 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:27:09,828 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:27:31,483 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:27:34,917 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:31:52,650 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:31:52,661 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:31:52,662 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 06:31:55,991 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:31:55,995 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:31:55,995 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 06:32:33,681 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:32:33,685 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:32:33,687 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
+2024-09-13 06:32:33,687 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
+2024-09-13 06:34:13,119 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 06:34:13,121 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
+2024-09-13 06:34:13,159 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 06:34:13,161 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 06:34:15,507 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:34:15,516 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:34:15,516 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
+2024-09-13 06:34:15,517 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
+2024-09-13 06:34:17,295 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 06:34:17,296 - backend.routes.code_routes - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 06:34:46,219 - backend.code_completion.check_code - INFO - result = (
+    df
+    .group_by('Brand')
+    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
+)
+2024-09-13 06:34:46,315 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0   Wide World Importers             3922
+1               A. Datum              555
+2       Adventure Works                30
+3      Northwind Traders              638
+4                Litware              875
+5      The Phone Company             6519
+6          Tailspin Toys             2732
+7               Litware               161
+8             Fabrikam                332
+9       Southridge Video             6749
+10               Contoso            11132
+11              Fabrikam             1516
+12       Adventure Works             4616
+13             Proseware             2763
+14              Contoso               977
+2024-09-13 06:34:46,321 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0      Northwind Traders              638
+1               A. Datum              555
+2                Litware              875
+3               Contoso               977
+4          Tailspin Toys             2732
+5   Wide World Importers             3922
+6              Proseware             2763
+7      The Phone Company             6519
+8       Southridge Video             6749
+9               Litware               161
+10       Adventure Works             4616
+11               Contoso            11132
+12      Adventure Works                30
+13            Fabrikam                332
+14              Fabrikam             1516
+2024-09-13 06:34:49,278 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:34:49,281 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:34:49,281 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
+2024-09-13 06:34:49,282 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
+2024-09-13 06:35:15,421 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 06:35:15,423 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 06:35:15,461 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 06:35:15,462 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
+2024-09-13 06:35:25,853 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 06:35:25,857 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 06:35:25,858 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 06:35:25,861 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}]
+2024-09-13 06:35:27,918 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 06:35:27,920 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 06:35:27,921 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
+2024-09-13 06:35:27,921 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}, has reviews: []
+2024-09-13 06:35:27,921 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}]
+2024-09-13 06:35:34,299 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 06:35:34,300 - backend.routes.code_routes - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 06:35:52,963 - backend.code_completion.check_code - INFO - result = (
+    df
+    .group_by('Brand')
+    .agg(pl.col('Quantity').mean().alias('Sum of Quantity'))
+)
+2024-09-13 06:35:52,980 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0   Wide World Importers             3922
+1               A. Datum              555
+2       Adventure Works                30
+3      Northwind Traders              638
+4                Litware              875
+5      The Phone Company             6519
+6          Tailspin Toys             2732
+7               Litware               161
+8             Fabrikam                332
+9       Southridge Video             6749
+10               Contoso            11132
+11              Fabrikam             1516
+12       Adventure Works             4616
+13             Proseware             2763
+14              Contoso               977
+2024-09-13 06:35:52,984 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0        Adventure Works         3.150853
+1      Northwind Traders         3.222222
+2                Contoso         3.135775
+3                Litware         3.147482
+4               Fabrikam         3.225532
+5      The Phone Company         3.030683
+6               Litware          2.927273
+7       Southridge Video         3.189509
+8             Fabrikam           3.192308
+9              Proseware         3.083705
+10         Tailspin Toys         3.136625
+11              Contoso          3.006154
+12  Wide World Importers         3.193811
+13      Adventure Works          2.727273
+14              A. Datum         2.817259
+2024-09-13 06:36:01,169 - backend.code_completion.check_code - INFO - result = (
+    df
+    .group_by('Brand')
+    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
+)
+2024-09-13 06:36:01,185 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0   Wide World Importers             3922
+1               A. Datum              555
+2       Adventure Works                30
+3      Northwind Traders              638
+4                Litware              875
+5      The Phone Company             6519
+6          Tailspin Toys             2732
+7               Litware               161
+8             Fabrikam                332
+9       Southridge Video             6749
+10               Contoso            11132
+11              Fabrikam             1516
+12       Adventure Works             4616
+13             Proseware             2763
+14              Contoso               977
+2024-09-13 06:36:01,188 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
+0               A. Datum              555
+1      Northwind Traders              638
+2                Contoso            11132
+3               Contoso               977
+4      The Phone Company             6519
+5          Tailspin Toys             2732
+6               Litware               161
+7        Adventure Works             4616
+8               Fabrikam             1516
+9              Proseware             2763
+10      Adventure Works                30
+11  Wide World Importers             3922
+12            Fabrikam                332
+13      Southridge Video             6749
+14               Litware              875
+2024-09-13 07:21:30,899 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:21:30,906 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:21:30,906 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 07:21:36,924 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:21:36,927 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
+2024-09-13 07:21:37,028 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 07:21:37,029 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 07:21:46,650 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:21:46,652 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:21:46,653 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}, has reviews: []
+2024-09-13 07:21:46,653 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
+2024-09-13 07:21:51,329 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:21:51,330 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
+2024-09-13 07:21:51,432 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 07:21:51,433 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:22:14,893 - backend.routes.card_routes - INFO - Updating card 1
+2024-09-13 07:22:17,932 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:22:17,934 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:22:18,023 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 07:22:18,025 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:25:45,199 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:25:45,206 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:25:45,238 - backend.routes.card_routes - INFO - Getting all reviews
+2024-09-13 07:25:45,240 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:25:46,608 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:25:46,616 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:25:46,620 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 46, in sm2_algorithm
-    if sm2_check_card(card, card_reviews):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 11, in sm2_check_card
-    assert sorted_reviews[0] < sorted_reviews[1]
-                               ~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 00:59:32,608 - backend.app - INFO - Cards to review: None
-2024-09-13 01:00:08,932 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:00:09,142 - backend.app - INFO - Getting cards to review
-2024-09-13 01:00:09,145 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:00:09,146 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 07:25:46,621 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:25:48,328 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:25:48,329 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:41:45,748 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:41:45,756 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:41:45,758 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 46, in sm2_algorithm
-    cards_to_review.append(card)
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 11, in sm2_check_card
-    ease_factor = 2.5
-                      
-IndexError: list index out of range
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 01:00:09,146 - backend.app - INFO - Cards to review: None
-2024-09-13 01:00:10,847 - backend.app - INFO - Getting cards to review
-2024-09-13 01:00:10,884 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:00:10,915 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 07:41:45,759 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:41:46,836 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:41:46,838 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:41:48,364 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:41:48,372 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:41:48,373 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
-    if sm2_check_card(card, card_reviews):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 35, in sm2_check_card
-    next_review_date = last_review_date + datetime.timedelta(days=interval)
-                                          ^^^^^^^^^^^^^^^^^^
-AttributeError: type object 'datetime.datetime' has no attribute 'timedelta'
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 01:00:10,917 - backend.app - INFO - Cards to review: None
-2024-09-13 01:00:32,987 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:00:33,127 - backend.app - INFO - Getting cards to review
-2024-09-13 01:00:33,129 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:00:33,132 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 07:41:48,374 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:41:50,424 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:41:50,426 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:43:01,802 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:43:01,808 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:43:01,809 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
-    if sm2_check_card(card, card_reviews):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
-    last_review_date = get_last_review_date(card_reviews)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
-    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
-                             ~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 01:00:33,132 - backend.app - INFO - Cards to review: None
-2024-09-13 01:00:33,914 - backend.app - INFO - Getting cards to review
-2024-09-13 01:00:33,917 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:00:33,918 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 07:43:01,810 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:43:02,973 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:43:02,983 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:43:09,789 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:43:09,791 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:43:13,760 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:43:13,763 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:43:13,764 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
-    if sm2_check_card(card, card_reviews):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
-    last_review_date = get_last_review_date(card_reviews)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
-    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
-                             ~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 01:00:33,918 - backend.app - INFO - Cards to review: None
-2024-09-13 01:01:18,030 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:01:18,166 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:18,169 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:18,171 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 07:43:13,764 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:43:15,026 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:43:15,027 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:44:46,908 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:44:46,911 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:44:48,359 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:44:48,364 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:45:30,701 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:45:30,705 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:47:21,729 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:47:21,732 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:47:23,370 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:47:23,372 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:47:25,416 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:47:25,418 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:52:50,724 - backend.routes.card_routes - INFO - Getting all card reviews
+2024-09-13 07:52:50,730 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:52:50,764 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:52:50,770 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:52:57,784 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:52:57,788 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:52:57,791 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
-    for card in cards:
-           ^^^^^^^^^^^^
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
-  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
-    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
-                             ~~~~~~~~~~~~~~^^^
-IndexError: list index out of range
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
 
-2024-09-13 01:01:18,171 - backend.app - INFO - Cards to review: None
-2024-09-13 01:01:19,545 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:19,547 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:19,548 - backend.app - INFO - Cards to review: [{'id': 2, 'question': '', 'answer': '', 'date_created': '2024-09-07 07:22:21'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:25,045 - backend.app - INFO - Getting all cards
-2024-09-13 01:01:25,047 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 2, 'question': '', 'answer': '', 'date_created': '2024-09-07 07:22:21'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:25,120 - backend.app - INFO - Getting all reviews
-2024-09-13 01:01:25,121 - backend.app - INFO - Reviews: [{'id': 3, 'card_id': 2, 'date': '2024-09-13 01:01:23', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:01:27,874 - backend.app - INFO - Deleting card 2
-2024-09-13 01:01:29,689 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:29,693 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:29,694 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:30,240 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:01:30,283 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:30,286 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:30,286 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:30,776 - backend.app - INFO - Getting all cards
-2024-09-13 01:01:30,777 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:30,856 - backend.app - INFO - Getting all reviews
-2024-09-13 01:01:30,857 - backend.app - INFO - Reviews: [{'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:01:32,535 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:32,537 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:32,537 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:35,817 - backend.app - INFO - Getting all cards
-2024-09-13 01:01:35,818 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:35,888 - backend.app - INFO - Getting all reviews
-2024-09-13 01:01:35,889 - backend.app - INFO - Reviews: [{'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:01:36,377 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:36,384 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:36,385 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:39,438 - backend.app - INFO - Getting all reviews
-2024-09-13 01:01:39,439 - backend.app - INFO - Reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:01:39,507 - backend.app - INFO - Getting all cards
-2024-09-13 01:01:39,508 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:01:40,659 - backend.app - INFO - Getting cards to review
-2024-09-13 01:01:40,664 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:01:40,664 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:02:14,322 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:02:14,463 - backend.app - INFO - Getting cards to review
-2024-09-13 01:02:14,467 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:02:14,467 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:02:35,138 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:02:35,280 - backend.app - INFO - Getting cards to review
-2024-09-13 01:02:35,283 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:02:35,283 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:02:35,284 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
-2024-09-13 01:02:35,285 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:02:51,307 - backend.app - INFO - Getting all reviews
-2024-09-13 01:02:51,314 - backend.app - INFO - Reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:02:51,322 - backend.app - INFO - Getting all cards
-2024-09-13 01:02:51,324 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:02:53,266 - backend.app - INFO - Getting cards to review
-2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
-2024-09-13 01:02:53,268 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:03:58,856 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:03:59,044 - backend.app - INFO - Getting cards to review
-2024-09-13 01:03:59,046 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:03:59,047 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
-2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
-2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 01:03:59,049 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:05:13,100 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:05:13,341 - backend.app - INFO - Getting cards to review
-2024-09-13 01:05:13,345 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:05:13,345 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
-2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-07, next_Review=2024-09-08
-2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
-2024-09-13 01:05:13,347 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 01:05:13,347 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 01:05:13,347 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:05:49,280 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:05:49,420 - backend.app - INFO - Getting cards to review
-2024-09-13 01:05:49,422 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:05:49,422 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:05:49,423 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
-2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-07, next_Review=2024-09-08
-2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
-2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 01:05:49,425 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 01:05:49,425 - backend.app - INFO - Cards to review: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-13 01:06:15,938 - backend.app - INFO - Getting all reviews
-2024-09-13 01:06:15,941 - backend.app - INFO - Reviews: [{'id': 6, 'card_id': 1, 'date': '2024-09-13 01:05:50', 'result': 1}, {'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-13 01:06:15,969 - backend.app - INFO - Getting all cards
-2024-09-13 01:06:15,971 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
-2024-09-13 01:06:19,759 - backend.app - INFO - Deleting card 3
-2024-09-13 01:06:21,407 - backend.app - INFO - Deleting card 1
-2024-09-13 01:23:16,155 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:23:20,260 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:23:20,557 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 01:23:20,616 - backend.app - INFO - Getting cards to review
-2024-09-13 01:23:20,624 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:23:20,625 - backend.app - INFO - Cards to review: []
-2024-09-13 01:23:23,666 - backend.db.sync - INFO - sync to : flashcards.db
-2024-09-13 01:23:43,830 - backend.app - INFO - Serving React app for path: study
-2024-09-13 01:23:47,555 - backend.db.sync - INFO - sync to : flashcards.db
-2024-09-13 01:23:47,558 - backend.db.sync - INFO - aborted sync as using dev
-2024-09-13 01:38:26,178 - backend.app - INFO - Getting cards to review
-2024-09-13 01:38:26,199 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:38:26,199 - backend.app - INFO - Cards to review: []
-2024-09-13 01:38:28,301 - backend.app - INFO - Getting all cards
-2024-09-13 01:38:28,303 - backend.app - INFO - Cards: []
-2024-09-13 01:38:28,405 - backend.app - INFO - Getting all reviews
-2024-09-13 01:38:28,406 - backend.app - INFO - Reviews: []
-2024-09-13 01:38:30,554 - backend.app - INFO - Getting cards to review
-2024-09-13 01:38:30,557 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 01:38:30,557 - backend.app - INFO - Cards to review: []
+2024-09-13 07:52:57,791 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:52:59,200 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:52:59,201 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:53:53,980 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:53:54,001 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:53:54,005 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
+
+2024-09-13 07:53:54,006 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:53:55,548 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:53:55,549 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:55:41,486 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:55:41,491 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:55:41,493 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
+
+2024-09-13 07:55:41,493 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 07:55:43,318 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 07:55:43,326 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 07:55:53,132 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:55:53,134 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:55:53,167 - backend.routes.card_routes - INFO - Getting all card reviews
+2024-09-13 07:55:53,169 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:57:19,649 - backend.routes.card_routes - INFO - Getting all card reviews
+2024-09-13 07:57:19,655 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 07:57:19,660 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 07:57:19,662 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 07:57:28,530 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 07:57:28,533 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 07:57:28,535 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
+    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
+                                                    ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
+
+2024-09-13 07:57:28,535 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 08:02:08,495 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 08:02:08,503 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 08:02:08,507 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 53, in sm2_algorithm
+    card_reviews = [review for review in card_reviews if review["card_id"] == card["id"]]
+                                                         ~~~~~~^^^^^^^^^^^
+KeyError: 'card_id'
+
+2024-09-13 08:02:08,507 - backend.routes.card_routes - INFO - Cards to review: None
+2024-09-13 08:02:53,847 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 08:02:53,850 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 08:02:53,850 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 08:02:53,851 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 08:02:53,851 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 08:02:53,851 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 08:03:01,154 - backend.routes.code_routes - INFO - Getting cards to review
+2024-09-13 08:03:01,160 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
+2024-09-13 08:04:08,036 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 08:04:08,041 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 08:04:08,042 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 08:04:08,042 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 08:04:08,043 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 08:04:08,043 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 08:04:09,648 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 08:05:24,182 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 08:05:24,188 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 08:05:24,189 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+2024-09-13 08:05:24,189 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 08:05:24,190 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 08:05:24,190 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 08:05:25,938 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 08:05:25,948 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 08:05:25,949 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}, has reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}]
+2024-09-13 08:05:25,950 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
+2024-09-13 08:05:25,951 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 08:05:25,952 - backend.routes.code_routes - INFO - []
+2024-09-13 08:05:30,589 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 08:05:30,595 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
+2024-09-13 08:05:30,596 - backend.routes.card_routes - INFO - Getting all card reviews
+2024-09-13 08:05:30,598 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
