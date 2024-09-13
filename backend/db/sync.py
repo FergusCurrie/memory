@@ -1,7 +1,11 @@
+import logging
 import os
 from azure.storage.blob import BlobServiceClient
-from dotenv import load_dotenv
 from backend.config import DB_PATH
+from dotenv import load_dotenv
+
+logger = logging.getLogger(__name__)
+
 
 load_dotenv()
 
@@ -20,6 +24,11 @@ def sync_db_to_azure():
     :param container_name: Name of the container in Azure Blob Storage
     :param blob_name: Name to give the blob in Azure Storage
     """
+    logger.info(f"sync to : {LOCAL_DB_PATH}")
+    # Dev can't sync
+    if LOCAL_DB_PATH == "flashcards.db":
+        logger.info("aborted sync as using dev")
+        return
     try:
         blob_service_client = BlobServiceClient.from_connection_string(AZURE_BLOB_CONNECTION_STRING)
 

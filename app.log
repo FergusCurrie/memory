@@ -1,535 +1,246 @@
-2024-09-03 08:06:15,221 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:06:15,431 - __main__ - INFO - Getting cards to review
-2024-09-03 08:06:15,433 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:06:15,433 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:06:15,434 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:06:15,434 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
-2024-09-03 08:06:15,435 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:06:15,435 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:06:15,435 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:06:17,171 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:06:17,369 - __main__ - INFO - Getting cards to review
-2024-09-03 08:06:17,372 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:06:17,373 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:06:17,373 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:06:17,373 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
-2024-09-03 08:06:17,374 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:06:17,374 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:06:17,374 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:07:51,422 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:07:51,661 - __main__ - INFO - Getting cards to review
-2024-09-03 08:07:51,666 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:07:51,666 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:07:51,666 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:07:51,666 - scheduling.basic_scheduler - INFO - Consecutive correct: 5
-2024-09-03 08:07:51,667 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:07:51,667 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:07:51,667 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:07:59,308 - __main__ - INFO - Getting cards to review
-2024-09-03 08:07:59,312 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:07:59,312 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:07:59,313 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:07:59,313 - scheduling.basic_scheduler - INFO - Consecutive correct: 6
-2024-09-03 08:07:59,313 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:07:59,314 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:07:59,314 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:08:04,573 - __main__ - INFO - Getting cards to review
-2024-09-03 08:08:04,577 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:08:04,577 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:04,578 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:04,578 - scheduling.basic_scheduler - INFO - Consecutive correct: 7
-2024-09-03 08:08:04,578 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:08:04,578 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:08:04,579 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:08:11,925 - __main__ - INFO - Getting cards to review
-2024-09-03 08:08:11,930 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:08:11,930 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:11,931 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:11,931 - scheduling.basic_scheduler - INFO - Consecutive correct: 8
-2024-09-03 08:08:11,932 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:08:11,932 - scheduling.basic_scheduler - INFO - Interval: 0.0
-2024-09-03 08:08:11,932 - __main__ - INFO - Cards to review: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}]
-2024-09-03 08:08:14,301 - __main__ - INFO - Getting all cards
-2024-09-03 08:08:14,304 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:08:14,395 - __main__ - INFO - Getting all reviews
-2024-09-03 08:08:14,397 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:17,282 - __main__ - INFO - Deleting card 2
-2024-09-03 08:08:44,691 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:08:44,991 - __main__ - INFO - Getting all reviews
-2024-09-03 08:08:44,993 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:45,032 - __main__ - INFO - Getting all cards
-2024-09-03 08:08:45,033 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:08:46,010 - __main__ - INFO - Deleting card 2
-2024-09-03 08:08:47,440 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:08:47,640 - __main__ - INFO - Getting all reviews
-2024-09-03 08:08:47,642 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:47,644 - __main__ - INFO - Getting all cards
-2024-09-03 08:08:47,660 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:08:48,460 - __main__ - INFO - Deleting card 2
-2024-09-03 08:08:49,005 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:08:49,228 - __main__ - INFO - Getting all cards
-2024-09-03 08:08:49,230 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:08:49,231 - __main__ - INFO - Getting all reviews
-2024-09-03 08:08:49,232 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:08:50,794 - __main__ - INFO - Deleting card 2
-2024-09-03 08:08:51,811 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:08:52,035 - __main__ - INFO - Getting all cards
-2024-09-03 08:08:52,039 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:08:52,126 - __main__ - INFO - Getting all reviews
-2024-09-03 08:08:52,127 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:10:32,380 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:10:32,622 - __main__ - INFO - Getting all cards
-2024-09-03 08:10:32,624 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:10:32,720 - __main__ - INFO - Getting all reviews
-2024-09-03 08:10:32,722 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:10:35,284 - __main__ - INFO - Deleting card 2
-2024-09-03 08:10:40,833 - __main__ - INFO - Deleting card 3
-2024-09-03 08:11:30,628 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:11:30,846 - __main__ - INFO - Getting all cards
-2024-09-03 08:11:30,860 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}]
-2024-09-03 08:11:30,933 - __main__ - INFO - Getting all reviews
-2024-09-03 08:11:30,934 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:33,139 - __main__ - INFO - Deleting card 2
-2024-09-03 08:11:36,855 - __main__ - INFO - Deleting card 3
-2024-09-03 08:11:38,284 - __main__ - INFO - Deleting card 4
-2024-09-03 08:11:38,985 - __main__ - INFO - Deleting card 5
-2024-09-03 08:11:39,691 - __main__ - INFO - Deleting card 6
-2024-09-03 08:11:40,611 - __main__ - INFO - Deleting card 7
-2024-09-03 08:11:41,277 - __main__ - INFO - Deleting card 8
-2024-09-03 08:11:42,778 - __main__ - INFO - Getting cards to review
-2024-09-03 08:11:42,782 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:11:42,782 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:42,789 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:42,790 - scheduling.basic_scheduler - INFO - Consecutive correct: 8
-2024-09-03 08:11:42,790 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:11:42,791 - scheduling.basic_scheduler - INFO - Interval: 1.0
-2024-09-03 08:11:42,791 - __main__ - INFO - Cards to review: []
-2024-09-03 08:11:46,809 - __main__ - INFO - Getting cards to review
-2024-09-03 08:11:46,813 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:11:46,813 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:46,814 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:46,814 - scheduling.basic_scheduler - INFO - Consecutive correct: 8
-2024-09-03 08:11:46,815 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:11:46,815 - scheduling.basic_scheduler - INFO - Interval: 1.0
-2024-09-03 08:11:46,815 - __main__ - INFO - Cards to review: []
-2024-09-03 08:11:47,949 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:11:48,159 - __main__ - INFO - Getting cards to review
-2024-09-03 08:11:48,162 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:11:48,162 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:48,163 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:48,163 - scheduling.basic_scheduler - INFO - Consecutive correct: 8
-2024-09-03 08:11:48,165 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:11:48,166 - scheduling.basic_scheduler - INFO - Interval: 1.0
-2024-09-03 08:11:48,167 - __main__ - INFO - Cards to review: []
-2024-09-03 08:11:48,758 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:11:48,940 - __main__ - INFO - Getting cards to review
-2024-09-03 08:11:48,943 - scheduling.basic_scheduler - INFO - Processing card: {'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}
-2024-09-03 08:11:48,943 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:48,944 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:11:48,944 - scheduling.basic_scheduler - INFO - Consecutive correct: 8
-2024-09-03 08:11:48,945 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:11:48,945 - scheduling.basic_scheduler - INFO - Interval: 1.0
-2024-09-03 08:11:48,945 - __main__ - INFO - Cards to review: []
-2024-09-03 08:11:50,449 - __main__ - INFO - Getting all cards
-2024-09-03 08:11:50,450 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:11:50,451 - __main__ - INFO - Getting all reviews
-2024-09-03 08:11:50,452 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:12:17,851 - __main__ - INFO - Deleting card 2
-2024-09-03 08:12:18,662 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:12:18,880 - __main__ - INFO - Getting all cards
-2024-09-03 08:12:18,886 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:12:18,961 - __main__ - INFO - Getting all reviews
-2024-09-03 08:12:18,962 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:12:31,357 - __main__ - INFO - Getting all reviews
-2024-09-03 08:12:31,359 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:12:31,360 - __main__ - INFO - Getting all cards
-2024-09-03 08:12:31,361 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:16:04,516 - __main__ - INFO - Deleting card 2
-2024-09-03 08:16:06,026 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:16:06,171 - __main__ - INFO - Getting all cards
-2024-09-03 08:16:06,179 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:16:06,264 - __main__ - INFO - Getting all reviews
-2024-09-03 08:16:06,265 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:17:19,379 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:17:19,482 - __main__ - INFO - Getting all cards
-2024-09-03 08:17:19,496 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:17:19,590 - __main__ - INFO - Getting all reviews
-2024-09-03 08:17:19,591 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:17:21,502 - __main__ - INFO - Deleting card 2
-2024-09-03 08:17:23,788 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:17:23,862 - __main__ - INFO - Getting all cards
-2024-09-03 08:17:23,863 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:17:23,949 - __main__ - INFO - Getting all reviews
-2024-09-03 08:17:23,950 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:18:33,971 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:18:34,046 - __main__ - INFO - Getting all cards
-2024-09-03 08:18:34,049 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:18:34,119 - __main__ - INFO - Getting all reviews
-2024-09-03 08:18:34,119 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:18:46,993 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:18:47,048 - __main__ - INFO - Getting all cards
-2024-09-03 08:18:47,050 - __main__ - INFO - Cards: [{'id': 2, 'question': '1', 'answer': '2', 'date_created': '2024-09-01 01:57:09'}, {'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:18:47,143 - __main__ - INFO - Getting all reviews
-2024-09-03 08:18:47,144 - __main__ - INFO - Reviews: [{'id': 27, 'card_id': 2, 'date': '2024-09-03 08:08:06', 'result': 1}, {'id': 26, 'card_id': 2, 'date': '2024-09-03 08:08:01', 'result': 1}, {'id': 25, 'card_id': 2, 'date': '2024-09-03 08:07:53', 'result': 1}, {'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 21, 'card_id': 2, 'date': '2024-09-03 07:53:44', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 19, 'card_id': 2, 'date': '2024-09-03 07:53:35', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 12, 'card_id': 2, 'date': '2024-09-03 07:19:28', 'result': 1}, {'id': 11, 'card_id': 2, 'date': '2024-09-03 07:19:27', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 7, 'card_id': 2, 'date': '2024-09-03 07:17:10', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}, {'id': 5, 'card_id': 2, 'date': '2024-09-03 06:47:46', 'result': 0}, {'id': 3, 'card_id': 2, 'date': '2024-09-01 02:13:36', 'result': 1}, {'id': 2, 'card_id': 2, 'date': '2024-09-01 02:13:35', 'result': 0}, {'id': 1, 'card_id': 2, 'date': '2024-09-01 02:13:31', 'result': 1}]
-2024-09-03 08:18:49,299 - __main__ - INFO - Deleting card 2
-2024-09-03 08:18:54,642 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:18:54,704 - __main__ - INFO - Getting all cards
-2024-09-03 08:18:54,705 - __main__ - INFO - Cards: [{'id': 3, 'question': '12313', 'answer': '124124', 'date_created': '2024-09-01 03:47:02'}, {'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:18:54,784 - __main__ - INFO - Getting all reviews
-2024-09-03 08:18:54,785 - __main__ - INFO - Reviews: [{'id': 24, 'card_id': 3, 'date': '2024-09-03 07:53:48', 'result': 1}, {'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 17, 'card_id': 3, 'date': '2024-09-03 07:53:32', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 14, 'card_id': 3, 'date': '2024-09-03 07:19:30', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}, {'id': 10, 'card_id': 3, 'date': '2024-09-03 07:17:14', 'result': 1}, {'id': 9, 'card_id': 3, 'date': '2024-09-03 07:17:12', 'result': 1}, {'id': 8, 'card_id': 3, 'date': '2024-09-03 07:17:11', 'result': 1}, {'id': 6, 'card_id': 3, 'date': '2024-09-03 07:17:08', 'result': 1}]
-2024-09-03 08:18:58,750 - __main__ - INFO - Deleting card 3
-2024-09-03 08:18:59,379 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:18:59,436 - __main__ - INFO - Getting all cards
-2024-09-03 08:18:59,447 - __main__ - INFO - Cards: [{'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:18:59,522 - __main__ - INFO - Getting all reviews
-2024-09-03 08:18:59,523 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}]
-2024-09-03 08:19:00,245 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:00,293 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:00,294 - __main__ - INFO - Cards: [{'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:19:00,356 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:00,357 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}]
-2024-09-03 08:19:00,754 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:00,786 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:00,788 - __main__ - INFO - Cards: [{'id': 4, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 06:59:21'}, {'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:19:00,790 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:00,792 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 22, 'card_id': 4, 'date': '2024-09-03 07:53:45', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}, {'id': 18, 'card_id': 4, 'date': '2024-09-03 07:53:33', 'result': 1}, {'id': 16, 'card_id': 4, 'date': '2024-09-03 07:19:32', 'result': 1}, {'id': 15, 'card_id': 4, 'date': '2024-09-03 07:19:31', 'result': 1}, {'id': 13, 'card_id': 4, 'date': '2024-09-03 07:19:29', 'result': 1}]
-2024-09-03 08:19:01,893 - __main__ - INFO - Deleting card 4
-2024-09-03 08:19:02,444 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:02,470 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:02,475 - __main__ - INFO - Cards: [{'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:19:02,476 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:02,478 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}]
-2024-09-03 08:19:03,012 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:03,053 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:03,055 - __main__ - INFO - Cards: [{'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:19:03,057 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:03,059 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}]
-2024-09-03 08:19:03,454 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:03,489 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:03,491 - __main__ - INFO - Cards: [{'id': 5, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:20:01'}, {'id': 6, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 07:53:39'}, {'id': 7, 'question': '34', 'answer': '4', 'date_created': '2024-09-03 08:07:56'}, {'id': 8, 'question': '4', 'answer': '4', 'date_created': '2024-09-03 08:08:10'}, {'id': 9, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:11:45'}]
-2024-09-03 08:19:03,497 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:03,506 - __main__ - INFO - Reviews: [{'id': 23, 'card_id': 6, 'date': '2024-09-03 07:53:47', 'result': 1}, {'id': 20, 'card_id': 5, 'date': '2024-09-03 07:53:36', 'result': 1}]
-2024-09-03 08:19:15,569 - __main__ - INFO - Deleting card 5
-2024-09-03 08:19:16,308 - __main__ - INFO - Deleting card 6
-2024-09-03 08:19:17,092 - __main__ - INFO - Deleting card 7
-2024-09-03 08:19:17,974 - __main__ - INFO - Deleting card 8
-2024-09-03 08:19:18,800 - __main__ - INFO - Deleting card 9
-2024-09-03 08:19:19,299 - __main__ - INFO - Serving React app for path: browse
-2024-09-03 08:19:19,363 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:19,364 - __main__ - INFO - Cards: []
-2024-09-03 08:19:19,496 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:19,498 - __main__ - INFO - Reviews: []
-2024-09-03 08:19:21,599 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:21,603 - __main__ - INFO - Cards to review: []
-2024-09-03 08:19:25,905 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:25,909 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:19:25,909 - scheduling.basic_scheduler - INFO - Card reviews: []
-2024-09-03 08:19:25,909 - scheduling.basic_scheduler - INFO - Card {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'} added to review
-2024-09-03 08:19:25,910 - __main__ - INFO - Cards to review: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}]
-2024-09-03 08:19:33,521 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:33,525 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:19:33,526 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:33,533 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:33,534 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:19:33,534 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:19:33,535 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:19:33,536 - __main__ - INFO - Cards to review: []
-2024-09-03 08:19:37,238 - __main__ - INFO - Getting all cards
-2024-09-03 08:19:37,239 - __main__ - INFO - Cards: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}]
-2024-09-03 08:19:37,240 - __main__ - INFO - Getting all reviews
-2024-09-03 08:19:37,241 - __main__ - INFO - Reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:41,916 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:41,919 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:19:41,919 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:41,920 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:41,920 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:19:41,920 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:19:41,921 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:19:41,921 - __main__ - INFO - Cards to review: []
-2024-09-03 08:19:50,918 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:19:51,016 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:51,019 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:19:51,019 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:51,020 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:51,020 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:19:51,020 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:19:51,020 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:19:51,021 - __main__ - INFO - Cards to review: []
-2024-09-03 08:19:55,383 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:19:55,430 - __main__ - INFO - Getting cards to review
-2024-09-03 08:19:55,432 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:19:55,432 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:55,433 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:19:55,433 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:19:55,434 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:19:55,434 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:19:55,435 - __main__ - INFO - Cards to review: []
-2024-09-03 08:20:00,340 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:20:00,383 - __main__ - INFO - Getting cards to review
-2024-09-03 08:20:00,385 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:20:00,385 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:20:00,387 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:20:00,387 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:20:00,388 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:20:00,389 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:20:00,389 - scheduling.basic_scheduler - INFO - Processing card: {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}
-2024-09-03 08:20:00,389 - scheduling.basic_scheduler - INFO - Card reviews: []
-2024-09-03 08:20:00,390 - scheduling.basic_scheduler - INFO - Card {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'} added to review
-2024-09-03 08:20:00,390 - __main__ - INFO - Cards to review: [{'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}]
-2024-09-03 08:20:03,271 - __main__ - INFO - Serving React app for path: study
-2024-09-03 08:20:03,328 - __main__ - INFO - Getting cards to review
-2024-09-03 08:20:03,330 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-03 08:20:03,332 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:20:03,334 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-03 08:20:03,335 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-03 08:20:03,335 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:20:03,336 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-03 08:20:03,336 - scheduling.basic_scheduler - INFO - Processing card: {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}
-2024-09-03 08:20:03,337 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-03 08:20:03,337 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-03 08:20:03,337 - scheduling.basic_scheduler - INFO - Consecutive correct: 0
-2024-09-03 08:20:03,338 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-03 08:20:03,338 - scheduling.basic_scheduler - INFO - Interval: 1
-2024-09-03 08:20:03,338 - __main__ - INFO - Cards to review: []
-2024-09-03 08:20:04,992 - __main__ - INFO - Getting all cards
-2024-09-03 08:20:04,994 - __main__ - INFO - Cards: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}]
-2024-09-03 08:20:05,107 - __main__ - INFO - Getting all reviews
-2024-09-03 08:20:05,108 - __main__ - INFO - Reviews: [{'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:25,034 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 02:34:26,348 - __main__ - INFO - Getting cards to review
-2024-09-07 02:34:26,353 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-07 02:34:26,354 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:26,358 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:26,358 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-07 02:34:26,359 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-07 02:34:26,359 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-07 02:34:26,359 - scheduling.basic_scheduler - INFO - Processing card: {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}
-2024-09-07 02:34:26,360 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:34:26,360 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:34:26,360 - scheduling.basic_scheduler - INFO - Consecutive correct: 0
-2024-09-07 02:34:26,361 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-03
-2024-09-07 02:34:26,361 - scheduling.basic_scheduler - INFO - Interval: 1
-2024-09-07 02:34:26,362 - __main__ - INFO - Cards to review: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}]
-2024-09-07 02:34:31,422 - __main__ - INFO - Getting all cards
-2024-09-07 02:34:31,424 - __main__ - INFO - Cards: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}]
-2024-09-07 02:34:31,425 - __main__ - INFO - Getting all reviews
-2024-09-07 02:34:31,426 - __main__ - INFO - Reviews: [{'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:39,187 - __main__ - INFO - Getting cards to review
-2024-09-07 02:34:39,190 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-07 02:34:39,190 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:39,190 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:34:39,191 - scheduling.basic_scheduler - INFO - Consecutive correct: 2
-2024-09-07 02:34:39,191 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-07
-2024-09-07 02:34:39,192 - scheduling.basic_scheduler - INFO - Interval: 11.0
-2024-09-07 02:34:39,193 - scheduling.basic_scheduler - INFO - Processing card: {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}
-2024-09-07 02:34:39,194 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:34:39,194 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:34:39,195 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-07 02:34:39,195 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-07
-2024-09-07 02:34:39,195 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-07 02:34:39,196 - scheduling.basic_scheduler - INFO - Processing card: {'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'}
-2024-09-07 02:34:39,196 - scheduling.basic_scheduler - INFO - Card reviews: []
-2024-09-07 02:34:39,196 - scheduling.basic_scheduler - INFO - Card {'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'} added to review
-2024-09-07 02:34:39,197 - __main__ - INFO - Cards to review: [{'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'}]
-2024-09-07 02:36:45,218 - __main__ - INFO - Getting cards to review
-2024-09-07 02:36:45,223 - scheduling.basic_scheduler - INFO - Processing card: {'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}
-2024-09-07 02:36:45,223 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:36:45,223 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:36:45,223 - scheduling.basic_scheduler - INFO - Consecutive correct: 2
-2024-09-07 02:36:45,223 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-07
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Interval: 11.0
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Processing card: {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}]
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Consecutive correct: 1
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-07
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Interval: 3
-2024-09-07 02:36:45,224 - scheduling.basic_scheduler - INFO - Processing card: {'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'}
-2024-09-07 02:36:45,225 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 32, 'card_id': 12, 'date': '2024-09-07 02:34:40', 'result': 0}]
-2024-09-07 02:36:45,225 - scheduling.basic_scheduler - INFO - sorted reviews: [{'id': 32, 'card_id': 12, 'date': '2024-09-07 02:34:40', 'result': 0}]
-2024-09-07 02:36:45,225 - scheduling.basic_scheduler - INFO - Consecutive correct: 0
-2024-09-07 02:36:45,225 - scheduling.basic_scheduler - INFO - Last review date: 2024-09-07
-2024-09-07 02:36:45,225 - scheduling.basic_scheduler - INFO - Interval: 1
-2024-09-07 02:36:45,225 - __main__ - INFO - Cards to review: []
-2024-09-07 02:36:48,313 - __main__ - INFO - Getting all cards
-2024-09-07 02:36:48,315 - __main__ - INFO - Cards: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}, {'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'}]
-2024-09-07 02:36:48,444 - __main__ - INFO - Getting all reviews
-2024-09-07 02:36:48,445 - __main__ - INFO - Reviews: [{'id': 32, 'card_id': 12, 'date': '2024-09-07 02:34:40', 'result': 0}, {'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:36:54,684 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 02:36:54,823 - __main__ - INFO - Getting all reviews
-2024-09-07 02:36:54,825 - __main__ - INFO - Reviews: [{'id': 32, 'card_id': 12, 'date': '2024-09-07 02:34:40', 'result': 0}, {'id': 31, 'card_id': 10, 'date': '2024-09-07 02:34:28', 'result': 1}, {'id': 30, 'card_id': 11, 'date': '2024-09-07 02:34:27', 'result': 1}, {'id': 29, 'card_id': 11, 'date': '2024-09-03 08:20:02', 'result': 0}, {'id': 28, 'card_id': 10, 'date': '2024-09-03 08:19:27', 'result': 1}]
-2024-09-07 02:36:54,827 - __main__ - INFO - Getting all cards
-2024-09-07 02:36:54,829 - __main__ - INFO - Cards: [{'id': 10, 'question': '1', 'answer': '2', 'date_created': '2024-09-03 08:19:23'}, {'id': 11, 'question': '23', 'answer': '13', 'date_created': '2024-09-03 08:19:31'}, {'id': 12, 'question': '5', 'answer': '5', 'date_created': '2024-09-07 02:34:37'}]
-2024-09-07 04:29:58,889 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://generalml6851610391.blob.core.windows.net/memory/flashcards.db'
-Request method: 'PUT'
-Request headers:
-    'Content-Length': '16384'
-    'x-ms-blob-type': 'REDACTED'
-    'x-ms-version': 'REDACTED'
-    'Content-Type': 'application/octet-stream'
-    'Accept': 'application/xml'
-    'User-Agent': 'azsdk-python-storage-blob/12.22.0 Python/3.12.4 (Linux-6.6.26-linuxkit-aarch64-with-glibc2.36)'
-    'x-ms-date': 'REDACTED'
-    'x-ms-client-request-id': 'd75c42a0-6cd1-11ef-8eaa-0242ac110002'
-    'Authorization': 'REDACTED'
-A body is sent with the request
-2024-09-07 04:29:59,099 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
-Response headers:
-    'Content-Length': '0'
-    'Content-MD5': 'REDACTED'
-    'Last-Modified': 'Sat, 07 Sep 2024 04:29:59 GMT'
-    'ETag': '"0x8DCCEF5BBB4FC1B"'
-    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-    'x-ms-request-id': '59597026-701e-005d-0dde-001ee8000000'
-    'x-ms-client-request-id': 'd75c42a0-6cd1-11ef-8eaa-0242ac110002'
-    'x-ms-version': 'REDACTED'
-    'x-ms-content-crc64': 'REDACTED'
-    'x-ms-request-server-encrypted': 'REDACTED'
-    'Date': 'Sat, 07 Sep 2024 04:29:58 GMT'
-2024-09-07 04:31:40,987 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://generalml6851610391.blob.core.windows.net/memory/flashcards.db'
-Request method: 'PUT'
-Request headers:
-    'Content-Length': '16384'
-    'x-ms-blob-type': 'REDACTED'
-    'x-ms-version': 'REDACTED'
-    'Content-Type': 'application/octet-stream'
-    'Accept': 'application/xml'
-    'User-Agent': 'azsdk-python-storage-blob/12.22.0 Python/3.12.4 (Linux-6.6.26-linuxkit-aarch64-with-glibc2.36)'
-    'x-ms-date': 'REDACTED'
-    'x-ms-client-request-id': '143747c4-6cd2-11ef-8eaa-0242ac110002'
-    'Authorization': 'REDACTED'
-A body is sent with the request
-2024-09-07 04:31:41,271 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 201
-Response headers:
-    'Content-Length': '0'
-    'Content-MD5': 'REDACTED'
-    'Last-Modified': 'Sat, 07 Sep 2024 04:31:41 GMT'
-    'ETag': '"0x8DCCEF5F89C2579"'
-    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
-    'x-ms-request-id': 'eeb71f6d-c01e-0067-2bde-000490000000'
-    'x-ms-client-request-id': '143747c4-6cd2-11ef-8eaa-0242ac110002'
-    'x-ms-version': 'REDACTED'
-    'x-ms-content-crc64': 'REDACTED'
-    'x-ms-request-server-encrypted': 'REDACTED'
-    'Date': 'Sat, 07 Sep 2024 04:31:40 GMT'
-2024-09-07 04:34:53,415 - __main__ - INFO - Getting cards to review
-2024-09-07 04:34:53,421 - __main__ - INFO - Cards to review: []
-2024-09-07 04:34:57,005 - __main__ - INFO - Getting all reviews
-2024-09-07 04:34:57,006 - __main__ - INFO - Reviews: []
-2024-09-07 04:34:57,048 - __main__ - INFO - Getting all cards
-2024-09-07 04:34:57,049 - __main__ - INFO - Cards: []
-2024-09-07 04:36:32,855 - __main__ - INFO - Serving React app for path: add_cards
-2024-09-07 04:36:41,029 - __main__ - INFO - Serving React app for path: add_cards
-2024-09-07 04:36:41,148 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:39:30,520 - __main__ - INFO - Serving React app for path: add_cards
-2024-09-07 04:39:31,688 - __main__ - INFO - Getting cards to review
-2024-09-07 04:39:31,692 - __main__ - INFO - Cards to review: []
-2024-09-07 04:39:41,556 - __main__ - INFO - Serving React app for path: study
-2024-09-07 04:39:41,719 - __main__ - INFO - Getting cards to review
-2024-09-07 04:39:41,720 - __main__ - INFO - Cards to review: []
-2024-09-07 04:41:46,033 - __main__ - INFO - Getting all cards
-2024-09-07 04:41:46,039 - __main__ - INFO - Cards: []
-2024-09-07 04:41:46,072 - __main__ - INFO - Getting all reviews
-2024-09-07 04:41:46,073 - __main__ - INFO - Reviews: []
-2024-09-07 04:47:58,578 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:49:01,109 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:49:03,024 - __main__ - INFO - Getting cards to review
-2024-09-07 04:49:03,028 - __main__ - INFO - Cards to review: []
-2024-09-07 04:54:03,343 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:55:57,957 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:56:01,863 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:56:01,929 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 04:58:10,197 - __main__ - INFO - Getting all cards
-2024-09-07 04:58:10,201 - __main__ - INFO - Cards: []
-2024-09-07 04:58:10,335 - __main__ - INFO - Getting all reviews
-2024-09-07 04:58:10,337 - __main__ - INFO - Reviews: []
-2024-09-07 04:58:20,063 - __main__ - INFO - Getting all cards
-2024-09-07 04:58:20,068 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 04:58:20,139 - __main__ - INFO - Getting all reviews
-2024-09-07 04:58:20,139 - __main__ - INFO - Reviews: []
-2024-09-07 04:58:46,007 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 04:58:46,183 - __main__ - INFO - Getting all reviews
-2024-09-07 04:58:46,184 - __main__ - INFO - Reviews: []
-2024-09-07 04:58:46,185 - __main__ - INFO - Getting all cards
-2024-09-07 04:58:46,186 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:01:57,478 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 05:01:57,615 - __main__ - INFO - Getting all cards
-2024-09-07 05:01:57,616 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:01:57,617 - __main__ - INFO - Getting all reviews
-2024-09-07 05:01:57,618 - __main__ - INFO - Reviews: []
-2024-09-07 05:02:00,982 - __main__ - INFO - Updating card 1
-2024-09-07 05:02:00,983 - __main__ - ERROR - Error updating card 1: name 'get_db_connection' is not defined
-2024-09-07 05:03:57,893 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 05:03:57,990 - __main__ - INFO - Getting all cards
-2024-09-07 05:03:57,991 - __main__ - INFO - Cards: [{'id': 1, 'question': 'Hello testing eddit t', 'answer': 'Fergus lbalga fswef ', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:03:57,992 - __main__ - INFO - Getting all reviews
-2024-09-07 05:03:57,993 - __main__ - INFO - Reviews: []
-2024-09-07 05:04:00,299 - __main__ - INFO - Updating card 1
-2024-09-07 05:04:06,627 - __main__ - INFO - Updating card 1
-2024-09-07 05:04:13,005 - __main__ - INFO - Updating card 1
-2024-09-07 05:04:14,680 - __main__ - INFO - Getting cards to review
-2024-09-07 05:04:14,683 - scheduling.basic_scheduler - INFO - Processing card: {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}
-2024-09-07 05:04:14,683 - scheduling.basic_scheduler - INFO - Card reviews: []
-2024-09-07 05:04:14,684 - scheduling.basic_scheduler - INFO - Card {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'} added to review
-2024-09-07 05:04:14,684 - __main__ - INFO - Cards to review: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:04:18,475 - __main__ - INFO - Getting all cards
-2024-09-07 05:04:18,478 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:04:18,553 - __main__ - INFO - Getting all reviews
-2024-09-07 05:04:18,554 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:05:28,571 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 05:05:28,737 - __main__ - INFO - Getting all reviews
-2024-09-07 05:05:28,738 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:05:28,739 - __main__ - INFO - Getting all cards
-2024-09-07 05:05:28,740 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:05:37,068 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 05:05:37,205 - __main__ - INFO - Getting all cards
-2024-09-07 05:05:37,207 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:05:37,227 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:05:37,277 - __main__ - INFO - Getting all reviews
-2024-09-07 05:05:37,277 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:06:20,220 - __main__ - INFO - Serving React app for path: browse
-2024-09-07 05:06:20,425 - __main__ - INFO - Getting all cards
-2024-09-07 05:06:20,427 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:06:20,509 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:20,554 - __main__ - INFO - Getting all reviews
-2024-09-07 05:06:20,556 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:06:34,604 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:51,012 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:52,543 - __main__ - INFO - Getting all cards
-2024-09-07 05:06:52,547 - __main__ - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}]
-2024-09-07 05:06:52,591 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:52,685 - __main__ - INFO - Getting all reviews
-2024-09-07 05:06:52,686 - __main__ - INFO - Reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:06:53,869 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:55,091 - __main__ - INFO - Getting cards to review
-2024-09-07 05:06:55,094 - scheduling.basic_scheduler - INFO - Processing card: {'id': 1, 'question': 'dog', 'answer': 'cat', 'date_created': '2024-09-07 04:58:17'}
-2024-09-07 05:06:55,094 - scheduling.basic_scheduler - INFO - Card reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
-2024-09-07 05:06:55,099 - scheduling.basic_scheduler - INFO - Consecutive correct: 0
-2024-09-07 05:06:55,101 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 05:06:55,447 - __main__ - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:00:37,220 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:01:45,123 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:02:06,785 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:02:21,009 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:18:40,913 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:18:52,783 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:18:53,287 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:19:16,828 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:19:17,104 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:19:18,017 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:19:18,217 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:19:33,283 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:19:33,541 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:20:35,243 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:20:35,601 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:20:56,895 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:20:57,207 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:21:15,942 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:21:16,230 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:21:25,800 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:21:26,067 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 07:22:20,206 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-07 07:22:20,459 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 08:18:42,244 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-07 08:18:56,086 - backend.app - INFO - Serving React app for path: browse
-2024-09-07 08:18:57,976 - backend.app - INFO - Serving React app for path: browse
+2024-09-13 00:52:40,187 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:52:40,447 - backend.app - INFO - Getting cards to review
+2024-09-13 00:52:40,450 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:53:22,455 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:53:22,609 - backend.app - INFO - Getting cards to review
+2024-09-13 00:53:22,611 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:53:22,611 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:53:22,611 - backend.app - INFO - Cards to review: None
+2024-09-13 00:53:24,555 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:53:24,584 - backend.app - INFO - Getting cards to review
+2024-09-13 00:53:24,587 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:53:24,587 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:53:24,588 - backend.app - INFO - Cards to review: None
+2024-09-13 00:53:25,751 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:53:25,851 - backend.app - INFO - Getting cards to review
+2024-09-13 00:53:25,853 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:53:25,853 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:53:25,853 - backend.app - INFO - Cards to review: None
+2024-09-13 00:53:26,913 - backend.app - INFO - Getting cards to review
+2024-09-13 00:53:26,914 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:53:26,914 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:53:26,915 - backend.app - INFO - Cards to review: None
+2024-09-13 00:57:30,991 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:57:31,164 - backend.app - INFO - Getting cards to review
+2024-09-13 00:57:31,167 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:57:31,167 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:57:31,167 - backend.app - INFO - Cards to review: None
+2024-09-13 00:57:35,440 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:57:35,572 - backend.app - INFO - Getting cards to review
+2024-09-13 00:57:35,574 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:57:35,574 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:57:35,575 - backend.app - INFO - Cards to review: None
+2024-09-13 00:57:36,567 - backend.app - INFO - Getting cards to review
+2024-09-13 00:57:36,569 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:57:36,569 - backend.scheduling.sm2_algorithm - INFO - module 'datetime' has no attribute 'strptime'
+2024-09-13 00:57:36,569 - backend.app - INFO - Cards to review: None
+2024-09-13 00:58:14,703 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:58:14,973 - backend.app - INFO - Getting cards to review
+2024-09-13 00:58:14,975 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:58:14,981 - backend.scheduling.sm2_algorithm - INFO - list index out of range
+2024-09-13 00:58:14,981 - backend.app - INFO - Cards to review: None
+2024-09-13 00:58:16,993 - backend.app - INFO - Getting cards to review
+2024-09-13 00:58:16,995 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:58:16,995 - backend.scheduling.sm2_algorithm - INFO - list index out of range
+2024-09-13 00:58:16,995 - backend.app - INFO - Cards to review: None
+2024-09-13 00:58:18,152 - backend.app - INFO - Serving React app for path: study
+2024-09-13 00:58:18,264 - backend.app - INFO - Getting cards to review
+2024-09-13 00:58:18,270 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:58:18,270 - backend.scheduling.sm2_algorithm - INFO - list index out of range
+2024-09-13 00:58:18,271 - backend.app - INFO - Cards to review: None
+2024-09-13 00:59:32,604 - backend.app - INFO - Getting cards to review
+2024-09-13 00:59:32,606 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 00:59:32,608 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 46, in sm2_algorithm
+    if sm2_check_card(card, card_reviews):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 11, in sm2_check_card
+    assert sorted_reviews[0] < sorted_reviews[1]
+                               ~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+2024-09-13 00:59:32,608 - backend.app - INFO - Cards to review: None
+2024-09-13 01:00:08,932 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:00:09,142 - backend.app - INFO - Getting cards to review
+2024-09-13 01:00:09,145 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:00:09,146 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 46, in sm2_algorithm
+    cards_to_review.append(card)
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 11, in sm2_check_card
+    ease_factor = 2.5
+                      
+IndexError: list index out of range
+
+2024-09-13 01:00:09,146 - backend.app - INFO - Cards to review: None
+2024-09-13 01:00:10,847 - backend.app - INFO - Getting cards to review
+2024-09-13 01:00:10,884 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:00:10,915 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
+    if sm2_check_card(card, card_reviews):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 35, in sm2_check_card
+    next_review_date = last_review_date + datetime.timedelta(days=interval)
+                                          ^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'datetime.datetime' has no attribute 'timedelta'
+
+2024-09-13 01:00:10,917 - backend.app - INFO - Cards to review: None
+2024-09-13 01:00:32,987 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:00:33,127 - backend.app - INFO - Getting cards to review
+2024-09-13 01:00:33,129 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:00:33,132 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
+    if sm2_check_card(card, card_reviews):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
+    last_review_date = get_last_review_date(card_reviews)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
+    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
+                             ~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+2024-09-13 01:00:33,132 - backend.app - INFO - Cards to review: None
+2024-09-13 01:00:33,914 - backend.app - INFO - Getting cards to review
+2024-09-13 01:00:33,917 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:00:33,918 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
+    if sm2_check_card(card, card_reviews):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
+    last_review_date = get_last_review_date(card_reviews)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
+    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
+                             ~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+2024-09-13 01:00:33,918 - backend.app - INFO - Cards to review: None
+2024-09-13 01:01:18,030 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:01:18,166 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:18,169 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:18,171 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+Traceback (most recent call last):
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 45, in sm2_algorithm
+    for card in cards:
+           ^^^^^^^^^^^^
+  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 34, in sm2_check_card
+  File "/workspaces/memory_slim/backend/scheduling/scheduling_utils.py", line 17, in get_last_review_date
+    return datetime.strptime(sorted_reviews[0]["date"], "%Y-%m-%d %H:%M:%S").date()
+                             ~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+
+2024-09-13 01:01:18,171 - backend.app - INFO - Cards to review: None
+2024-09-13 01:01:19,545 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:19,547 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:19,548 - backend.app - INFO - Cards to review: [{'id': 2, 'question': '', 'answer': '', 'date_created': '2024-09-07 07:22:21'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:25,045 - backend.app - INFO - Getting all cards
+2024-09-13 01:01:25,047 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 2, 'question': '', 'answer': '', 'date_created': '2024-09-07 07:22:21'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:25,120 - backend.app - INFO - Getting all reviews
+2024-09-13 01:01:25,121 - backend.app - INFO - Reviews: [{'id': 3, 'card_id': 2, 'date': '2024-09-13 01:01:23', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:01:27,874 - backend.app - INFO - Deleting card 2
+2024-09-13 01:01:29,689 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:29,693 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:29,694 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:30,240 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:01:30,283 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:30,286 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:30,286 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:30,776 - backend.app - INFO - Getting all cards
+2024-09-13 01:01:30,777 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:30,856 - backend.app - INFO - Getting all reviews
+2024-09-13 01:01:30,857 - backend.app - INFO - Reviews: [{'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:01:32,535 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:32,537 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:32,537 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:35,817 - backend.app - INFO - Getting all cards
+2024-09-13 01:01:35,818 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:35,888 - backend.app - INFO - Getting all reviews
+2024-09-13 01:01:35,889 - backend.app - INFO - Reviews: [{'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:01:36,377 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:36,384 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:36,385 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:39,438 - backend.app - INFO - Getting all reviews
+2024-09-13 01:01:39,439 - backend.app - INFO - Reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:01:39,507 - backend.app - INFO - Getting all cards
+2024-09-13 01:01:39,508 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:01:40,659 - backend.app - INFO - Getting cards to review
+2024-09-13 01:01:40,664 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:01:40,664 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:02:14,322 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:02:14,463 - backend.app - INFO - Getting cards to review
+2024-09-13 01:02:14,467 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:02:14,467 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:02:35,138 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:02:35,280 - backend.app - INFO - Getting cards to review
+2024-09-13 01:02:35,283 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:02:35,283 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:02:35,284 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
+2024-09-13 01:02:35,285 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:02:51,307 - backend.app - INFO - Getting all reviews
+2024-09-13 01:02:51,314 - backend.app - INFO - Reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:02:51,322 - backend.app - INFO - Getting all cards
+2024-09-13 01:02:51,324 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:02:53,266 - backend.app - INFO - Getting cards to review
+2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:02:53,268 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
+2024-09-13 01:02:53,268 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:03:58,856 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:03:59,044 - backend.app - INFO - Getting cards to review
+2024-09-13 01:03:59,046 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:03:59,047 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
+2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
+2024-09-13 01:03:59,049 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 01:03:59,049 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:05:13,100 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:05:13,341 - backend.app - INFO - Getting cards to review
+2024-09-13 01:05:13,345 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:05:13,345 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
+2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-07, next_Review=2024-09-08
+2024-09-13 01:05:13,346 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
+2024-09-13 01:05:13,347 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 01:05:13,347 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 01:05:13,347 - backend.app - INFO - Cards to review: [{'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:05:49,280 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:05:49,420 - backend.app - INFO - Getting cards to review
+2024-09-13 01:05:49,422 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:05:49,422 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, has reviews: [{'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:05:49,423 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
+2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-07, next_Review=2024-09-08
+2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}, has reviews: [{'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}]
+2024-09-13 01:05:49,424 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
+2024-09-13 01:05:49,425 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
+2024-09-13 01:05:49,425 - backend.app - INFO - Cards to review: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}]
+2024-09-13 01:06:15,938 - backend.app - INFO - Getting all reviews
+2024-09-13 01:06:15,941 - backend.app - INFO - Reviews: [{'id': 6, 'card_id': 1, 'date': '2024-09-13 01:05:50', 'result': 1}, {'id': 5, 'card_id': 3, 'date': '2024-09-13 01:01:38', 'result': 1}, {'id': 4, 'card_id': 3, 'date': '2024-09-13 01:01:34', 'result': 1}, {'id': 2, 'card_id': 3, 'date': '2024-09-13 01:01:21', 'result': 1}, {'id': 1, 'card_id': 1, 'date': '2024-09-07 05:04:17', 'result': 0}]
+2024-09-13 01:06:15,969 - backend.app - INFO - Getting all cards
+2024-09-13 01:06:15,971 - backend.app - INFO - Cards: [{'id': 1, 'question': 'dog', 'answer': 'catq3', 'date_created': '2024-09-07 04:58:17'}, {'id': 3, 'question': 'wefrewf', 'answer': 'wefwef', 'date_created': '2024-09-13 00:50:48'}]
+2024-09-13 01:06:19,759 - backend.app - INFO - Deleting card 3
+2024-09-13 01:06:21,407 - backend.app - INFO - Deleting card 1
+2024-09-13 01:23:16,155 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:23:20,260 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:23:20,557 - backend.app - INFO - Serving React app for path: favicon.ico
+2024-09-13 01:23:20,616 - backend.app - INFO - Getting cards to review
+2024-09-13 01:23:20,624 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:23:20,625 - backend.app - INFO - Cards to review: []
+2024-09-13 01:23:23,666 - backend.db.sync - INFO - sync to : flashcards.db
+2024-09-13 01:23:43,830 - backend.app - INFO - Serving React app for path: study
+2024-09-13 01:23:47,555 - backend.db.sync - INFO - sync to : flashcards.db
+2024-09-13 01:23:47,558 - backend.db.sync - INFO - aborted sync as using dev
+2024-09-13 01:38:26,178 - backend.app - INFO - Getting cards to review
+2024-09-13 01:38:26,199 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:38:26,199 - backend.app - INFO - Cards to review: []
+2024-09-13 01:38:28,301 - backend.app - INFO - Getting all cards
+2024-09-13 01:38:28,303 - backend.app - INFO - Cards: []
+2024-09-13 01:38:28,405 - backend.app - INFO - Getting all reviews
+2024-09-13 01:38:28,406 - backend.app - INFO - Reviews: []
+2024-09-13 01:38:30,554 - backend.app - INFO - Getting cards to review
+2024-09-13 01:38:30,557 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 01:38:30,557 - backend.app - INFO - Cards to review: []

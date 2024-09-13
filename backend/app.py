@@ -8,7 +8,9 @@ from .db.cards import (
     update_card_in_db,
 )
 from .db.sync import sync_db_to_azure
-from .scheduling.basic_scheduler import get_todays_reviews
+
+# from .scheduling.basic_scheduler import get_todays_reviews
+from .scheduling.sm2_algorithm import sm2_algorithm
 from fastapi import BackgroundTasks, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
@@ -16,7 +18,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", filename="app.log", filemode="a"
+    level=logging.DEBUG, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", filename="app.log", filemode="a"
 )
 
 # Set up logging
@@ -112,7 +114,7 @@ async def get_cards():
 async def get_cards_to_review():
     logger.info("Getting cards to review")
     try:
-        cards_to_review = get_todays_reviews(get_all_cards(), get_all_reviews())
+        cards_to_review = sm2_algorithm(get_all_cards(), get_all_reviews())
         logger.info(f"Cards to review: {cards_to_review}")
         return {"cards": cards_to_review}
     except Exception as e:
@@ -144,4 +146,3 @@ async def create_review_route(review: ReviewCreate):
 async def serve_react_app(full_path: str):
     logger.info(f"Serving React app for path: {full_path}")
     return FileResponse("static/index.html")
-
