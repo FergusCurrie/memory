@@ -254,3 +254,255 @@ result = df.select(pl.all().n_unique())
 0           1          45        45  ...               493                                      4264         2
 
 [1 rows x 16 columns]
+2024-09-13 09:58:00,971 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:58:00,977 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:58:00,977 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 10:58:31,527 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 10:58:47,625 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 10:59:30,490 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 10:59:30,494 - backend.routes.code_routes - ERROR - An error occurred adding code:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 82, in get_reviews
+    reviews = [r for r in reviews if r.note_id in [c["note_id"] for c in codes]]
+                                     ^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'note_id'
+
+2024-09-13 11:01:30,194 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:30,198 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:01:46,009 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:46,013 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:01:47,506 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:47,510 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:01:47,511 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:01:47,512 - backend.routes.code_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 11:01:49,316 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:01:49,323 - backend.routes.code_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 11:01:49,324 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:49,325 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:01:50,468 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:01:50,470 - backend.routes.code_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 11:01:50,471 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:50,473 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:01:53,162 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:01:53,165 - backend.routes.code_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 11:01:53,166 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:01:53,168 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:02:11,925 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:02:11,929 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:02:11,966 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:02:11,968 - backend.routes.code_routes - ERROR - An error occurred adding code:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 47, in get_cards
+    return {"codes": codes}
+                     ^^^^^
+NameError: name 'codes' is not defined
+
+2024-09-13 11:02:26,711 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:02:26,713 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:02:26,714 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:02:39,315 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:02:39,323 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:02:39,323 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:08:07,050 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:08:07,059 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:08:07,061 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:08:10,695 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:08:38,868 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:08:38,874 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:08:38,877 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:08:41,607 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:08:41,607 - backend.routes.code_routes - ERROR - Error updating card 1: 'CodeUpdate' object has no attribute 'question'
+2024-09-13 11:08:59,452 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:08:59,459 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:08:59,491 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:09:01,700 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:09:01,732 - backend.routes.code_routes - ERROR - Error updating card 1: 'CodeUpdate' object has no attribute 'question'
+2024-09-13 11:09:01,833 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.question, code.answer)
+                                              ^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CodeUpdate' object has no attribute 'question'
+
+2024-09-13 11:09:35,157 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:09:35,166 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:09:35,169 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:09:38,455 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:09:38,456 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: name 'question' is not defined
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (question, answer, code, code_id))
+                                                                                                                    ^^^^^^^^
+NameError: name 'question' is not defined
+2024-09-13 11:09:38,457 - backend.routes.code_routes - ERROR - Error updating card 1: name 'question' is not defined
+2024-09-13 11:09:38,459 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (question, answer, code, code_id))
+                                                                                                                    ^^^^^^^^
+NameError: name 'question' is not defined
+
+2024-09-13 11:09:41,479 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:09:41,590 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:09:41,592 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:09:47,465 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:09:47,466 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: name 'question' is not defined
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (question, answer, code, code_id))
+                                                                                                                    ^^^^^^^^
+NameError: name 'question' is not defined
+2024-09-13 11:09:47,467 - backend.routes.code_routes - ERROR - Error updating card 1: name 'question' is not defined
+2024-09-13 11:09:47,469 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (question, answer, code, code_id))
+                                                                                                                    ^^^^^^^^
+NameError: name 'question' is not defined
+
+2024-09-13 11:10:02,163 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:10:02,169 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:10:02,169 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:10:04,441 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:10:04,442 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: near "WHERE": syntax error
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (dataset_name, problem_description, code, code_id))
+sqlite3.OperationalError: near "WHERE": syntax error
+2024-09-13 11:10:04,443 - backend.routes.code_routes - ERROR - Error updating card 1: near "WHERE": syntax error
+2024-09-13 11:10:04,444 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 51, in update_code_in_db
+    cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ?, WHERE id = ?", (dataset_name, problem_description, code, code_id))
+sqlite3.OperationalError: near "WHERE": syntax error
+
+2024-09-13 11:10:16,843 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:10:16,859 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:10:16,861 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:10:19,215 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:10:19,222 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: Code with id 1 not found
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 58, in update_code_in_db
+    raise ValueError(f"Code with id {code_id} not found")
+ValueError: Code with id 1 not found
+2024-09-13 11:10:19,223 - backend.routes.code_routes - ERROR - Error updating card 1: Code with id 1 not found
+2024-09-13 11:10:19,224 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 58, in update_code_in_db
+    raise ValueError(f"Code with id {code_id} not found")
+ValueError: Code with id 1 not found
+
+2024-09-13 11:10:47,553 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:10:47,557 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:10:47,596 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:10:50,361 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:10:50,365 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: no such column: question
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+2024-09-13 11:10:50,367 - backend.routes.code_routes - ERROR - Error updating card 1: no such column: question
+2024-09-13 11:10:50,371 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+
+2024-09-13 11:10:51,204 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:10:51,206 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: no such column: question
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+2024-09-13 11:10:51,206 - backend.routes.code_routes - ERROR - Error updating card 1: no such column: question
+2024-09-13 11:10:51,207 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+
+2024-09-13 11:10:52,830 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:10:52,894 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:10:52,900 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:10:58,369 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:10:58,374 - backend.db.code_completion - ERROR - Error in update_card_in_db for card 1: no such column: question
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+2024-09-13 11:10:58,374 - backend.routes.code_routes - ERROR - Error updating card 1: no such column: question
+2024-09-13 11:10:58,374 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+
+2024-09-13 11:11:38,570 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:11:38,580 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:11:38,581 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:11:41,470 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:11:41,475 - backend.db.code_completion - ERROR - Error in update_code_in_db for card 1: no such column: question
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+2024-09-13 11:11:41,477 - backend.routes.code_routes - ERROR - Error updating card 1: no such column: question
+2024-09-13 11:11:41,479 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 152, in update_code
+    updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 64, in update_code_in_db
+    raise e
+  File "/workspaces/memory/backend/db/code_completion.py", line 54, in update_code_in_db
+    cursor.execute("SELECT id, question, answer FROM code_completion WHERE id = ?", (code_id,))
+sqlite3.OperationalError: no such column: question
+
+2024-09-13 11:12:01,625 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:12:01,627 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:12:01,629 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:12:03,101 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:12:03,106 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:12:03,107 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:12:06,050 - backend.routes.code_routes - INFO - Updating code 1
+2024-09-13 11:12:08,319 - backend.routes.code_routes - INFO - Getting all code reviews
+2024-09-13 11:12:08,324 - backend.routes.code_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 09:54:46', 'result': 1}]
+2024-09-13 11:12:08,355 - backend.routes.code_routes - INFO - Getting all cards
+2024-09-13 11:12:11,897 - backend.routes.code_routes - INFO - Updating code 1

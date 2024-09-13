@@ -1,7 +1,7 @@
 import logging
 import traceback
 from ..code_completion.check_code import run_code_against_test, run_code, get_pandas_header
-from ..db.code_completion import get_a_code_completition, get_all_codes, get_note_id_from_code_id, add_code_problem_to_db
+from ..db.code_completion import get_a_code_completition, get_all_codes, get_note_id_from_code_id, add_code_problem_to_db, get_all_codes, update_code_in_db
 from ..db.notes import create_review, get_all_reviews
 from ..scheduling.sm2_algorithm import sm2_algorithm
 
@@ -37,7 +37,26 @@ class CreateCode(BaseModel):
 class GetHeader(BaseModel):
     dataset_name: str
 
+class CodeUpdate(BaseModel):
+    id: int
+    note_id: int
+    dataset_name: str
+    problem_description: str
+    code: str
+    dataset_header: str
+
+
 ####################################### GET #######################################
+
+@router.get("/codes")
+async def get_cards():
+    logger.info("Getting all cards")
+    try:
+        codes = get_all_codes()
+        return {"codes": codes}
+    except Exception as e:
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @router.get("/code_to_review")
@@ -48,6 +67,7 @@ async def get_code_to_review():
         logger.info(codes_to_review)
         return {"codes": codes_to_review}
     except Exception as e:
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
@@ -58,6 +78,20 @@ async def get_data_header(dataset_name: str):
         return {"header": get_pandas_header(dataset_name)}
     except Exception as e:
         logger.error(f"Error in get_data_header: {str(e)}")
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+@router.get("/reviews")
+async def get_reviews():
+    logger.info("Getting all code reviews")
+    try:
+        reviews = get_all_reviews()
+        codes = get_all_codes()
+        reviews = [r for r in reviews if r['note_id'] in [c["note_id"] for c in codes]]
+        logger.info(f"Reviews: {reviews}")
+        return {"reviews": reviews}
+    except Exception as e:
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 ####################################### POST #######################################
@@ -105,5 +139,19 @@ async def test_code(code: TestCode):
         executed_df = run_code(code.code, f'backend/code_completion/data/{code.dataset_name}')
         return {"result_head": executed_df.head(10).to_json()}
     except Exception as e:
+        logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+############################### put 3######################################
+
+@router.put("/cards/{card_id}")
+async def update_code(code: CodeUpdate):
+
+    logger.info(f"Updating code {code.id}")
+    try:
+        updated_card = update_code_in_db(code.id, code.dataset_name, code.problem_description, code.code)
+        return {"message": f"Card {code.id} updated successfully", "card": updated_card}
+    except Exception as e:
+        logger.error(f"Error updating card {code.id}: {str(e)}")
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e

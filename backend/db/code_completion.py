@@ -1,5 +1,8 @@
 from .db_helpers import get_db
 from ..code_completion.check_code import get_pandas_header
+import logging
+
+logger = logging.getLogger(__name__)
 
 def get_a_code_completition(id):
     conn = get_db()
@@ -40,3 +43,24 @@ def add_code_problem_to_db(description, dataset_path, code):
     conn.commit()
     conn.close()
     return note_id
+
+def update_code_in_db(code_id: int, dataset_name: str, problem_description: str, code: str):
+    conn = get_db()
+    cursor = conn.cursor()
+    try:
+        cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ? WHERE id = ?", (dataset_name, problem_description, code, code_id))
+        conn.commit()
+        # Fetch the updated card
+        cursor.execute("SELECT id, dataset_name, problem_description FROM code_completion WHERE id = ?", (code_id,))
+        updated_card = cursor.fetchone()
+
+        if updated_card is None:
+            raise ValueError(f"Code with id {code_id} not found")
+
+        return {"id": updated_card[0]}
+    except Exception as e:
+        conn.rollback()
+        logger.error(f"Error in update_code_in_db for card {code_id}: {str(e)}", exc_info=True)
+        raise e
+    finally:
+        conn.close()
