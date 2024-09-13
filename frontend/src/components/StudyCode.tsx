@@ -17,12 +17,15 @@ import {
 } from '@mui/material';
 import api from '../api';
 import Editor from '@monaco-editor/react';
+import PandasJsonTable from './PandasTable';
 
 interface CodeCard {
   id: number;
-  dataframe_header: string;
-  description: string;
-  resulting_dataframe: string;
+  note_id: number;
+  dataset_name: string;
+  problem_description: string;
+  code: string;
+  dataset_header: string;
 }
 
 const StudyCode: React.FC = () => {
@@ -35,6 +38,7 @@ const StudyCode: React.FC = () => {
   const [submittedResult, setSubmittedResult] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [testPassed, setTestPassed] = useState<boolean | null>(null);
+  const [tableHeader, setTableHeader] = useState<Record<string, any> | null>(null);
 
   useEffect(() => {
     fetchCards();
@@ -43,6 +47,7 @@ const StudyCode: React.FC = () => {
   const fetchCards = async () => {
     try {
       const response = await api.get('/api/code/code_to_review');
+      console.log(response);
       setCards(response.data.codes);
       pickRandomCard(response.data.codes);
     } catch (error) {
@@ -50,61 +55,30 @@ const StudyCode: React.FC = () => {
     }
   };
 
+  // const getHeader = async () => {
+  //   console.log(cards);
+  //   console.log(currentCard?.dataset_name);
+  //   try {
+  //     const response = await api.get('/api/code/get_data_header', {
+  //       params: { dataset_name: currentCard?.dataset_name },
+  //     });
+  //     setTableHeader(JSON.parse(response.data.header));
+  //   } catch (error) {
+  //     console.error('Error fetching code cards:', error);
+  //   }
+  // };
+
   const pickRandomCard = (cardArray: CodeCard[]) => {
     if (cardArray.length > 0) {
       const randomIndex = Math.floor(Math.random() * cardArray.length);
       setCurrentCard(cardArray[randomIndex]);
+      //console.log(currentCard);
+
+      // getHeader();
       setShowAnswer(false);
     } else {
       setCurrentCard(null);
     }
-  };
-
-  const PandasJsonTable = ({ data }) => {
-    console.log(data);
-    // Extract column names from the first row
-    const columns = Object.keys(data);
-
-    // Get the number of rows (assuming all columns have the same length)
-    const rowCount = Object.keys(data[columns[0]]).length;
-
-    // Function to format cell values
-    const formatCellValue = (value) => {
-      if (typeof value === 'number') {
-        return value.toFixed(4); // Format numbers to 4 decimal places
-      }
-      return value;
-    };
-
-    return (
-      <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
-        <Table size="small" stickyHeader aria-label="pandas dataframe table">
-          <TableHead>
-            <TableRow>
-              {columns.map((column) => (
-                <TableCell
-                  key={column}
-                  sx={{ py: 1, px: 2, fontWeight: 'bold', bgcolor: 'lightblue' }}
-                >
-                  {column}
-                </TableCell>
-              ))}
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {[...Array(rowCount)].map((_, rowIndex) => (
-              <TableRow key={rowIndex}>
-                {columns.map((column) => (
-                  <TableCell key={`${column}-${rowIndex}`} sx={{ py: 0.5, px: 2 }}>
-                    {formatCellValue(data[column][rowIndex.toString()])}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    );
   };
 
   const handleScore = async (result: boolean) => {
@@ -157,10 +131,10 @@ const StudyCode: React.FC = () => {
             Description:
           </Typography>
           <Typography variant="body1" paragraph>
-            {currentCard.description}
+            {currentCard.problem_description}
           </Typography>
 
-          {showAnswer && (
+          {/* {showAnswer && (
             <>
               <Typography variant="h5" component="div" gutterBottom>
                 Resulting Dataframe:
@@ -169,11 +143,14 @@ const StudyCode: React.FC = () => {
                 {currentCard.resulting_dataframe}
               </Typography>
             </>
-          )}
+          )} */}
         </CardContent>
       </Card>
       <Box sx={{ mt: 4, mb: 4 }}></Box>
-      <PandasJsonTable data={JSON.parse(currentCard.dataframe_header)}></PandasJsonTable>
+      {currentCard && (
+        <PandasJsonTable data={JSON.parse(currentCard.dataset_header)}></PandasJsonTable>
+      )}
+
       <Box sx={{ mt: 4, mb: 4 }}>
         <Typography variant="h5" component="div" gutterBottom>
           Code Editor:

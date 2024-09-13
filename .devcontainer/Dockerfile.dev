@@ -2,9 +2,9 @@
 FROM python:3.12-slim
 
 # set workdir to /workspaces/<project_folder_name>
-ENV WORKDIR /workspaces/memory_slim
+ENV WORKDIR /workspaces/memory
 
-ENV DB_PATH=/workspaces/memory_slim/flashcards.db
+ENV DB_PATH=/workspaces/memory/flashcards.db
 
 # Set working directory
 WORKDIR ${WORKDIR}

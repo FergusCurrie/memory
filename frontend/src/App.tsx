@@ -11,6 +11,7 @@ import Study from './pages/Study';
 import NavigationBar from './pages/NavigationBar';
 import AddCards from './pages/AddCards';
 import Browse from './pages/Browse';
+import AddCode from './pages/AddCode';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/study" element={<Study />} />
             <Route path="/add_cards" element={<AddCards />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/add_code" element={<AddCode />} />
             {/* <Route path="/mindmap" element={<Mindmap />} />
             <Route path="/train_mindmap" element={<TrainMindmap />} />
             <Route path="/code_train" element={<CodeTrain />} />

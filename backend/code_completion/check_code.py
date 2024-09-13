@@ -6,9 +6,11 @@ from contextlib import redirect_stderr, redirect_stdout
 
 logger = logging.getLogger(__name__)
 
+def get_pandas_header(dataset_name):
+    return str(pd.read_csv("backend/code_completion/data/"+dataset_name).head(3).to_json())
 
 def run_code(code, dataset_path):
-    df = pl.read_csv(dataset_path)
+    df = pl.read_csv("backend/code_completion/data/"+dataset_path)
 
     # Capture stdout and stderr
     output = io.StringIO()
@@ -38,17 +40,20 @@ def compare_dataframes(df1, df2):
 
 def run_code_against_test(code_completion_row, code_submission):
     # Test the code
-    description = code_completion_row["description"]
-    dataset_path = code_completion_row["dataset_path"]
-    target = pd.read_json(str(code_completion_row["resulting_dataframe"]))
+    description = code_completion_row["problem_description"]
+    dataset_path = code_completion_row["dataset_name"]
+    solution_code = code_completion_row["code"]
     code_text = code_submission.code
     logger.info(code_text)
-    executed_df = run_code(code_text, dataset_path)
 
-    logger.info(target)
-    logger.info(executed_df)
+    # Run solution and attempt
+    submission_df = run_code(code_text, dataset_path)
+    solution_df = run_code(solution_code, dataset_path)
+
+    logger.info(solution_df)
+    logger.info(submission_df)
 
     # Test result
-    if compare_dataframes(executed_df, target):
-        return True, executed_df.head(10).to_json()
-    return False, executed_df.head(10).to_json()
+    if compare_dataframes(submission_df, solution_df):
+        return True, submission_df.head(10).to_json()
+    return False, submission_df.head(10).to_json()

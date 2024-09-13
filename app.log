@@ -1,450 +1,256 @@
-2024-09-13 05:46:39,062 - backend.app - INFO - Serving React app for path: study
-2024-09-13 05:46:39,404 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 05:46:39,477 - backend.app - INFO - Getting cards to review
-2024-09-13 05:46:39,480 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 05:46:39,480 - backend.app - INFO - Cards to review: []
-2024-09-13 05:46:43,236 - backend.app - INFO - Getting cards to review
-2024-09-13 05:46:43,238 - backend.app - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 05:47:01,314 - backend.code_completion.check_code - INFO - result = (
-    df
-    .group_by('Brand')
-    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
-)
-2024-09-13 05:47:01,352 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0   Wide World Importers             3922
-1               A. Datum              555
-2       Adventure Works                30
-3      Northwind Traders              638
-4                Litware              875
-5      The Phone Company             6519
-6          Tailspin Toys             2732
-7               Litware               161
-8             Fabrikam                332
-9       Southridge Video             6749
-10               Contoso            11132
-11              Fabrikam             1516
-12       Adventure Works             4616
-13             Proseware             2763
-14              Contoso               977
-2024-09-13 05:47:01,356 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0               Contoso               977
-1          Tailspin Toys             2732
-2               Fabrikam             1516
-3                Litware              875
-4       Southridge Video             6749
-5                Contoso            11132
-6      The Phone Company             6519
-7               Litware               161
-8       Adventure Works                30
-9               A. Datum              555
-10             Proseware             2763
-11            Fabrikam                332
-12     Northwind Traders              638
-13       Adventure Works             4616
-14  Wide World Importers             3922
-2024-09-13 06:05:31,642 - backend.app - INFO - Serving React app for path: study
-2024-09-13 06:05:32,017 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:05:32,113 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:05:33,632 - backend.app - INFO - Serving React app for path: api/code_to_review
-2024-09-13 06:05:35,311 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:05:59,097 - backend.app - INFO - Serving React app for path: study
-2024-09-13 06:05:59,103 - backend.app - INFO - Serving React app for path: study
-2024-09-13 06:05:59,426 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:05:59,506 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:07:16,883 - backend.app - INFO - Serving React app for path: study
-2024-09-13 06:07:17,222 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:17,305 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:07:17,958 - backend.app - INFO - Serving React app for path: api/code_to_review
-2024-09-13 06:07:19,498 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:07:21,632 - backend.app - INFO - Serving React app for path: api/cards
-2024-09-13 06:07:21,729 - backend.app - INFO - Serving React app for path: api/reviews
-2024-09-13 06:07:21,729 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:22,996 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:24,273 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:25,445 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-13 06:07:25,678 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:58,446 - backend.app - INFO - Serving React app for path: add_cards
-2024-09-13 06:07:58,972 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:59,707 - backend.app - INFO - Serving React app for path: api/reviews
-2024-09-13 06:07:59,707 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:07:59,746 - backend.app - INFO - Serving React app for path: api/cards
-2024-09-13 06:12:20,347 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:12:21,179 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:12:21,286 - backend.app - INFO - Serving React app for path: api/reviews
-2024-09-13 06:12:21,288 - backend.app - INFO - Serving React app for path: api/cards
-2024-09-13 06:12:36,226 - backend.app - INFO - Serving React app for path: browse
-2024-09-13 06:12:36,557 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:12:36,630 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 06:12:36,633 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 06:12:36,670 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 06:12:36,671 - backend.routes.card_routes - INFO - Cards: []
-2024-09-13 06:13:37,330 - backend.app - INFO - Serving React app for path: browse
-2024-09-13 06:13:37,636 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:13:37,739 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 06:13:37,743 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 06:13:37,781 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 06:13:37,782 - backend.routes.card_routes - INFO - Cards: []
-2024-09-13 06:13:38,496 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:13:39,003 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:13:39,079 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:13:40,317 - backend.app - INFO - Serving React app for path: card/code_to_review
-2024-09-13 06:13:41,724 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:17:48,412 - backend.app - INFO - Serving React app for path: study
-2024-09-13 06:17:48,790 - backend.app - INFO - Serving React app for path: favicon.ico
-2024-09-13 06:17:48,904 - backend.app - INFO - Serving React app for path: api/cards_to_review
-2024-09-13 06:21:49,777 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:22:30,770 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:23:36,996 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:26:06,935 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:26:42,607 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:27:08,181 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:27:09,828 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:27:31,483 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:27:34,917 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:31:52,650 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:31:52,661 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:31:52,662 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 06:31:55,991 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:31:55,995 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:31:55,995 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 06:32:33,681 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:32:33,685 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:32:33,687 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
-2024-09-13 06:32:33,687 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
-2024-09-13 06:34:13,119 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 06:34:13,121 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
-2024-09-13 06:34:13,159 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 06:34:13,161 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 06:34:15,507 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:34:15,516 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:34:15,516 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
-2024-09-13 06:34:15,517 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
-2024-09-13 06:34:17,295 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 06:34:17,296 - backend.routes.code_routes - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 06:34:46,219 - backend.code_completion.check_code - INFO - result = (
-    df
-    .group_by('Brand')
-    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
-)
-2024-09-13 06:34:46,315 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0   Wide World Importers             3922
-1               A. Datum              555
-2       Adventure Works                30
-3      Northwind Traders              638
-4                Litware              875
-5      The Phone Company             6519
-6          Tailspin Toys             2732
-7               Litware               161
-8             Fabrikam                332
-9       Southridge Video             6749
-10               Contoso            11132
-11              Fabrikam             1516
-12       Adventure Works             4616
-13             Proseware             2763
-14              Contoso               977
-2024-09-13 06:34:46,321 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0      Northwind Traders              638
-1               A. Datum              555
-2                Litware              875
-3               Contoso               977
-4          Tailspin Toys             2732
-5   Wide World Importers             3922
-6              Proseware             2763
-7      The Phone Company             6519
-8       Southridge Video             6749
-9               Litware               161
-10       Adventure Works             4616
-11               Contoso            11132
-12      Adventure Works                30
-13            Fabrikam                332
-14              Fabrikam             1516
-2024-09-13 06:34:49,278 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:34:49,281 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:34:49,281 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
-2024-09-13 06:34:49,282 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
-2024-09-13 06:35:15,421 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 06:35:15,423 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 06:35:15,461 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 06:35:15,462 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}]
-2024-09-13 06:35:25,853 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 06:35:25,857 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 06:35:25,858 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 06:35:25,861 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}]
-2024-09-13 06:35:27,918 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 06:35:27,920 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 06:35:27,921 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, has reviews: []
-2024-09-13 06:35:27,921 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}, has reviews: []
-2024-09-13 06:35:27,921 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'question': 'sfsef', 'answer': 'sefsfe', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:32:24'}, {'id': 2, 'question': 'who is annbel', 'answer': 'gf', 'type': 'basic', 'tags': '{}', 'date_created': '2024-09-13 06:35:22'}]
-2024-09-13 06:35:34,299 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 06:35:34,300 - backend.routes.code_routes - INFO - [{'id': 1, 'date_created': '2024-09-13 05:42:19', 'tags': '{}', 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'resulting_dataframe': '{"Brand":{"0":"Wide World Importers","1":"A. Datum","2":"Adventure Works ","3":"Northwind Traders","4":"Litware","5":"The Phone Company","6":"Tailspin Toys","7":"Litware ","8":"Fabrikam  ","9":"Southridge Video","10":"Contoso","11":"Fabrikam","12":"Adventure Works","13":"Proseware","14":"Contoso "},"Sum of Quantity":{"0":3922,"1":555,"2":30,"3":638,"4":875,"5":6519,"6":2732,"7":161,"8":332,"9":6749,"10":11132,"11":1516,"12":4616,"13":2763,"14":977}}', 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 06:35:52,963 - backend.code_completion.check_code - INFO - result = (
-    df
-    .group_by('Brand')
-    .agg(pl.col('Quantity').mean().alias('Sum of Quantity'))
-)
-2024-09-13 06:35:52,980 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0   Wide World Importers             3922
-1               A. Datum              555
-2       Adventure Works                30
-3      Northwind Traders              638
-4                Litware              875
-5      The Phone Company             6519
-6          Tailspin Toys             2732
-7               Litware               161
-8             Fabrikam                332
-9       Southridge Video             6749
-10               Contoso            11132
-11              Fabrikam             1516
-12       Adventure Works             4616
-13             Proseware             2763
-14              Contoso               977
-2024-09-13 06:35:52,984 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0        Adventure Works         3.150853
-1      Northwind Traders         3.222222
-2                Contoso         3.135775
-3                Litware         3.147482
-4               Fabrikam         3.225532
-5      The Phone Company         3.030683
-6               Litware          2.927273
-7       Southridge Video         3.189509
-8             Fabrikam           3.192308
-9              Proseware         3.083705
-10         Tailspin Toys         3.136625
-11              Contoso          3.006154
-12  Wide World Importers         3.193811
-13      Adventure Works          2.727273
-14              A. Datum         2.817259
-2024-09-13 06:36:01,169 - backend.code_completion.check_code - INFO - result = (
-    df
-    .group_by('Brand')
-    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))
-)
-2024-09-13 06:36:01,185 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0   Wide World Importers             3922
-1               A. Datum              555
-2       Adventure Works                30
-3      Northwind Traders              638
-4                Litware              875
-5      The Phone Company             6519
-6          Tailspin Toys             2732
-7               Litware               161
-8             Fabrikam                332
-9       Southridge Video             6749
-10               Contoso            11132
-11              Fabrikam             1516
-12       Adventure Works             4616
-13             Proseware             2763
-14              Contoso               977
-2024-09-13 06:36:01,188 - backend.code_completion.check_code - INFO -                    Brand  Sum of Quantity
-0               A. Datum              555
-1      Northwind Traders              638
-2                Contoso            11132
-3               Contoso               977
-4      The Phone Company             6519
-5          Tailspin Toys             2732
-6               Litware               161
-7        Adventure Works             4616
-8               Fabrikam             1516
-9              Proseware             2763
-10      Adventure Works                30
-11  Wide World Importers             3922
-12            Fabrikam                332
-13      Southridge Video             6749
-14               Litware              875
-2024-09-13 07:21:30,899 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:21:30,906 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:21:30,906 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 07:21:36,924 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:21:36,927 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
-2024-09-13 07:21:37,028 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 07:21:37,029 - backend.routes.card_routes - INFO - Reviews: []
-2024-09-13 07:21:46,650 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:21:46,652 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:21:46,653 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}, has reviews: []
-2024-09-13 07:21:46,653 - backend.routes.card_routes - INFO - Cards to review: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
-2024-09-13 07:21:51,329 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:21:51,330 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': 'sefesf', 'answer': 'sefesf'}]
-2024-09-13 07:21:51,432 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 07:21:51,433 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:22:14,893 - backend.routes.card_routes - INFO - Updating card 1
-2024-09-13 07:22:17,932 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:22:17,934 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:22:18,023 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 07:22:18,025 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:25:45,199 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:25:45,206 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:25:45,238 - backend.routes.card_routes - INFO - Getting all reviews
-2024-09-13 07:25:45,240 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:25:46,608 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:25:46,616 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:25:46,620 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 09:17:26,058 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:17:26,065 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+  File "/workspaces/memory/backend/routes/code_routes.py", line 93, in test_code
+    executed_df = run_code(code.code, f'backend/code_completion/data/{code.dataset_path}')
+                                                                      ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'TestCode' object has no attribute 'dataset_path'. Did you mean: 'dataset_name'?
 
-2024-09-13 07:25:46,621 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:25:48,328 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:25:48,329 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:41:45,748 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:41:45,756 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:41:45,758 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 09:18:31,187 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:18:35,846 - backend.routes.code_routes - ERROR - An error occurred adding code:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+  File "/workspaces/memory/backend/routes/code_routes.py", line 59, in add_code
+    note_id = add_code_problem_to_db(description, dataset_name, code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 35, in add_code_problem_to_db
+    cursor.execute(
+sqlite3.OperationalError: table code_completion has no column named dataset_name
 
-2024-09-13 07:41:45,759 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:41:46,836 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:41:46,838 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:41:48,364 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:41:48,372 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:41:48,373 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 09:21:06,406 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:21:15,789 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:21:15,792 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:21:15,792 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:21:17,053 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:21:17,055 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:21:17,056 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:21:17,056 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:33:23,754 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:33:23,760 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:33:23,760 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:33:25,659 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:33:25,662 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:33:25,662 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:33:25,663 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:35:02,723 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:35:02,753 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:35:02,754 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:35:03,997 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:35:03,999 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:35:04,000 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:35:04,000 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:35:04,004 - backend.routes.code_routes - INFO - Running get_data_header for dataset: None
+2024-09-13 09:35:04,005 - backend.routes.code_routes - ERROR - Error in get_data_header: 400: dataset_name is required
+2024-09-13 09:36:06,587 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:36:06,613 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:06,614 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:36:07,606 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:36:07,609 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:07,609 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:36:07,609 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:36:15,318 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:36:15,340 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:15,341 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:36:17,012 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:36:17,016 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:17,017 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:36:17,017 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:36:39,258 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:36:39,264 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:39,264 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:36:40,572 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:36:40,574 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:36:40,575 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}, has reviews: []
+2024-09-13 09:36:40,575 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': 'LALALA ', 'dataset_name': 'covid_19_deaths.csv'}]
+2024-09-13 09:38:58,172 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:38:58,177 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:38:58,177 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:39:21,452 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:39:26,631 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:39:26,634 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:39:26,636 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:39:27,855 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:39:27,858 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:39:27,858 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}, has reviews: []
+2024-09-13 09:39:27,858 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}]
+2024-09-13 09:39:34,593 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:39:34,599 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:39:34,600 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:39:38,123 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:39:38,126 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:39:38,127 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}, has reviews: []
+2024-09-13 09:39:38,127 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}]
+2024-09-13 09:39:40,515 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:39:40,517 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:39:40,517 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:40:10,649 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:40:10,654 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:40:10,654 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:40:12,548 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:40:12,555 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:40:12,556 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:40:14,607 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:40:14,608 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:40:14,608 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}, has reviews: []
+2024-09-13 09:40:14,609 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': None}]
+2024-09-13 09:42:28,361 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:42:28,365 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:42:28,365 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:42:29,190 - backend.routes.card_routes - INFO - Getting all cards
+2024-09-13 09:42:29,192 - backend.routes.card_routes - INFO - Cards: []
+2024-09-13 09:42:29,228 - backend.routes.card_routes - INFO - Getting all card reviews
+2024-09-13 09:42:29,229 - backend.routes.card_routes - INFO - Reviews: []
+2024-09-13 09:42:42,226 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:42:43,891 - backend.routes.code_routes - ERROR - An error occurred adding code:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+  File "/workspaces/memory/backend/routes/code_routes.py", line 71, in add_code
+    note_id = add_code_problem_to_db(description, dataset_name, code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 31, in add_code_problem_to_db
+    header = get_pandas_header(dataset_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/code_completion/check_code.py", line 10, in get_pandas_header
+    return str(pd.read_csv(dataset_name).head(3).to_json())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pandas/io/parsers/readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/pandas/io/common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'covid_19_deaths.csv'
 
-2024-09-13 07:41:48,374 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:41:50,424 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:41:50,426 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:43:01,802 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:43:01,808 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:43:01,809 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 09:43:37,723 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-13 09:43:43,299 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:43:43,306 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:43:43,306 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:43:44,452 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:43:44,455 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:43:44,455 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:43:44,455 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:44:24,042 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:44:24,047 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:44:24,048 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:44:25,516 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:44:25,534 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:44:25,536 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:44:25,537 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:45:57,801 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:45:57,805 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:45:57,805 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:45:59,364 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:45:59,366 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:45:59,367 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:45:59,367 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:46:31,129 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:46:31,156 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:46:31,158 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:46:32,476 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:46:32,478 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:46:32,478 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:46:32,478 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:46:35,768 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:46:35,769 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:46:35,770 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:46:54,032 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:46:54,036 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:46:54,036 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:46:55,369 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:46:55,372 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:46:55,372 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:46:55,372 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:47:04,224 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:47:04,230 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:47:04,230 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:47:05,685 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:47:05,688 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:47:05,688 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:47:05,688 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:49:58,861 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:49:58,873 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:49:58,873 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:50:00,062 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:50:00,064 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:50:00,065 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:50:00,065 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:50:15,564 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+  File "/workspaces/memory/backend/routes/code_routes.py", line 93, in submit_code
+    passed, result_head = run_code_against_test(
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/code_completion/check_code.py", line 43, in run_code_against_test
+    description = code_completion_row["description"]
+                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'description'
 
-2024-09-13 07:43:01,810 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:43:02,973 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:43:02,983 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:43:09,789 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:43:09,791 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:43:13,760 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:43:13,763 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:43:13,764 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
+2024-09-13 09:52:05,856 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:52:05,862 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:52:05,862 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:52:07,259 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:52:07,262 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:52:07,262 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:52:07,263 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:52:20,026 - backend.routes.code_routes - ERROR - An error occurred in code compleition:
 Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+  File "/workspaces/memory/backend/routes/code_routes.py", line 93, in submit_code
+    passed, result_head = run_code_against_test(
+                          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/code_completion/check_code.py", line 44, in run_code_against_test
+    dataset_path = code_completion_row["dataset_path"]
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+KeyError: 'dataset_path'
 
-2024-09-13 07:43:13,764 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:43:15,026 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:43:15,027 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:44:46,908 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:44:46,911 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:44:48,359 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:44:48,364 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:45:30,701 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:45:30,705 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:47:21,729 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:47:21,732 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:47:23,370 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:47:23,372 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:47:25,416 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:47:25,418 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:52:50,724 - backend.routes.card_routes - INFO - Getting all card reviews
-2024-09-13 07:52:50,730 - backend.routes.card_routes - INFO - Reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:52:50,764 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:52:50,770 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:52:57,784 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:52:57,788 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:52:57,791 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
-Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+2024-09-13 09:53:02,832 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:53:02,837 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:53:02,839 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:53:04,327 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:53:04,329 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:53:04,329 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:53:04,330 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:53:06,993 - backend.code_completion.check_code - INFO - # Write your code here. there will be a variable df with data. store submission in object called result
+result = df.select(pl.all().n_unique())
+2024-09-13 09:53:07,130 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
 
-2024-09-13 07:52:57,791 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:52:59,200 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:52:59,201 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:53:53,980 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:53:54,001 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:53:54,005 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
-Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+[1 rows x 16 columns]
+2024-09-13 09:53:07,151 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
 
-2024-09-13 07:53:54,006 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:53:55,548 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:53:55,549 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:55:41,486 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:55:41,491 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:55:41,493 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
-Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+[1 rows x 16 columns]
+2024-09-13 09:53:14,472 - backend.code_completion.check_code - INFO - # Write your code here. there will be a variable df with data. store submission in object called result
+result = df.select(pl.all().n_unique())
+2024-09-13 09:53:14,527 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
 
-2024-09-13 07:55:41,493 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 07:55:43,318 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 07:55:43,326 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 07:55:53,132 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:55:53,134 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:55:53,167 - backend.routes.card_routes - INFO - Getting all card reviews
-2024-09-13 07:55:53,169 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:57:19,649 - backend.routes.card_routes - INFO - Getting all card reviews
-2024-09-13 07:57:19,655 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 07:57:19,660 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 07:57:19,662 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 07:57:28,530 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 07:57:28,533 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 07:57:28,535 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
-Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 51, in sm2_algorithm
-    card_reviews = [review for review in reviews if review["card_id"] == card["id"]]
-                                                    ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+[1 rows x 16 columns]
+2024-09-13 09:53:14,532 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
 
-2024-09-13 07:57:28,535 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 08:02:08,495 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 08:02:08,503 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 08:02:08,507 - backend.scheduling.sm2_algorithm - ERROR - An error occurred in sm2_algorithm:
-Traceback (most recent call last):
-  File "/workspaces/memory_slim/backend/scheduling/sm2_algorithm.py", line 53, in sm2_algorithm
-    card_reviews = [review for review in card_reviews if review["card_id"] == card["id"]]
-                                                         ~~~~~~^^^^^^^^^^^
-KeyError: 'card_id'
+[1 rows x 16 columns]
+2024-09-13 09:54:39,169 - backend.routes.card_routes - INFO - Getting cards to review
+2024-09-13 09:54:39,178 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:54:39,178 - backend.routes.card_routes - INFO - Cards to review: []
+2024-09-13 09:54:40,225 - backend.routes.code_routes - INFO - Getting codes to review
+2024-09-13 09:54:40,227 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
+2024-09-13 09:54:40,227 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}, has reviews: []
+2024-09-13 09:54:40,227 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 1, 'code': 'result = df.select(pl.all().n_unique())', 'problem_description': '', 'dataset_name': 'covid_19_deaths.csv', 'dataset_header': '{"Data As Of":{"0":"09\\/27\\/2023","1":"09\\/27\\/2023","2":"09\\/27\\/2023"},"Start Date":{"0":"01\\/01\\/2020","1":"01\\/01\\/2020","2":"01\\/01\\/2020"},"End Date":{"0":"09\\/23\\/2023","1":"09\\/23\\/2023","2":"09\\/23\\/2023"},"Group":{"0":"By Total","1":"By Total","2":"By Total"},"Year":{"0":null,"1":null,"2":null},"Month":{"0":null,"1":null,"2":null},"State":{"0":"United States","1":"United States","2":"United States"},"Sex":{"0":"All Sexes","1":"All Sexes","2":"All Sexes"},"Age Group":{"0":"All Ages","1":"Under 1 year","2":"0-17 years"},"COVID-19 Deaths":{"0":1146774.0,"1":519.0,"2":1696.0},"Total Deaths":{"0":12303399.0,"1":73213.0,"2":130970.0},"Pneumonia Deaths":{"0":1162844.0,"1":1056.0,"2":2961.0},"Pneumonia and COVID-19 Deaths":{"0":569264.0,"1":95.0,"2":424.0},"Influenza Deaths":{"0":22229.0,"1":64.0,"2":509.0},"Pneumonia, Influenza, or COVID-19 Deaths":{"0":1760095.0,"1":1541.0,"2":4716.0},"Footnote":{"0":null,"1":null,"2":null}}'}]
+2024-09-13 09:54:42,821 - backend.code_completion.check_code - INFO - # Write your code here. there will be a variable df with data. store submission in object called result
+result = df.select(pl.all().n_unique())
+2024-09-13 09:54:42,949 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
 
-2024-09-13 08:02:08,507 - backend.routes.card_routes - INFO - Cards to review: None
-2024-09-13 08:02:53,847 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 08:02:53,850 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 08:02:53,850 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 08:02:53,851 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 08:02:53,851 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 08:02:53,851 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 08:03:01,154 - backend.routes.code_routes - INFO - Getting cards to review
-2024-09-13 08:03:01,160 - backend.routes.code_routes - INFO - [{'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}]
-2024-09-13 08:04:08,036 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 08:04:08,041 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 08:04:08,042 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 08:04:08,042 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 08:04:08,043 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 08:04:08,043 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 08:04:09,648 - backend.routes.code_routes - INFO - Getting codes to review
-2024-09-13 08:05:24,182 - backend.routes.card_routes - INFO - Getting cards to review
-2024-09-13 08:05:24,188 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 08:05:24,189 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}, has reviews: [{'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
-2024-09-13 08:05:24,189 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.5
-2024-09-13 08:05:24,190 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 08:05:24,190 - backend.routes.card_routes - INFO - Cards to review: []
-2024-09-13 08:05:25,938 - backend.routes.code_routes - INFO - Getting codes to review
-2024-09-13 08:05:25,948 - backend.scheduling.sm2_algorithm - INFO - Running sm2 algo
-2024-09-13 08:05:25,949 - backend.scheduling.sm2_algorithm - DEBUG - Checking card {'id': 1, 'note_id': 2, 'dataframe_header': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'solution_dataframe': '{"Brand":{"0":"Litware ","1":"Adventure Works ","2":"Litware","3":"Contoso ","4":"Northwind Traders","5":"Contoso","6":"Fabrikam","7":"Tailspin Toys","8":"Proseware","9":"The Phone Company","10":"Wide World Importers","11":"A. Datum","12":"Southridge Video","13":"Fabrikam  ","14":"Adventure Works"},"Sum of Quantity":{"0":161,"1":30,"2":875,"3":977,"4":638,"5":11132,"6":1516,"7":2732,"8":2763,"9":6519,"10":3922,"11":555,"12":6749,"13":332,"14":4616}}', 'problem_description': "Summarise the brand column by taking the sum of Quanaity, naming the new column 'Sum of Quanity'", 'dataset_path': 'backend/code_completion/data/contoso_sales.csv'}, has reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}]
-2024-09-13 08:05:25,950 - backend.scheduling.sm2_algorithm - DEBUG - Found interval = 1, ease_factor = 2.1799999999999997
-2024-09-13 08:05:25,951 - backend.scheduling.sm2_algorithm - DEBUG - Today = 2024-09-13, last_review=2024-09-13, next_Review=2024-09-14
-2024-09-13 08:05:25,952 - backend.routes.code_routes - INFO - []
-2024-09-13 08:05:30,589 - backend.routes.card_routes - INFO - Getting all cards
-2024-09-13 08:05:30,595 - backend.routes.card_routes - INFO - Cards: [{'id': 1, 'note_id': 1, 'question': '12312313', 'answer': 'sefesf'}]
-2024-09-13 08:05:30,596 - backend.routes.card_routes - INFO - Getting all card reviews
-2024-09-13 08:05:30,598 - backend.routes.card_routes - INFO - Reviews: [{'id': 2, 'note_id': 2, 'date': '2024-09-13 07:55:46', 'result': 0}, {'id': 1, 'note_id': 1, 'date': '2024-09-13 07:21:48', 'result': 1}]
+[1 rows x 16 columns]
+2024-09-13 09:54:42,970 - backend.code_completion.check_code - INFO -    Data As Of  Start Date  End Date  ...  Influenza Deaths  Pneumonia, Influenza, or COVID-19 Deaths  Footnote
+0           1          45        45  ...               493                                      4264         2
+
+[1 rows x 16 columns]

@@ -43,10 +43,10 @@ def init_db():
     CREATE TABLE IF NOT EXISTS code_completion (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         note_id INTEGER,
-        dataframe_header JSON,
-        solution_dataframe JSON,
+        code TEXT,
         problem_description TEXT,
-        dataset_path TEXT,
+        dataset_name TEXT,
+        dataset_header JSON,
         FOREIGN KEY (note_id) REFERENCES notes (id)           
     )
     """)

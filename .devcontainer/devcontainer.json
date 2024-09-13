@@ -1,5 +1,5 @@
 {
-    "name": "memory-slim",
+    "name": "memory",
     "dockerFile": "Dockerfile.dev",
     "context": "..",
     "customizations": {
