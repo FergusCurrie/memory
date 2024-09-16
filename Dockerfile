@@ -18,9 +18,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 # COPY backend backend
 # COPY static static
-# COPY . . 
-COPY static .
-COPY backend . 
+COPY . . 
+# COPY static .
+# COPY backend . 
 
 
 # Expose the port the app runs on

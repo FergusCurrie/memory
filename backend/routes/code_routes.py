@@ -136,7 +136,7 @@ async def submit_code(code_submission: CodeSubmission):
 async def test_code(code: TestCode):
     try:
         logger.info('TESTTING code ')
-        executed_df = run_code(code.code, f'backend/code_completion/data/{code.dataset_name}')
+        executed_df = run_code(code.code, code.dataset_name)
         return {"result_head": executed_df.head(10).to_json()}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
