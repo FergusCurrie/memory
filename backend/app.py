@@ -1,4 +1,5 @@
 import logging
+from .db.notes import delete_review
 from .db.sync import sync_db_to_azure
 from .routes import card_routes, code_routes
 
@@ -45,6 +46,19 @@ async def sync_db(background_tasks: BackgroundTasks):
         return {"message": "Database sync started in the background"}
     except Exception as e:
         logger.error(f"Error starting database sync: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+####################################### DELETE #######################################
+
+
+@app.delete("/api/reviews/{review_id}")
+async def delete_reveiw(review_id: int):
+    logger.info(f"Deleting review {review_id}")
+    try:
+        delete_review(review_id)
+        return {"message": f"Review {review_id} and its reviews deleted successfully"}
+    except Exception as e:
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 

@@ -4,7 +4,7 @@ import StudyBasic from '../components/StudyBasic';
 import StudyCode from '../components/StudyCode';
 
 const Study: React.FC = () => {
-  const [cardType, setCardType] = useState<'basic' | 'code'>('basic');
+  const [cardType, setCardType] = useState<'basic' | 'code'>('code');
 
   const handleCardTypeChange = (event: SelectChangeEvent<'basic' | 'code'>) => {
     setCardType(event.target.value as 'basic' | 'code');

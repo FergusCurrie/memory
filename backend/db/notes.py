@@ -25,6 +25,21 @@ def delete_note(note_id: int):
         conn.close()
 
 
+def delete_review(review_id):
+    conn = get_db()
+    cursor = conn.cursor()
+    try:
+        # Delete related reviews first
+        cursor.execute("DELETE FROM reviews WHERE id = ?", (review_id,))
+        conn.commit()
+    except Exception as e:
+        conn.rollback()
+        logger.error(f"Error in delete_review {review_id}: {str(e)}", exc_info=True)
+        raise e
+    finally:
+        conn.close()
+
+
 def get_all_reviews():
     conn = get_db()
     cursor = conn.cursor()

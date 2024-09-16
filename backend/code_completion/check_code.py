@@ -6,23 +6,30 @@ from contextlib import redirect_stderr, redirect_stdout
 
 logger = logging.getLogger(__name__)
 
+
 def get_pandas_header(dataset_name):
-    return str(pd.read_csv("backend/code_completion/data/"+dataset_name).head(3).to_json())
+    return str(pd.read_csv("backend/code_completion/data/" + dataset_name).head(3).to_json())
+
 
 def run_code(code, dataset_path):
-    df = pl.read_csv("backend/code_completion/data/"+dataset_path)
+    df = pl.read_csv("backend/code_completion/data/" + dataset_path)
 
-    # Capture stdout and stderr
     output = io.StringIO()
     error = io.StringIO()
 
-    with redirect_stdout(output), redirect_stderr(error):
-        local_vars = {"df": df}
-        exec("import polars as pl\n" + code, {}, local_vars)
-    if "result" in local_vars:
-        return pd.DataFrame(local_vars["result"].to_dict())
+    try:
+        with redirect_stdout(output), redirect_stderr(error):
+            local_vars = {"df": df}
+            exec("import polars as pl\n" + code, {}, local_vars)
 
-    return pd.DataFrame()
+        if "result" in local_vars:
+            return pd.DataFrame(local_vars["result"].to_dict()), None
+        return pd.DataFrame(), None
+    except Exception as e:
+        error_output = error.getvalue().strip()
+        if error_output:
+            return None, error_output
+        return pd.DataFrame(), str(e)
 
 
 def compare_dataframes(df1, df2):
@@ -47,13 +54,13 @@ def run_code_against_test(code_completion_row, code_submission):
     logger.info(code_text)
 
     # Run solution and attempt
-    submission_df = run_code(code_text, dataset_path)
-    solution_df = run_code(solution_code, dataset_path)
+    submission_df, submission_error = run_code(code_text, dataset_path)
+    solution_df, solution_error = run_code(solution_code, dataset_path)
 
     logger.info(solution_df)
     logger.info(submission_df)
 
     # Test result
     if compare_dataframes(submission_df, solution_df):
-        return True, submission_df.head(10).to_json()
-    return False, submission_df.head(10).to_json()
+        return True, submission_df.head(10).to_json(), submission_error
+    return False, submission_df.head(10).to_json(), submission_error

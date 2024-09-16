@@ -10,6 +10,10 @@ import {
 } from '@mui/material';
 
 const PandasJsonTable = ({ data }) => {
+  // Check if data is empty or undefined
+  if (!data || Object.keys(data).length === 0) {
+    return <></>; // Return empty fragment if data is empty
+  }
   // Extract column names from the first row
   const columns = Object.keys(data);
 

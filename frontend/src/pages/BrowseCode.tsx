@@ -70,26 +70,6 @@ const BrowseCodeCards: React.FC = () => {
     setSelectedCardId(cardId === selectedCardId ? null : cardId);
   };
 
-  //   const handleDeleteCard = async (cardId: number, event: React.MouseEvent) => {
-  //     event.stopPropagation();
-  //     if (
-  //       window.confirm(
-  //         'Are you sure you want to delete this code card? This will also delete all related reviews.',
-  //       )
-  //     ) {
-  //       try {
-  //         await api.delete(`/api/code/cards/${cardId}`);
-  //         setCodeCards(codeCards.filter((card) => card.id !== cardId));
-  //         setCodeReviews(codeReviews.filter((review) => review.code_id !== cardId));
-  //         if (selectedCardId === cardId) {
-  //           setSelectedCardId(null);
-  //         }
-  //       } catch (error) {
-  //         console.error('Error deleting code card:', error);
-  //       }
-  //     }
-  //   };
-
   const handleEditCard = (card: CodeCard) => {
     setEditingCard(card);
   };
@@ -102,6 +82,18 @@ const BrowseCodeCards: React.FC = () => {
         setEditingCard(null);
       } catch (error) {
         console.error('Error updating code card:', error);
+      }
+    }
+  };
+
+  const handleDeleteReview = async (reviewId: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    if (window.confirm('Are you sure you want to delete this review?')) {
+      try {
+        await api.delete(`/api/reviews/${reviewId}`);
+        setCodeReviews(codeReviews.filter((review) => review.id !== reviewId));
+      } catch (error) {
+        console.error('Error deleting review:', error);
       }
     }
   };
@@ -140,7 +132,7 @@ const BrowseCodeCards: React.FC = () => {
                 <TableCell>{card.dataset_name}</TableCell>
                 <TableCell>{card.problem_description}</TableCell>
                 <TableCell>
-                  <IconButton onClick={(e) => handleDeleteCard(card.id, e)} color="error">
+                  <IconButton onClick={(e) => handleDeleteReview(card.id, e)} color="error">
                     <DeleteIcon />
                   </IconButton>
                   <IconButton onClick={() => handleEditCard(card)} color="primary">
@@ -169,6 +161,7 @@ const BrowseCodeCards: React.FC = () => {
               <TableCell>Code Card ID</TableCell>
               <TableCell>Result</TableCell>
               <TableCell>Timestamp</TableCell>
+              <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -187,6 +180,11 @@ const BrowseCodeCards: React.FC = () => {
                       ? date.toLocaleString()
                       : `Invalid Date: ${review.date}`;
                   })()}
+                </TableCell>
+                <TableCell>
+                  <IconButton onClick={(e) => handleDeleteReview(review.id, e)} color="error">
+                    <DeleteIcon />
+                  </IconButton>
                 </TableCell>
               </TableRow>
             ))}

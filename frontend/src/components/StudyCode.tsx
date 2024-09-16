@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Button,
   Card,
@@ -14,10 +14,15 @@ import {
   Paper,
   CircularProgress,
   Alert,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from '@mui/material';
 import api from '../api';
-import Editor from '@monaco-editor/react';
+import Editor, { OnMount } from '@monaco-editor/react';
 import PandasJsonTable from './PandasTable';
+import { KeyboardEvent } from 'react';
 
 interface CodeCard {
   id: number;
@@ -32,13 +37,13 @@ const StudyCode: React.FC = () => {
   const [cards, setCards] = useState<CodeCard[]>([]);
   const [currentCard, setCurrentCard] = useState<CodeCard | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [editorContent, setEditorContent] = useState<string>(
-    '# Write your code here. there will be a variable df with data. store submission in object called result',
-  );
+  const [editorContent, setEditorContent] = useState<string>('result = (\n\tdf\n\n)');
   const [submittedResult, setSubmittedResult] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [testPassed, setTestPassed] = useState<boolean | null>(null);
   const [tableHeader, setTableHeader] = useState<Record<string, any> | null>(null);
+  const [codeError, setCodeError] = useState<string>('');
+  const [openAnswerDialog, setOpenAnswerDialog] = useState(false);
 
   useEffect(() => {
     fetchCards();
@@ -101,22 +106,53 @@ const StudyCode: React.FC = () => {
   };
 
   const handleSendCode = async () => {
-    console.log(editorContent);
+    const currentContent = editorRef.current?.getValue() || editorContent;
+    console.log('Sending code:', currentContent);
     setIsLoading(true);
     try {
       const response = await api.post('/api/code/submit_code', {
-        code: editorContent,
+        code: currentContent,
         code_id: currentCard?.id,
       });
       console.log('API response:', response);
       setSubmittedResult(JSON.parse(response.data.result_head));
       setTestPassed(response.data.passed);
+      setCodeError(response.data.error);
+      console.log(response);
       console.log('Code submitted successfully');
     } catch (error) {
       console.error('Error submitting code:', error);
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleEditorDidMount: OnMount = (editor, monaco) => {
+    editorRef.current = editor;
+    editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
+      handleSendCode();
+    });
+  };
+
+  const editorRef = useRef<any>(null);
+
+  const handleEditorChange = (value: string | undefined) => {
+    setEditorContent(value || '');
+  };
+
+  const handleEditorKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter' && event.shiftKey) {
+      event.preventDefault();
+      handleSendCode();
+    }
+  };
+
+  const handleOpenAnswerDialog = () => {
+    setOpenAnswerDialog(true);
+  };
+
+  const handleCloseAnswerDialog = () => {
+    setOpenAnswerDialog(false);
   };
 
   if (!currentCard) {
@@ -159,23 +195,24 @@ const StudyCode: React.FC = () => {
           height="300px"
           defaultLanguage="python"
           value={editorContent}
-          onChange={(value) => setEditorContent(value || '')}
+          onChange={handleEditorChange}
           options={{
             minimap: { enabled: false },
             scrollBeyondLastLine: false,
             fontSize: 14,
           }}
+          onMount={handleEditorDidMount}
         />
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={handleSendCode}
-          sx={{ mt: 2 }}
-          disabled={isLoading}
-        >
-          {isLoading ? <CircularProgress size={24} /> : 'Submit Code'}
-        </Button>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+          <Button variant="contained" color="primary" onClick={handleSendCode} disabled={isLoading}>
+            {isLoading ? <CircularProgress size={24} /> : 'Submit Code'}
+          </Button>
+          <Button variant="contained" color="primary" onClick={handleOpenAnswerDialog}>
+            Show Answer
+          </Button>
+        </Box>
       </Box>
+      <Typography>{codeError}</Typography>
       {submittedResult && (
         <Box sx={{ mt: 4, mb: 4 }}>
           <Typography variant="h5" component="div" gutterBottom>
@@ -207,6 +244,21 @@ const StudyCode: React.FC = () => {
           </Button>
         )}
       </Box>
+      <Box sx={{ mt: 2, display: 'flex', justifyContent: 'center' }}>
+        <Button variant="contained" color="primary" onClick={fetchCards} sx={{ mt: 2 }}>
+          Get New Random Card
+        </Button>
+      </Box>
+
+      <Dialog open={openAnswerDialog} onClose={handleCloseAnswerDialog}>
+        <DialogTitle>Answer</DialogTitle>
+        <DialogContent>
+          <pre style={{ whiteSpace: 'pre-wrap', wordWrap: 'break-word' }}>{currentCard?.code}</pre>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseAnswerDialog}>Close</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 };
