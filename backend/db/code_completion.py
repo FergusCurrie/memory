@@ -47,7 +47,7 @@ def add_code_problem_to_db(description, datasets, code, preprocessing_code, defa
     cursor.execute("INSERT INTO notes DEFAULT VALUES")
     note_id = cursor.lastrowid
     cursor.execute(
-        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, preprocessing_code, dataframe_headers, code_start) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, preprocessing_code, dataset_headers, code_start) VALUES (?, ?, ?, ?, ?, ?, ?)",
         (note_id, description, ",".join(datasets), code, preprocessing_code, json.dumps(headers), default_code),
     )
     conn.commit()

@@ -57,7 +57,7 @@ def init_db():
         dataset_name TEXT,
         preprocessing_code TEXT,
         code_start text DEFAULT NULL,
-        dataframe_headers JSON,
+        dataset_headers JSON,
         FOREIGN KEY (note_id) REFERENCES notes (id)           
     )
     """)

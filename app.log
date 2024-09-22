@@ -3979,3 +3979,245 @@ result = temperatures.select(
 12               9.0     9.0
 13              -2.0    -2.0
 14               NaN    -2.0
+2024-09-22 06:09:17,496 - backend.routes.code_routes - INFO - Getting all available datasets
+2024-09-22 06:09:41,323 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-22 06:09:41,366 - backend.code_completion.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-09-22 06:09:41,367 - backend.code_completion.check_code - INFO - {'contoso_sales': shape: (13_915, 20)
+┌──────────────┬─────────────┬────────────┬───────────────┬───┬───────────┬───────────┬───────────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Order Date ┆ Delivery Date ┆ … ┆ Net Price ┆ Unit Cost ┆ Currency Code ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---        ┆ ---           ┆   ┆ ---       ┆ ---       ┆ ---           ┆ ---           │
+│ i64          ┆ i64         ┆ str        ┆ str           ┆   ┆ f64       ┆ f64       ┆ str           ┆ f64           │
+╞══════════════╪═════════════╪════════════╪═══════════════╪═══╪═══════════╪═══════════╪═══════════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 2017-10-18 ┆ 2017-10-20    ┆ … ┆ 10.288    ┆ 5.958     ┆ USD           ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 2017-10-25 ┆ 2017-10-26    ┆ … ┆ 11.691    ┆ 5.958     ┆ AUD           ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 2018-07-07 ┆ 2018-07-12    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 2020-01-11 ┆ 2020-01-11    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 2018-12-01 ┆ 2018-12-02    ┆ … ┆ 11.5611   ┆ 6.62      ┆ USD           ┆ 1.0           │
+│ …            ┆ …           ┆ …          ┆ …             ┆ … ┆ …         ┆ …         ┆ …             ┆ …             │
+│ 277804       ┆ 0           ┆ 2017-08-09 ┆ 2017-08-13    ┆ … ┆ 4.221     ┆ 2.394     ┆ AUD           ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 2020-01-28 ┆ 2020-01-28    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 2018-12-17 ┆ 2018-12-17    ┆ … ┆ 2.9145    ┆ 1.71      ┆ GBP           ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 2018-10-10 ┆ 2018-10-10    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 2019-12-26 ┆ 2019-12-29    ┆ … ┆ 3.2495    ┆ 1.71      ┆ CAD           ┆ 1.3161        │
+└──────────────┴─────────────┴────────────┴───────────────┴───┴───────────┴───────────┴───────────────┴───────────────┘}
+2024-09-22 06:09:41,367 - backend.code_completion.check_code - INFO - Prprocessing code = [preprocessed = contoso_sales.with_columns(
+    (pl.col('Quantity') * pl.col('Net Price')).round(2).alias('Sales Amount')
+)
+
+]
+2024-09-22 06:09:41,382 - backend.code_completion.check_code - INFO - Found result in execution
+2024-09-22 06:09:41,383 - backend.code_completion.check_code - INFO - {'contoso_sales': shape: (13_915, 20)
+┌──────────────┬─────────────┬────────────┬───────────────┬───┬───────────┬───────────┬───────────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Order Date ┆ Delivery Date ┆ … ┆ Net Price ┆ Unit Cost ┆ Currency Code ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---        ┆ ---           ┆   ┆ ---       ┆ ---       ┆ ---           ┆ ---           │
+│ i64          ┆ i64         ┆ str        ┆ str           ┆   ┆ f64       ┆ f64       ┆ str           ┆ f64           │
+╞══════════════╪═════════════╪════════════╪═══════════════╪═══╪═══════════╪═══════════╪═══════════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 2017-10-18 ┆ 2017-10-20    ┆ … ┆ 10.288    ┆ 5.958     ┆ USD           ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 2017-10-25 ┆ 2017-10-26    ┆ … ┆ 11.691    ┆ 5.958     ┆ AUD           ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 2018-07-07 ┆ 2018-07-12    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 2020-01-11 ┆ 2020-01-11    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 2018-12-01 ┆ 2018-12-02    ┆ … ┆ 11.5611   ┆ 6.62      ┆ USD           ┆ 1.0           │
+│ …            ┆ …           ┆ …          ┆ …             ┆ … ┆ …         ┆ …         ┆ …             ┆ …             │
+│ 277804       ┆ 0           ┆ 2017-08-09 ┆ 2017-08-13    ┆ … ┆ 4.221     ┆ 2.394     ┆ AUD           ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 2020-01-28 ┆ 2020-01-28    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 2018-12-17 ┆ 2018-12-17    ┆ … ┆ 2.9145    ┆ 1.71      ┆ GBP           ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 2018-10-10 ┆ 2018-10-10    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 2019-12-26 ┆ 2019-12-29    ┆ … ┆ 3.2495    ┆ 1.71      ┆ CAD           ┆ 1.3161        │
+└──────────────┴─────────────┴────────────┴───────────────┴───┴───────────┴───────────┴───────────────┴───────────────┘, 'pl': <module 'polars' from '/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/polars/__init__.py'>, 'preprocessed': shape: (13_915, 21)
+┌──────────────┬─────────────┬────────────┬───────────────┬───┬───────────┬───────────────┬───────────────┬──────────────┐
+│ Order Number ┆ Line Number ┆ Order Date ┆ Delivery Date ┆ … ┆ Unit Cost ┆ Currency Code ┆ Exchange Rate ┆ Sales Amount │
+│ ---          ┆ ---         ┆ ---        ┆ ---           ┆   ┆ ---       ┆ ---           ┆ ---           ┆ ---          │
+│ i64          ┆ i64         ┆ str        ┆ str           ┆   ┆ f64       ┆ str           ┆ f64           ┆ f64          │
+╞══════════════╪═════════════╪════════════╪═══════════════╪═══╪═══════════╪═══════════════╪═══════════════╪══════════════╡
+│ 284806       ┆ 1           ┆ 2017-10-18 ┆ 2017-10-20    ┆ … ┆ 5.958     ┆ USD           ┆ 1.0           ┆ 72.02        │
+│ 285506       ┆ 1           ┆ 2017-10-25 ┆ 2017-10-26    ┆ … ┆ 5.958     ┆ AUD           ┆ 1.2967        ┆ 11.69        │
+│ 311002       ┆ 2           ┆ 2018-07-07 ┆ 2018-07-12    ┆ … ┆ 6.62      ┆ AUD           ┆ 1.3484        ┆ 77.94        │
+│ 366307       ┆ 2           ┆ 2020-01-11 ┆ 2020-01-11    ┆ … ┆ 6.62      ┆ AUD           ┆ 1.4545        ┆ 51.96        │
+│ 325708       ┆ 3           ┆ 2018-12-01 ┆ 2018-12-02    ┆ … ┆ 6.62      ┆ USD           ┆ 1.0           ┆ 23.12        │
+│ …            ┆ …           ┆ …          ┆ …             ┆ … ┆ …         ┆ …             ┆ …             ┆ …            │
+│ 277804       ┆ 0           ┆ 2017-08-09 ┆ 2017-08-13    ┆ … ┆ 2.394     ┆ AUD           ┆ 1.2683        ┆ 25.33        │
+│ 368000       ┆ 1           ┆ 2020-01-28 ┆ 2020-01-28    ┆ … ┆ 1.71      ┆ CAD           ┆ 1.319         ┆ 2.98         │
+│ 327307       ┆ 0           ┆ 2018-12-17 ┆ 2018-12-17    ┆ … ┆ 1.71      ┆ GBP           ┆ 0.7926        ┆ 11.66        │
+│ 320507       ┆ 2           ┆ 2018-10-10 ┆ 2018-10-10    ┆ … ┆ 1.71      ┆ CAD           ┆ 1.2963        ┆ 2.98         │
+│ 364705       ┆ 2           ┆ 2019-12-26 ┆ 2019-12-29    ┆ … ┆ 1.71      ┆ CAD           ┆ 1.3161        ┆ 9.75         │
+└──────────────┴─────────────┴────────────┴───────────────┴───┴───────────┴───────────────┴───────────────┴──────────────┘, 'result': shape: (13_915, 3)
+┌─────────────┬─────────────────────────┬───────────────────┐
+│ Category    ┆ Subcategory             ┆ Sales Amt per Cat │
+│ ---         ┆ ---                     ┆ ---               │
+│ str         ┆ str                     ┆ f64               │
+╞═════════════╪═════════════════════════╪═══════════════════╡
+│ Audio       ┆ MP4&MP3                 ┆ 238356.0          │
+│ Audio       ┆ MP4&MP3                 ┆ 238356.0          │
+│ Audio       ┆ MP4&MP3                 ┆ 238356.0          │
+│ Audio       ┆ MP4&MP3                 ┆ 238356.0          │
+│ Audio       ┆ MP4&MP3                 ┆ 238356.0          │
+│ …           ┆ …                       ┆ …                 │
+│ Cell phones ┆ Cell phones Accessories ┆ 2.2399e6          │
+│ Cell phones ┆ Cell phones Accessories ┆ 2.2399e6          │
+│ Cell phones ┆ Cell phones Accessories ┆ 2.2399e6          │
+│ Cell phones ┆ Cell phones Accessories ┆ 2.2399e6          │
+│ Cell phones ┆ Cell phones Accessories ┆ 2.2399e6          │
+└─────────────┴─────────────────────────┴───────────────────┘}
+2024-09-22 06:09:43,351 - backend.routes.code_routes - ERROR - An error occurred adding code:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/code_routes.py", line 136, in add_code
+    note_id = add_code_problem_to_db(description, dataset_names, code, preprocessing_code, default_code)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/db/code_completion.py", line 49, in add_code_problem_to_db
+    cursor.execute(
+sqlite3.OperationalError: table code_completion has no column named dataframe_headers
+
+2024-09-22 06:12:02,485 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-22 06:12:02,499 - backend.code_completion.check_code - INFO - AAAAAAAAAAAAA size = 163
+2024-09-22 06:12:02,499 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘}
+2024-09-22 06:12:02,505 - backend.code_completion.check_code - INFO - Prprocessing code = []
+2024-09-22 06:12:02,513 - backend.code_completion.check_code - INFO - Found result in execution
+2024-09-22 06:12:02,514 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘, 'pl': <module 'polars' from '/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/polars/__init__.py'>, 'result': shape: (163,)
+Series: 'sum' [i64]
+[
+	94
+	123
+	163
+	203
+	82
+	…
+	180
+	86
+	126
+	186
+	196
+]}
+2024-09-22 06:12:02,515 - backend.code_completion.check_code - INFO - Exception hit 'Series' object has no attribute 'to_dict' <_io.StringIO object at 0xffff758f0b80>
+2024-09-22 06:13:16,331 - backend.routes.code_routes - INFO - Getting all available datasets
+2024-09-22 06:13:45,396 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-22 06:13:45,400 - backend.code_completion.check_code - INFO - AAAAAAAAAAAAA size = 163
+2024-09-22 06:13:45,400 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘}
+2024-09-22 06:13:45,401 - backend.code_completion.check_code - INFO - Prprocessing code = []
+2024-09-22 06:13:45,403 - backend.code_completion.check_code - INFO - Found result in execution
+2024-09-22 06:13:45,403 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘, 'pl': <module 'polars' from '/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/polars/__init__.py'>, 'result': shape: (163,)
+Series: 'sum' [i64]
+[
+	94
+	123
+	163
+	203
+	82
+	…
+	180
+	86
+	126
+	186
+	196
+]}
+2024-09-22 06:13:45,403 - backend.code_completion.check_code - INFO - Exception hit 'Series' object has no attribute 'to_dict' <_io.StringIO object at 0xffff782f4ac0>
+2024-09-22 06:15:17,511 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-22 06:15:17,521 - backend.code_completion.check_code - INFO - AAAAAAAAAAAAA size = 163
+2024-09-22 06:15:17,522 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘}
+2024-09-22 06:15:17,522 - backend.code_completion.check_code - INFO - Prprocessing code = []
+2024-09-22 06:15:17,524 - backend.code_completion.check_code - INFO - Exception hit 'preprocessed' <_io.StringIO object at 0xffff696f4a00>
+2024-09-22 06:16:32,233 - backend.routes.code_routes - INFO - TESTTING code 
+2024-09-22 06:16:32,248 - backend.code_completion.check_code - INFO - AAAAAAAAAAAAA size = 163
+2024-09-22 06:16:32,248 - backend.code_completion.check_code - INFO - {'pokemon': shape: (163, 13)
+┌─────┬───────────────────────┬─────────┬────────┬───┬─────────┬───────┬────────────┬───────────┐
+│ #   ┆ Name                  ┆ Type 1  ┆ Type 2 ┆ … ┆ Sp. Def ┆ Speed ┆ Generation ┆ Legendary │
+│ --- ┆ ---                   ┆ ---     ┆ ---    ┆   ┆ ---     ┆ ---   ┆ ---        ┆ ---       │
+│ i64 ┆ str                   ┆ str     ┆ str    ┆   ┆ i64     ┆ i64   ┆ i64        ┆ bool      │
+╞═════╪═══════════════════════╪═════════╪════════╪═══╪═════════╪═══════╪════════════╪═══════════╡
+│ 1   ┆ Bulbasaur             ┆ Grass   ┆ Poison ┆ … ┆ 65      ┆ 45    ┆ 1          ┆ false     │
+│ 2   ┆ Ivysaur               ┆ Grass   ┆ Poison ┆ … ┆ 80      ┆ 60    ┆ 1          ┆ false     │
+│ 3   ┆ Venusaur              ┆ Grass   ┆ Poison ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 3   ┆ VenusaurMega Venusaur ┆ Grass   ┆ Poison ┆ … ┆ 120     ┆ 80    ┆ 1          ┆ false     │
+│ 4   ┆ Charmander            ┆ Fire    ┆ null   ┆ … ┆ 50      ┆ 65    ┆ 1          ┆ false     │
+│ …   ┆ …                     ┆ …       ┆ …      ┆ … ┆ …       ┆ …     ┆ …          ┆ …         │
+│ 146 ┆ Moltres               ┆ Fire    ┆ Flying ┆ … ┆ 85      ┆ 90    ┆ 1          ┆ true      │
+│ 147 ┆ Dratini               ┆ Dragon  ┆ null   ┆ … ┆ 50      ┆ 50    ┆ 1          ┆ false     │
+│ 148 ┆ Dragonair             ┆ Dragon  ┆ null   ┆ … ┆ 70      ┆ 70    ┆ 1          ┆ false     │
+│ 149 ┆ Dragonite             ┆ Dragon  ┆ Flying ┆ … ┆ 100     ┆ 80    ┆ 1          ┆ false     │
+│ 150 ┆ Mewtwo                ┆ Psychic ┆ null   ┆ … ┆ 90      ┆ 130   ┆ 1          ┆ true      │
+└─────┴───────────────────────┴─────────┴────────┴───┴─────────┴───────┴────────────┴───────────┘}
+2024-09-22 06:16:32,250 - backend.code_completion.check_code - INFO - Prprocessing code = []

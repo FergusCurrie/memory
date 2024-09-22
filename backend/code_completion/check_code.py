@@ -25,7 +25,12 @@ def get_preprocessing_headers(datasets, preprocessing_code):
             exec(f"import polars as pl\n{preprocessing_code}\n", {}, local_vars)
 
         if "preprocessed" in local_vars:
-            return pd.DataFrame(local_vars["preprocessed"].to_dict()).head(3).to_json()
+            result = local_vars["preprocessed"]  # .to_dict()
+            # Convert result to DataFrame if it's a Series
+            if isinstance(result, pl.Series):
+                result = result.to_frame()
+            result = result.to_dict()
+            return pd.DataFrame(result).head(3).to_json()
         return pd.DataFrame()
     except Exception as e:
         logger.info(f"Exception hit {e} {error}")
@@ -57,9 +62,12 @@ def run_code(code, datasets, preprocessing_code):
                 exec("import polars as pl\n" + code, {}, local_vars)
 
         if "result" in local_vars:
-            logger.info("Found result in execution")
-            logger.info(local_vars)
-            return pd.DataFrame(local_vars["result"].to_dict()), None
+            result = local_vars["result"]  # .to_dict()
+            # Convert result to DataFrame if it's a Series
+            if isinstance(result, pl.Series):
+                result = result.to_frame()
+            result = result.to_dict()
+            return pd.DataFrame(result), None
         return pd.DataFrame(), None
     except Exception as e:
         logger.info(f"Exception hit {e} {error}")
