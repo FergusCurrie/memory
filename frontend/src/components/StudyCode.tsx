@@ -32,13 +32,14 @@ interface CodeCard {
   problem_description: string;
   code: string;
   dataframe_headers: string; // This is now a JSON string containing multiple datasets
+  code_start: string;
 }
 
 const StudyCode: React.FC = () => {
   const [cards, setCards] = useState<CodeCard[]>([]);
   const [currentCard, setCurrentCard] = useState<CodeCard | null>(null);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [editorContent, setEditorContent] = useState<string>('result = (\n\tdf\n\n)');
+  const [editorContent, setEditorContent] = useState<string>('');
   const [submittedResult, setSubmittedResult] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [testPassed, setTestPassed] = useState<boolean | null>(null);
@@ -82,6 +83,9 @@ const StudyCode: React.FC = () => {
       const newCard = cardArray[randomIndex];
       setCurrentCard(newCard);
 
+      // Set the editor content based on code_start or default value
+      setEditorContent(newCard.code_start || 'result = (\n\tdf\n\n)');
+
       // Parse the dataframe_headers JSON and set the datasets
       const parsedDatasets = JSON.parse(newCard.dataframe_headers);
       setDatasets(parsedDatasets);
@@ -109,7 +113,6 @@ const StudyCode: React.FC = () => {
         });
         setCards((prevCards) => prevCards.filter((card) => card.id !== currentCard.id));
         pickRandomCard(cards.filter((card) => card.id !== currentCard.id));
-        setEditorContent('result = (\n\tdf\n\n)');
         setCodeError('');
         setSubmittedResult(null);
         setTestPassed(null);

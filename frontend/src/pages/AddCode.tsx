@@ -25,6 +25,8 @@ const AddCode: React.FC = () => {
 
   const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
 
+  const [defaultCode, setDefaultCode] = useState('');
+
   useEffect(() => {
     const fetchDatasets = async () => {
       try {
@@ -72,15 +74,17 @@ const AddCode: React.FC = () => {
     try {
       const response = await api.post('/api/code/add_code', {
         description: description,
-        dataset_names: datasetPaths, // Changed to datasetPaths
+        dataset_names: datasetPaths,
         code: code,
         preprocessing_code: preprocessingCode,
+        default_code: defaultCode, // Add this line
       });
       console.log('Card added:', response.data);
       setCode('');
       setPreprocessingCode('');
       setDescription('');
-      setDatasetPaths([]); // Reset to empty array
+      setDatasetPaths([]);
+      setDefaultCode(''); // Reset default code
       setSubmittedResult(false);
       alert('Code added successfully!');
     } catch (error) {
@@ -137,6 +141,18 @@ const AddCode: React.FC = () => {
         placeholder="Description"
         rows={3}
         style={{ padding: '10px', fontSize: '16px' }}
+      />
+      <Typography variant="h6">Default Code</Typography>
+      <Editor
+        height="200px"
+        defaultLanguage="python"
+        value={defaultCode}
+        onChange={(value) => setDefaultCode(value || '')}
+        options={{
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          fontSize: 14,
+        }}
       />
       <Typography variant="h6">Preprocessing Code</Typography>
       <Editor

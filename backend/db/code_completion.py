@@ -33,21 +33,22 @@ def get_note_id_from_code_id(code_id):
     return dict(card)["note_id"] if card else None
 
 
-def add_code_problem_to_db(description, datasets, code, preprocessing_code):
+def add_code_problem_to_db(description, datasets, code, preprocessing_code, default_code):
     # Get the dataframe headers
     headers = {}
     for dataset in datasets:
         headers[dataset.replace(".csv", "")] = get_pandas_header(dataset)
     # Get preprocessing headers
-    headers["preprocessing"] = get_preprocessing_headers(datasets, preprocessing_code)
+    if preprocessing_code != "":
+        headers["preprocessing"] = get_preprocessing_headers(datasets, preprocessing_code)
 
     conn = get_db()
     cursor = conn.cursor()
     cursor.execute("INSERT INTO notes DEFAULT VALUES")
     note_id = cursor.lastrowid
     cursor.execute(
-        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, preprocessing_code, dataframe_headers) VALUES (?, ?, ?, ?, ?, ?)",
-        (note_id, description, ",".join(datasets), code, preprocessing_code, json.dumps(headers)),
+        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, preprocessing_code, dataframe_headers, code_start) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        (note_id, description, ",".join(datasets), code, preprocessing_code, json.dumps(headers), default_code),
     )
     conn.commit()
     conn.close()

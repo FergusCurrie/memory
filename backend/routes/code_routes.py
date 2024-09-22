@@ -43,6 +43,7 @@ class CreateCode(BaseModel):
     dataset_names: list[str]
     preprocessing_code: str
     code: str
+    default_code: str
 
 
 class GetHeader(BaseModel):
@@ -131,7 +132,8 @@ async def add_code(cc: CreateCode):
         dataset_names = cc.dataset_names
         code = cc.code
         preprocessing_code = cc.preprocessing_code
-        note_id = add_code_problem_to_db(description, dataset_names, code, preprocessing_code)
+        default_code = cc.default_code
+        note_id = add_code_problem_to_db(description, dataset_names, code, preprocessing_code, default_code)
         return {"id": note_id, "message": "Code created successfully"}
     except Exception as e:
         logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
