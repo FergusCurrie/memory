@@ -1,4 +1,3 @@
-import os
 import pandas as pd
 from .db_helpers import get_db
 
@@ -17,7 +16,6 @@ def create_basic_code_compleition(dataframe_head, dataframe_target, description)
 
 
 if __name__ == "__main__":
-    print(os.listdir())
     df = pd.read_csv("backend/code_completion/data/contoso_sales.csv")
     head = df.head()
     target = head

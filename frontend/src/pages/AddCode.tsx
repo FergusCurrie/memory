@@ -1,28 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../api';
 import Editor from '@monaco-editor/react';
-import { Button, CircularProgress, Typography, Box, Alert } from '@mui/material';
+import {
+  Button,
+  CircularProgress,
+  Typography,
+  Box,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Chip,
+} from '@mui/material';
 import PandasJsonTable from '../components/PandasTable';
 
 const AddCode: React.FC = () => {
-  const [datasetPath, setDatasetPath] = useState('');
+  // Change datasetPath to datasetPaths and make it an array
+  const [datasetPaths, setDatasetPaths] = useState<string[]>([]);
   const [description, setDescription] = useState('');
   const [code, setCode] = useState('');
+  const [preprocessingCode, setPreprocessingCode] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [submittedResult, setSubmittedResult] = useState<any>(null);
 
+  const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
+
+  useEffect(() => {
+    const fetchDatasets = async () => {
+      try {
+        const response = await api.get('/api/code/available_datasets');
+        setAvailableDatasets(response.data.datasets);
+      } catch (error) {
+        console.error('Error fetching available datasets:', error);
+      }
+    };
+
+    fetchDatasets();
+  }, []);
+
+  const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setDatasetPaths(event.target.value as string[]);
+  };
+
+  const handleRemoveDataset = (datasetToRemove: string) => {
+    setDatasetPaths((prevDatasets) =>
+      prevDatasets.filter((dataset) => dataset !== datasetToRemove),
+    );
+  };
+
+  // Update handleRunCode and handleSaveCode to use datasetPaths instead of datasetPath
   const handleRunCode = async () => {
     setIsLoading(true);
     try {
       const response = await api.post('/api/code/test_code', {
         code: code,
-        dataset_name: datasetPath,
+        preprocessing_code: preprocessingCode,
+        dataset_names: datasetPaths, // Changed to datasetPaths
       });
       console.log(response);
       setSubmittedResult(JSON.parse(response.data.result_head));
     } catch (error) {
       console.error('Error executing code:', error);
-      alert('Error executing code. Please try again.');
+      alert('Error executing code. Please try again.', error);
     } finally {
       setIsLoading(false);
     }
@@ -33,13 +72,15 @@ const AddCode: React.FC = () => {
     try {
       const response = await api.post('/api/code/add_code', {
         description: description,
-        dataset_name: datasetPath,
+        dataset_names: datasetPaths, // Changed to datasetPaths
         code: code,
+        preprocessing_code: preprocessingCode,
       });
       console.log('Card added:', response.data);
       setCode('');
+      setPreprocessingCode('');
       setDescription('');
-      setDatasetPath('');
+      setDatasetPaths([]); // Reset to empty array
       setSubmittedResult(false);
       alert('Code added successfully!');
     } catch (error) {
@@ -59,12 +100,37 @@ const AddCode: React.FC = () => {
       }}
     >
       <h1>Add and Run Code</h1>
-      <input
-        value={datasetPath}
-        onChange={(e) => setDatasetPath(e.target.value)}
-        placeholder="Dataset path"
-        style={{ padding: '10px', fontSize: '16px' }}
-      />
+      <FormControl fullWidth>
+        <InputLabel id="dataset-select-label">Datasets</InputLabel>
+        <Select
+          labelId="dataset-select-label"
+          id="dataset-select"
+          multiple
+          value={datasetPaths}
+          onChange={handleDatasetChange}
+          style={{ fontSize: '16px' }}
+          renderValue={(selected) => (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+              {(selected as string[]).map((value) => (
+                <Chip
+                  key={value}
+                  label={value}
+                  onDelete={() => handleRemoveDataset(value)}
+                  onMouseDown={(event) => {
+                    event.stopPropagation();
+                  }}
+                />
+              ))}
+            </Box>
+          )}
+        >
+          {availableDatasets.map((dataset) => (
+            <MenuItem key={dataset} value={dataset}>
+              {dataset}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -72,6 +138,19 @@ const AddCode: React.FC = () => {
         rows={3}
         style={{ padding: '10px', fontSize: '16px' }}
       />
+      <Typography variant="h6">Preprocessing Code</Typography>
+      <Editor
+        height="200px"
+        defaultLanguage="python"
+        value={preprocessingCode}
+        onChange={(value) => setPreprocessingCode(value || '')}
+        options={{
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          fontSize: 14,
+        }}
+      />
+      <Typography variant="h6">Main Code</Typography>
       <Editor
         height="400px"
         defaultLanguage="python"

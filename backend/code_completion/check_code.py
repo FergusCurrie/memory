@@ -11,23 +11,59 @@ def get_pandas_header(dataset_name):
     return str(pd.read_csv("backend/code_completion/data/" + dataset_name).head(3).to_json())
 
 
-def run_code(code, dataset_path):
-    df = pl.read_csv("backend/code_completion/data/" + dataset_path)
+def get_preprocessing_headers(datasets, preprocessing_code):
+    dfs = {}
+    for dataset in datasets:
+        dfs[dataset.replace(".csv", "")] = pl.read_csv("backend/code_completion/data/" + dataset)
 
     output = io.StringIO()
     error = io.StringIO()
 
     try:
         with redirect_stdout(output), redirect_stderr(error):
-            local_vars = {"df": df}
-            exec("import polars as pl\n" + code, {}, local_vars)
+            local_vars = dfs
+            exec(f"import polars as pl\n{preprocessing_code}\n", {}, local_vars)
+
+        if "preprocessed" in local_vars:
+            return pd.DataFrame(local_vars["preprocessed"].to_dict()).head(3).to_json()
+        return pd.DataFrame()
+    except Exception as e:
+        logger.info(f"Exception hit {e} {error}")
+        error_output = error.getvalue().strip()
+        if error_output:
+            logger.info(error_output)
+            return None
+        return pd.DataFrame()
+
+
+def run_code(code, datasets, preprocessing_code):
+    dfs = {}
+    for dataset in datasets:
+        dfs[dataset.replace(".csv", "")] = pl.read_csv("backend/code_completion/data/" + dataset)
+
+    logger.info(dfs)
+    logger.info(f"Prprocessing code = [{preprocessing_code}]")
+    output = io.StringIO()
+    error = io.StringIO()
+
+    try:
+        with redirect_stdout(output), redirect_stderr(error):
+            local_vars = dfs
+            if preprocessing_code != "":
+                exec(f"import polars as pl\n{preprocessing_code}\n" + code, {}, local_vars)
+            else:
+                exec("import polars as pl\n" + code, {}, local_vars)
 
         if "result" in local_vars:
+            logger.info("Found result in execution")
+            logger.info(local_vars)
             return pd.DataFrame(local_vars["result"].to_dict()), None
         return pd.DataFrame(), None
     except Exception as e:
+        logger.info(f"Exception hit {e} {error}")
         error_output = error.getvalue().strip()
         if error_output:
+            logger.info(error_output)
             return None, error_output
         return pd.DataFrame(), str(e)
 
@@ -49,13 +85,15 @@ def run_code_against_test(code_completion_row, code_submission):
     # Test the code
     description = code_completion_row["problem_description"]
     dataset_path = code_completion_row["dataset_name"]
+    datasets = dataset_path.split(",")
+    preprocessing_code = code_completion_row["preprocessing_code"]
     solution_code = code_completion_row["code"]
     code_text = code_submission.code
     logger.info(code_text)
 
     # Run solution and attempt
-    submission_df, submission_error = run_code(code_text, dataset_path)
-    solution_df, solution_error = run_code(solution_code, dataset_path)
+    submission_df, submission_error = run_code(code_text, datasets, preprocessing_code)
+    solution_df, solution_error = run_code(solution_code, datasets, preprocessing_code)
 
     logger.info(solution_df)
     logger.info(submission_df)

@@ -23,6 +23,7 @@ import api from '../api';
 import Editor, { OnMount } from '@monaco-editor/react';
 import PandasJsonTable from './PandasTable';
 import { KeyboardEvent } from 'react';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
 interface CodeCard {
   id: number;
@@ -30,7 +31,7 @@ interface CodeCard {
   dataset_name: string;
   problem_description: string;
   code: string;
-  dataset_header: string;
+  dataframe_headers: string; // This is now a JSON string containing multiple datasets
 }
 
 const StudyCode: React.FC = () => {
@@ -44,6 +45,8 @@ const StudyCode: React.FC = () => {
   const [tableHeader, setTableHeader] = useState<Record<string, any> | null>(null);
   const [codeError, setCodeError] = useState<string>('');
   const [openAnswerDialog, setOpenAnswerDialog] = useState(false);
+  const [datasets, setDatasets] = useState<Record<string, any>>({});
+  const [selectedDataset, setSelectedDataset] = useState<string>('');
 
   useEffect(() => {
     fetchCards();
@@ -76,10 +79,17 @@ const StudyCode: React.FC = () => {
   const pickRandomCard = (cardArray: CodeCard[]) => {
     if (cardArray.length > 0) {
       const randomIndex = Math.floor(Math.random() * cardArray.length);
-      setCurrentCard(cardArray[randomIndex]);
-      //console.log(currentCard);
+      const newCard = cardArray[randomIndex];
+      setCurrentCard(newCard);
 
-      // getHeader();
+      // Parse the dataframe_headers JSON and set the datasets
+      const parsedDatasets = JSON.parse(newCard.dataframe_headers);
+      setDatasets(parsedDatasets);
+
+      // Set the first dataset as selected by default
+      const firstDatasetName = Object.keys(parsedDatasets)[0];
+      setSelectedDataset(firstDatasetName);
+
       setShowAnswer(false);
     } else {
       setCurrentCard(null);
@@ -99,6 +109,10 @@ const StudyCode: React.FC = () => {
         });
         setCards((prevCards) => prevCards.filter((card) => card.id !== currentCard.id));
         pickRandomCard(cards.filter((card) => card.id !== currentCard.id));
+        setEditorContent('result = (\n\tdf\n\n)');
+        setCodeError('');
+        setSubmittedResult(null);
+        setTestPassed(null);
       } catch (error) {
         console.error('Error submitting review:', error);
       }
@@ -155,12 +169,19 @@ const StudyCode: React.FC = () => {
     setOpenAnswerDialog(false);
   };
 
+  const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setSelectedDataset(event.target.value as string);
+  };
+
   if (!currentCard) {
     return <Typography>All done with code cards!</Typography>;
   }
 
   return (
     <>
+      <Typography variant="h6" gutterBottom>
+        Number of cards to study: {cards.length}
+      </Typography>
       <Card>
         <CardContent>
           <Typography variant="h5" component="div" gutterBottom>
@@ -184,7 +205,25 @@ const StudyCode: React.FC = () => {
       </Card>
       <Box sx={{ mt: 4, mb: 4 }}></Box>
       {currentCard && (
-        <PandasJsonTable data={JSON.parse(currentCard.dataset_header)}></PandasJsonTable>
+        <>
+          <FormControl fullWidth sx={{ mt: 4, mb: 2 }}>
+            <InputLabel id="dataset-select-label">Select Dataset</InputLabel>
+            <Select
+              labelId="dataset-select-label"
+              id="dataset-select"
+              value={selectedDataset}
+              label="Select Dataset"
+              onChange={handleDatasetChange}
+            >
+              {Object.keys(datasets).map((datasetName) => (
+                <MenuItem key={datasetName} value={datasetName}>
+                  {datasetName}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          {selectedDataset && <PandasJsonTable data={datasets[selectedDataset]} />}
+        </>
       )}
 
       <Box sx={{ mt: 4, mb: 4 }}>

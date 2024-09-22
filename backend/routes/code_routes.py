@@ -1,4 +1,5 @@
 import logging
+import os
 import traceback
 from ..code_completion.check_code import get_pandas_header, run_code, run_code_against_test
 from ..db.code_completion import (
@@ -33,12 +34,14 @@ class CodeSubmission(BaseModel):
 
 class TestCode(BaseModel):
     code: str
-    dataset_name: str
+    dataset_names: list[str]
+    preprocessing_code: str
 
 
 class CreateCode(BaseModel):
     description: str
-    dataset_name: str
+    dataset_names: list[str]
+    preprocessing_code: str
     code: str
 
 
@@ -59,7 +62,7 @@ class CodeUpdate(BaseModel):
 
 
 @router.get("/codes")
-async def get_cards():
+async def get_codes():
     logger.info("Getting all cards")
     try:
         codes = get_all_codes()
@@ -106,6 +109,18 @@ async def get_reviews():
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
+@router.get("/available_datasets")
+async def get_available_datasets():
+    logger.info("Getting all available datasets")
+    try:
+        # datasets = ["x"]
+        datasets = os.listdir("backend/code_completion/data")
+        return {"datasets": datasets}
+    except Exception as e:
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
 ####################################### POST #######################################
 
 
@@ -113,9 +128,10 @@ async def get_reviews():
 async def add_code(cc: CreateCode):
     try:
         description = cc.description
-        dataset_name = cc.dataset_name
+        dataset_names = cc.dataset_names
         code = cc.code
-        note_id = add_code_problem_to_db(description, dataset_name, code)
+        preprocessing_code = cc.preprocessing_code
+        note_id = add_code_problem_to_db(description, dataset_names, code, preprocessing_code)
         return {"id": note_id, "message": "Code created successfully"}
     except Exception as e:
         logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
@@ -150,7 +166,7 @@ async def submit_code(code_submission: CodeSubmission):
 async def test_code(code: TestCode):
     try:
         logger.info("TESTTING code ")
-        executed_df = run_code(code.code, code.dataset_name)
+        executed_df, error = run_code(code.code, code.dataset_names, code.preprocessing_code)
         return {"result_head": executed_df.head(10).to_json()}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")

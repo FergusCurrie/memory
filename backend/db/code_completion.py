@@ -1,8 +1,10 @@
-from .db_helpers import get_db
-from ..code_completion.check_code import get_pandas_header
+import json
 import logging
+from ..code_completion.check_code import get_pandas_header, get_preprocessing_headers
+from .db_helpers import get_db
 
 logger = logging.getLogger(__name__)
+
 
 def get_a_code_completition(id):
     conn = get_db()
@@ -30,25 +32,36 @@ def get_note_id_from_code_id(code_id):
     conn.close()
     return dict(card)["note_id"] if card else None
 
-def add_code_problem_to_db(description, dataset_path, code):
-    header = get_pandas_header(dataset_path)
+
+def add_code_problem_to_db(description, datasets, code, preprocessing_code):
+    # Get the dataframe headers
+    headers = {}
+    for dataset in datasets:
+        headers[dataset.replace(".csv", "")] = get_pandas_header(dataset)
+    # Get preprocessing headers
+    headers["preprocessing"] = get_preprocessing_headers(datasets, preprocessing_code)
+
     conn = get_db()
     cursor = conn.cursor()
     cursor.execute("INSERT INTO notes DEFAULT VALUES")
     note_id = cursor.lastrowid
     cursor.execute(
-        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, dataset_header) VALUES (?, ?, ?, ?, ?)",
-        (note_id, description, dataset_path, code, header),
+        "INSERT INTO code_completion (note_id, problem_description, dataset_name, code, preprocessing_code, dataframe_headers) VALUES (?, ?, ?, ?, ?, ?)",
+        (note_id, description, ",".join(datasets), code, preprocessing_code, json.dumps(headers)),
     )
     conn.commit()
     conn.close()
     return note_id
 
+
 def update_code_in_db(code_id: int, dataset_name: str, problem_description: str, code: str):
     conn = get_db()
     cursor = conn.cursor()
     try:
-        cursor.execute("UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ? WHERE id = ?", (dataset_name, problem_description, code, code_id))
+        cursor.execute(
+            "UPDATE code_completion SET dataset_name = ?, problem_description = ?, code = ? WHERE id = ?",
+            (dataset_name, problem_description, code, code_id),
+        )
         conn.commit()
         # Fetch the updated card
         cursor.execute("SELECT id, dataset_name, problem_description FROM code_completion WHERE id = ?", (code_id,))

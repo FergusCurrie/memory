@@ -10,20 +10,35 @@ import {
 } from '@mui/material';
 
 const PandasJsonTable = ({ data }) => {
+  // Check if data is a string (JSON)
+  if (typeof data === 'string') {
+    try {
+      data = JSON.parse(data);
+    } catch (error) {
+      console.error('Error parsing JSON:', error);
+      return <div>Error parsing data</div>;
+    }
+  }
+
   // Check if data is empty or undefined
   if (!data || Object.keys(data).length === 0) {
-    return <></>; // Return empty fragment if data is empty
+    return <div>No data available</div>;
   }
-  // Extract column names from the first row
+
+  // Extract column names
   const columns = Object.keys(data);
 
-  // Get the number of rows (assuming all columns have the same length)
-  const rowCount = Object.keys(data[columns[0]]).length;
+  // Get the number of rows
+  const rowCount = data[columns[0]].length;
+
+  console.log('Columns:', columns);
+  console.log('Row count:', rowCount);
 
   // Function to format cell values
   const formatCellValue = (value) => {
+    if (value === null) return 'N/A';
     if (typeof value === 'number') {
-      return value.toFixed(4); // Format numbers to 4 decimal places
+      return value.toFixed(2); // Format numbers to 2 decimal places
     }
     return value;
   };
@@ -48,7 +63,7 @@ const PandasJsonTable = ({ data }) => {
             <TableRow key={rowIndex}>
               {columns.map((column) => (
                 <TableCell key={`${column}-${rowIndex}`} sx={{ py: 0.5, px: 2 }}>
-                  {formatCellValue(data[column][rowIndex.toString()])}
+                  {formatCellValue(data[column][rowIndex])}
                 </TableCell>
               ))}
             </TableRow>
