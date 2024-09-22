@@ -115,7 +115,7 @@ async def get_available_datasets():
     logger.info("Getting all available datasets")
     try:
         # datasets = ["x"]
-        datasets = os.listdir("backend/code_completion/data")
+        datasets = sorted([x for x in os.listdir("backend/code_completion/data") if ".csv" in x])
         return {"datasets": datasets}
     except Exception as e:
         logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")

@@ -2,6 +2,13 @@
 
 This is a implementation of memory app. I've switched to using fastapi.
 
+## Making a card
+
+- Select any number of datasets. For code entry they will be in env by default, under name of datasets bar .csv.
+- Enter some default code which will be prepopulated in editor
+- Add whatever preprocessing code to prepare another dataframe. this can only produce 1 dataframe, preprocessed
+- Add main code. This must product a dataframe 'result'.
+
 ## Setting up DevContainer
 
 This project supports development using Visual Studio Code's DevContainers. DevContainers provide a consistent, isolated development environment that can be easily shared across team members. Follow these steps to set up and use the DevContainer:
