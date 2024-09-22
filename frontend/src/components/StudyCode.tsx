@@ -31,7 +31,7 @@ interface CodeCard {
   dataset_name: string;
   problem_description: string;
   code: string;
-  dataframe_headers: string; // This is now a JSON string containing multiple datasets
+  dataset_headers: string; // This is now a JSON string containing multiple datasets
   code_start: string;
 }
 
@@ -87,12 +87,20 @@ const StudyCode: React.FC = () => {
       setEditorContent(newCard.code_start || 'result = (\n\tdf\n\n)');
 
       // Parse the dataframe_headers JSON and set the datasets
-      const parsedDatasets = JSON.parse(newCard.dataframe_headers);
-      setDatasets(parsedDatasets);
-
-      // Set the first dataset as selected by default
-      const firstDatasetName = Object.keys(parsedDatasets)[0];
-      setSelectedDataset(firstDatasetName);
+      try {
+        const parsedDatasets = JSON.parse(newCard.dataset_headers);
+        setDatasets(parsedDatasets);
+        // Set the first dataset as selected by default
+        const firstDatasetName = Object.keys(parsedDatasets)[0];
+        console.log(firstDatasetName);
+        setSelectedDataset(firstDatasetName);
+      } catch (error) {
+        console.error('Error parsing dataframe_headers:', error);
+        console.log('dataframe_headers type:', typeof newCard.dataset_headers);
+        console.log('dataframe_headers value:', newCard.dataset_headers);
+        // Set an empty object as fallback
+        setDatasets({});
+      }
 
       setShowAnswer(false);
     } else {

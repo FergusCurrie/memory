@@ -1,3 +1,4 @@
+import argparse
 import json
 import os
 import sqlite3
@@ -65,7 +66,52 @@ def init_db():
     conn.close()
 
 
-import argparse
+def rename_column(cursor, table, old_column_name, new_column_name):
+    cursor.execute(f"PRAGMA table_info({table})")
+    columns = cursor.fetchall()
+
+    # Create new table with renamed column
+    new_columns = [f"{new_column_name if col[1] == old_column_name else col[1]} {col[2]}" for col in columns]
+    print(new_columns)
+    cursor.execute(f"CREATE TABLE new_{table} ({', '.join(new_columns)})")
+
+    # Copy data from old table to new table
+    old_cols = [col[1] for col in columns]
+    new_cols = [new_column_name if col == old_column_name else col for col in old_cols]
+    cursor.execute(f"INSERT INTO new_{table} ({', '.join(new_cols)}) SELECT {', '.join(old_cols)} FROM {table}")
+
+    # Drop old table and rename new table
+    cursor.execute(f"DROP TABLE {table}")
+    cursor.execute(f"ALTER TABLE new_{table} RENAME TO {table}")
+
+
+def update_dataset_header_rows(cursor, table):
+    cursor.execute(f"SELECT id, dataset_name, dataset_header FROM {table}")
+    rows = cursor.fetchall()
+    for row in rows:
+        id, dataset_name, dataset_headers = row
+
+        # Create a new JSON object with dataset_name as key and dataset_headers as value
+        new_headers = json.dumps({dataset_name.replace(".csv", ""): dataset_headers})
+
+        # Update the row with the new JSON format
+        cursor.execute(f"UPDATE {table} SET dataset_header = ? WHERE id = ?", (new_headers, id))
+
+    print(f"Updated {len(rows)} rows in the {table} table.")
+
+
+def update_solution_code(cursor, table):
+    cursor.execute(f"SELECT id, code, dataset_name FROM {table}")
+    rows = cursor.fetchall()
+    for row in rows:
+        id, code, dataset = row
+
+        # Update the row with the new JSON format
+        cursor.execute(
+            f"UPDATE {table} SET code = ? WHERE id = ?", (code.replace("df", dataset.replace(".csv", "")), id)
+        )
+
+    print(f"Updated {len(rows)} rows in the {table} table.")
 
 
 def run_migration():
@@ -78,14 +124,20 @@ def run_migration():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     try:
-        for table, operations in migration_plan.items():
-            for operation in operations:
-                change_type, column_name, column_type = operation
-                if change_type == "add_column":
-                    column_name, column_type = operation[1], operation[2]
-                    cursor.execute(f"ALTER TABLE {table} ADD COLUMN {column_name} {column_type}")
-                else:
-                    raise Exception(f"Migration type {change_type} not implemented")
+        cursor.execute("ALTER TABLE code_completion ADD COLUMN code_start TEXT DEFAULT NULL")
+        cursor.execute("ALTER TABLE code_completion ADD COLUMN preprocessing_code TEXT DEFAULT ''")
+        update_dataset_header_rows(cursor, "code_completion")
+        update_solution_code(cursor, "code_completion")
+        rename_column(cursor, "code_completion", "dataset_header", "dataset_headers")
+
+        # for table, operations in migration_plan.items():
+        #     for operation in operations:
+        #         change_type, column_name, column_type = operation
+        #         if change_type == "add_column":
+        #             column_name, column_type = operation[1], operation[2]
+        #             cursor.execute(f"ALTER TABLE {table} ADD COLUMN {column_name} {column_type}")
+        #         else:
+        #             raise Exception(f"Migration type {change_type} not implemented")
         # cursor.execute("ALTER TABLE code_completion ADD COLUMN preprocessing_code TEXT")
         print("Migration completed successfully.")
     except sqlite3.OperationalError as e:

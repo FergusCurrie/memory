@@ -10,7 +10,9 @@ import {
 } from '@mui/material';
 
 const PandasJsonTable = ({ data }) => {
-  // Check if data is a string (JSON)
+  console.log('Received data:', data); // Debugging: Log the received data
+
+  // Parse the data if it's a string
   if (typeof data === 'string') {
     try {
       data = JSON.parse(data);
@@ -29,10 +31,10 @@ const PandasJsonTable = ({ data }) => {
   const columns = Object.keys(data);
 
   // Get the number of rows
-  const rowCount = data[columns[0]].length;
+  const rowCount = Object.keys(data[columns[0]]).length;
 
-  console.log('Columns:', columns);
-  console.log('Row count:', rowCount);
+  console.log('Columns:', columns); // Debugging: Log the columns
+  console.log('Row count:', rowCount); // Debugging: Log the row count
 
   // Function to format cell values
   const formatCellValue = (value) => {
@@ -42,6 +44,10 @@ const PandasJsonTable = ({ data }) => {
     }
     return value;
   };
+
+  if (rowCount === 0) {
+    return <div>No rows found in the data</div>;
+  }
 
   return (
     <TableContainer component={Paper} sx={{ maxHeight: 400 }}>
@@ -59,11 +65,11 @@ const PandasJsonTable = ({ data }) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {[...Array(rowCount)].map((_, rowIndex) => (
+          {Array.from({ length: rowCount }).map((_, rowIndex) => (
             <TableRow key={rowIndex}>
               {columns.map((column) => (
                 <TableCell key={`${column}-${rowIndex}`} sx={{ py: 0.5, px: 2 }}>
-                  {formatCellValue(data[column][rowIndex])}
+                  {formatCellValue(data[column][rowIndex.toString()])}
                 </TableCell>
               ))}
             </TableRow>

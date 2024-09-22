@@ -77,7 +77,7 @@ const BrowseCodeCards: React.FC = () => {
   const handleSaveEdit = async () => {
     if (editingCard) {
       try {
-        await api.put(`/api/code/cards/${editingCard.id}`, editingCard);
+        await api.put(`/api/code/${editingCard.id}`, editingCard);
         setCodeCards(codeCards.map((c) => (c.id === editingCard.id ? editingCard : c)));
         setEditingCard(null);
       } catch (error) {
@@ -87,6 +87,18 @@ const BrowseCodeCards: React.FC = () => {
   };
 
   const handleDeleteReview = async (reviewId: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    if (window.confirm('Are you sure you want to delete this review?')) {
+      try {
+        await api.delete(`/api/reviews/${reviewId}`);
+        setCodeReviews(codeReviews.filter((review) => review.id !== reviewId));
+      } catch (error) {
+        console.error('Error deleting review:', error);
+      }
+    }
+  };
+
+  const handleDeleteCode = async (codeId: number, event: React.MouseEvent) => {
     event.stopPropagation();
     if (window.confirm('Are you sure you want to delete this review?')) {
       try {
@@ -132,7 +144,7 @@ const BrowseCodeCards: React.FC = () => {
                 <TableCell>{card.dataset_name}</TableCell>
                 <TableCell>{card.problem_description}</TableCell>
                 <TableCell>
-                  <IconButton onClick={(e) => handleDeleteReview(card.id, e)} color="error">
+                  <IconButton onClick={(e) => handleDeleteCode(card.id, e)} color="error">
                     <DeleteIcon />
                   </IconButton>
                   <IconButton onClick={() => handleEditCard(card)} color="primary">

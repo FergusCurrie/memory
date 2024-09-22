@@ -1,5 +1,6 @@
 {
     "code_completion": [
-        ["add_column", "preprocessing_code","TEXT"]
+        ["add_column", "preprocessing_code","TEXT"],
+        ["add_column", "code_start","TEXT"]
     ]
 }

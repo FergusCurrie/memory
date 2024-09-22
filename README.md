@@ -2,6 +2,10 @@
 
 This is a implementation of memory app. I've switched to using fastapi.
 
+## Readings
+
+- https://github.com/zhanymkanov/fastapi-best-practices
+
 ## Making a card
 
 - Select any number of datasets. For code entry they will be in env by default, under name of datasets bar .csv.
@@ -124,3 +128,14 @@ The application will now be accessible at `http://localhost:9898`.
 Note: Make sure you have Docker installed on your system before running the Docker commands.
 
 For convenience, steps 3-4 are combined in the `scripts/build.sh` script. You can run it with:
+
+# SQL server
+
+Following : https://medium.com/@karifbattle/install-microsoft-sql-server-express-on-ubuntu-d074bab10f99
+
+requires: wget software-properties-common mssql-server
+
+curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
+add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Singed%95" -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest

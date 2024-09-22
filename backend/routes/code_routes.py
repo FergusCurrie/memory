@@ -178,7 +178,7 @@ async def test_code(code: TestCode):
 ############################### put 3######################################
 
 
-@router.put("/cards/{card_id}")
+@router.put("/{card_id}")
 async def update_code(code: CodeUpdate):
     logger.info(f"Updating code {code.id}")
     try:
@@ -188,3 +188,17 @@ async def update_code(code: CodeUpdate):
         logger.error(f"Error updating card {code.id}: {str(e)}")
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+####################################### DELETE #######################################
+
+
+# @router.delete("/{card_id}")
+# async def delete_code(card_id: int):
+#     logger.info(f"Deleting card {card_id}")
+#     try:
+#         note_id = get_note_id_from_card_id(card_id)
+#         delete_note(note_id)
+#         return {"message": f"Card {card_id} and its reviews deleted successfully"}
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=str(e)) from e

@@ -39,7 +39,9 @@ def get_preprocessing_headers(datasets, preprocessing_code):
 def run_code(code, datasets, preprocessing_code):
     dfs = {}
     for dataset in datasets:
-        dfs[dataset.replace(".csv", "")] = pl.read_csv("backend/code_completion/data/" + dataset)
+        x = pl.read_csv("backend/code_completion/data/" + dataset)
+        dfs[dataset.replace(".csv", "")] = x
+        logger.info(f"AAAAAAAAAAAAA size = {len(x)}")
 
     logger.info(dfs)
     logger.info(f"Prprocessing code = [{preprocessing_code}]")
