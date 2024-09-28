@@ -139,3 +139,15 @@ curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gp
 add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
 
 docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Singed%95" -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest
+
+# azure sql edge
+
+docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=Singed%!blah' \
+ -p 1433:1433 --name azuresqledge -v ~/sqlserver/data:/var/opt/mssql/data \
+ -d mcr.microsoft.com/azure-sql-edge:latest
+
+https://hub.docker.com/r/microsoft/azure-sql-edge
+
+apt install -y curl unixodbc odbcinst
+curl https://packages.microsoft.com/debian/12/prod/pool/main/m/msodbcsql18/msodbcsql18_18.3.2.1-1_arm64.deb -o msodbcsql18.deb
+ACCEPT_EULA=Y dpkg --install msodbcsql17.deb

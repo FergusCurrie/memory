@@ -58,6 +58,7 @@ const StudyCode: React.FC = () => {
       const response = await api.get('/api/code/code_to_review');
       console.log(response);
       setCards(response.data.codes);
+
       pickRandomCard(response.data.codes);
     } catch (error) {
       console.error('Error fetching code cards:', error);
@@ -135,10 +136,12 @@ const StudyCode: React.FC = () => {
     console.log('Sending code:', currentContent);
     setIsLoading(true);
     try {
-      const response = await api.post('/api/code/submit_code', {
+      const payload = {
         code: currentContent,
         code_id: currentCard?.id,
-      });
+      };
+      console.log(payload);
+      const response = await api.post('/api/code/submit_code', payload);
       console.log('API response:', response);
       setSubmittedResult(JSON.parse(response.data.result_head));
       setTestPassed(response.data.passed);

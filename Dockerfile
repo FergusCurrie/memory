@@ -6,11 +6,19 @@ WORKDIR /app
 # Set env path for db for prd 
 ENV DB_PATH=/app/db/flashcards.db
 
+# Install some stuff 
+RUN apt-get update && apt-get install -y \
+    sqlite3 
+
+
+
 # Copy the requirements file into the container
 COPY requirements.txt .
 
 # Create the db directory
 RUN mkdir -p /app/db
+
+
 
 # Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
