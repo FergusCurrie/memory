@@ -6,12 +6,12 @@ import NextCardManagement from '../study_components/NextCardManagement';
 
 interface Problem {
   problem_type: string;
-  problem_id?: number;
-  concept_id?: number;
-  code_default?: string;
-  datasets?: Array<string>;
+  problem_id: number;
+  //concept_id: number;
+  code_default: string;
+  datasets: string;
   description?: string;
-  hint?: string;
+  //hint: string;
 }
 
 interface PolarsProblem {
@@ -33,7 +33,9 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   return (
     <>
       <Description text={problem.description} />
-      <DatasetRenderer {...{ selectedDataset, setSelectedDataset, datasets: problem.datasets }} />
+      <DatasetRenderer
+        {...{ selectedDataset, setSelectedDataset, datasets: JSON.parse(problem.datasets) }}
+      />
       <CodeEditor {...{ problem_id: problem?.problem_id, testPassed, setTestPassed }} />
       <NextCardManagement {...{ testPassed, handleScore }} />
     </>

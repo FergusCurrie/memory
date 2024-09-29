@@ -13,7 +13,7 @@ import PandasJsonTable from './PandasTable';
 interface DatasetRendererProps {
   selectedDataset?: string;
   setSelectedDataset: React.Dispatch<React.SetStateAction<string>>;
-  datasets?: Array<string>;
+  datasets?: Record<string, any>;
 }
 const DatasetRenderer: React.FC<DatasetRendererProps> = ({
   selectedDataset,

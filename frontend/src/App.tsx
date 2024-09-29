@@ -7,12 +7,13 @@ import { ThemeProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { CssBaseline } from '@mui/material';
 import Home from './pages/Home';
-import Study from './pages/Study';
+//import Study from './pages/OLDSTUDY';
 import NavigationBar from './pages/NavigationBar';
 import AddCards from './pages/AddCards';
 import Browse from './pages/Browse';
 import AddCode from './pages/AddCode';
 import BrowseCodeCards from './pages/BrowseCode';
+import Study from './components/Study';
 
 const App = () => {
   return (

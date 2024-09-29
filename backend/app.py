@@ -1,5 +1,5 @@
 import logging
-from .db.notes import delete_review
+from .db.problems import add_review, delete_review, get_problem_for_polars
 from .db.sync import sync_db_to_azure
 from .routes import card_routes, code_routes
 
@@ -8,6 +8,7 @@ from fastapi import BackgroundTasks, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from pydantic import BaseModel
 
 logging.basicConfig(
     level=logging.DEBUG,  # vs DEBUG
@@ -40,6 +41,43 @@ app.include_router(code_routes.router, prefix="/api/code")
 @app.get("/")
 def root():
     return FileResponse("static/index.html")
+
+
+class PlaceholderReview(BaseModel):
+    problem_id: int
+    result: bool
+
+
+class ReviewCreate(BaseModel):
+    problem_id: int
+    result: bool
+
+
+@app.post("/api/reviews")
+async def reviews(review: ReviewCreate):
+    try:
+        review_id = add_review(review.problem_id, review.result)
+        return {"id": review_id, "message": "Review created successfully"}
+    except Exception as e:
+        logger.error(f"Error adding review: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+@app.get("/api/get_next_problem")
+async def get_next_problem():
+    try:
+        data = get_problem_for_polars(1)
+
+        return {
+            "problem_type": "polars",
+            "problem_id": data["problem_id"],
+            "code_default": data["default_code"],
+            "datasets": data["dataset_headers"],
+            "description": data["description"],
+        }
+    except Exception as e:
+        logger.error(f"Error getting next problem: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.post("/api/sync_db")

@@ -1,56 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {
-  Button,
-  Card,
-  CardContent,
-  Typography,
-  Box,
-  Table,
-  TableHead,
-  TableCell,
-  TableRow,
-  TableContainer,
-  TableBody,
-  Paper,
-  CircularProgress,
-  Alert,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-} from '@mui/material';
 import api from '../api';
-import Editor, { OnMount } from '@monaco-editor/react';
-import PandasJsonTable from './study_components/PandasTable';
-import { KeyboardEvent } from 'react';
-import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-// import Description from './study_components/Description';
-// import DatasetRenderer from './study_components/DatasetRenderer';
 import PolarsProblem from './problem_types/PolarsProblem';
-// interface CodeCard {
-//   id: number;
-//   note_id: number;
-//   dataset_name: string;
-//   problem_description: string;
-//   code: string;
-//   dataset_headers: string; // This is now a JSON string containing multiple datasets
-//   code_start: string;
-// }
-
-// const selectRandomConcept = (concepts) => {
-//     const randomIndex = Math.floor(Math.random() * concepts.length);
-//     const nextConcept = concepts[randomIndex];
-//     setCurrentConcept(nextConcept);
-//   };
+import { Box } from '@mui/material';
 
 interface Problem {
   problem_type: string;
-  problem_id?: number;
-  concept_id?: number;
-  code_default?: string;
-  datasets?: Array<string>;
+  problem_id: number;
+  //concept_id: number;
+  code_default: string;
+  datasets: string;
   description?: string;
-  hint?: string;
+  //hint: string;
 }
 
 const Study: React.FC = () => {
@@ -95,13 +55,6 @@ const Study: React.FC = () => {
           problem_id: problem.problem_id,
           result: result,
         });
-        // Fetch a new problem after submitting the review
-
-        //setCards((prevCards) => prevCards.filter((card) => card.id !== currentCard.id));
-        //pickRandomCard(cards.filter((card) => card.id !== currentCard.id));
-        //setCodeError('');
-        //setSubmittedResult(null);
-        //setTestPassed(null);
         fetchConcept();
       } catch (error) {
         console.error('Error submitting review:', error);
@@ -112,10 +65,8 @@ const Study: React.FC = () => {
   const fetchConcept = async () => {
     try {
       const response = await api.get('/api/get_next_problem');
-      //console.log(response);
-      setProblem(response.data.problem);
-
-      //selectRandomConcept(response.data.codes);
+      console.log(response);
+      setProblem(response.data);
     } catch (error) {
       console.error('Error fetching concept', error);
     }
@@ -123,9 +74,11 @@ const Study: React.FC = () => {
 
   return (
     <>
-      {problem?.problem_type == 'polars' && (
-        <PolarsProblem problem={problem} handleScore={handleScore} />
-      )}
+      <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
+        {problem?.problem_type == 'polars' && (
+          <PolarsProblem problem={problem} handleScore={handleScore} />
+        )}
+      </Box>
     </>
     // <>
     //   {problem?.description && <Description text={problem.description} />}
