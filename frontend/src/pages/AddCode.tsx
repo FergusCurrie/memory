@@ -12,7 +12,7 @@ import {
   MenuItem,
   Chip,
 } from '@mui/material';
-import PandasJsonTable from '../components/PandasTable';
+import PandasJsonTable from '../components/study_components/PandasTable';
 
 const AddCode: React.FC = () => {
   // Change datasetPath to datasetPaths and make it an array
@@ -80,11 +80,11 @@ const AddCode: React.FC = () => {
         default_code: defaultCode, // Add this line
       });
       console.log('Card added:', response.data);
-      setCode('');
-      setPreprocessingCode('');
-      setDescription('');
-      setDatasetPaths([]);
-      setDefaultCode(''); // Reset default code
+      // setCode('');
+      // setPreprocessingCode('');
+      // setDescription('');
+      // setDatasetPaths([]);
+      // setDefaultCode(''); // Reset default code
       setSubmittedResult(false);
       alert('Code added successfully!');
     } catch (error) {

@@ -21,7 +21,7 @@ import {
 } from '@mui/material';
 import api from '../api';
 import Editor, { OnMount } from '@monaco-editor/react';
-import PandasJsonTable from './PandasTable';
+import PandasJsonTable from './study_components/PandasTable';
 import { KeyboardEvent } from 'react';
 import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
 
