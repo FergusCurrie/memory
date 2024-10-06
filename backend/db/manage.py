@@ -1,5 +1,3 @@
-import argparse
-import json
 import os
 import sqlite3
 import sys
@@ -16,12 +14,37 @@ def init_db():
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
 
-    # Create Notes table
+    # Create problems table
     cursor.execute("""
-    CREATE TABLE IF NOT EXISTS notes (
+    CREATE TABLE IF NOT EXISTS problems (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        tags JSON DEFAULT '{}',
+        description TEXT,
         date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    """)
+
+    # code
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS code (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        problem_id INTEGER,
+        code TEXT,
+        preprocessing_code TEXT,
+        default_code TEXT,
+        date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (problem_id) REFERENCES problems (id)
+    )
+    """)
+
+    # datasets
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS datasets (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        problem_id INTEGER,
+        dataset_name TEXT,
+        dataset_headers JSON,
+        date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (problem_id) REFERENCES problems (id)
     )
     """)
 
@@ -29,36 +52,10 @@ def init_db():
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS reviews (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        note_id INTEGER,
-        date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        problem_id INTEGER,
         result BOOLEAN,
-        FOREIGN KEY (note_id) REFERENCES notes (id)
-    )
-    """)
-
-    # Create Card table
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS cards (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        note_id INTEGER,
-        question TEXT NOT NULL,
-        answer TEXT NOT NULL,
-        FOREIGN KEY (note_id) REFERENCES notes (id)
-    )
-    """)
-
-    # Create Code Completion table
-    cursor.execute("""
-    CREATE TABLE IF NOT EXISTS code_completion (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        note_id INTEGER,
-        code TEXT,
-        problem_description TEXT,
-        dataset_name TEXT,
-        preprocessing_code TEXT,
-        code_start text DEFAULT NULL,
-        dataset_headers JSON,
-        FOREIGN KEY (note_id) REFERENCES notes (id)           
+        date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (problem_id) REFERENCES problems (id)
     )
     """)
 
@@ -66,99 +63,119 @@ def init_db():
     conn.close()
 
 
-def rename_column(cursor, table, old_column_name, new_column_name):
-    cursor.execute(f"PRAGMA table_info({table})")
-    columns = cursor.fetchall()
+def print_first_code_completion_row():
+    # Connect to the old database
+    old_conn = sqlite3.connect("old_flashcards.db")
+    old_cursor = old_conn.cursor()
 
-    # Create new table with renamed column
-    new_columns = [f"{new_column_name if col[1] == old_column_name else col[1]} {col[2]}" for col in columns]
-    print(new_columns)
-    cursor.execute(f"CREATE TABLE new_{table} ({', '.join(new_columns)})")
+    try:
+        # Execute a query to fetch the first row from code_completion table
+        old_cursor.execute("SELECT * FROM code_completion LIMIT 1")
 
-    # Copy data from old table to new table
-    old_cols = [col[1] for col in columns]
-    new_cols = [new_column_name if col == old_column_name else col for col in old_cols]
-    cursor.execute(f"INSERT INTO new_{table} ({', '.join(new_cols)}) SELECT {', '.join(old_cols)} FROM {table}")
-
-    # Drop old table and rename new table
-    cursor.execute(f"DROP TABLE {table}")
-    cursor.execute(f"ALTER TABLE new_{table} RENAME TO {table}")
-
-
-def update_dataset_header_rows(cursor, table):
-    cursor.execute(f"SELECT id, dataset_name, dataset_header FROM {table}")
-    rows = cursor.fetchall()
-    for row in rows:
-        id, dataset_name, dataset_headers = row
-
-        # Create a new JSON object with dataset_name as key and dataset_headers as value
-        new_headers = json.dumps({dataset_name.replace(".csv", ""): dataset_headers})
-
-        # Update the row with the new JSON format
-        cursor.execute(f"UPDATE {table} SET dataset_header = ? WHERE id = ?", (new_headers, id))
-
-    print(f"Updated {len(rows)} rows in the {table} table.")
-
-
-def update_solution_code(cursor, table):
-    cursor.execute(f"SELECT id, code, dataset_name FROM {table}")
-    rows = cursor.fetchall()
-    for row in rows:
-        id, code, dataset = row
-
-        # Update the row with the new JSON format
-        cursor.execute(
-            f"UPDATE {table} SET code = ? WHERE id = ?", (code.replace("df", dataset.replace(".csv", "")), id)
+        # Fetch the first row
+        first_row = old_cursor.fetchone()
+        id, note_id, code, problem_description, dataset_name, preprocessing_code, code_start, dataset_headers = (
+            first_row
         )
 
-    print(f"Updated {len(rows)} rows in the {table} table.")
+        # Connect to the new database
+        new_conn = sqlite3.connect(DB_PATH)
+        new_cursor = new_conn.cursor()
 
+        try:
+            # Insert into problems table
+            new_cursor.execute(
+                """
+            INSERT INTO problems (description)
+            VALUES (?)
+            """,
+                (problem_description,),
+            )
+            problem_id = new_cursor.lastrowid
 
-def run_migration():
-    # Add your migration logic here
-    print("Running migration...")
-    with open("backend/db/migration.json", "r") as f:
-        migration_plan = json.load(f)
-    print(migration_plan)
-    # Example: Add a new column to an existing table
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    try:
-        cursor.execute("ALTER TABLE code_completion ADD COLUMN code_start TEXT DEFAULT NULL")
-        cursor.execute("ALTER TABLE code_completion ADD COLUMN preprocessing_code TEXT DEFAULT ''")
-        update_dataset_header_rows(cursor, "code_completion")
-        update_solution_code(cursor, "code_completion")
-        rename_column(cursor, "code_completion", "dataset_header", "dataset_headers")
+            # Insert into code table
+            new_cursor.execute(
+                """
+            INSERT INTO code (problem_id, code, preprocessing_code, default_code)
+            VALUES (?, ?, ?, ?)
+            """,
+                (problem_id, code, preprocessing_code, code_start),
+            )
 
-        # for table, operations in migration_plan.items():
-        #     for operation in operations:
-        #         change_type, column_name, column_type = operation
-        #         if change_type == "add_column":
-        #             column_name, column_type = operation[1], operation[2]
-        #             cursor.execute(f"ALTER TABLE {table} ADD COLUMN {column_name} {column_type}")
-        #         else:
-        #             raise Exception(f"Migration type {change_type} not implemented")
-        # cursor.execute("ALTER TABLE code_completion ADD COLUMN preprocessing_code TEXT")
-        print("Migration completed successfully.")
-    except sqlite3.OperationalError as e:
-        print(f"Migration failed: {e}")
+            # Insert into datasets table
+            new_cursor.execute(
+                """
+            INSERT INTO datasets (problem_id, dataset_name, dataset_headers)
+            VALUES (?, ?, ?)
+            """,
+                (problem_id, dataset_name, dataset_headers),
+            )
+
+            # Commit the changes
+            new_conn.commit()
+
+            print(f"Inserted data for problem_id: {problem_id}")
+
+        except sqlite3.Error as e:
+            print(f"An error occurred while inserting data: {e}")
+
+        finally:
+            # Close the new database connection
+            new_conn.close()
+
+        print(type(first_row))
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+
     finally:
-        conn.commit()
-        conn.close()
+        # Close the connection
+        old_conn.close()
+
+
+def get_code_for_first_problem():
+    try:
+        conn = sqlite3.connect("flashcards.db")
+        cursor = conn.cursor()
+
+        query = """
+        SELECT p.id, p.description, c.code, c.preprocessing_code, c.default_code, d.dataset_name, d.dataset_headers
+        FROM problems p
+        JOIN code c ON p.id = c.problem_id
+        JOIN datasets d ON p.id = d.problem_id
+        ORDER BY p.id
+        LIMIT 1
+        """
+
+        cursor.execute(query)
+        result = cursor.fetchone()
+
+        if result:
+            problem_id, description, code, preprocessing_code, default_code, dataset_name, dataset_headers = result
+            print(
+                {
+                    "problem_id": problem_id,
+                    "description": description,
+                    "code": code,
+                    "preprocessing_code": preprocessing_code,
+                    "default_code": default_code,
+                    "dataset_name": dataset_name,
+                    "dataset_headers": dataset_headers,
+                }
+            )
+        return
+
+    except sqlite3.Error as e:
+        print(f"An error occurred: {e}")
+        return
+
+    finally:
+        if conn:
+            conn.close()
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Database management script")
-    parser.add_argument("action", choices=["init", "migrate"], help="Action to perform: init_db or run_migration")
-
-    args = parser.parse_args()
-
-    if args.action == "init":
-        init_db()
-        print("Database initialized successfully.")
-    elif args.action == "migrate":
-        run_migration()
-    else:
-        print("No arguments supplied ")
-
-init_db()
+    # Call the function to print the first row
+    # init_db()
+    # print_first_code_completion_row()
+    get_code_for_first_problem()

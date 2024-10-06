@@ -11,7 +11,7 @@ def sm2_check_card(card, card_reviews) -> bool:
     logger.debug(f"Checking card {card}, has reviews: {card_reviews}")
     if len(card_reviews) == 0:
         return True
-    sorted_reviews = sorted(card_reviews, key=lambda x: datetime.strptime(x["date"], "%Y-%m-%d %H:%M:%S"))
+    sorted_reviews = sorted(card_reviews, key=lambda x: datetime.strptime(x["date_created"], "%Y-%m-%d %H:%M:%S"))
     ease_factor = 2.5
     n = 0
     for review in sorted_reviews:
@@ -49,9 +49,11 @@ def sm2_algorithm(cards, reviews):
         cards_to_review = []
         for card in cards:
             # filter revies to be in note ids
-            card_reviews = [review for review in reviews if review["note_id"] == card["note_id"]]
+            card_reviews = [review for review in reviews if review["problem_id"] == card["problem_id"]]
+
             if sm2_check_card(card, card_reviews):
                 cards_to_review.append(card)
         return cards_to_review
     except Exception:
         logger.error(f"An error occurred in sm2_algorithm:\n{traceback.format_exc()}")
+        return -1

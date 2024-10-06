@@ -27,6 +27,7 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
     if (problem) {
       setSelectedDataset('');
       setTestPassed(false);
+      console.log(problem);
     }
   }, [problem]);
 

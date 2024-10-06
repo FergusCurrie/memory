@@ -1,0 +1,41 @@
+from backend.db.review_model import add_review, delete_review, get_all_reviews, get_review
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
+
+
+class ReviewCreate(BaseModel):
+    problem_id: int
+    result: bool
+
+
+router = APIRouter()
+
+
+@router.post("/")
+def create_review(review: ReviewCreate):
+    review_id = add_review(problem_id=review.problem_id, result=review.result)
+    if review_id is None:
+        raise HTTPException(status_code=500, detail="Failed to create review")
+    return get_review(review_id)
+
+
+@router.get("/")
+def get_reviews():
+    return get_all_reviews()
+
+
+@router.get("/{review_id}")
+def get_a_review(review_id: int):
+    db_review = get_review(review_id)
+    if db_review is None:
+        raise HTTPException(status_code=404, detail="Review not found")
+    return db_review
+
+
+@router.delete("/{review_id}")
+def delete_review(review_id: int):
+    db_review = get_review(review_id)
+    if db_review is None:
+        raise HTTPException(status_code=404, detail="Review not found")
+    delete_review(review_id)
+    return db_review

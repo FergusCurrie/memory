@@ -50,8 +50,9 @@ const BrowseCodeCards: React.FC = () => {
 
   const fetchCodeCards = async () => {
     try {
-      const response = await api.get('/api/code/codes');
-      setCodeCards(response.data.codes);
+      const response = await api.get('/api/problem/');
+      console.log(response);
+      setCodeCards(response.data);
     } catch (error) {
       console.error('Error fetching code cards:', error);
     }
@@ -59,8 +60,9 @@ const BrowseCodeCards: React.FC = () => {
 
   const fetchCodeReviews = async () => {
     try {
-      const response = await api.get('/api/code/reviews');
-      setCodeReviews(response.data.reviews);
+      // const response = await api.get('/api/review');
+      // console.log(response);
+      // setCodeReviews(response.data.reviews);
     } catch (error) {
       console.error('Error fetching code reviews:', error);
     }

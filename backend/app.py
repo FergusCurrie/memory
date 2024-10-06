@@ -1,7 +1,10 @@
 import logging
-from .db.problems import add_review, delete_review, get_problem_for_polars
+import os
+import traceback
+from .code_completion.check_code import run_code, run_code_against_test
+from .db.problem_model import get_problem_for_polars
 from .db.sync import sync_db_to_azure
-from .routes import card_routes, code_routes
+from .routes import problem_routes, review_routes
 
 # from .scheduling.basic_scheduler import get_todays_reviews
 from fastapi import BackgroundTasks, FastAPI, HTTPException, Request
@@ -34,8 +37,8 @@ app.add_middleware(
 # Mount the static directory
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
-app.include_router(card_routes.router, prefix="/api/card")
-app.include_router(code_routes.router, prefix="/api/code")
+app.include_router(problem_routes.router, prefix="/api/problem")
+app.include_router(review_routes.router, prefix="/api/review")
 
 
 @app.get("/")
@@ -43,40 +46,40 @@ def root():
     return FileResponse("static/index.html")
 
 
-class PlaceholderReview(BaseModel):
+class CheckCodeForCreation(BaseModel):
+    code: str
+    preprocessing_code: str
+    dataset_names: list
+
+
+class TestCodeSubmission(BaseModel):
     problem_id: int
-    result: bool
+    code: str
 
 
-class ReviewCreate(BaseModel):
-    problem_id: int
-    result: bool
-
-
-@app.post("/api/reviews")
-async def reviews(review: ReviewCreate):
+@app.post("/api/code/test_code")
+async def submit_code(code_submission: TestCodeSubmission):
     try:
-        review_id = add_review(review.problem_id, review.result)
-        return {"id": review_id, "message": "Review created successfully"}
+        code_compleition_row = get_problem_for_polars(code_submission.problem_id)
+        passed, result_head, error = run_code_against_test(
+            code_completion_row=code_compleition_row, code_submission=code_submission
+        )
+        return {"passed": passed, "result_head": result_head, "error": error}
     except Exception as e:
-        logger.error(f"Error adding review: {str(e)}")
+        logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-@app.get("/api/get_next_problem")
-async def get_next_problem():
+@app.post("/api/code/polars_code")
+async def check_code_for_creation(code_submission: CheckCodeForCreation):
     try:
-        data = get_problem_for_polars(1)
-
-        return {
-            "problem_type": "polars",
-            "problem_id": data["problem_id"],
-            "code_default": data["default_code"],
-            "datasets": data["dataset_headers"],
-            "description": data["description"],
-        }
+        logger.info(code_submission)
+        executed_df, error = run_code(
+            code_submission.code, code_submission.dataset_names, code_submission.preprocessing_code
+        )
+        return {"result_head": executed_df.head(10).to_json()}
     except Exception as e:
-        logger.error(f"Error getting next problem: {str(e)}")
+        logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
@@ -90,17 +93,19 @@ async def sync_db(background_tasks: BackgroundTasks):
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-####################################### DELETE #######################################
-
-
-@app.delete("/api/reviews/{review_id}")
-async def delete_reveiw(review_id: int):
-    logger.info(f"Deleting review {review_id}")
+@app.get("/api/available_datasets")
+async def get_available_datasets():
+    logger.info("Getting all available datasets")
     try:
-        delete_review(review_id)
-        return {"message": f"Review {review_id} and its reviews deleted successfully"}
+        # datasets = ["x"]
+        datasets = sorted([x for x in os.listdir("backend/code_completion/data") if ".csv" in x])
+        return {"datasets": datasets}
     except Exception as e:
+        logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+####################################### DELETE #######################################
 
 
 # # Catch-all route for React Router

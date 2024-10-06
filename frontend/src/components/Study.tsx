@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import api from '../api';
 import PolarsProblem from './problem_types/PolarsProblem';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 interface Problem {
   problem_type: string;
@@ -34,6 +34,7 @@ const Study: React.FC = () => {
    */
 
   const [problem, setProblem] = useState<Problem>();
+  const [problemsRemaining, setProblemsRemaining] = useState<boolean>(true);
 
   useEffect(() => {
     fetchConcept();
@@ -51,7 +52,8 @@ const Study: React.FC = () => {
      */
     if (problem) {
       try {
-        await api.post('/api/reviews', {
+        console.log('Handling score');
+        await api.post('/api/review', {
           problem_id: problem.problem_id,
           result: result,
         });
@@ -64,9 +66,13 @@ const Study: React.FC = () => {
 
   const fetchConcept = async () => {
     try {
-      const response = await api.get('/api/get_next_problem');
-      console.log(response);
-      setProblem(response.data);
+      console.log('requesting');
+      const response = await api.get('/api/problem/get_next_problem');
+      if (response.data.problems.length === 0) {
+        setProblemsRemaining(false);
+      } else {
+        setProblem(response.data.problems[0]);
+      }
     } catch (error) {
       console.error('Error fetching concept', error);
     }
@@ -74,19 +80,18 @@ const Study: React.FC = () => {
 
   return (
     <>
-      <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
-        {problem?.problem_type == 'polars' && (
-          <PolarsProblem problem={problem} handleScore={handleScore} />
-        )}
-      </Box>
+      {problemsRemaining ? (
+        <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
+          {problem?.problem_type === 'polars' && (
+            <PolarsProblem problem={problem} handleScore={handleScore} />
+          )}
+        </Box>
+      ) : (
+        <Typography variant="h5" sx={{ textAlign: 'center', mt: 4 }}>
+          No cards remaining
+        </Typography>
+      )}
     </>
-    // <>
-    //   {problem?.description && <Description text={problem.description} />}
-    //   <Box sx={{ mt: 4, mb: 4 }}></Box>
-    //   {problem?.datasets && (
-    //     <DatasetRenderer {...{ selectedDataset, setSelectedDataset, datasets: problem.datasets }} />
-    //   )}
-    // </>
   );
 };
 

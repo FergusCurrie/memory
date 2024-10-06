@@ -29,8 +29,10 @@ const AddCode: React.FC = () => {
 
   useEffect(() => {
     const fetchDatasets = async () => {
+      console.log('fetching');
       try {
-        const response = await api.get('/api/code/available_datasets');
+        const response = await api.get('/api/available_datasets');
+        console.log(response);
         setAvailableDatasets(response.data.datasets);
       } catch (error) {
         console.error('Error fetching available datasets:', error);
@@ -54,11 +56,13 @@ const AddCode: React.FC = () => {
   const handleRunCode = async () => {
     setIsLoading(true);
     try {
-      const response = await api.post('/api/code/test_code', {
+      const payload = {
         code: code,
         preprocessing_code: preprocessingCode,
         dataset_names: datasetPaths, // Changed to datasetPaths
-      });
+      };
+      console.log(payload);
+      const response = await api.post('/api/code/polars_code', payload);
       console.log(response);
       setSubmittedResult(JSON.parse(response.data.result_head));
     } catch (error) {
@@ -72,7 +76,7 @@ const AddCode: React.FC = () => {
   const handleSaveCode = async () => {
     console.log('trying to add card');
     try {
-      const response = await api.post('/api/code/add_code', {
+      const response = await api.post('/api/problem', {
         description: description,
         dataset_names: datasetPaths,
         code: code,

@@ -93,7 +93,7 @@ def compare_dataframes(df1, df2):
 
 def run_code_against_test(code_completion_row, code_submission):
     # Test the code
-    description = code_completion_row["problem_description"]
+    description = code_completion_row["description"]
     dataset_path = code_completion_row["dataset_name"]
     datasets = dataset_path.split(",")
     preprocessing_code = code_completion_row["preprocessing_code"]

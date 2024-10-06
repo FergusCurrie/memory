@@ -30,7 +30,7 @@ const CodeEditor: React.FC<CodeEditorProps> = ({ problem_id, testPassed, setTest
         problem_id: problem_id,
       };
       console.log(payload);
-      const response = await api.post('/api/code/polars_code', payload);
+      const response = await api.post('/api/code/test_code', payload);
       console.log('API response:', response);
       setSubmittedResult(JSON.parse(response.data.result_head));
       setTestPassed(response.data.passed);
