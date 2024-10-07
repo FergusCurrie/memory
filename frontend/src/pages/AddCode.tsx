@@ -27,6 +27,8 @@ const AddCode: React.FC = () => {
 
   const [defaultCode, setDefaultCode] = useState('');
 
+  const [problemType, setProblemType] = useState<'polars' | 'pyspark'>('polars');
+
   useEffect(() => {
     const fetchDatasets = async () => {
       console.log('fetching');
@@ -52,17 +54,22 @@ const AddCode: React.FC = () => {
     );
   };
 
-  // Update handleRunCode and handleSaveCode to use datasetPaths instead of datasetPath
+  const handleProblemTypeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setProblemType(event.target.value as 'polars' | 'pyspark');
+  };
+
+  // Update handleRunCode to use the problemType
   const handleRunCode = async () => {
     setIsLoading(true);
     try {
       const payload = {
         code: code,
         preprocessing_code: preprocessingCode,
-        dataset_names: datasetPaths, // Changed to datasetPaths
+        dataset_names: datasetPaths,
+        problem_type: problemType, // Add this line
       };
       console.log(payload);
-      const response = await api.post('/api/code/polars_code', payload);
+      const response = await api.post(`/api/code/check_creation_code`, payload);
       console.log(response);
       setSubmittedResult(JSON.parse(response.data.result_head));
     } catch (error) {
@@ -81,7 +88,8 @@ const AddCode: React.FC = () => {
         dataset_names: datasetPaths,
         code: code,
         preprocessing_code: preprocessingCode,
-        default_code: defaultCode, // Add this line
+        default_code: defaultCode,
+        problem_type: problemType, // Add this line
       });
       console.log('Card added:', response.data);
       // setCode('');
@@ -137,6 +145,19 @@ const AddCode: React.FC = () => {
               {dataset}
             </MenuItem>
           ))}
+        </Select>
+      </FormControl>
+      <FormControl fullWidth>
+        <InputLabel id="problem-type-select-label">Problem Type</InputLabel>
+        <Select
+          labelId="problem-type-select-label"
+          id="problem-type-select"
+          value={problemType}
+          onChange={handleProblemTypeChange}
+          style={{ fontSize: '16px' }}
+        >
+          <MenuItem value="polars">Polars</MenuItem>
+          <MenuItem value="pyspark">PySpark</MenuItem>
         </Select>
       </FormControl>
       <textarea

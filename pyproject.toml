@@ -30,6 +30,7 @@ polars = "^1.7.1"
 pyarrow = "^17.0.0"
 pyodbc = "^5.1.0"
 pyspark = "^3.5.3"
+setuptools = "^75.1.0"
 
 
 [tool.poetry.group.dev.dependencies]

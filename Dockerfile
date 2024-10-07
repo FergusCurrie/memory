@@ -18,6 +18,12 @@ COPY requirements.txt .
 # Create the db directory
 RUN mkdir -p /app/db
 
+# Install spark
+RUN mkdir -p /etc/apt/keyrings
+RUN wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | tee /etc/apt/keyrings/adoptium.asc
+RUN echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+RUN apt-get update && apt-get install -y temurin-17-jdk
+ENV JAVA_HOME /usr/lib/jvm/temurin-17-jdk-arm64
 
 
 # Install the Python dependencies

@@ -15,6 +15,7 @@ class ProblemCreate(BaseModel):
     dataset_names: list
     preprocessing_code: str
     default_code: str
+    problem_type: str
 
 
 router = APIRouter()
@@ -29,6 +30,7 @@ def create_problem(problem: ProblemCreate):
             datasets=problem.dataset_names,
             preprocessing_code=problem.preprocessing_code,
             code_start=problem.default_code,
+            type=problem.problem_type,
         )
         return {"result": True}
     except Exception as e:

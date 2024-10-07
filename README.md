@@ -197,3 +197,36 @@ print(f"Error connecting to SQL Server: {e}")
 finally:
 if 'conn' in locals():
 conn.close()
+
+# pyspark
+
+FROM --platform=linux/arm64 debian:bullseye
+
+# Update and install necessary packages
+
+RUN apt-get update && apt-get install -y \
+ curl \
+ wget \
+ gnupg \
+ software-properties-common
+
+# Install Java
+
+RUN mkdir -p /etc/apt/keyrings
+RUN wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | tee /etc/apt/keyrings/adoptium.asc
+RUN echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
+RUN apt-get update && apt-get install -y temurin-17-jdk
+
+# Set Java home
+
+ENV JAVA_HOME /usr/lib/jvm/temurin-17-jdk-arm64
+
+# Your other configurations...
+
+# Set working directory
+
+WORKDIR /workspaces/memory
+
+# Command to run when starting the container
+
+CMD ["/bin/bash"]

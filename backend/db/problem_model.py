@@ -1,7 +1,10 @@
 import json
+import logging
 import sqlite3
-from backend.code_completion.check_code import get_pandas_header, get_preprocessing_headers
+from backend.code_execution.utils import get_pandas_header, get_preprocessing_headers
 from backend.config import DB_PATH
+
+logger = logging.getLogger(__name__)
 
 
 # Initialize the database
@@ -63,7 +66,7 @@ def get_problem_for_polars(problem_id):
     cursor = conn.cursor()
 
     query = f"""
-    SELECT p.id, p.description, c.code, c.preprocessing_code, c.default_code, d.dataset_name, d.dataset_headers
+    SELECT p.id, p.description, p.type, c.code, c.preprocessing_code, c.default_code, d.dataset_name, d.dataset_headers
     FROM problems p
     JOIN code c ON p.id = c.problem_id
     JOIN datasets d ON p.id = d.problem_id
@@ -75,10 +78,13 @@ def get_problem_for_polars(problem_id):
     cursor.execute(query)
     result = cursor.fetchone()
 
-    problem_id, description, code, preprocessing_code, default_code, dataset_name, dataset_headers = result
+    problem_id, description, problem_type, code, preprocessing_code, default_code, dataset_name, dataset_headers = (
+        result
+    )
 
     return {
         "problem_id": problem_id,
+        "type": problem_type,
         "description": description,
         "code": code,
         "preprocessing_code": preprocessing_code,
@@ -119,7 +125,7 @@ def delete_problem(problem_id):
         conn.close()
 
 
-def add_new_polars_problem(code, problem_description, datasets, preprocessing_code, code_start):
+def add_new_polars_problem(code, problem_description, datasets, preprocessing_code, code_start, type):
     # Get the dataframe headers
     headers = {}
     for dataset in datasets:
@@ -133,10 +139,10 @@ def add_new_polars_problem(code, problem_description, datasets, preprocessing_co
         # Insert into problems table
         new_cursor.execute(
             """
-        INSERT INTO problems (description)
-        VALUES (?)
+        INSERT INTO problems (description, type)
+        VALUES (?, ?)
         """,
-            (problem_description,),
+            (problem_description, type),
         )
         problem_id = new_cursor.lastrowid
 
@@ -173,10 +179,10 @@ def add_new_polars_problem(code, problem_description, datasets, preprocessing_co
         # Commit the changes
         new_conn.commit()
 
-        print(f"Inserted data for problem_id: {problem_id}")
+        logger.info(f"Inserted data for problem_id: {problem_id}")
 
     except sqlite3.Error as e:
-        print(f"An error occurred while inserting data: {e}")
+        logger.info(f"An error occurred while inserting data: {e}")
 
     finally:
         # Close the new database connection

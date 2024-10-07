@@ -1,7 +1,7 @@
 import logging
 import os
 import traceback
-from .code_completion.check_code import run_code, run_code_against_test
+from .code_execution.check_code import run_code_against_test, run_code_to_check_results_for_card_creation
 from .db.problem_model import get_problem_for_polars
 from .db.sync import sync_db_to_azure
 from .routes import problem_routes, review_routes
@@ -19,6 +19,7 @@ logging.basicConfig(
     filename="app.log",
     filemode="a",
 )
+logging.getLogger("py4j").setLevel(logging.ERROR)
 
 # Set up logging
 logger = logging.getLogger(__name__)
@@ -50,6 +51,7 @@ class CheckCodeForCreation(BaseModel):
     code: str
     preprocessing_code: str
     dataset_names: list
+    problem_type: str
 
 
 class TestCodeSubmission(BaseModel):
@@ -60,22 +62,23 @@ class TestCodeSubmission(BaseModel):
 @app.post("/api/code/test_code")
 async def submit_code(code_submission: TestCodeSubmission):
     try:
-        code_compleition_row = get_problem_for_polars(code_submission.problem_id)
-        passed, result_head, error = run_code_against_test(
-            code_completion_row=code_compleition_row, code_submission=code_submission
-        )
+        problem = get_problem_for_polars(code_submission.problem_id)
+        passed, result_head, error = run_code_against_test(problem=problem, code_submission=code_submission)
         return {"passed": passed, "result_head": result_head, "error": error}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-@app.post("/api/code/polars_code")
+@app.post("/api/code/check_creation_code")
 async def check_code_for_creation(code_submission: CheckCodeForCreation):
     try:
         logger.info(code_submission)
-        executed_df, error = run_code(
-            code_submission.code, code_submission.dataset_names, code_submission.preprocessing_code
+        executed_df, error = run_code_to_check_results_for_card_creation(
+            code_submission.code,
+            code_submission.dataset_names,
+            code_submission.preprocessing_code,
+            code_submission.problem_type,
         )
         return {"result_head": executed_df.head(10).to_json()}
     except Exception as e:
@@ -98,7 +101,7 @@ async def get_available_datasets():
     logger.info("Getting all available datasets")
     try:
         # datasets = ["x"]
-        datasets = sorted([x for x in os.listdir("backend/code_completion/data") if ".csv" in x])
+        datasets = sorted([x for x in os.listdir("backend/code_execution/data") if ".csv" in x])
         return {"datasets": datasets}
     except Exception as e:
         logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
