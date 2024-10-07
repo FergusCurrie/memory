@@ -11,6 +11,7 @@ interface Problem {
   code_default: string;
   datasets: string;
   description?: string;
+  answer: string;
   //hint: string;
 }
 
@@ -37,8 +38,15 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
       <DatasetRenderer
         {...{ selectedDataset, setSelectedDataset, datasets: JSON.parse(problem.datasets) }}
       />
-      <CodeEditor {...{ problem_id: problem?.problem_id, testPassed, setTestPassed }} />
-      <NextCardManagement {...{ testPassed, handleScore }} />
+      <CodeEditor
+        {...{
+          problem_id: problem?.problem_id,
+          testPassed,
+          setTestPassed,
+          code_default: problem.code_default,
+        }}
+      />
+      <NextCardManagement {...{ testPassed, handleScore, answer: problem.answer }} />
     </>
   );
 };

@@ -8,11 +8,19 @@ interface CodeEditorProps {
   problem_id?: number;
   testPassed: boolean;
   setTestPassed: React.Dispatch<React.SetStateAction<boolean>>;
+  code_default: string;
 }
 
-const CodeEditor: React.FC<CodeEditorProps> = ({ problem_id, testPassed, setTestPassed }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({
+  problem_id,
+  testPassed,
+  setTestPassed,
+  code_default,
+}) => {
   const editorRef = useRef<any>(null);
-  const [editorContent, setEditorContent] = useState<string>('');
+  const [editorContent, setEditorContent] = useState<string>(
+    code_default || 'result = (\n\tdf\n\n)',
+  );
   const [submittedResult, setSubmittedResult] = useState<any>(null);
   const [codeError, setCodeError] = useState<string>('');
 

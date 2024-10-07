@@ -4,15 +4,25 @@ import React, { useState, useEffect, useRef } from 'react';
 interface NextCardManagementProps {
   testPassed: boolean;
   handleScore: (result: boolean) => void;
+  answer: string;
 }
 
-const NextCardManagement: React.FC<NextCardManagementProps> = ({ testPassed, handleScore }) => {
+const NextCardManagement: React.FC<NextCardManagementProps> = ({
+  testPassed,
+  handleScore,
+  answer,
+}) => {
+  const handleIncorrect = () => {
+    alert(`The correct answer was: ${answer}`);
+    handleScore(false);
+  };
+
   return (
     <Box sx={{ mt: 2, display: 'flex', justifyContent: 'space-between' }}>
       <Button
         variant="contained"
         color="error"
-        onClick={() => handleScore(false)}
+        onClick={() => handleIncorrect(false)}
         sx={{ flex: 1, mr: testPassed ? 1 : 0 }}
       >
         Incorrect

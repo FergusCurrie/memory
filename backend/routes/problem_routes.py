@@ -63,9 +63,19 @@ def get_next_problem():
                 "code_default": next_["default_code"],
                 "datasets": next_["dataset_headers"],
                 "description": next_["description"],
+                "answer": next_["code"],
             }
         ]
     }
+
+
+@router.get("/get_number_problems_remaining")
+def get_problems_remaining():
+    problem_ids = get_all_problem_ids()
+    problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
+    reviews = get_all_reviews()
+    next_ = sm2_algorithm(problems, reviews)
+    return {"remaining": len(next_)}
 
 
 @router.get("/{problem_id}")

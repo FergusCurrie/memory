@@ -10,7 +10,12 @@ interface Problem {
   code_default: string;
   datasets: string;
   description?: string;
+  answer: string;
   //hint: string;
+}
+
+interface Remaining {
+  remaining: number;
 }
 
 const Study: React.FC = () => {
@@ -35,10 +40,17 @@ const Study: React.FC = () => {
 
   const [problem, setProblem] = useState<Problem>();
   const [problemsRemaining, setProblemsRemaining] = useState<boolean>(true);
+  const [numberProblemsRemaining, setNumberProblemsRemaining] = useState<number>(0);
 
   useEffect(() => {
+    fetchProblemsRemaining();
     fetchConcept();
   }, []);
+
+  const fetchProblemsRemaining = async () => {
+    const response = await api.get('/api/problem/get_number_problems_remaining');
+    setNumberProblemsRemaining(response.data.remaining);
+  };
 
   const handleScore = async (result: boolean) => {
     /**
@@ -57,6 +69,7 @@ const Study: React.FC = () => {
           problem_id: problem.problem_id,
           result: result,
         });
+        fetchProblemsRemaining();
         fetchConcept();
       } catch (error) {
         console.error('Error submitting review:', error);
@@ -80,6 +93,7 @@ const Study: React.FC = () => {
 
   return (
     <>
+      <Typography>Remaining probs = {numberProblemsRemaining}</Typography>
       {problemsRemaining ? (
         <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
           {problem?.problem_type === 'polars' && (
