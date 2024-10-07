@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import api from '../api';
 import PolarsProblem from './problem_types/PolarsProblem';
-import { Box, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 interface Problem {
   problem_type: string;
@@ -64,12 +64,11 @@ const Study: React.FC = () => {
      */
     if (problem) {
       try {
-        console.log('Handling score');
         await api.post('/api/review', {
           problem_id: problem.problem_id,
           result: result,
         });
-        fetchProblemsRemaining();
+        
         fetchConcept();
       } catch (error) {
         console.error('Error submitting review:', error);
@@ -77,14 +76,25 @@ const Study: React.FC = () => {
     }
   };
 
+  const handleSuspend = async () => {
+    try{
+      if (problem){
+        await api.post(`/api/problem/suspend/${problem.problem_id}`);
+        await fetchConcept();
+      }
+    }catch (error) {
+      console.error('Error suspending:', error);
+    }
+   
+  }
+
   const fetchConcept = async () => {
+    fetchProblemsRemaining();
     try {
-      console.log('requesting');
       const response = await api.get('/api/problem/get_next_problem');
       if (response.data.problems.length === 0) {
         setProblemsRemaining(false);
       } else {
-        console.log(response.data.problems[0])
         setProblem(response.data.problems[0]);
       }
     } catch (error) {
@@ -94,11 +104,20 @@ const Study: React.FC = () => {
 
   return (
     <>
-      <Typography>Remaining probs = {numberProblemsRemaining}</Typography>
+      <Typography>Remaining probs = {numberProblemsRemaining}, Problem type = {problem?.problem_type}</Typography>
       {problemsRemaining ? (
         <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
+           <Button 
+                variant="contained" 
+                onClick={handleSuspend}
+                sx={{ mt: 2, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
+              >
+                Suspend
+              </Button>
           {problem?.problem_type === 'polars' && (
-            <PolarsProblem problem={problem} handleScore={handleScore} />
+            <>
+              <PolarsProblem problem={problem} handleScore={handleScore} />
+            </>
           )}
         </Box>
       ) : (

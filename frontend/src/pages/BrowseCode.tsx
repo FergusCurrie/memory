@@ -20,6 +20,13 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import api from '../api';
+import PauseIcon from '@mui/icons-material/Pause';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+// Add these new imports
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
+import HelpIcon from '@mui/icons-material/Help';
 
 interface CodeCard {
   problem_id: number;
@@ -29,6 +36,7 @@ interface CodeCard {
   default_code: string;
   preprocessing_code: string;
   description: string;
+  is_suspended: boolean;
 }
 
 interface CodeReview {
@@ -78,8 +86,9 @@ const BrowseCodeCards: React.FC = () => {
 
   const handleSaveEdit = async () => {
     if (editingCard) {
+      console.log('Saving edit')
       try {
-        await api.put(`/api/code/${editingCard.problem_id}`, editingCard);
+        await api.put(`/api/problem/${editingCard.problem_id}`, { description: editingCard.description, code: editingCard.code });
         setCodeCards(
           codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
         );
@@ -114,6 +123,20 @@ const BrowseCodeCards: React.FC = () => {
     }
   };
 
+  const handleToggleSuspend = async (problem_id: number, event: React.MouseEvent) => {
+    event.stopPropagation();
+    try {
+      await api.post(`/api/problem/suspend/${problem_id}`);
+      setCodeCards(codeCards.map(card => 
+        card.problem_id === problem_id ? {...card, is_suspended: !card.is_suspended} : card
+      ));
+    } catch (error) {
+      console.error('Error toggling suspend status:', error);
+    }
+  };
+
+
+
   const filteredReviews = selectedCardId
     ? codeReviews.filter((review) => review.problem_id === selectedCardId)
     : codeReviews;
@@ -130,6 +153,7 @@ const BrowseCodeCards: React.FC = () => {
               <TableCell>ID</TableCell>
               <TableCell>Dataset Name</TableCell>
               <TableCell>Problem Description</TableCell>
+              <TableCell>Status</TableCell>
               <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -153,6 +177,9 @@ const BrowseCodeCards: React.FC = () => {
                   </IconButton>
                   <IconButton onClick={() => handleEditCard(card)} color="primary">
                     <EditIcon />
+                  </IconButton>
+                  <IconButton onClick={(e) => handleToggleSuspend(card.problem_id, e)} color={card.is_suspended ? "warning" : "success"}>
+                    {card.is_suspended ? <PlayArrowIcon /> : <PauseIcon />}
                   </IconButton>
                 </TableCell>
               </TableRow>
@@ -212,12 +239,13 @@ const BrowseCodeCards: React.FC = () => {
         <DialogTitle>Edit Code Card</DialogTitle>
         <DialogContent>
           <TextField
-            autoFocus
             margin="dense"
             label="Dataset Name"
             fullWidth
             value={editingCard?.dataset_name || ''}
-            onChange={(e) => setEditingCard((prev) => ({ ...prev!, dataset_name: e.target.value }))}
+            InputProps={{
+              readOnly: true,
+            }}
           />
           <TextField
             margin="dense"
@@ -227,7 +255,7 @@ const BrowseCodeCards: React.FC = () => {
             rows={4}
             value={editingCard?.description || ''}
             onChange={(e) =>
-              setEditingCard((prev) => ({ ...prev!, problem_description: e.target.value }))
+              setEditingCard((prev) => ({ ...prev!, description: e.target.value }))
             }
           />
           <TextField

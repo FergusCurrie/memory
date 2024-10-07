@@ -23,13 +23,10 @@ interface PolarsProblem {
 const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   const [selectedDataset, setSelectedDataset] = useState<string>('');
   const [testPassed, setTestPassed] = useState<boolean>(false);
-  console.log(problem.datasets);
-  console.log(typeof problem.datasets);
   useEffect(() => {
     if (problem) {
       setSelectedDataset('');
       setTestPassed(false);
-      console.log(problem);
     }
   }, [problem]);
 

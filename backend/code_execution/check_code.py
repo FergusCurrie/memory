@@ -54,7 +54,7 @@ def run_code_polars(code, datasets, preprocessing_code):
     dfs = {}
     for dataset in datasets:
         logger.info(DATA_PATH + dataset)
-        x = pl.read_csv(DATA_PATH + dataset)
+        x = pl.read_csv(DATA_PATH + dataset + '.csv')
         dfs[dataset.replace(".csv", "")] = x
         logger.info(f"AAAAAAAAAAAAA size = {len(x)}")
 
@@ -75,7 +75,7 @@ def run_code_pyspark(code, datasets, preprocessing_code):
     # Load datasets
     dfs = {}
     for dataset in datasets:
-        x = pd.read_csv(DATA_PATH + dataset)
+        x = pd.read_csv(DATA_PATH + dataset + '.csv')
         dfs[dataset.replace(".csv", "")] = x
 
     # Setup pyspark code
@@ -116,8 +116,7 @@ def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessi
 
 def run_code_against_test(problem, code_submission):
     # Test the code
-    dataset_path = problem["dataset_name"]  # this is actually a list of paths
-    datasets = dataset_path.split(",")
+    datasets = [x for x in list(problem["datasets"].keys()) if x != 'preprocessing']  # this is actually a list of paths
     preprocessing_code = problem["preprocessing_code"]
     solution_code = problem["code"]
     intput_code = code_submission.code

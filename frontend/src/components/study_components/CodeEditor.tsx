@@ -23,7 +23,6 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
   );
   const [submittedResult, setSubmittedResult] = useState<any>(null);
   const [codeError, setCodeError] = useState<string>('');
-
   useEffect(() => {
     setSubmittedResult(null);
     setCodeError('');
@@ -31,19 +30,15 @@ const CodeEditor: React.FC<CodeEditorProps> = ({
 
   const handleSendCode = async () => {
     const currentContent = editorRef.current?.getValue() || editorContent;
-    console.log('Sending code:', currentContent);
     try {
       const payload = {
         code: currentContent,
         problem_id: problem_id,
       };
-      console.log(payload);
       const response = await api.post('/api/code/test_code', payload);
-      console.log('API response:', response);
       setSubmittedResult(JSON.parse(response.data.result_head));
       setTestPassed(response.data.passed);
       setCodeError(response.data.error);
-      console.log(response);
       console.log('Code submitted successfully');
     } catch (error) {
       console.error('Error submitting code:', error);

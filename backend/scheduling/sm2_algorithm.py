@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 
 def sm2_check_card(card, card_reviews) -> bool:
-    logger.debug(f"Checking card {card}, has reviews: {card_reviews}")
+    # logger.debug(f"Checking card {card}, has reviews: {card_reviews}")
     if len(card_reviews) == 0:
         return True
     sorted_reviews = sorted(card_reviews, key=lambda x: datetime.strptime(x["date_created"], "%Y-%m-%d %H:%M:%S"))
@@ -34,17 +34,17 @@ def sm2_check_card(card, card_reviews) -> bool:
         if ease_factor < 1.3:
             ease_factor = 1.3
 
-    logger.debug(f"Found interval = {interval}, ease_factor = {ease_factor}")
+    #logger.debug(f"Found interval = {interval}, ease_factor = {ease_factor}")
 
     today = datetime.now().date()
     last_review_date = get_last_review_date(card_reviews)
     next_review_date = last_review_date + timedelta(days=interval)
-    logger.debug(f"Today = {today}, last_review={last_review_date}, next_Review={next_review_date}")
+    #logger.debug(f"Today = {today}, last_review={last_review_date}, next_Review={next_review_date}")
     return next_review_date <= today
 
 
 def sm2_algorithm(cards, reviews):
-    logger.info("Running sm2 algo")
+    #logger.info("Running sm2 algo")
     try:
         cards_to_review = []
         for card in cards:

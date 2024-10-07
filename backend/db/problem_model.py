@@ -18,6 +18,7 @@ def init_problem_model():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         description TEXT,
         type TEXT,
+        status TEXT,
         date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
     """)
@@ -53,7 +54,7 @@ def get_all_problem_ids():
     cursor = conn.cursor()
 
     query = """
-    SELECT p.id
+    SELECT p.id, p.status
     FROM problems p
     """
     cursor.execute(query)
@@ -91,7 +92,7 @@ def get_problem_for_polars(problem_id):
         "datasets": datasets
     }
 
-    logger.info(result)
+    # logger.info(result)
     return result
 
     # cursor.execute(query)
@@ -117,6 +118,41 @@ def get_problem_for_polars(problem_id):
     # }
     
     # return result 
+
+def toggle_suspend_problem(problem_id):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+
+    try:
+        # Get the current status of the problem
+        cursor.execute("SELECT status FROM problems WHERE id = ?", (problem_id,))
+        current_status = cursor.fetchone()[0]
+
+        # Toggle the status
+        new_status = 'suspended' if current_status == 'active' else 'active'
+
+        # Update the problem's status
+        cursor.execute(
+            """
+            UPDATE problems
+            SET status = ?
+            WHERE id = ?
+            """,
+            (new_status, problem_id)
+        )
+
+        # Commit the changes
+        conn.commit()
+        print(f"Problem with id {problem_id} has been toggled to {new_status}.")
+
+    except sqlite3.Error as e:
+        # If an error occurs, roll back the changes
+        conn.rollback()
+        print(f"An error occurred while toggling the problem status: {e}")
+
+    finally:
+        # Close the database connection
+        conn.close()
 
 def delete_problem(problem_id):
     conn = sqlite3.connect(DB_PATH)
@@ -211,3 +247,43 @@ def add_new_polars_problem(code, problem_description, datasets, preprocessing_co
     finally:
         # Close the new database connection
         new_conn.close()
+
+
+def update_problem_in_db(problem_id: int, problem: dict):
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        cursor = conn.cursor()
+
+        # Update problems table
+        cursor.execute(
+            """
+            UPDATE problems
+            SET description = ?
+            WHERE id = ?
+            """,
+            (problem.get('description'), problem_id)
+        )
+
+        # Update code table
+        cursor.execute(
+            """
+            UPDATE code
+            SET code = ?
+            WHERE problem_id = ?
+            """,
+            (problem.get('code'), problem_id)
+        )
+
+        conn.commit()
+        logger.info(f"Updated data for problem_id: {problem_id}")
+
+        # Fetch and return the updated problem
+        return get_problem_for_polars(problem_id)
+
+    except sqlite3.Error as e:
+        logger.error(f"An error occurred while updating data: {e}")
+        conn.rollback()
+        return None
+
+    finally:
+        conn.close()
