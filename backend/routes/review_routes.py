@@ -33,7 +33,7 @@ def get_a_review(review_id: int):
 
 
 @router.delete("/{review_id}")
-def delete_review(review_id: int):
+def route_delete_review(review_id: int):
     db_review = get_review(review_id)
     if db_review is None:
         raise HTTPException(status_code=404, detail="Review not found")

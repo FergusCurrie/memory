@@ -88,6 +88,37 @@ def get_problem_for_polars(problem_id):
     }
 
 
+def delete_problem(problem_id):
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+
+    try:
+        # Start a transaction
+        cursor.execute("BEGIN TRANSACTION")
+
+        # Delete associated datasets
+        cursor.execute("DELETE FROM datasets WHERE problem_id = ?", (problem_id,))
+
+        # Delete associated code
+        cursor.execute("DELETE FROM code WHERE problem_id = ?", (problem_id,))
+
+        # Delete the problem
+        cursor.execute("DELETE FROM problems WHERE id = ?", (problem_id,))
+
+        # Commit the transaction
+        conn.commit()
+        print(f"Problem with id {problem_id} and its associated data have been deleted.")
+
+    except sqlite3.Error as e:
+        # If an error occurs, roll back the transaction
+        conn.rollback()
+        print(f"An error occurred while deleting the problem: {e}")
+
+    finally:
+        # Close the database connection
+        conn.close()
+
+
 def add_new_polars_problem(code, problem_description, datasets, preprocessing_code, code_start):
     # Get the dataframe headers
     headers = {}

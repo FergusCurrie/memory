@@ -22,19 +22,20 @@ import EditIcon from '@mui/icons-material/Edit';
 import api from '../api';
 
 interface CodeCard {
-  id: number;
-  note_id: number;
+  problem_id: number;
   dataset_name: string;
-  problem_description: string;
+  dataset_headers: string;
   code: string;
-  dataset_header: string;
+  default_code: string;
+  preprocessing_code: string;
+  description: string;
 }
 
 interface CodeReview {
   id: number;
-  code_id: number;
+  problem_id: number;
   result: boolean;
-  date: string;
+  date_created: string;
 }
 
 const BrowseCodeCards: React.FC = () => {
@@ -60,9 +61,8 @@ const BrowseCodeCards: React.FC = () => {
 
   const fetchCodeReviews = async () => {
     try {
-      // const response = await api.get('/api/review');
-      // console.log(response);
-      // setCodeReviews(response.data.reviews);
+      const response = await api.get('/api/review');
+      setCodeReviews(response.data);
     } catch (error) {
       console.error('Error fetching code reviews:', error);
     }
@@ -79,8 +79,10 @@ const BrowseCodeCards: React.FC = () => {
   const handleSaveEdit = async () => {
     if (editingCard) {
       try {
-        await api.put(`/api/code/${editingCard.id}`, editingCard);
-        setCodeCards(codeCards.map((c) => (c.id === editingCard.id ? editingCard : c)));
+        await api.put(`/api/code/${editingCard.problem_id}`, editingCard);
+        setCodeCards(
+          codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
+        );
         setEditingCard(null);
       } catch (error) {
         console.error('Error updating code card:', error);
@@ -92,7 +94,7 @@ const BrowseCodeCards: React.FC = () => {
     event.stopPropagation();
     if (window.confirm('Are you sure you want to delete this review?')) {
       try {
-        await api.delete(`/api/reviews/${reviewId}`);
+        await api.delete(`/api/review/${reviewId}`);
         setCodeReviews(codeReviews.filter((review) => review.id !== reviewId));
       } catch (error) {
         console.error('Error deleting review:', error);
@@ -100,12 +102,12 @@ const BrowseCodeCards: React.FC = () => {
     }
   };
 
-  const handleDeleteCode = async (codeId: number, event: React.MouseEvent) => {
+  const handleDeleteCode = async (problem_id: number, event: React.MouseEvent) => {
     event.stopPropagation();
     if (window.confirm('Are you sure you want to delete this review?')) {
       try {
-        await api.delete(`/api/reviews/${reviewId}`);
-        setCodeReviews(codeReviews.filter((review) => review.id !== reviewId));
+        await api.delete(`/api/problem/${problem_id}`);
+        setCodeReviews(codeReviews.filter((review) => review.problem_id !== problem_id));
       } catch (error) {
         console.error('Error deleting review:', error);
       }
@@ -113,7 +115,7 @@ const BrowseCodeCards: React.FC = () => {
   };
 
   const filteredReviews = selectedCardId
-    ? codeReviews.filter((review) => review.code_id === selectedCardId)
+    ? codeReviews.filter((review) => review.problem_id === selectedCardId)
     : codeReviews;
 
   return (
@@ -132,21 +134,21 @@ const BrowseCodeCards: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {codeCards.map((card) => (
+            {(codeCards || []).map((card) => (
               <TableRow
-                key={card.id}
-                onClick={() => handleCardClick(card.id)}
+                key={card.problem_id}
+                onClick={() => handleCardClick(card.problem_id)}
                 sx={{
                   cursor: 'pointer',
-                  backgroundColor: card.id === selectedCardId ? '#e3f2fd' : 'inherit',
+                  backgroundColor: card.problem_id === selectedCardId ? '#e3f2fd' : 'inherit',
                   '&:hover': { backgroundColor: '#f5f5f5' },
                 }}
               >
-                <TableCell>{card.id}</TableCell>
+                <TableCell>{card.problem_id}</TableCell>
                 <TableCell>{card.dataset_name}</TableCell>
-                <TableCell>{card.problem_description}</TableCell>
+                <TableCell>{card.description}</TableCell>
                 <TableCell>
-                  <IconButton onClick={(e) => handleDeleteCode(card.id, e)} color="error">
+                  <IconButton onClick={(e) => handleDeleteCode(card.problem_id, e)} color="error">
                     <DeleteIcon />
                   </IconButton>
                   <IconButton onClick={() => handleEditCard(card)} color="primary">
@@ -179,20 +181,20 @@ const BrowseCodeCards: React.FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {filteredReviews.map((review) => (
+            {(filteredReviews || []).map((review) => (
               <TableRow key={review.id}>
                 <TableCell>{review.id}</TableCell>
-                <TableCell>{review.code_id}</TableCell>
+                <TableCell>{review.problem_id}</TableCell>
                 <TableCell>{review.result ? 'Correct' : 'Incorrect'}</TableCell>
                 <TableCell>
                   {(() => {
-                    if (!review.date) {
+                    if (!review.date_created) {
                       return 'No date available';
                     }
-                    const date = new Date(review.date);
+                    const date = new Date(review.date_created);
                     return date.toString() !== 'Invalid Date'
                       ? date.toLocaleString()
-                      : `Invalid Date: ${review.date}`;
+                      : `Invalid Date: ${review.date_created}`;
                   })()}
                 </TableCell>
                 <TableCell>
@@ -223,7 +225,7 @@ const BrowseCodeCards: React.FC = () => {
             fullWidth
             multiline
             rows={4}
-            value={editingCard?.problem_description || ''}
+            value={editingCard?.description || ''}
             onChange={(e) =>
               setEditingCard((prev) => ({ ...prev!, problem_description: e.target.value }))
             }

@@ -1,6 +1,6 @@
 import logging
 import traceback
-from ..db.problem_model import add_new_polars_problem, get_all_problem_ids, get_problem_for_polars
+from ..db.problem_model import add_new_polars_problem, delete_problem, get_all_problem_ids, get_problem_for_polars
 from ..db.review_model import add_review, get_all_reviews, get_review
 from ..scheduling.sm2_algorithm import sm2_algorithm
 from fastapi import APIRouter, HTTPException
@@ -92,3 +92,9 @@ def create_review_for_problem(problem_id: int, review):
     if review_id is None:
         raise HTTPException(status_code=500, detail="Failed to create review")
     return get_review(review_id)
+
+
+@router.delete("/{problem_id}")
+def route_delete_problem(problem_id: int):
+    delete_problem(problem_id)
+    return {}
