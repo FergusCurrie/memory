@@ -6,6 +6,14 @@ This is a implementation of memory app. I've switched to using fastapi.
 
 - https://github.com/zhanymkanov/fastapi-best-practices
 
+## Db structure
+
+![Alt text](docs/db.png)
+
+## UI
+
+![Alt text](docs/ui.png)
+
 ## Making a card
 
 - Select any number of datasets. For code entry they will be in env by default, under name of datasets bar .csv.
@@ -129,25 +137,63 @@ Note: Make sure you have Docker installed on your system before running the Dock
 
 For convenience, steps 3-4 are combined in the `scripts/build.sh` script. You can run it with:
 
-# SQL server
+# Azure sql on mac
 
-Following : https://medium.com/@karifbattle/install-microsoft-sql-server-express-on-ubuntu-d074bab10f99
+https://database.guide/how-to-install-sql-server-on-an-m1-mac-arm64/
+docker pull mcr.microsoft.com/azure-sql-edge
+docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=bigStrfefongPwd4234#!#' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge
 
-requires: wget software-properties-common mssql-server
+## Connecting??
 
-curl https://packages.microsoft.com/keys/microsoft.asc | tee /etc/apt/trusted.gpg.d/microsoft.asc
-add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+some connection options
 
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Singed%95" -p 1433:1433 --name sql1 --hostname sql1 -d mcr.microsoft.com/mssql/server:2022-latest
+docker network create sqlnet
 
-# azure sql edge
+{
+"name": "Python 3",
+"image": "mcr.microsoft.com/devcontainers/python:3",
+"network": "sqlnet",
+"mssql.connections": [
+{
+"server": "azuresqledge",
+"database": "master",
+"username": "sa",
+"password": "YourStrongPassword123!"
+}
+],
+"extensions": [
+"ms-python.python",
+"ms-mssql.mssql"
+]
+}
 
-docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=Singed%!blah' \
- -p 1433:1433 --name azuresqledge -v ~/sqlserver/data:/var/opt/mssql/data \
- -d mcr.microsoft.com/azure-sql-edge:latest
+pip install pyodbc
 
-https://hub.docker.com/r/microsoft/azure-sql-edge
+import pyodbc
 
-apt install -y curl unixodbc odbcinst
-curl https://packages.microsoft.com/debian/12/prod/pool/main/m/msodbcsql18/msodbcsql18_18.3.2.1-1_arm64.deb -o msodbcsql18.deb
-ACCEPT_EULA=Y dpkg --install msodbcsql17.deb
+server = 'azuresqledge'
+database = 'master'
+username = 'sa'
+password = 'YourStrongPassword123!'
+driver = '{ODBC Driver 17 for SQL Server}'
+
+connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+
+try:
+conn = pyodbc.connect(connection_string)
+cursor = conn.cursor()
+print("Connected successfully!")
+
+    # Example query
+    cursor.execute("SELECT @@version;")
+    row = cursor.fetchone()
+    while row:
+        print(row[0])
+        row = cursor.fetchone()
+
+except pyodbc.Error as e:
+print(f"Error connecting to SQL Server: {e}")
+
+finally:
+if 'conn' in locals():
+conn.close()
