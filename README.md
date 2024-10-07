@@ -141,92 +141,86 @@ For convenience, steps 3-4 are combined in the `scripts/build.sh` script. You ca
 
 https://database.guide/how-to-install-sql-server-on-an-m1-mac-arm64/
 docker pull mcr.microsoft.com/azure-sql-edge
-docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=bigStrfefongPwd4234#!#' -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge
+docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=bigStrfefongPwd4234#!#' --network memory-network -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge
 
-## Connecting??
+Need to create a docker network for devctonainer, deployment, and sql edge to be able to hit each othe:
+```
+docker network create memory-network
+```
 
-some connection options
+Setup a database 
 
-docker network create sqlnet
+`CREATE DATABASE datasets;`
 
-{
-"name": "Python 3",
-"image": "mcr.microsoft.com/devcontainers/python:3",
-"network": "sqlnet",
-"mssql.connections": [
-{
-"server": "azuresqledge",
-"database": "master",
-"username": "sa",
-"password": "YourStrongPassword123!"
-}
-],
-"extensions": [
-"ms-python.python",
-"ms-mssql.mssql"
-]
-}
+Setup a table 
 
-pip install pyodbc
-
+Basic query example:
+```
 import pyodbc
 
-server = 'azuresqledge'
+server = 'sqledge'  # This is the name of your Azure SQL Edge container
 database = 'master'
 username = 'sa'
-password = 'YourStrongPassword123!'
-driver = '{ODBC Driver 17 for SQL Server}'
+password = 'bigStrfefongPwd4234#!#'
 
-connection_string = f'DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}'
+conn_str = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={server};DATABASE={database};UID={username};PWD={password};TrustServerCertificate=yes;Encrypt=yes;'
 
-try:
-conn = pyodbc.connect(connection_string)
+conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
-print("Connected successfully!")
 
-    # Example query
-    cursor.execute("SELECT @@version;")
-    row = cursor.fetchone()
-    while row:
-        print(row[0])
-        row = cursor.fetchone()
+query = """
+SELECT 
+    t.name AS TableName,
+    s.name AS SchemaName
+FROM 
+    sys.tables t
+INNER JOIN 
+    sys.schemas s ON t.schema_id = s.schema_id
+ORDER BY 
+    s.name, t.name;
+"""
+cursor.execute(query)
 
-except pyodbc.Error as e:
-print(f"Error connecting to SQL Server: {e}")
+# Fetch all results
+tables = cursor.fetchall()
 
-finally:
-if 'conn' in locals():
+# Print the results
+print("Tables in the database:")
+for table in tables:
+    print(f"Schema: {table.SchemaName}, Table: {table.TableName}")
+
+# Close the cursor and connection
+cursor.close()
 conn.close()
+```
 
-# pyspark
 
-FROM --platform=linux/arm64 debian:bullseye
+# Fixing 
 
-# Update and install necessary packages
+```
+ERROR in ./src/App.tsx 13:0-36
+Module not found: Error: Can't resolve './pages/Browse' in '/workspaces/memory/frontend/src'
+resolve './pages/Browse' in '/workspaces/memory/frontend/src'
+  using description file: /workspaces/memory/frontend/package.json (relative path: ./src)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /workspaces/memory/frontend/package.json (relative path: ./src/pages/Browse)
+      no extension
+        Field 'browser' doesn't contain a valid alias configuration
+        /workspaces/memory/frontend/src/pages/Browse doesn't exist
+      .ts
+        Field 'browser' doesn't contain a valid alias configuration
+        /workspaces/memory/frontend/src/pages/Browse.ts doesn't exist
+      .tsx
+        Field 'browser' doesn't contain a valid alias configuration
+        /workspaces/memory/frontend/src/pages/Browse.tsx doesn't exist
 
-RUN apt-get update && apt-get install -y \
- curl \
- wget \
- gnupg \
- software-properties-common
+```
 
-# Install Java
-
-RUN mkdir -p /etc/apt/keyrings
-RUN wget -O - https://packages.adoptium.net/artifactory/api/gpg/key/public | tee /etc/apt/keyrings/adoptium.asc
-RUN echo "deb [signed-by=/etc/apt/keyrings/adoptium.asc] https://packages.adoptium.net/artifactory/deb $(awk -F= '/^VERSION_CODENAME/{print$2}' /etc/os-release) main" | tee /etc/apt/sources.list.d/adoptium.list
-RUN apt-get update && apt-get install -y temurin-17-jdk
-
-# Set Java home
-
-ENV JAVA_HOME /usr/lib/jvm/temurin-17-jdk-arm64
-
-# Your other configurations...
-
-# Set working directory
-
-WORKDIR /workspaces/memory
-
-# Command to run when starting the container
-
-CMD ["/bin/bash"]
+Fix by:
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+source ~/.bashrc
+nvm --version
+nvm install -lts
+nvm use --lts
+```

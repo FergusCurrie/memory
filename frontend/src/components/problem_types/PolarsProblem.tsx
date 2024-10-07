@@ -9,7 +9,7 @@ interface Problem {
   problem_id: number;
   //concept_id: number;
   code_default: string;
-  datasets: string;
+  datasets: Record<string, any>;
   description?: string;
   answer: string;
   //hint: string;
@@ -23,7 +23,8 @@ interface PolarsProblem {
 const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   const [selectedDataset, setSelectedDataset] = useState<string>('');
   const [testPassed, setTestPassed] = useState<boolean>(false);
-
+  console.log(problem.datasets);
+  console.log(typeof problem.datasets);
   useEffect(() => {
     if (problem) {
       setSelectedDataset('');
@@ -36,7 +37,7 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
     <>
       <Description text={problem.description} />
       <DatasetRenderer
-        {...{ selectedDataset, setSelectedDataset, datasets: JSON.parse(problem.datasets) }}
+        {...{ selectedDataset, setSelectedDataset, datasets: problem.datasets }}
       />
       <CodeEditor
         {...{

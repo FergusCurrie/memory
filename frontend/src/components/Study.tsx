@@ -84,6 +84,7 @@ const Study: React.FC = () => {
       if (response.data.problems.length === 0) {
         setProblemsRemaining(false);
       } else {
+        console.log(response.data.problems[0])
         setProblem(response.data.problems[0]);
       }
     } catch (error) {

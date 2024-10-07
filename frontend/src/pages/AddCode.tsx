@@ -27,7 +27,7 @@ const AddCode: React.FC = () => {
 
   const [defaultCode, setDefaultCode] = useState('');
 
-  const [problemType, setProblemType] = useState<'polars' | 'pyspark'>('polars');
+  const [problemType, setProblemType] = useState<'polars' | 'pyspark'| 'sql'>('polars');
 
   useEffect(() => {
     const fetchDatasets = async () => {
@@ -55,7 +55,7 @@ const AddCode: React.FC = () => {
   };
 
   const handleProblemTypeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setProblemType(event.target.value as 'polars' | 'pyspark');
+    setProblemType(event.target.value as 'polars' | 'pyspark' | 'sql');
   };
 
   // Update handleRunCode to use the problemType
@@ -158,6 +158,7 @@ const AddCode: React.FC = () => {
         >
           <MenuItem value="polars">Polars</MenuItem>
           <MenuItem value="pyspark">PySpark</MenuItem>
+          <MenuItem value="sql">SQL</MenuItem>
         </Select>
       </FormControl>
       <textarea

@@ -9,8 +9,6 @@ import { CssBaseline } from '@mui/material';
 import Home from './pages/Home';
 //import Study from './pages/OLDSTUDY';
 import NavigationBar from './pages/NavigationBar';
-import AddCards from './pages/AddCards';
-import Browse from './pages/Browse';
 import AddCode from './pages/AddCode';
 import BrowseCodeCards from './pages/BrowseCode';
 import Study from './components/Study';
@@ -32,8 +30,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/study" element={<Study />} />
-            <Route path="/add_cards" element={<AddCards />} />
-            <Route path="/browse" element={<Browse />} />
+            {/* <Route path="/add_cards" element={<AddCards />} />
+            <Route path="/browse" element={<Browse />} /> */}
             <Route path="/add_code" element={<AddCode />} />
             <Route path="/browse_code" element={<BrowseCodeCards />} />
             {/* <Route path="/mindmap" element={<Mindmap />} />

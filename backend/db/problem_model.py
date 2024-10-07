@@ -17,6 +17,7 @@ def init_problem_model():
     CREATE TABLE IF NOT EXISTS problems (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         description TEXT,
+        type TEXT,
         date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
     """)
@@ -64,35 +65,58 @@ def get_all_problem_ids():
 def get_problem_for_polars(problem_id):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
-
     query = f"""
     SELECT p.id, p.description, p.type, c.code, c.preprocessing_code, c.default_code, d.dataset_name, d.dataset_headers
     FROM problems p
     JOIN code c ON p.id = c.problem_id
     JOIN datasets d ON p.id = d.problem_id
     WHERE p.id == {problem_id}
-    ORDER BY p.id
-    LIMIT 1
     """
-
     cursor.execute(query)
-    result = cursor.fetchone()
+    results = cursor.fetchall()
 
-    problem_id, description, problem_type, code, preprocessing_code, default_code, dataset_name, dataset_headers = (
-        result
-    )
+    if not results:
+        return None
 
-    return {
+    problem_id, description, problem_type, code, preprocessing_code, default_code = results[0][:6]
+    datasets = {row[6]: json.loads(row[7]) for row in results}
+
+    result = {
         "problem_id": problem_id,
         "type": problem_type,
         "description": description,
         "code": code,
         "preprocessing_code": preprocessing_code,
         "default_code": default_code,
-        "dataset_name": dataset_name,
-        "dataset_headers": dataset_headers,
+        "datasets": datasets
     }
 
+    logger.info(result)
+    return result
+
+    # cursor.execute(query)
+    # result = cursor.fetchall()
+
+    # logger.info(f'fetching all somehow has big thing: {len(result)} for {problem_id}')
+
+    # problem_id, description, problem_type, code, preprocessing_code, default_code, dataset_name, dataset_headers = (
+    #     result[0]
+    # )
+   
+
+    
+    # result =  {
+    #     "problem_id": problem_id,
+    #     "type": problem_type,
+    #     "description": description,
+    #     "code": code,
+    #     "preprocessing_code": preprocessing_code,
+    #     "default_code": default_code,
+    #     "dataset_name": dataset_name,
+    #     "dataset_headers": dataset_headers,
+    # }
+    
+    # return result 
 
 def delete_problem(problem_id):
     conn = sqlite3.connect(DB_PATH)

@@ -1,5 +1,6 @@
 {
     "name": "memory",
+    "runArgs": ["--network=memory-network"],
     "dockerFile": "Dockerfile.dev",
     "context": "..",
     "customizations": {

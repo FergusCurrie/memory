@@ -4,7 +4,7 @@ import pandas as pd
 import polars as pl
 from .utils import compare_dataframes
 from contextlib import redirect_stderr, redirect_stdout
-
+from ..sqlserver.query import sql_server_query
 logging.getLogger("py4j").setLevel(logging.ERROR)
 logger = logging.getLogger(__name__)
 
@@ -91,12 +91,23 @@ def run_code_pyspark(code, datasets, preprocessing_code):
     logger.info(result)
     return result
 
+def run_code_sql(code, datasets, preprocessing_code):
+    logger.info("Running sql code")
+    df = sql_server_query(code)
+    try:
+        return df, None 
+    except Exception as e:
+        logger.info(f"Exception hit {e}")
+        return pd.DataFrame(), e
+
 
 def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessing_code, problem_type):
     if problem_type == "polars":
         check_function = run_code_polars
     elif problem_type == "pyspark":
         check_function = run_code_pyspark
+    elif problem_type == "sql":
+        check_function = run_code_sql
     else:
         raise Exception(f"Problem type {problem_type} not supported")
 
@@ -117,6 +128,8 @@ def run_code_against_test(problem, code_submission):
         check_function = run_code_polars
     elif problem_type == "pyspark":
         check_function = run_code_pyspark
+    elif problem_type == "sql":
+        check_function = run_code_sql
     else:
         raise Exception(f"Problem type {problem_type} not supported")
 

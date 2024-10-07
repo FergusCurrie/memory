@@ -48,22 +48,20 @@ def read_problems(skip: int = 0, limit: int = 100):
 @router.get("/get_next_problem")
 def get_next_problem():
     problem_ids = get_all_problem_ids()
-    logger.info(f"My problem is are :{problem_ids}")
     problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
-    logger.info(f"My problem is are :{problems}")
     reviews = get_all_reviews()
     next_ = sm2_algorithm(problems, reviews)
     if len(next_) == 0:
         return {"problems": []}
     next_ = next_[0]
-    logger.info(next_)
+    #logger.info(next_["dataset_headers"])
     return {
         "problems": [
             {
-                "problem_type": "polars",
+                "problem_type": next_["type"],
                 "problem_id": next_["problem_id"],
                 "code_default": next_["default_code"],
-                "datasets": next_["dataset_headers"],
+                "datasets": next_["datasets"],
                 "description": next_["description"],
                 "answer": next_["code"],
             }
