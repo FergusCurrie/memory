@@ -96,6 +96,7 @@ const Study: React.FC = () => {
         setProblemsRemaining(false);
       } else {
         setProblem(response.data.problems[0]);
+        console.log(response.data)
       }
     } catch (error) {
       console.error('Error fetching concept', error);
@@ -114,7 +115,7 @@ const Study: React.FC = () => {
               >
                 Suspend
               </Button>
-          {problem?.problem_type === 'polars' && (
+          {(problem?.problem_type === 'polars' || problem?.problem_type === 'sql' || problem?.problem_type === 'pyspark') && (
             <>
               <PolarsProblem problem={problem} handleScore={handleScore} />
             </>

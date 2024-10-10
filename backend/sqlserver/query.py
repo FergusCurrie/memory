@@ -1,6 +1,7 @@
 import pyodbc 
 
 import pandas as pd
+import polars as pl
 import pyodbc
 
 def sql_server_query(query):
@@ -14,7 +15,7 @@ def sql_server_query(query):
     conn = pyodbc.connect(conn_str)
     
     # Execute the query and fetch the results into a pandas DataFrame
-    df = pd.read_sql(query, conn)
+    df = pl.DataFrame(pd.read_sql(query, conn))
 
     # Close the connection
     conn.close()

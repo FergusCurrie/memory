@@ -16,7 +16,7 @@ def _clean_result_to_pandas(result):
     if isinstance(result, pl.Series):
         result = result.to_frame()
     result = result.to_dict()
-    return pd.DataFrame(result)
+    return pl.DataFrame(result)
 
 
 def _execute_code(code, local_variables):
@@ -35,7 +35,7 @@ def _execute_code(code, local_variables):
         if error_output:
             logger.info(error_output)
             return None, error_output
-        return pd.DataFrame(), str(e)
+        return pl.DataFrame(), str(e)
 
 
 def run_code_polars(code, datasets, preprocessing_code):
@@ -98,7 +98,7 @@ def run_code_sql(code, datasets, preprocessing_code):
         return df, None 
     except Exception as e:
         logger.info(f"Exception hit {e}")
-        return pd.DataFrame(), e
+        return pl.DataFrame(), e
 
 
 def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessing_code, problem_type):
@@ -140,6 +140,11 @@ def run_code_against_test(problem, code_submission):
     logger.info(submission_df)
 
     # Test result
-    if compare_dataframes(submission_df, solution_df):
-        return True, submission_df.head(10).to_json(), submission_error
-    return False, submission_df.head(10).to_json(), submission_error
+    # if compare_dataframes(submission_df, solution_df):
+    #     return True, submission_df.head(10).to_json(), submission_error
+    logger.info([c for c in solution_df.columns])
+    #solution_df = solution_df.sort([c for c in solution_df.columns])
+    #submission_df = solution_df.sort([c for c in solution_df.columns])
+    if solution_df.equals(submission_df):
+        return True, submission_df.to_pandas().head(10).to_json(), submission_error
+    return False, submission_df.to_pandas().head(10).to_json(), submission_error
