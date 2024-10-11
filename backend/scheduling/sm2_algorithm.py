@@ -45,6 +45,7 @@ def sm2_check_card(card, card_reviews) -> bool:
 
 def sm2_algorithm(cards, reviews):
     #logger.info("Running sm2 algo")
+    logger.debug(cards)
     try:
         cards_to_review = []
         for card in cards:
@@ -56,4 +57,4 @@ def sm2_algorithm(cards, reviews):
         return cards_to_review
     except Exception:
         logger.error(f"An error occurred in sm2_algorithm:\n{traceback.format_exc()}")
-        return -1
+        # eturn -1

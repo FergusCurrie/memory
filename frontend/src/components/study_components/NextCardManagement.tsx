@@ -2,9 +2,9 @@ import { Box, Button, Card, CardContent, Typography } from '@mui/material';
 import React, { useState, useEffect, useRef } from 'react';
 
 interface NextCardManagementProps {
-  testPassed: boolean;
+  testPassed?: boolean;
   handleScore: (result: boolean) => void;
-  answer: string;
+  answer?: string;
 }
 
 const NextCardManagement: React.FC<NextCardManagementProps> = ({

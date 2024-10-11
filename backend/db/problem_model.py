@@ -54,7 +54,7 @@ def get_all_problem_ids():
     cursor = conn.cursor()
 
     query = """
-    SELECT p.id, p.status
+    SELECT p.id, p.status, p.type
     FROM problems p
     """
     cursor.execute(query)

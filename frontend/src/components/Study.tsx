@@ -7,16 +7,13 @@ interface Problem {
   problem_type: string;
   problem_id: number;
   //concept_id: number;
-  code_default: string;
-  datasets: string;
-  description?: string;
-  answer: string;
+  // code_default: string;
+  // datasets: string;
+  // description?: string;
+  // answer: string;
   //hint: string;
 }
 
-interface Remaining {
-  remaining: number;
-}
 
 const Study: React.FC = () => {
   /**

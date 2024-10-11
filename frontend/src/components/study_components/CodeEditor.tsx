@@ -6,9 +6,9 @@ import PandasJsonTable from './PandasTable';
 
 interface CodeEditorProps {
   problem_id?: number;
-  testPassed: boolean;
-  setTestPassed: React.Dispatch<React.SetStateAction<boolean>>;
-  code_default: string;
+  testPassed?: boolean;
+  setTestPassed?: React.Dispatch<React.SetStateAction<boolean>>;
+  code_default?: string;
 }
 
 const CodeEditor: React.FC<CodeEditorProps> = ({

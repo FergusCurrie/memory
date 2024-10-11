@@ -51,40 +51,66 @@ def read_problems(skip: int = 0, limit: int = 1000):
 
 @router.get("/get_next_problem")
 def get_next_problem():
-    problem_ids = get_all_problem_ids()
-    logger.info(problem_ids)
-    problem_ids = [x for x in problem_ids if x[1] == 'active']
-    problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
+    try:
+        problem_ids = get_all_problem_ids()
+        logger.info(problem_ids)
+        problem_ids = [{'problem_id':x[0], 'type': x[2]} for x in problem_ids if x[1] == 'active']
+        # problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
 
-    reviews = get_all_reviews()
-    next_ = sm2_algorithm(problems, reviews)
-    if len(next_) == 0:
-        return {"problems": []}
-    next_ = next_[0]
-    #logger.info(next_["dataset_headers"])
-    return {
-        "problems": [
-            {
-                "problem_type": next_["type"],
-                "problem_id": next_["problem_id"],
-                "code_default": next_["default_code"],
-                "datasets": next_["datasets"],
-                "description": next_["description"],
-                "answer": next_["code"],
-            }
-        ]
-    }
+        reviews = get_all_reviews()
+        next_ = sm2_algorithm(problem_ids, reviews)
+        if len(next_) == 0:
+            return {"problems": []}
+        next_ = next_[0]
+        #logger.info(next_["dataset_headers"])
+        return {
+            "problems": [
+                {
+                    "problem_type": next_["type"],
+                    "problem_id": next_["problem_id"],
+                    # "code_default": next_["default_code"],
+                    # "datasets": next_["datasets"],
+                    # "description": next_["description"],
+                    # "answer": next_["code"],
+                }
+            ]
+        }
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
+@router.get("/data_wrangling/{problem_id}")
+def get_data_wrangling_problem(problem_id):
+    try:
+        problem = get_problem_for_polars(problem_id)
+        #logger.info(next_["dataset_headers"])
+        return {
+            "problems": [
+                {
+                    "problem_type": problem["type"],
+                    "problem_id": problem["problem_id"],
+                    "code_default": problem["default_code"],
+                    "datasets": problem["datasets"],
+                    "description": problem["description"],
+                    "answer": problem["code"],
+                }
+            ]
+        }
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 @router.get("/get_number_problems_remaining")
 def get_problems_remaining():
-    problem_ids = get_all_problem_ids()
-    problem_ids = [x for x in problem_ids if x[1] == 'active']
-    problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
-    reviews = get_all_reviews()
-    next_ = sm2_algorithm(problems, reviews)
-    return {"remaining": len(next_)}
-
+    try:
+        problem_ids = get_all_problem_ids()
+        problem_ids = [{'problem_id':x[0]} for x in problem_ids if x[1] == 'active']
+        reviews = get_all_reviews()
+        next_ = sm2_algorithm(problem_ids, reviews)
+        return {"remaining": len(next_)}
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 @router.get("/{problem_id}")
 def read_problem(problem_id: int):
