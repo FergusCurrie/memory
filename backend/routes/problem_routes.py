@@ -1,7 +1,12 @@
+from contextlib import redirect_stderr, redirect_stdout
+import io
 import logging
 import traceback
+from ..code_execution.multi_choice_problem_gen import multi_choice_generation
 from ..db.problem_model import add_new_polars_problem, delete_problem, get_all_problem_ids, get_problem_for_polars, update_problem_in_db, toggle_suspend_problem
+from ..db.card_model import get_card_by_problem_id
 from ..db.review_model import add_review, get_all_reviews, get_review
+from ..db.multi_choice_model import get_multi_choice_by_problem_id
 from ..scheduling.sm2_algorithm import sm2_algorithm
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
@@ -79,26 +84,8 @@ def get_next_problem():
         logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
 
-@router.get("/data_wrangling/{problem_id}")
-def get_data_wrangling_problem(problem_id):
-    try:
-        problem = get_problem_for_polars(problem_id)
-        #logger.info(next_["dataset_headers"])
-        return {
-            "problems": [
-                {
-                    "problem_type": problem["type"],
-                    "problem_id": problem["problem_id"],
-                    "code_default": problem["default_code"],
-                    "datasets": problem["datasets"],
-                    "description": problem["description"],
-                    "answer": problem["code"],
-                }
-            ]
-        }
-    except Exception as e:
-        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
-        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
 
 @router.get("/get_number_problems_remaining")
 def get_problems_remaining():
@@ -167,3 +154,49 @@ def do_suspend(problem_id: int):
 def route_delete_problem(problem_id: int):
     delete_problem(problem_id)
     return {}
+
+
+
+####### CUSTOM problem teyps 
+
+@router.get("/data_wrangling/{problem_id}")
+def get_data_wrangling_problem(problem_id):
+    try:
+        problem = get_problem_for_polars(problem_id)
+        #logger.info(next_["dataset_headers"])
+        return {
+            "problems": [
+                {
+                    "problem_type": problem["type"],
+                    "problem_id": problem["problem_id"],
+                    "code_default": problem["default_code"],
+                    "datasets": problem["datasets"],
+                    "description": problem["description"],
+                    "answer": problem["code"],
+                }
+            ]
+        }
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    
+
+
+@router.get("/multi_choice/{problem_id}")
+def get_multi_choice_problem(problem_id):
+    try:
+        return multi_choice_generation(get_multi_choice_by_problem_id(problem_id))
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    
+
+@router.get("/card/{problem_id}")
+def get_card_problem(problem_id):
+
+    try:
+        return get_card_by_problem_id(problem_id)
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    

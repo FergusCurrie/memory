@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import api from '../api';
 import PolarsProblem from './problem_types/PolarsProblem';
+import CardProblem from './problem_types/CardProblem';
+import MultiChoiceProblem from './problem_types/MultiChoiceProblem'
 import { Box, Button, Typography } from '@mui/material';
 
 interface Problem {
@@ -117,6 +119,17 @@ const Study: React.FC = () => {
               <PolarsProblem problem={problem} handleScore={handleScore} />
             </>
           )}
+          {(problem?.problem_type === 'multi_choice') && (
+            <>
+               <MultiChoiceProblem problem={problem} handleScore={handleScore} />
+            </>
+          )}
+          {(problem?.problem_type === 'card') && (
+            <>
+               <CardProblem problem={problem} handleScore={handleScore} />
+            </>
+          )}
+          
         </Box>
       ) : (
         <Typography variant="h5" sx={{ textAlign: 'center', mt: 4 }}>
