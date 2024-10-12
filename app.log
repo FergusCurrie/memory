@@ -66,3 +66,60 @@ KeyError: 'correct_answer'
 2024-10-12 03:21:17,108 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
 2024-10-12 03:21:17,212 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
 2024-10-12 03:21:17,212 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
+2024-10-12 05:31:14,414 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:44,371 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:45,553 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:46,128 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:46,433 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:46,631 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:51,255 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:51,886 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:52,058 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:52,226 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:33:52,377 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:24,340 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:24,817 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:25,154 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:25,318 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:31,240 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:31,722 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:31,949 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:32,121 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:32,290 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:46,655 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:34:48,632 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:37:27,121 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:37:27,957 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:37:44,073 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:38:00,330 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:38:40,895 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:40:19,149 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:40:20,852 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:40:27,972 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:44:58,215 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:59:15,176 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:59:30,300 - backend.app - INFO - Getting all available datasets
+2024-10-12 05:59:32,793 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:02:10,688 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:05:51,777 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:06:17,199 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:15:12,588 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:15:15,063 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
+2024-10-12 06:15:15,142 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
+2024-10-12 06:15:15,143 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
+2024-10-12 06:15:15,145 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
+2024-10-12 06:15:16,692 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:15:17,465 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
+2024-10-12 06:15:17,467 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
+2024-10-12 06:15:17,468 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
+2024-10-12 06:15:17,469 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
+2024-10-12 06:15:18,082 - backend.app - INFO - Getting all available datasets
+2024-10-12 06:15:26,567 - backend.db.card_model - INFO - Added new card for problem_id: 41
+2024-10-12 06:15:28,929 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
+2024-10-12 06:15:28,930 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
+2024-10-12 06:15:28,931 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
+2024-10-12 06:15:28,932 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
+2024-10-12 06:15:31,470 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
+2024-10-12 06:15:31,471 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
+2024-10-12 06:15:31,472 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
+2024-10-12 06:15:33,234 - backend.app - INFO - Getting all available datasets

@@ -9,7 +9,7 @@ import { CssBaseline } from '@mui/material';
 import Home from './pages/Home';
 //import Study from './pages/OLDSTUDY';
 import NavigationBar from './pages/NavigationBar';
-import AddCode from './pages/AddCode';
+import Add from './pages/Add';
 import BrowseCodeCards from './pages/BrowseCode';
 import Study from './components/Study';
 
@@ -32,7 +32,7 @@ const App = () => {
             <Route path="/study" element={<Study />} />
             {/* <Route path="/add_cards" element={<AddCards />} />
             <Route path="/browse" element={<Browse />} /> */}
-            <Route path="/add_code" element={<AddCode />} />
+            <Route path="/add_code" element={<Add />} />
             <Route path="/browse_code" element={<BrowseCodeCards />} />
             {/* <Route path="/mindmap" element={<Mindmap />} />
             <Route path="/train_mindmap" element={<TrainMindmap />} />

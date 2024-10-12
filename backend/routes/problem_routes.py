@@ -4,7 +4,7 @@ import logging
 import traceback
 from ..code_execution.multi_choice_problem_gen import multi_choice_generation
 from ..db.problem_model import add_new_polars_problem, delete_problem, get_all_problem_ids, get_problem_for_polars, update_problem_in_db, toggle_suspend_problem
-from ..db.card_model import get_card_by_problem_id
+from ..db.card_model import get_card_by_problem_id, add_card
 from ..db.review_model import add_review, get_all_reviews, get_review
 from ..db.multi_choice_model import get_multi_choice_by_problem_id
 from ..scheduling.sm2_algorithm import sm2_algorithm
@@ -22,6 +22,9 @@ class ProblemCreate(BaseModel):
     default_code: str
     problem_type: str
 
+class Card(BaseModel):
+    front: str
+    back: str
 
 router = APIRouter()
 
@@ -36,6 +39,19 @@ def create_problem(problem: ProblemCreate):
             preprocessing_code=problem.preprocessing_code,
             code_start=problem.default_code,
             type=problem.problem_type,
+        )
+        return {"result": True}
+    except Exception as e:
+        logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+    
+
+@router.post("/card/create")
+def create_problem(card: Card):
+    try:
+        add_card(
+            front=card.front,
+            back=card.back,
         )
         return {"result": True}
     except Exception as e:

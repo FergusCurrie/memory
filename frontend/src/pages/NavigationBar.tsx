@@ -14,12 +14,12 @@ const NavigationBar = () => {
           <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
             <MenuIcon />
           </IconButton>
-          <ButtonRouter name="HOME" link="/" />
-          <ButtonRouter name="FLASHCARDS  " link="/study" />
+          <ButtonRouter name="Home" link="/" />
+          <ButtonRouter name="Study  " link="/study" />
           {/* <ButtonRouter name="ADD cards  " link="/add_cards" />
           <ButtonRouter name="browse" link="/browse" /> */}
-          <ButtonRouter name="Add Code" link="/add_code" />
-          <ButtonRouter name="Browse Code" link="/browse_code" />
+          <ButtonRouter name="Add" link="/add_code" />
+          <ButtonRouter name="Browse" link="/browse_code" />
           {/* <ButtonRouter name="MINDMAP" link="/mindmap" />
           <ButtonRouter name="TRAIN_MIND_MAP" link="/train_mindmap" />
           <ButtonRouter name="CODE_TRAIN" link="/code_train" />

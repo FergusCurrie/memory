@@ -12,53 +12,33 @@ import {
   MenuItem,
   Chip,
 } from '@mui/material';
-import PandasJsonTable from '../components/study_components/PandasTable';
+import PandasJsonTable from './study_components/PandasTable';
 
-const AddCode: React.FC = () => {
-  // Change datasetPath to datasetPaths and make it an array
-  const [datasetPaths, setDatasetPaths] = useState<string[]>([]);
-  const [description, setDescription] = useState('');
-  const [code, setCode] = useState('');
-  const [preprocessingCode, setPreprocessingCode] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [submittedResult, setSubmittedResult] = useState<any>(null);
 
-  const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
 
-  const [defaultCode, setDefaultCode] = useState('');
+const AddCode: React.FC = ({problemType}) => {
+    const [datasetPaths, setDatasetPaths] = useState<string[]>([]);
+    const [description, setDescription] = useState('');
+    const [code, setCode] = useState('');
+    const [preprocessingCode, setPreprocessingCode] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [submittedResult, setSubmittedResult] = useState<any>(null);
 
-  const [problemType, setProblemType] = useState<'polars' | 'pyspark'| 'sql'>('polars');
+    const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
 
-  useEffect(() => {
-    const fetchDatasets = async () => {
-      console.log('fetching');
-      try {
-        const response = await api.get('/api/available_datasets');
-        console.log(response);
-        setAvailableDatasets(response.data.datasets);
-      } catch (error) {
-        console.error('Error fetching available datasets:', error);
-      }
-    };
+    const [defaultCode, setDefaultCode] = useState('');
 
-    fetchDatasets();
-  }, []);
-
-  const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setDatasetPaths(event.target.value as string[]);
-  };
-
-  const handleRemoveDataset = (datasetToRemove: string) => {
-    setDatasetPaths((prevDatasets) =>
-      prevDatasets.filter((dataset) => dataset !== datasetToRemove),
-    );
-  };
-
-  const handleProblemTypeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setProblemType(event.target.value as 'polars' | 'pyspark' | 'sql');
-  };
-
-  // Update handleRunCode to use the problemType
+    const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+        setDatasetPaths(event.target.value as string[]);
+      };
+    
+      const handleRemoveDataset = (datasetToRemove: string) => {
+        setDatasetPaths((prevDatasets) =>
+          prevDatasets.filter((dataset) => dataset !== datasetToRemove),
+        );
+      };
+    
+    // Update handleRunCode to use the problemType
   const handleRunCode = async () => {
     setIsLoading(true);
     try {
@@ -104,19 +84,25 @@ const AddCode: React.FC = () => {
       alert(error);
     }
   };
-
-  return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '20px',
-        maxWidth: '800px',
-        margin: 'auto',
-      }}
-    >
-      <h1>Add and Run Code</h1>
-      <FormControl fullWidth>
+  
+    useEffect(() => {
+        const fetchDatasets = async () => {
+          console.log('fetching');
+          try {
+            const response = await api.get('/api/available_datasets');
+            console.log(response);
+            setAvailableDatasets(response.data.datasets);
+          } catch (error) {
+            console.error('Error fetching available datasets:', error);
+          }
+        };
+    
+        fetchDatasets();
+      }, []);
+    
+    return (
+        <>
+        <FormControl fullWidth>
         <InputLabel id="dataset-select-label">Datasets</InputLabel>
         <Select
           labelId="dataset-select-label"
@@ -147,20 +133,7 @@ const AddCode: React.FC = () => {
           ))}
         </Select>
       </FormControl>
-      <FormControl fullWidth>
-        <InputLabel id="problem-type-select-label">Problem Type</InputLabel>
-        <Select
-          labelId="problem-type-select-label"
-          id="problem-type-select"
-          value={problemType}
-          onChange={handleProblemTypeChange}
-          style={{ fontSize: '16px' }}
-        >
-          <MenuItem value="polars">Polars</MenuItem>
-          <MenuItem value="pyspark">PySpark</MenuItem>
-          <MenuItem value="sql">SQL</MenuItem>
-        </Select>
-      </FormControl>
+      
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -228,8 +201,8 @@ const AddCode: React.FC = () => {
           </Button>
         </Box>
       )}
-    </div>
-  );
-};
+      </>
+    )
+}
 
 export default AddCode;
