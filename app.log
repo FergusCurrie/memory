@@ -1,168 +1,307 @@
-12024-10-12 01:47:10,524 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:10,524 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:10,526 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:47:10,597 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:18,061 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:18,126 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:18,127 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:47:19,783 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:19,784 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:19,890 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:19,900 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:47:26,457 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:26,528 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:26,529 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:26,529 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:47:30,823 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:30,824 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:30,826 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:47:38,460 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:38,535 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:47:38,535 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:47:38,536 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:48:46,420 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:48:46,422 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:48:46,422 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:48:46,460 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:11,701 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:49:11,702 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:11,702 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:11,704 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:49:15,245 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:49:15,247 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 01:49:15,249 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:16,631 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card')]
-2024-10-12 01:49:16,632 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:16,632 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}]
-2024-10-12 01:49:16,633 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}]
-2024-10-12 03:18:26,139 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice')]
-2024-10-12 03:18:26,141 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:18:26,141 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 03:18:26,146 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:18:47,829 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:18:47,831 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:18:47,864 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice')]
-2024-10-12 03:18:47,865 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 03:18:47,874 - backend.code_execution.multi_choice_problem_gen - INFO - raise exception
-2024-10-12 03:18:51,322 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice')]
-2024-10-12 03:18:51,323 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 03:18:51,324 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:21:13,995 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 40}]
-2024-10-12 03:21:14,032 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'active', 'multi_choice')]
-2024-10-12 03:21:14,033 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 40, 'type': 'multi_choice'}]
-2024-10-12 03:21:14,034 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 40}]
-2024-10-12 03:21:14,043 - backend.code_execution.multi_choice_problem_gen - INFO - raise exception
-2024-10-12 03:21:14,045 - backend.routes.problem_routes - ERROR - An error occurred while updating the problem:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/routes/problem_routes.py", line 188, in get_multi_choice_problem
-    return multi_choice_generation(get_multi_choice_by_problem_id(problem_id))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory/backend/code_execution/multi_choice_problem_gen.py", line 49, in multi_choice_generation
-    "correctAnswer": str(local_variables['correct_answer'])
-                         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
-KeyError: 'correct_answer'
-
-2024-10-12 03:21:17,092 - backend.routes.problem_routes - INFO - 40 FEFEFF suspending
-2024-10-12 03:21:17,108 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 03:21:17,212 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
-2024-10-12 03:21:17,212 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 05:31:14,414 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:44,371 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:45,553 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:46,128 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:46,433 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:46,631 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:51,255 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:51,886 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:52,058 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:52,226 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:33:52,377 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:24,340 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:24,817 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:25,154 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:25,318 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:31,240 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:31,722 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:31,949 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:32,121 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:32,290 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:46,655 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:34:48,632 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:37:27,121 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:37:27,957 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:37:44,073 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:38:00,330 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:38:40,895 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:40:19,149 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:40:20,852 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:40:27,972 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:44:58,215 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:59:15,176 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:59:30,300 - backend.app - INFO - Getting all available datasets
-2024-10-12 05:59:32,793 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:02:10,688 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:05:51,777 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:06:17,199 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:15:12,588 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:15:15,063 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 06:15:15,142 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
-2024-10-12 06:15:15,143 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 06:15:15,145 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 06:15:16,692 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:15:17,465 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice')]
-2024-10-12 06:15:17,467 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 06:15:17,468 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}]
-2024-10-12 06:15:17,469 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}]
-2024-10-12 06:15:18,082 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:15:26,567 - backend.db.card_model - INFO - Added new card for problem_id: 41
-2024-10-12 06:15:28,929 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-12 06:15:28,930 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 06:15:28,931 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-12 06:15:28,932 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 06:15:31,470 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-12 06:15:31,471 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 06:15:31,472 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-12 06:15:33,234 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:32:29,849 - backend.app - INFO - Getting all available datasets
-2024-10-12 06:32:32,329 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-12 06:32:32,330 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 06:32:32,331 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-12 06:32:32,332 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 06:32:33,433 - backend.app - INFO - Getting all available datasets
-2024-10-12 08:03:27,000 - backend.app - INFO - Getting all available datasets
-2024-10-12 08:03:28,182 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 08:03:28,202 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-12 08:03:28,294 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-12 08:03:28,295 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-12 08:03:31,258 - backend.app - INFO - Getting all available datasets
-2024-10-15 08:18:32,005 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'active', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-15 08:18:32,007 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-15 08:18:32,008 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37, 'type': 'multi_choice'}, {'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-15 08:18:32,020 - backend.routes.problem_routes - ERROR - An error occurred while updating the problem:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/routes/problem_routes.py", line 204, in get_multi_choice_problem
-    return multi_choice_generation(get_multi_choice_by_problem_id(problem_id))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory/backend/code_execution/multi_choice_problem_gen.py", line 28, in multi_choice_generation
-    assert 'generation_code' in problem
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: argument of type 'NoneType' is not iterable
-
-2024-10-15 08:18:32,079 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 37}, {'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-15 08:18:37,963 - backend.routes.problem_routes - INFO - 37 FEFEFF suspending
-2024-10-15 08:18:38,000 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 38}, {'problem_id': 39}, {'problem_id': 41}]
-2024-10-15 08:18:38,050 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'active', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-15 08:18:38,051 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 38, 'type': 'card'}, {'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-15 08:18:40,092 - backend.routes.problem_routes - INFO - 38 FEFEFF suspending
-2024-10-15 08:18:40,101 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'active', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-15 08:18:40,101 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 39}, {'problem_id': 41}]
-2024-10-15 08:18:40,102 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 39, 'type': 'multi_choice'}, {'problem_id': 41, 'type': 'card'}]
-2024-10-15 08:18:40,108 - backend.code_execution.multi_choice_problem_gen - INFO - raise exception
-2024-10-15 08:18:41,786 - backend.routes.problem_routes - INFO - 39 FEFEFF suspending
-2024-10-15 08:18:41,794 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'active', 'card')]
-2024-10-15 08:18:41,795 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 41}]
-2024-10-15 08:18:41,796 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 41, 'type': 'card'}]
-2024-10-15 08:18:43,286 - backend.routes.problem_routes - INFO - 41 FEFEFF suspending
-2024-10-15 08:18:43,315 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
-2024-10-15 08:18:43,321 - backend.scheduling.sm2_algorithm - DEBUG - []
-2024-10-15 08:18:43,322 - backend.scheduling.sm2_algorithm - DEBUG - []
+2024-11-09 22:12:26,377 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:13:15,585 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'suspended', 'polars'), (8, 'suspended', 'polars'), (9, 'suspended', 'polars'), (10, 'suspended', 'polars'), (11, 'suspended', 'polars'), (12, 'suspended', 'polars'), (13, 'suspended', 'polars'), (14, 'suspended', 'polars'), (15, 'suspended', 'polars'), (16, 'suspended', 'polars'), (17, 'suspended', 'polars'), (18, 'suspended', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:13:15,596 - backend.routes.problem_routes - INFO - Failed to fetch problem for (37, 'suspended', 'multi_choice')
+2024-11-09 22:13:15,597 - backend.routes.problem_routes - INFO - Failed to fetch problem for (38, 'suspended', 'card')
+2024-11-09 22:13:15,597 - backend.routes.problem_routes - INFO - Failed to fetch problem for (39, 'suspended', 'multi_choice')
+2024-11-09 22:13:15,597 - backend.routes.problem_routes - INFO - Failed to fetch problem for (40, 'suspended', 'multi_choice')
+2024-11-09 22:13:15,597 - backend.routes.problem_routes - INFO - Failed to fetch problem for (41, 'suspended', 'card')
+2024-11-09 22:13:39,037 - backend.routes.problem_routes - INFO - 7 FEFEFF suspending
+2024-11-09 22:13:40,422 - backend.routes.problem_routes - INFO - 8 FEFEFF suspending
+2024-11-09 22:13:41,447 - backend.routes.problem_routes - INFO - 9 FEFEFF suspending
+2024-11-09 22:13:43,187 - backend.routes.problem_routes - INFO - 10 FEFEFF suspending
+2024-11-09 22:13:44,282 - backend.routes.problem_routes - INFO - 11 FEFEFF suspending
+2024-11-09 22:13:45,645 - backend.routes.problem_routes - INFO - 12 FEFEFF suspending
+2024-11-09 22:13:46,770 - backend.routes.problem_routes - INFO - 13 FEFEFF suspending
+2024-11-09 22:13:47,508 - backend.routes.problem_routes - INFO - 14 FEFEFF suspending
+2024-11-09 22:13:48,207 - backend.routes.problem_routes - INFO - 15 FEFEFF suspending
+2024-11-09 22:13:49,557 - backend.routes.problem_routes - INFO - 16 FEFEFF suspending
+2024-11-09 22:13:50,663 - backend.routes.problem_routes - INFO - 18 FEFEFF suspending
+2024-11-09 22:13:51,380 - backend.routes.problem_routes - INFO - 17 FEFEFF suspending
+2024-11-09 22:13:53,697 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:13:53,972 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:13:54,035 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:13:54,035 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:14:10,575 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:14:10,575 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:14:10,621 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:14:10,626 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:16:57,153 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:16:57,175 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:16:57,175 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:16:57,220 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:20:49,747 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:20:49,780 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:20:49,780 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:20:49,804 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:21:39,656 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:21:39,713 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:21:39,715 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:21:39,723 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:21:58,135 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:21:58,191 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:21:58,191 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:21:58,193 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:22:10,236 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:22:10,236 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:22:10,275 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:22:10,296 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:22:13,472 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:22:13,472 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:22:13,472 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:22:13,473 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:23:10,863 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:10,912 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:23:10,914 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:23:10,922 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:22,206 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:23:22,207 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:23:22,238 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:22,262 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:41,290 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:41,329 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:23:41,331 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:23:41,331 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-09 22:24:20,470 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:20,475 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:20,476 - backend.code_execution.check_code - INFO - Exception hit name 'df' is not defined <_io.StringIO object at 0x779062971f00>
+2024-11-09 22:24:20,476 - backend.code_execution.check_code - INFO - (shape: (0, 0)
+┌┐
+╞╡
+└┘, "name 'df' is not defined")
+2024-11-09 22:24:20,476 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:20,478 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:20,479 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:24:20,479 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:24:20,479 - backend.code_execution.check_code - INFO - shape: (0, 0)
+┌┐
+╞╡
+└┘
+2024-11-09 22:24:20,480 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:24:31,953 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:31,955 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:31,955 - backend.code_execution.check_code - INFO - (shape: (13_915, 20)
+┌──────────────┬─────────────┬────────────┬───────────────┬───┬───────────┬───────────┬───────────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Order Date ┆ Delivery Date ┆ … ┆ Net Price ┆ Unit Cost ┆ Currency Code ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---        ┆ ---           ┆   ┆ ---       ┆ ---       ┆ ---           ┆ ---           │
+│ i64          ┆ i64         ┆ str        ┆ str           ┆   ┆ f64       ┆ f64       ┆ str           ┆ f64           │
+╞══════════════╪═════════════╪════════════╪═══════════════╪═══╪═══════════╪═══════════╪═══════════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 2017-10-18 ┆ 2017-10-20    ┆ … ┆ 10.288    ┆ 5.958     ┆ USD           ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 2017-10-25 ┆ 2017-10-26    ┆ … ┆ 11.691    ┆ 5.958     ┆ AUD           ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 2018-07-07 ┆ 2018-07-12    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 2020-01-11 ┆ 2020-01-11    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 2018-12-01 ┆ 2018-12-02    ┆ … ┆ 11.5611   ┆ 6.62      ┆ USD           ┆ 1.0           │
+│ …            ┆ …           ┆ …          ┆ …             ┆ … ┆ …         ┆ …         ┆ …             ┆ …             │
+│ 277804       ┆ 0           ┆ 2017-08-09 ┆ 2017-08-13    ┆ … ┆ 4.221     ┆ 2.394     ┆ AUD           ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 2020-01-28 ┆ 2020-01-28    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 2018-12-17 ┆ 2018-12-17    ┆ … ┆ 2.9145    ┆ 1.71      ┆ GBP           ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 2018-10-10 ┆ 2018-10-10    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 2019-12-26 ┆ 2019-12-29    ┆ … ┆ 3.2495    ┆ 1.71      ┆ CAD           ┆ 1.3161        │
+└──────────────┴─────────────┴────────────┴───────────────┴───┴───────────┴───────────┴───────────────┴───────────────┘, None)
+2024-11-09 22:24:31,956 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:31,958 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:31,958 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:24:31,959 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:24:31,959 - backend.code_execution.check_code - INFO - shape: (13_915, 20)
+┌──────────────┬─────────────┬────────────┬───────────────┬───┬───────────┬───────────┬───────────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Order Date ┆ Delivery Date ┆ … ┆ Net Price ┆ Unit Cost ┆ Currency Code ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---        ┆ ---           ┆   ┆ ---       ┆ ---       ┆ ---           ┆ ---           │
+│ i64          ┆ i64         ┆ str        ┆ str           ┆   ┆ f64       ┆ f64       ┆ str           ┆ f64           │
+╞══════════════╪═════════════╪════════════╪═══════════════╪═══╪═══════════╪═══════════╪═══════════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 2017-10-18 ┆ 2017-10-20    ┆ … ┆ 10.288    ┆ 5.958     ┆ USD           ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 2017-10-25 ┆ 2017-10-26    ┆ … ┆ 11.691    ┆ 5.958     ┆ AUD           ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 2018-07-07 ┆ 2018-07-12    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 2020-01-11 ┆ 2020-01-11    ┆ … ┆ 12.99     ┆ 6.62      ┆ AUD           ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 2018-12-01 ┆ 2018-12-02    ┆ … ┆ 11.5611   ┆ 6.62      ┆ USD           ┆ 1.0           │
+│ …            ┆ …           ┆ …          ┆ …             ┆ … ┆ …         ┆ …         ┆ …             ┆ …             │
+│ 277804       ┆ 0           ┆ 2017-08-09 ┆ 2017-08-13    ┆ … ┆ 4.221     ┆ 2.394     ┆ AUD           ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 2020-01-28 ┆ 2020-01-28    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 2018-12-17 ┆ 2018-12-17    ┆ … ┆ 2.9145    ┆ 1.71      ┆ GBP           ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 2018-10-10 ┆ 2018-10-10    ┆ … ┆ 2.9815    ┆ 1.71      ┆ CAD           ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 2019-12-26 ┆ 2019-12-29    ┆ … ┆ 3.2495    ┆ 1.71      ┆ CAD           ┆ 1.3161        │
+└──────────────┴─────────────┴────────────┴───────────────┴───┴───────────┴───────────┴───────────────┴───────────────┘
+2024-11-09 22:24:31,959 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:24:54,587 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:54,590 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:54,590 - backend.code_execution.check_code - INFO - Exception hit invalid syntax. Perhaps you forgot a comma? (<string>, line 5) <_io.StringIO object at 0x779062972080>
+2024-11-09 22:24:54,590 - backend.code_execution.check_code - INFO - (shape: (0, 0)
+┌┐
+╞╡
+└┘, 'invalid syntax. Perhaps you forgot a comma? (<string>, line 5)')
+2024-11-09 22:24:54,590 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:24:54,592 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:24:54,593 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:24:54,593 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:24:54,593 - backend.code_execution.check_code - INFO - shape: (0, 0)
+┌┐
+╞╡
+└┘
+2024-11-09 22:24:54,593 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:25:01,222 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:01,224 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:01,224 - backend.code_execution.check_code - INFO - Exception hit module 'polars.selectors' has no attribute 'isnumeric' <_io.StringIO object at 0x779062972080>
+2024-11-09 22:25:01,224 - backend.code_execution.check_code - INFO - (shape: (0, 0)
+┌┐
+╞╡
+└┘, "module 'polars.selectors' has no attribute 'isnumeric'")
+2024-11-09 22:25:01,224 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:01,226 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:01,226 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:25:01,227 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:25:01,227 - backend.code_execution.check_code - INFO - shape: (0, 0)
+┌┐
+╞╡
+└┘
+2024-11-09 22:25:01,227 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:25:23,647 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:23,650 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:23,650 - backend.code_execution.check_code - INFO - (shape: (13_915, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 47           ┆ 7        ┆ 11.691     ┆ 10.288    ┆ 5.958     ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 30           ┆ 1        ┆ 11.691     ┆ 11.691    ┆ 5.958     ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 59           ┆ 6        ┆ 12.99      ┆ 12.99     ┆ 6.62      ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 25           ┆ 4        ┆ 12.99      ┆ 12.99     ┆ 6.62      ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 56           ┆ 2        ┆ 12.99      ┆ 11.5611   ┆ 6.62      ┆ 1.0           │
+│ …            ┆ …           ┆ …            ┆ …        ┆ …          ┆ …         ┆ …         ┆ …             │
+│ 277804       ┆ 0           ┆ 66           ┆ 6        ┆ 4.69       ┆ 4.221     ┆ 2.394     ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 41           ┆ 1        ┆ 3.35       ┆ 2.9815    ┆ 1.71      ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 36           ┆ 4        ┆ 3.35       ┆ 2.9145    ┆ 1.71      ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 72           ┆ 1        ┆ 3.35       ┆ 2.9815    ┆ 1.71      ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 66           ┆ 3        ┆ 3.35       ┆ 3.2495    ┆ 1.71      ┆ 1.3161        │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:25:23,651 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:23,653 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:23,653 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:25:23,653 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:25:23,653 - backend.code_execution.check_code - INFO - shape: (13_915, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 284806       ┆ 1           ┆ 47           ┆ 7        ┆ 11.691     ┆ 10.288    ┆ 5.958     ┆ 1.0           │
+│ 285506       ┆ 1           ┆ 30           ┆ 1        ┆ 11.691     ┆ 11.691    ┆ 5.958     ┆ 1.2967        │
+│ 311002       ┆ 2           ┆ 59           ┆ 6        ┆ 12.99      ┆ 12.99     ┆ 6.62      ┆ 1.3484        │
+│ 366307       ┆ 2           ┆ 25           ┆ 4        ┆ 12.99      ┆ 12.99     ┆ 6.62      ┆ 1.4545        │
+│ 325708       ┆ 3           ┆ 56           ┆ 2        ┆ 12.99      ┆ 11.5611   ┆ 6.62      ┆ 1.0           │
+│ …            ┆ …           ┆ …            ┆ …        ┆ …          ┆ …         ┆ …         ┆ …             │
+│ 277804       ┆ 0           ┆ 66           ┆ 6        ┆ 4.69       ┆ 4.221     ┆ 2.394     ┆ 1.2683        │
+│ 368000       ┆ 1           ┆ 41           ┆ 1        ┆ 3.35       ┆ 2.9815    ┆ 1.71      ┆ 1.319         │
+│ 327307       ┆ 0           ┆ 36           ┆ 4        ┆ 3.35       ┆ 2.9145    ┆ 1.71      ┆ 0.7926        │
+│ 320507       ┆ 2           ┆ 72           ┆ 1        ┆ 3.35       ┆ 2.9815    ┆ 1.71      ┆ 1.2963        │
+│ 364705       ┆ 2           ┆ 66           ┆ 3        ┆ 3.35       ┆ 3.2495    ┆ 1.71      ┆ 1.3161        │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:25:23,654 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:25:34,301 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:34,303 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:34,303 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:25:34,304 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-09 22:25:34,305 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-09 22:25:34,306 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-09 22:25:34,306 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:25:34,306 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-09 22:25:34,306 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-09 22:25:36,912 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-09 22:25:37,190 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-09 22:25:37,192 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]

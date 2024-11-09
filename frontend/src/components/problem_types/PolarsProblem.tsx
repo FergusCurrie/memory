@@ -38,21 +38,20 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   const [polarsProblemData, setPolarsProblemData] = useState<PolarsProblemData>();
 
   const fetchPolarsProblemData = async () => {
-    console.log('fetching polars prbo')
+    console.log('fetching polars prbo');
     try {
       const response = await api.get(`/api/problem/data_wrangling/${problem.problem_id}`);
-      console.log(response)
-      setPolarsProblemData(response.data)
+      console.log(response.data['problems'][0]);
+      setPolarsProblemData(response.data['problems'][0]);
     } catch (error) {
       console.error('Error fetching concept', error);
     }
   };
 
-
   useEffect(() => {
-    console.log(problem)
+    console.log(problem);
     if (problem) {
-      fetchPolarsProblemData()
+      fetchPolarsProblemData();
       setSelectedDataset('');
       setTestPassed(false);
     }

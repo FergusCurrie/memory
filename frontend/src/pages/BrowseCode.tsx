@@ -70,6 +70,7 @@ const BrowseCodeCards: React.FC = () => {
   const fetchCodeReviews = async () => {
     try {
       const response = await api.get('/api/review');
+      console.log('x', response);
       setCodeReviews(response.data);
     } catch (error) {
       console.error('Error fetching code reviews:', error);
@@ -86,9 +87,12 @@ const BrowseCodeCards: React.FC = () => {
 
   const handleSaveEdit = async () => {
     if (editingCard) {
-      console.log('Saving edit')
+      console.log('Saving edit');
       try {
-        await api.put(`/api/problem/${editingCard.problem_id}`, { description: editingCard.description, code: editingCard.code });
+        await api.put(`/api/problem/${editingCard.problem_id}`, {
+          description: editingCard.description,
+          code: editingCard.code,
+        });
         setCodeCards(
           codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
         );
@@ -127,15 +131,15 @@ const BrowseCodeCards: React.FC = () => {
     event.stopPropagation();
     try {
       await api.post(`/api/problem/suspend/${problem_id}`);
-      setCodeCards(codeCards.map(card => 
-        card.problem_id === problem_id ? {...card, is_suspended: !card.is_suspended} : card
-      ));
+      setCodeCards(
+        codeCards.map((card) =>
+          card.problem_id === problem_id ? { ...card, is_suspended: !card.is_suspended } : card,
+        ),
+      );
     } catch (error) {
       console.error('Error toggling suspend status:', error);
     }
   };
-
-
 
   const filteredReviews = selectedCardId
     ? codeReviews.filter((review) => review.problem_id === selectedCardId)
@@ -178,7 +182,10 @@ const BrowseCodeCards: React.FC = () => {
                   <IconButton onClick={() => handleEditCard(card)} color="primary">
                     <EditIcon />
                   </IconButton>
-                  <IconButton onClick={(e) => handleToggleSuspend(card.problem_id, e)} color={card.is_suspended ? "warning" : "success"}>
+                  <IconButton
+                    onClick={(e) => handleToggleSuspend(card.problem_id, e)}
+                    color={card.is_suspended ? 'warning' : 'success'}
+                  >
                     {card.is_suspended ? <PlayArrowIcon /> : <PauseIcon />}
                   </IconButton>
                 </TableCell>
@@ -254,9 +261,7 @@ const BrowseCodeCards: React.FC = () => {
             multiline
             rows={4}
             value={editingCard?.description || ''}
-            onChange={(e) =>
-              setEditingCard((prev) => ({ ...prev!, description: e.target.value }))
-            }
+            onChange={(e) => setEditingCard((prev) => ({ ...prev!, description: e.target.value }))}
           />
           <TextField
             margin="dense"

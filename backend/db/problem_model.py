@@ -89,7 +89,7 @@ def get_problem_for_polars(problem_id):
         "code": code,
         "preprocessing_code": preprocessing_code,
         "default_code": default_code,
-        "datasets": datasets
+        "datasets": datasets,
     }
 
     # logger.info(result)
@@ -103,9 +103,7 @@ def get_problem_for_polars(problem_id):
     # problem_id, description, problem_type, code, preprocessing_code, default_code, dataset_name, dataset_headers = (
     #     result[0]
     # )
-   
 
-    
     # result =  {
     #     "problem_id": problem_id,
     #     "type": problem_type,
@@ -116,8 +114,9 @@ def get_problem_for_polars(problem_id):
     #     "dataset_name": dataset_name,
     #     "dataset_headers": dataset_headers,
     # }
-    
-    # return result 
+
+    # return result
+
 
 def toggle_suspend_problem(problem_id):
     conn = sqlite3.connect(DB_PATH)
@@ -129,7 +128,7 @@ def toggle_suspend_problem(problem_id):
         current_status = cursor.fetchone()[0]
 
         # Toggle the status
-        new_status = 'suspended' if current_status == 'active' else 'active'
+        new_status = "suspended" if current_status == "active" else "active"
 
         # Update the problem's status
         cursor.execute(
@@ -138,7 +137,7 @@ def toggle_suspend_problem(problem_id):
             SET status = ?
             WHERE id = ?
             """,
-            (new_status, problem_id)
+            (new_status, problem_id),
         )
 
         # Commit the changes
@@ -153,6 +152,7 @@ def toggle_suspend_problem(problem_id):
     finally:
         # Close the database connection
         conn.close()
+
 
 def delete_problem(problem_id):
     conn = sqlite3.connect(DB_PATH)
@@ -261,7 +261,7 @@ def update_problem_in_db(problem_id: int, problem: dict):
             SET description = ?
             WHERE id = ?
             """,
-            (problem.get('description'), problem_id)
+            (problem.get("description"), problem_id),
         )
 
         # Update code table
@@ -271,7 +271,7 @@ def update_problem_in_db(problem_id: int, problem: dict):
             SET code = ?
             WHERE problem_id = ?
             """,
-            (problem.get('code'), problem_id)
+            (problem.get("code"), problem_id),
         )
 
         conn.commit()

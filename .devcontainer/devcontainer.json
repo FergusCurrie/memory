@@ -1,6 +1,6 @@
 {
     "name": "memory",
-    "runArgs": ["--network=memory-network"],
+    // "runArgs": ["--network=memory-network"],
     "dockerFile": "Dockerfile.dev",
     "context": "..",
     "customizations": {
@@ -50,7 +50,7 @@
         }
     },
     "mounts": [
-        "source=/Users/ferguscurrie/memory_backups,target=/workspaces/memory/memory_backups,type=bind"
+        "source=/home/fergus/data/memory_backups,target=/workspaces/memory/memory_backups,type=bind"
     ]
 
 }

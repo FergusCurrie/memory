@@ -2,9 +2,9 @@ import io
 import logging
 import pandas as pd
 import polars as pl
-from .utils import compare_dataframes
-from contextlib import redirect_stderr, redirect_stdout
 from ..sqlserver.query import sql_server_query
+from contextlib import redirect_stderr, redirect_stdout
+
 logging.getLogger("py4j").setLevel(logging.ERROR)
 logger = logging.getLogger(__name__)
 
@@ -54,7 +54,7 @@ def run_code_polars(code, datasets, preprocessing_code):
     dfs = {}
     for dataset in datasets:
         logger.info(DATA_PATH + dataset)
-        x = pl.read_csv(DATA_PATH + dataset + '.csv')
+        x = pl.read_csv(DATA_PATH + dataset + ".csv")
         dfs[dataset.replace(".csv", "")] = x
         logger.info(f"AAAAAAAAAAAAA size = {len(x)}")
 
@@ -75,7 +75,7 @@ def run_code_pyspark(code, datasets, preprocessing_code):
     # Load datasets
     dfs = {}
     for dataset in datasets:
-        x = pd.read_csv(DATA_PATH + dataset + '.csv')
+        x = pd.read_csv(DATA_PATH + dataset + ".csv")
         dfs[dataset.replace(".csv", "")] = x
 
     # Setup pyspark code
@@ -91,11 +91,12 @@ def run_code_pyspark(code, datasets, preprocessing_code):
     logger.info(result)
     return result
 
+
 def run_code_sql(code, datasets, preprocessing_code):
     logger.info("Running sql code")
     df = sql_server_query(code)
     try:
-        return df, None 
+        return df, None
     except Exception as e:
         logger.info(f"Exception hit {e}")
         return pl.DataFrame(), e
@@ -116,7 +117,7 @@ def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessi
 
 def run_code_against_test(problem, code_submission):
     # Test the code
-    datasets = [x for x in list(problem["datasets"].keys()) if x != 'preprocessing']  # this is actually a list of paths
+    datasets = [x for x in list(problem["datasets"].keys()) if x != "preprocessing"]  # this is actually a list of paths
     preprocessing_code = problem["preprocessing_code"]
     solution_code = problem["code"]
     intput_code = code_submission.code
@@ -143,8 +144,8 @@ def run_code_against_test(problem, code_submission):
     # if compare_dataframes(submission_df, solution_df):
     #     return True, submission_df.head(10).to_json(), submission_error
     logger.info([c for c in solution_df.columns])
-    #solution_df = solution_df.sort([c for c in solution_df.columns])
-    #submission_df = solution_df.sort([c for c in solution_df.columns])
+    # solution_df = solution_df.sort([c for c in solution_df.columns])
+    # submission_df = solution_df.sort([c for c in solution_df.columns])
     if solution_df.equals(submission_df):
         return True, submission_df.to_pandas().head(10).to_json(), submission_error
     return False, submission_df.to_pandas().head(10).to_json(), submission_error

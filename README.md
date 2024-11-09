@@ -144,17 +144,19 @@ docker pull mcr.microsoft.com/azure-sql-edge
 docker run --cap-add SYS_PTRACE -e 'ACCEPT_EULA=1' -e 'MSSQL_SA_PASSWORD=bigStrfefongPwd4234#!#' --network memory-network -p 1433:1433 --name sqledge -d mcr.microsoft.com/azure-sql-edge
 
 Need to create a docker network for devctonainer, deployment, and sql edge to be able to hit each othe:
+
 ```
 docker network create memory-network
 ```
 
-Setup a database 
+Setup a database
 
 `CREATE DATABASE datasets;`
 
-Setup a table 
+Setup a table
 
 Basic query example:
+
 ```
 import pyodbc
 
@@ -169,14 +171,14 @@ conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
 query = """
-SELECT 
+SELECT
     t.name AS TableName,
     s.name AS SchemaName
-FROM 
+FROM
     sys.tables t
-INNER JOIN 
+INNER JOIN
     sys.schemas s ON t.schema_id = s.schema_id
-ORDER BY 
+ORDER BY
     s.name, t.name;
 """
 cursor.execute(query)
@@ -194,8 +196,7 @@ cursor.close()
 conn.close()
 ```
 
-
-# Fixing 
+# Fixing
 
 ```
 ERROR in ./src/App.tsx 13:0-36
@@ -217,6 +218,7 @@ resolve './pages/Browse' in '/workspaces/memory/frontend/src'
 ```
 
 Fix by:
+
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 source ~/.bashrc
