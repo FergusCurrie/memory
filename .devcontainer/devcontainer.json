@@ -1,6 +1,6 @@
 {
     "name": "memory",
-    // "runArgs": ["--network=memory-network"],
+    "runArgs": ["--network=memory_default"],
     "dockerFile": "Dockerfile.dev",
     "context": "..",
     "customizations": {

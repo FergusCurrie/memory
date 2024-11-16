@@ -9,10 +9,10 @@
 
 ## Todo
 
-- [ ] Improved logging. Requires research of what should be logged
+- [x] Improved logging. Requires research of what should be logged
+- [ ] switch to sqlalchemy, connected to local postgres
 - [ ] Move scheduling into an interface
 - [ ] Move code completition into an interface
-- [ ] switch to sqlalchemy, connected to local postgres
 
 ## Doing
 
@@ -43,3 +43,5 @@
 - [ ] Code browse improvements
 - [ ] How to host on linux? Docker swarm / kubernetes for sql, pyspark, app etc.
 - [ ] Review on complete, less work?
+- [ ] Logging from prod? Prometheus?
+- [ ] UI drop new datasets in, write to db as tables. No json please

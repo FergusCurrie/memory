@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:14
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: ferg234e1341
+      POSTGRES_PASSWORD: 32rsrg5ty3t%gst42
+      POSTGRES_DB: memory_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - memory_default
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   ports:
+  #     - 8088:8088
+volumes:
+  postgres_data:
+
+networks:
+  memory_default:
+    name: memory_default
+    external: true # use predefined network

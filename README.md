@@ -2,6 +2,21 @@
 
 This is a implementation of memory app. I've switched to using fastapi.
 
+## Docker
+
+- docker-compose up -d
+- azure sql edge for running Tsql queries
+- postgres for main data storage
+- spark can be moved into a container
+- Get docker exec -it postgres_db bash
+- psql -h ferg234e1341 -U postgres
+- apt install postgresql-client
+
+- docker compose up
+- psql -h 127.0.0.1 -U ferg234e1341 -d memory_db
+
+psycopg2 = adaptor for postgres on python
+
 ## Db structure
 
 ![Alt text](docs/db.png)
