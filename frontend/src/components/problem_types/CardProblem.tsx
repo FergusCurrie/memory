@@ -32,7 +32,7 @@ const CardProblem: React.FC<CardProblemInterface> = ({ problem, handleScore }) =
   const fetchcardProblemData = async () => {
     try {
       const response = await api.get(`/api/problem/card/${problem.problem_id}`);
-      console.log(response)
+      console.log(response);
       setCardProblemData(response.data);
     } catch (error) {
       console.error('Error fetching card problem data', error);
@@ -45,11 +45,10 @@ const CardProblem: React.FC<CardProblemInterface> = ({ problem, handleScore }) =
     }
   }, [problem]);
 
-
   return (
     <>
-    <Description text={cardProblemData?.front} />
-    {!showBack ? (
+      <Description text={cardProblemData?.front} />
+      {!showBack ? (
         <Box mt={2}>
           <Button variant="contained" color="primary" onClick={handleShowBack}>
             Show Back
@@ -58,7 +57,7 @@ const CardProblem: React.FC<CardProblemInterface> = ({ problem, handleScore }) =
       ) : (
         <Description text={cardProblemData?.back} />
       )}
-    <NextCardManagement {...{ testPassed: true, handleScore, answer: cardProblemData?.back }} />
+      <NextCardManagement {...{ testPassed: true, handleScore, answer: cardProblemData?.back }} />
     </>
   );
 };

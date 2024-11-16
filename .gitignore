@@ -2,3 +2,4 @@ static/frontend/
 __pycache__/
 frontend/node_modules/
 .env
+memory_backups/*

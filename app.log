@@ -305,3 +305,409 @@
 2024-11-09 22:25:36,912 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
 2024-11-09 22:25:37,190 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
 2024-11-09 22:25:37,192 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-12 09:54:41,363 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:54:41,401 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-12 09:54:41,402 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-12 09:54:41,737 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:54:41,852 - backend.app - INFO - Getting all available datasets
+2024-11-12 09:54:45,516 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-12 09:54:45,516 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-12 09:54:45,518 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:54:45,583 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:55:08,610 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:08,614 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:08,614 - backend.code_execution.check_code - INFO - Exception hit name 'df' is not defined <_io.StringIO object at 0x72a1db5422c0>
+2024-11-12 09:55:08,614 - backend.code_execution.check_code - INFO - (shape: (0, 0)
+┌┐
+╞╡
+└┘, "name 'df' is not defined")
+2024-11-12 09:55:08,614 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:08,616 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:08,617 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-12 09:55:08,617 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-12 09:55:08,618 - backend.code_execution.check_code - INFO - shape: (0, 0)
+┌┐
+╞╡
+└┘
+2024-11-12 09:55:08,618 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-12 09:55:17,298 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:17,300 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:17,300 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-12 09:55:17,300 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:17,302 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:17,303 - backend.code_execution.check_code - INFO - (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-12 09:55:17,303 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-12 09:55:17,303 - backend.code_execution.check_code - INFO - shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-12 09:55:17,303 - backend.code_execution.check_code - INFO - ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-11-12 09:55:19,301 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 8}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:55:19,575 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'active', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-12 09:55:19,576 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 8, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-12 09:55:52,232 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:52,235 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:52,236 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌───────────────────┬─────────────────┐
+│ Brand             ┆ Sum of Quantity │
+│ ---               ┆ ---             │
+│ str               ┆ i64             │
+╞═══════════════════╪═════════════════╡
+│ Adventure Works   ┆ 30              │
+│ Contoso           ┆ 11132           │
+│ The Phone Company ┆ 6519            │
+│ Tailspin Toys     ┆ 2732            │
+│ Contoso           ┆ 977             │
+│ …                 ┆ …               │
+│ Litware           ┆ 161             │
+│ Fabrikam          ┆ 1516            │
+│ Litware           ┆ 875             │
+│ Southridge Video  ┆ 6749            │
+│ Adventure Works   ┆ 4616            │
+└───────────────────┴─────────────────┘, None)
+2024-11-12 09:55:52,236 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:55:52,238 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:55:52,239 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ Fabrikam             ┆ 332             │
+│ Northwind Traders    ┆ 638             │
+│ Fabrikam             ┆ 1516            │
+│ A. Datum             ┆ 555             │
+│ Litware              ┆ 161             │
+│ …                    ┆ …               │
+│ The Phone Company    ┆ 6519            │
+│ Adventure Works      ┆ 4616            │
+│ Wide World Importers ┆ 3922            │
+│ Litware              ┆ 875             │
+│ Contoso              ┆ 977             │
+└──────────────────────┴─────────────────┘, None)
+2024-11-12 09:55:52,239 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ Fabrikam             ┆ 332             │
+│ Northwind Traders    ┆ 638             │
+│ Fabrikam             ┆ 1516            │
+│ A. Datum             ┆ 555             │
+│ Litware              ┆ 161             │
+│ …                    ┆ …               │
+│ The Phone Company    ┆ 6519            │
+│ Adventure Works      ┆ 4616            │
+│ Wide World Importers ┆ 3922            │
+│ Litware              ┆ 875             │
+│ Contoso              ┆ 977             │
+└──────────────────────┴─────────────────┘
+2024-11-12 09:55:52,239 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌───────────────────┬─────────────────┐
+│ Brand             ┆ Sum of Quantity │
+│ ---               ┆ ---             │
+│ str               ┆ i64             │
+╞═══════════════════╪═════════════════╡
+│ Adventure Works   ┆ 30              │
+│ Contoso           ┆ 11132           │
+│ The Phone Company ┆ 6519            │
+│ Tailspin Toys     ┆ 2732            │
+│ Contoso           ┆ 977             │
+│ …                 ┆ …               │
+│ Litware           ┆ 161             │
+│ Fabrikam          ┆ 1516            │
+│ Litware           ┆ 875             │
+│ Southridge Video  ┆ 6749            │
+│ Adventure Works   ┆ 4616            │
+└───────────────────┴─────────────────┘
+2024-11-12 09:55:52,239 - backend.code_execution.check_code - INFO - ['Brand', 'Sum of Quantity']
+2024-11-12 09:56:09,740 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:09,744 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:09,747 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ The Phone Company    ┆ 6519            │
+│ Litware              ┆ 875             │
+│ Northwind Traders    ┆ 638             │
+│ Proseware            ┆ 2763            │
+│ Adventure Works      ┆ 30              │
+│ …                    ┆ …               │
+│ A. Datum             ┆ 555             │
+│ Fabrikam             ┆ 332             │
+│ Wide World Importers ┆ 3922            │
+│ Adventure Works      ┆ 4616            │
+│ Litware              ┆ 161             │
+└──────────────────────┴─────────────────┘, None)
+2024-11-12 09:56:09,749 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:09,756 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:09,757 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ Proseware            ┆ 2763            │
+│ Litware              ┆ 161             │
+│ Litware              ┆ 875             │
+│ Northwind Traders    ┆ 638             │
+│ Tailspin Toys        ┆ 2732            │
+│ …                    ┆ …               │
+│ A. Datum             ┆ 555             │
+│ Wide World Importers ┆ 3922            │
+│ Fabrikam             ┆ 332             │
+│ Adventure Works      ┆ 30              │
+│ Contoso              ┆ 977             │
+└──────────────────────┴─────────────────┘, None)
+2024-11-12 09:56:09,757 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ Proseware            ┆ 2763            │
+│ Litware              ┆ 161             │
+│ Litware              ┆ 875             │
+│ Northwind Traders    ┆ 638             │
+│ Tailspin Toys        ┆ 2732            │
+│ …                    ┆ …               │
+│ A. Datum             ┆ 555             │
+│ Wide World Importers ┆ 3922            │
+│ Fabrikam             ┆ 332             │
+│ Adventure Works      ┆ 30              │
+│ Contoso              ┆ 977             │
+└──────────────────────┴─────────────────┘
+2024-11-12 09:56:09,757 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬─────────────────┐
+│ Brand                ┆ Sum of Quantity │
+│ ---                  ┆ ---             │
+│ str                  ┆ i64             │
+╞══════════════════════╪═════════════════╡
+│ The Phone Company    ┆ 6519            │
+│ Litware              ┆ 875             │
+│ Northwind Traders    ┆ 638             │
+│ Proseware            ┆ 2763            │
+│ Adventure Works      ┆ 30              │
+│ …                    ┆ …               │
+│ A. Datum             ┆ 555             │
+│ Fabrikam             ┆ 332             │
+│ Wide World Importers ┆ 3922            │
+│ Adventure Works      ┆ 4616            │
+│ Litware              ┆ 161             │
+└──────────────────────┴─────────────────┘
+2024-11-12 09:56:09,757 - backend.code_execution.check_code - INFO - ['Brand', 'Sum of Quantity']
+2024-11-12 09:56:16,915 - backend.routes.problem_routes - INFO - 8 FEFEFF suspending
+2024-11-12 09:56:16,997 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-12 09:56:17,235 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-12 09:56:17,236 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-12 09:56:31,563 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:31,566 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:31,567 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬──────────┐
+│ Brand                ┆ Quantity │
+│ ---                  ┆ ---      │
+│ str                  ┆ i64      │
+╞══════════════════════╪══════════╡
+│ Litware              ┆ 2        │
+│ Wide World Importers ┆ 2        │
+│ Litware              ┆ 1        │
+│ Southridge Video     ┆ 1        │
+│ Fabrikam             ┆ 2        │
+│ …                    ┆ …        │
+│ Adventure Works      ┆ 5        │
+│ A. Datum             ┆ 2        │
+│ Tailspin Toys        ┆ 6        │
+│ Contoso              ┆ 7        │
+│ Adventure Works      ┆ 2        │
+└──────────────────────┴──────────┘, None)
+2024-11-12 09:56:31,567 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:31,569 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:31,570 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬──────────────────┐
+│ Brand                ┆ Customer Name    │
+│ ---                  ┆ ---              │
+│ str                  ┆ str              │
+╞══════════════════════╪══════════════════╡
+│ Litware              ┆ Clifford Wagner  │
+│ Fabrikam             ┆ Sabine Neumann   │
+│ Contoso              ┆ Eric Kennedy     │
+│ A. Datum             ┆ Blažena Salabová │
+│ Fabrikam             ┆ Jose McKenna     │
+│ …                    ┆ …                │
+│ Proseware            ┆ Vjekoslava Delic │
+│ The Phone Company    ┆ Filippa Greece   │
+│ Litware              ┆ Kiara Brewer     │
+│ Tailspin Toys        ┆ Santina Kelly    │
+│ Wide World Importers ┆ Irene Pisano     │
+└──────────────────────┴──────────────────┘, None)
+2024-11-12 09:56:31,571 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬──────────────────┐
+│ Brand                ┆ Customer Name    │
+│ ---                  ┆ ---              │
+│ str                  ┆ str              │
+╞══════════════════════╪══════════════════╡
+│ Litware              ┆ Clifford Wagner  │
+│ Fabrikam             ┆ Sabine Neumann   │
+│ Contoso              ┆ Eric Kennedy     │
+│ A. Datum             ┆ Blažena Salabová │
+│ Fabrikam             ┆ Jose McKenna     │
+│ …                    ┆ …                │
+│ Proseware            ┆ Vjekoslava Delic │
+│ The Phone Company    ┆ Filippa Greece   │
+│ Litware              ┆ Kiara Brewer     │
+│ Tailspin Toys        ┆ Santina Kelly    │
+│ Wide World Importers ┆ Irene Pisano     │
+└──────────────────────┴──────────────────┘
+2024-11-12 09:56:31,571 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬──────────┐
+│ Brand                ┆ Quantity │
+│ ---                  ┆ ---      │
+│ str                  ┆ i64      │
+╞══════════════════════╪══════════╡
+│ Litware              ┆ 2        │
+│ Wide World Importers ┆ 2        │
+│ Litware              ┆ 1        │
+│ Southridge Video     ┆ 1        │
+│ Fabrikam             ┆ 2        │
+│ …                    ┆ …        │
+│ Adventure Works      ┆ 5        │
+│ A. Datum             ┆ 2        │
+│ Tailspin Toys        ┆ 6        │
+│ Contoso              ┆ 7        │
+│ Adventure Works      ┆ 2        │
+└──────────────────────┴──────────┘
+2024-11-12 09:56:31,571 - backend.code_execution.check_code - INFO - ['Brand', 'Customer Name']
+2024-11-12 09:56:45,780 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:45,782 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:45,783 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌───────────────────┬──────────────────┐
+│ Brand             ┆ Customer Name    │
+│ ---               ┆ ---              │
+│ str               ┆ str              │
+╞═══════════════════╪══════════════════╡
+│ Fabrikam          ┆ Jose McKenna     │
+│ Litware           ┆ Kiara Brewer     │
+│ Northwind Traders ┆ Michael McIntyre │
+│ Proseware         ┆ Vjekoslava Delic │
+│ Litware           ┆ Clifford Wagner  │
+│ …                 ┆ …                │
+│ Contoso           ┆ Chiquita Boyd    │
+│ Southridge Video  ┆ Matthew Dunavant │
+│ Fabrikam          ┆ Sabine Neumann   │
+│ Tailspin Toys     ┆ Santina Kelly    │
+│ Adventure Works   ┆ James Steinfeld  │
+└───────────────────┴──────────────────┘, None)
+2024-11-12 09:56:45,783 - backend.code_execution.check_code - INFO - backend/code_execution/data/contoso_sales
+2024-11-12 09:56:45,785 - backend.code_execution.check_code - INFO - AAAAAAAAAAAAA size = 13915
+2024-11-12 09:56:45,786 - backend.code_execution.check_code - INFO - (shape: (15, 2)
+┌──────────────────────┬──────────────────┐
+│ Brand                ┆ Customer Name    │
+│ ---                  ┆ ---              │
+│ str                  ┆ str              │
+╞══════════════════════╪══════════════════╡
+│ Fabrikam             ┆ Sabine Neumann   │
+│ Contoso              ┆ Chiquita Boyd    │
+│ A. Datum             ┆ Blažena Salabová │
+│ Contoso              ┆ Eric Kennedy     │
+│ Fabrikam             ┆ Jose McKenna     │
+│ …                    ┆ …                │
+│ Southridge Video     ┆ Matthew Dunavant │
+│ Litware              ┆ Clifford Wagner  │
+│ Adventure Works      ┆ Molly Walters    │
+│ Wide World Importers ┆ Irene Pisano     │
+│ Litware              ┆ Kiara Brewer     │
+└──────────────────────┴──────────────────┘, None)
+2024-11-12 09:56:45,786 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌──────────────────────┬──────────────────┐
+│ Brand                ┆ Customer Name    │
+│ ---                  ┆ ---              │
+│ str                  ┆ str              │
+╞══════════════════════╪══════════════════╡
+│ Fabrikam             ┆ Sabine Neumann   │
+│ Contoso              ┆ Chiquita Boyd    │
+│ A. Datum             ┆ Blažena Salabová │
+│ Contoso              ┆ Eric Kennedy     │
+│ Fabrikam             ┆ Jose McKenna     │
+│ …                    ┆ …                │
+│ Southridge Video     ┆ Matthew Dunavant │
+│ Litware              ┆ Clifford Wagner  │
+│ Adventure Works      ┆ Molly Walters    │
+│ Wide World Importers ┆ Irene Pisano     │
+│ Litware              ┆ Kiara Brewer     │
+└──────────────────────┴──────────────────┘
+2024-11-12 09:56:45,786 - backend.code_execution.check_code - INFO - shape: (15, 2)
+┌───────────────────┬──────────────────┐
+│ Brand             ┆ Customer Name    │
+│ ---               ┆ ---              │
+│ str               ┆ str              │
+╞═══════════════════╪══════════════════╡
+│ Fabrikam          ┆ Jose McKenna     │
+│ Litware           ┆ Kiara Brewer     │
+│ Northwind Traders ┆ Michael McIntyre │
+│ Proseware         ┆ Vjekoslava Delic │
+│ Litware           ┆ Clifford Wagner  │
+│ …                 ┆ …                │
+│ Contoso           ┆ Chiquita Boyd    │
+│ Southridge Video  ┆ Matthew Dunavant │
+│ Fabrikam          ┆ Sabine Neumann   │
+│ Tailspin Toys     ┆ Santina Kelly    │
+│ Adventure Works   ┆ James Steinfeld  │
+└───────────────────┴──────────────────┘
+2024-11-12 09:56:45,786 - backend.code_execution.check_code - INFO - ['Brand', 'Customer Name']
+2024-11-15 23:42:37,077 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-15 23:42:37,077 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-15 23:42:37,078 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-15 23:42:37,145 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-15 23:42:38,435 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-15 23:42:38,443 - backend.routes.problem_routes - INFO - Failed to fetch problem for (37, 'suspended', 'multi_choice')
+2024-11-15 23:42:38,443 - backend.routes.problem_routes - INFO - Failed to fetch problem for (38, 'suspended', 'card')
+2024-11-15 23:42:38,444 - backend.routes.problem_routes - INFO - Failed to fetch problem for (39, 'suspended', 'multi_choice')
+2024-11-15 23:42:38,444 - backend.routes.problem_routes - INFO - Failed to fetch problem for (40, 'suspended', 'multi_choice')
+2024-11-15 23:42:38,444 - backend.routes.problem_routes - INFO - Failed to fetch problem for (41, 'suspended', 'card')
+2024-11-15 23:42:40,267 - backend.routes.problem_routes - INFO - [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-15 23:42:40,268 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-15 23:42:40,268 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-15 23:42:40,333 - backend.scheduling.sm2_algorithm - DEBUG - [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-15 23:44:51,284 - backend.app - INFO - Getting all available datasets

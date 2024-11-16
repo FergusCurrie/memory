@@ -4,6 +4,7 @@ import traceback
 from .code_execution.check_code import run_code_against_test, run_code_to_check_results_for_card_creation
 from .db.problem_model import get_problem_for_polars
 from .db.sync import sync_db_to_azure
+from .logging_config import LOGGING_CONFIG
 from .routes import problem_routes, review_routes
 
 # from .scheduling.basic_scheduler import get_todays_reviews
@@ -13,13 +14,8 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
-logging.basicConfig(
-    level=logging.DEBUG,  # vs DEBUG
-    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    filename="app.log",
-    filemode="a",
-)
-logging.getLogger("py4j").setLevel(logging.ERROR)
+logging.config.dictConfig(LOGGING_CONFIG)
+
 
 # Set up logging
 logger = logging.getLogger(__name__)

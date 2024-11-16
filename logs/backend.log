@@ -1,0 +1,41 @@
+2024-11-16 00:12:19,250 INFO backend.app Getting all available datasets
+2024-11-16 00:12:19,446 INFO backend.routes.problem_routes [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-16 00:12:19,454 INFO backend.routes.problem_routes Failed to fetch problem for (37, 'suspended', 'multi_choice')
+2024-11-16 00:12:19,454 INFO backend.routes.problem_routes Failed to fetch problem for (38, 'suspended', 'card')
+2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (39, 'suspended', 'multi_choice')
+2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (40, 'suspended', 'multi_choice')
+2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (41, 'suspended', 'card')
+2024-11-16 00:12:20,051 INFO backend.routes.problem_routes [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
+2024-11-16 00:12:20,051 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-16 00:12:20,052 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
+2024-11-16 00:12:20,121 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
+2024-11-16 00:12:22,132 INFO backend.code_execution.check_code backend/code_execution/data/contoso_sales
+2024-11-16 00:12:22,137 INFO backend.code_execution.check_code AAAAAAAAAAAAA size = 13915
+2024-11-16 00:12:22,138 INFO backend.code_execution.check_code Exception hit name 'df' is not defined <_io.StringIO object at 0x7f78329719c0>
+2024-11-16 00:12:22,138 INFO backend.code_execution.check_code (shape: (0, 0)
+┌┐
+╞╡
+└┘, "name 'df' is not defined")
+2024-11-16 00:12:22,138 INFO backend.code_execution.check_code backend/code_execution/data/contoso_sales
+2024-11-16 00:12:22,140 INFO backend.code_execution.check_code AAAAAAAAAAAAA size = 13915
+2024-11-16 00:12:22,142 INFO backend.code_execution.check_code (shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
+2024-11-16 00:12:22,142 INFO backend.code_execution.check_code shape: (1, 8)
+┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
+│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
+│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
+│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
+╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
+│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
+└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
+2024-11-16 00:12:22,142 INFO backend.code_execution.check_code shape: (0, 0)
+┌┐
+╞╡
+└┘
+2024-11-16 00:12:22,142 INFO backend.code_execution.check_code ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
