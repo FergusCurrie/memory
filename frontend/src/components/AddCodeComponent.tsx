@@ -14,31 +14,29 @@ import {
 } from '@mui/material';
 import PandasJsonTable from './study_components/PandasTable';
 
+const AddCode: React.FC = ({ problemType }) => {
+  const [datasetPaths, setDatasetPaths] = useState<string[]>([]);
+  const [description, setDescription] = useState('');
+  const [code, setCode] = useState('');
+  const [preprocessingCode, setPreprocessingCode] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [submittedResult, setSubmittedResult] = useState<any>(null);
 
+  const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
 
-const AddCode: React.FC = ({problemType}) => {
-    const [datasetPaths, setDatasetPaths] = useState<string[]>([]);
-    const [description, setDescription] = useState('');
-    const [code, setCode] = useState('');
-    const [preprocessingCode, setPreprocessingCode] = useState('');
-    const [isLoading, setIsLoading] = useState(false);
-    const [submittedResult, setSubmittedResult] = useState<any>(null);
+  const [defaultCode, setDefaultCode] = useState('');
 
-    const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
+  const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+    setDatasetPaths(event.target.value as string[]);
+  };
 
-    const [defaultCode, setDefaultCode] = useState('');
+  const handleRemoveDataset = (datasetToRemove: string) => {
+    setDatasetPaths((prevDatasets) =>
+      prevDatasets.filter((dataset) => dataset !== datasetToRemove),
+    );
+  };
 
-    const handleDatasetChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-        setDatasetPaths(event.target.value as string[]);
-      };
-    
-      const handleRemoveDataset = (datasetToRemove: string) => {
-        setDatasetPaths((prevDatasets) =>
-          prevDatasets.filter((dataset) => dataset !== datasetToRemove),
-        );
-      };
-    
-    // Update handleRunCode to use the problemType
+  // Update handleRunCode to use the problemType
   const handleRunCode = async () => {
     setIsLoading(true);
     try {
@@ -84,25 +82,25 @@ const AddCode: React.FC = ({problemType}) => {
       alert(error);
     }
   };
-  
-    useEffect(() => {
-        const fetchDatasets = async () => {
-          console.log('fetching');
-          try {
-            const response = await api.get('/api/available_datasets');
-            console.log(response);
-            setAvailableDatasets(response.data.datasets);
-          } catch (error) {
-            console.error('Error fetching available datasets:', error);
-          }
-        };
-    
-        fetchDatasets();
-      }, []);
-    
-    return (
-        <>
-        <FormControl fullWidth>
+
+  useEffect(() => {
+    const fetchDatasets = async () => {
+      console.log('fetching');
+      try {
+        const response = await api.get('/api/available_datasets');
+        console.log(response);
+        setAvailableDatasets(response.data.datasets);
+      } catch (error) {
+        console.error('Error fetching available datasets:', error);
+      }
+    };
+
+    fetchDatasets();
+  }, []);
+
+  return (
+    <>
+      <FormControl fullWidth>
         <InputLabel id="dataset-select-label">Datasets</InputLabel>
         <Select
           labelId="dataset-select-label"
@@ -133,7 +131,7 @@ const AddCode: React.FC = ({problemType}) => {
           ))}
         </Select>
       </FormControl>
-      
+
       <textarea
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -201,8 +199,8 @@ const AddCode: React.FC = ({problemType}) => {
           </Button>
         </Box>
       )}
-      </>
-    )
-}
+    </>
+  );
+};
 
 export default AddCode;

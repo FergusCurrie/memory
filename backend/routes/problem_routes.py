@@ -1,6 +1,7 @@
 import logging
 import traceback
-from ..code_execution.multi_choice_problem_gen import multi_choice_generation
+from ..core.code_execution.multi_choice_problem_gen import multi_choice_generation
+from ..core.scheduling.sm2_algorithm import sm2_algorithm
 from ..db.card_model import add_card, get_card_by_problem_id
 from ..db.multi_choice_model import get_multi_choice_by_problem_id
 from ..db.problem_model import (
@@ -12,7 +13,6 @@ from ..db.problem_model import (
     update_problem_in_db,
 )
 from ..db.review_model import get_all_reviews
-from ..scheduling.sm2_algorithm import sm2_algorithm
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 

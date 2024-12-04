@@ -1,8 +1,8 @@
 import json
 import logging
 import sqlite3
-from backend.code_execution.utils import get_pandas_header, get_preprocessing_headers
 from backend.config import DB_PATH
+from backend.core.code_execution.utils import get_pandas_header, get_preprocessing_headers
 
 logger = logging.getLogger(__name__)
 

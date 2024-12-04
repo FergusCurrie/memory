@@ -50,14 +50,6 @@ def run_code_polars(code, datasets, preprocessing_code):
         pd.DataFrame, str : Resulting dataframe and error (if error raised)
     """
 
-    # Loading datasets in as a dictionary
-    dfs = {}
-    for dataset in datasets:
-        logger.info(DATA_PATH + dataset)
-        x = pl.read_csv(DATA_PATH + dataset + ".csv")
-        dfs[dataset.replace(".csv", "")] = x
-        logger.info(f"AAAAAAAAAAAAA size = {len(x)}")
-
     # Polish the input code, and necassary polars imports
     if preprocessing_code != "":
         code_to_run = f"import polars as pl\n{preprocessing_code}\n" + code
@@ -65,7 +57,7 @@ def run_code_polars(code, datasets, preprocessing_code):
         code_to_run = "import polars as pl\n" + code
 
     # Execute and return
-    result = _execute_code(code_to_run, dfs)
+    result = _execute_code(code_to_run, datasets)
     logger.info(result)
     return result
 
@@ -102,7 +94,7 @@ def run_code_sql(code, datasets, preprocessing_code):
         return pl.DataFrame(), e
 
 
-def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessing_code, problem_type):
+def run_code_to_check_results_for_card_creation(code, datasets, preprocessing_code, problem_type):
     if problem_type == "polars":
         check_function = run_code_polars
     elif problem_type == "pyspark":
@@ -112,7 +104,7 @@ def run_code_to_check_results_for_card_creation(code, dataset_names, preprocessi
     else:
         raise Exception(f"Problem type {problem_type} not supported")
 
-    return check_function(code, dataset_names, preprocessing_code)
+    return check_function(code, datasets, preprocessing_code)
 
 
 def run_code_against_test(problem, code_submission):

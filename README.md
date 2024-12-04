@@ -2,6 +2,8 @@
 
 This is a implementation of memory app. I've switched to using fastapi.
 
+poetry run pytest tests/test_crud.py
+
 ## Docker
 
 - docker-compose up -d

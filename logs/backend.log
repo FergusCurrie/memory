@@ -1,41 +1,34 @@
-2024-11-16 00:12:19,250 INFO backend.app Getting all available datasets
-2024-11-16 00:12:19,446 INFO backend.routes.problem_routes [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
-2024-11-16 00:12:19,454 INFO backend.routes.problem_routes Failed to fetch problem for (37, 'suspended', 'multi_choice')
-2024-11-16 00:12:19,454 INFO backend.routes.problem_routes Failed to fetch problem for (38, 'suspended', 'card')
-2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (39, 'suspended', 'multi_choice')
-2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (40, 'suspended', 'multi_choice')
-2024-11-16 00:12:19,455 INFO backend.routes.problem_routes Failed to fetch problem for (41, 'suspended', 'card')
-2024-11-16 00:12:20,051 INFO backend.routes.problem_routes [(6, 'suspended', 'sql'), (7, 'active', 'polars'), (8, 'suspended', 'polars'), (9, 'active', 'polars'), (10, 'active', 'polars'), (11, 'active', 'polars'), (12, 'active', 'polars'), (13, 'active', 'polars'), (14, 'active', 'polars'), (15, 'active', 'polars'), (16, 'active', 'polars'), (17, 'active', 'polars'), (18, 'active', 'polars'), (19, 'suspended', 'polars'), (20, 'suspended', 'polars'), (21, 'suspended', 'polars'), (22, 'suspended', 'polars'), (23, 'suspended', 'polars'), (24, 'suspended', 'polars'), (25, 'suspended', 'polars'), (26, 'suspended', 'polars'), (27, 'suspended', 'polars'), (28, 'suspended', 'polars'), (29, 'suspended', 'polars'), (30, 'suspended', 'polars'), (31, 'suspended', 'polars'), (32, 'suspended', 'polars'), (33, 'suspended', 'polars'), (34, 'suspended', 'polars'), (35, 'suspended', 'polars'), (36, 'suspended', 'sql'), (37, 'suspended', 'multi_choice'), (38, 'suspended', 'card'), (39, 'suspended', 'multi_choice'), (40, 'suspended', 'multi_choice'), (41, 'suspended', 'card')]
-2024-11-16 00:12:20,051 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
-2024-11-16 00:12:20,052 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7, 'type': 'polars'}, {'problem_id': 9, 'type': 'polars'}, {'problem_id': 10, 'type': 'polars'}, {'problem_id': 11, 'type': 'polars'}, {'problem_id': 12, 'type': 'polars'}, {'problem_id': 13, 'type': 'polars'}, {'problem_id': 14, 'type': 'polars'}, {'problem_id': 15, 'type': 'polars'}, {'problem_id': 16, 'type': 'polars'}, {'problem_id': 17, 'type': 'polars'}, {'problem_id': 18, 'type': 'polars'}]
-2024-11-16 00:12:20,121 DEBUG backend.scheduling.sm2_algorithm [{'problem_id': 7}, {'problem_id': 9}, {'problem_id': 10}, {'problem_id': 11}, {'problem_id': 12}, {'problem_id': 13}, {'problem_id': 14}, {'problem_id': 15}, {'problem_id': 16}, {'problem_id': 17}, {'problem_id': 18}]
-2024-11-16 00:12:22,132 INFO backend.code_execution.check_code backend/code_execution/data/contoso_sales
-2024-11-16 00:12:22,137 INFO backend.code_execution.check_code AAAAAAAAAAAAA size = 13915
-2024-11-16 00:12:22,138 INFO backend.code_execution.check_code Exception hit name 'df' is not defined <_io.StringIO object at 0x7f78329719c0>
-2024-11-16 00:12:22,138 INFO backend.code_execution.check_code (shape: (0, 0)
-┌┐
-╞╡
-└┘, "name 'df' is not defined")
-2024-11-16 00:12:22,138 INFO backend.code_execution.check_code backend/code_execution/data/contoso_sales
-2024-11-16 00:12:22,140 INFO backend.code_execution.check_code AAAAAAAAAAAAA size = 13915
-2024-11-16 00:12:22,142 INFO backend.code_execution.check_code (shape: (1, 8)
-┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
-│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
-│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
-│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
-╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
-│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
-└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘, None)
-2024-11-16 00:12:22,142 INFO backend.code_execution.check_code shape: (1, 8)
-┌──────────────┬─────────────┬──────────────┬──────────┬────────────┬───────────┬───────────┬───────────────┐
-│ Order Number ┆ Line Number ┆ Customer Age ┆ Quantity ┆ Unit Price ┆ Net Price ┆ Unit Cost ┆ Exchange Rate │
-│ ---          ┆ ---         ┆ ---          ┆ ---      ┆ ---        ┆ ---       ┆ ---       ┆ ---           │
-│ i64          ┆ i64         ┆ i64          ┆ i64      ┆ f64        ┆ f64       ┆ f64       ┆ f64           │
-╞══════════════╪═════════════╪══════════════╪══════════╪════════════╪═══════════╪═══════════╪═══════════════╡
-│ 4466019052   ┆ 16195       ┆ 725757       ┆ 43517    ┆ 4.1785e6   ┆ 3.9286e6  ┆ 1.7356e6  ┆ 14124.4597    │
-└──────────────┴─────────────┴──────────────┴──────────┴────────────┴───────────┴───────────┴───────────────┘
-2024-11-16 00:12:22,142 INFO backend.code_execution.check_code shape: (0, 0)
-┌┐
-╞╡
-└┘
-2024-11-16 00:12:22,142 INFO backend.code_execution.check_code ['Order Number', 'Line Number', 'Customer Age', 'Quantity', 'Unit Price', 'Net Price', 'Unit Cost', 'Exchange Rate']
+2024-12-04 08:00:05,491 INFO backend.app Getting all available datasets
+2024-12-04 08:00:05,510 INFO backend.crud Found datasets: ['academic', 'academic.csv']
+2024-12-04 08:00:05,510 INFO backend.app ['academic', 'academic.csv']
+2024-12-04 08:00:10,503 INFO backend.app code='result = (\n    academic\n)' preprocessing_code='' dataset_names=['academic'] problem_type='polars'
+2024-12-04 08:00:10,512 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 111, in check_code_for_creation
+    assert isinstance(datasets[0], pl.DataFrame)
+                      ~~~~~~~~^^^
+KeyError: 0
+
+2024-12-04 08:00:24,715 INFO backend.app Getting all available datasets
+2024-12-04 08:00:24,727 INFO backend.crud Found datasets: ['academic', 'academic.csv']
+2024-12-04 08:00:24,727 INFO backend.app ['academic', 'academic.csv']
+2024-12-04 08:00:29,132 INFO backend.app code='result = (\n    academic\n)' preprocessing_code='' dataset_names=['academic'] problem_type='polars'
+2024-12-04 08:00:29,139 INFO backend.core.code_execution.check_code (shape: (75, 7)
+┌─────────┬──────────┬─────────────┬───────────────┬──────────┬────────────┬──────────┐
+│ year    ┆ students ┆ us_students ┆ undergraduate ┆ graduate ┆ non_degree ┆ opt      │
+│ ---     ┆ ---      ┆ ---         ┆ ---           ┆ ---      ┆ ---        ┆ ---      │
+│ str     ┆ i64      ┆ f64         ┆ f64           ┆ f64      ┆ f64        ┆ f64      │
+╞═════════╪══════════╪═════════════╪═══════════════╪══════════╪════════════╪══════════╡
+│ 1948/49 ┆ 25464    ┆ 2.4034e6    ┆ null          ┆ null     ┆ null       ┆ null     │
+│ 1949/50 ┆ 26433    ┆ 2.445e6     ┆ null          ┆ null     ┆ null       ┆ null     │
+│ 1950/51 ┆ 29813    ┆ 2.281e6     ┆ null          ┆ null     ┆ null       ┆ null     │
+│ 1951/52 ┆ 30462    ┆ 2.102e6     ┆ null          ┆ null     ┆ null       ┆ null     │
+│ 1952/53 ┆ 33675    ┆ 2.134e6     ┆ null          ┆ null     ┆ null       ┆ null     │
+│ …       ┆ …        ┆ …           ┆ …             ┆ …        ┆ …          ┆ …        │
+│ 2018/19 ┆ 1095299  ┆ 1.9828e7    ┆ 431930.0      ┆ 377943.0 ┆ 62341.0    ┆ 223085.0 │
+│ 2019/20 ┆ 1075496  ┆ 1.972e7     ┆ 419321.0      ┆ 374435.0 ┆ 58201.0    ┆ 223539.0 │
+│ 2020/21 ┆ 914095   ┆ 1.9744e7    ┆ 359787.0      ┆ 329272.0 ┆ 21151.0    ┆ 203885.0 │
+│ 2021/22 ┆ 948519   ┆ 2.0327e7    ┆ 344532.0      ┆ 385097.0 ┆ 34131.0    ┆ 184759.0 │
+│ 2022/23 ┆ 1057188  ┆ 1.896128e7  ┆ 347602.0      ┆ 467027.0 ┆ 43766.0    ┆ 198793.0 │
+└─────────┴──────────┴─────────────┴───────────────┴──────────┴────────────┴──────────┘, None)
+2024-12-04 08:00:29,141 INFO backend.app {"year":{"0":"1948\/49","1":"1949\/50","2":"1950\/51","3":"1951\/52","4":"1952\/53","5":"1953\/54","6":"1954\/55","7":"1955\/56","8":"1956\/57","9":"1957\/58"},"students":{"0":25464,"1":26433,"2":29813,"3":30462,"4":33675,"5":33833,"6":34232,"7":36494,"8":40666,"9":43391},"us_students":{"0":2403400.0,"1":2445000.0,"2":2281000.0,"3":2102000.0,"4":2134000.0,"5":2231000.0,"6":2447000.0,"7":2653000.0,"8":2918000.0,"9":3324000.0},"undergraduate":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":19101.0,"7":null,"8":null,"9":null},"graduate":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":12118.0,"7":null,"8":null,"9":null},"non_degree":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null,"9":null},"opt":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null,"9":null}}

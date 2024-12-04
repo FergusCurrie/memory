@@ -1,8 +1,16 @@
 from datetime import date
+from sqlalchemy import ForeignKey
 
 # Declarative mapping = write python objects, sql alchemy creates sql objects
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.sql import func
+
+# class Dataset(Base):
+#     __tablename__ = "code"
+
+#     id: Mapped[int] = mapped_column(primary_key=True)
+#     description: Mapped[str]
+#     date_created: Mapped[date] = mapped_column(default=func.current_date())
 
 
 class Base(DeclarativeBase):
@@ -17,31 +25,31 @@ class Problem(Base):
     date_created: Mapped[date] = mapped_column(default=func.current_date())
 
 
-class Dataset(Base):
-    __tablename__ = "code"
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    description: Mapped[str]
-    date_created: Mapped[date] = mapped_column(default=func.current_date())
-
-
 class Review(Base):
     __tablename__ = "review"
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
-    problem_id: Mapped["Problem"] = relationship(back_populates="user", cascade="all, delete-orphan")
+    problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
 
 class Code(Base):
     __tablename__ = "code"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    code: Mapped[str]
-    preprocessing_code: Mapped[str]
+    code_table_name: Mapped[str]
+    # preprocessing_code: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
-    problem_id: Mapped["Problem"] = relationship(back_populates="user", cascade="all, delete-orphan")
+    problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
+
+
+class Dataset(Base):
+    __tablename__ = "dataset"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str]
+    date_created: Mapped[date] = mapped_column(default=func.current_date())
 
 
 from sqlalchemy import create_engine

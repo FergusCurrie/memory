@@ -1,7 +1,7 @@
 import logging
-import os
 import traceback
-from .code_execution.check_code import run_code_against_test, run_code_to_check_results_for_card_creation
+from .core.code_execution.check_code import run_code_against_test, run_code_to_check_results_for_card_creation
+from .crud import get_dataset, list_available_datasets
 from .db.problem_model import get_problem_for_polars
 from .db.sync import sync_db_to_azure
 from .logging_config import LOGGING_CONFIG
@@ -22,6 +22,13 @@ logger = logging.getLogger(__name__)
 
 
 app = FastAPI()
+
+from sqlalchemy import create_engine
+
+conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
+
+engine = create_engine(conn_url)
+from sqlalchemy.orm import Session
 
 app.add_middleware(
     CORSMiddleware,
@@ -55,6 +62,24 @@ class TestCodeSubmission(BaseModel):
     code: str
 
 
+# class TestCodeSubmissionNew(BaseModel):
+#     code: str
+#     dataset_name: str
+#     problem_type: str
+
+
+# @app.post("/test/api/code/test_code")
+# async def submit_code(code_submission: TestCodeSubmissionNew):
+#     try:
+
+#         problem = get_problem_for_polars(code_submission.problem_id)
+#         passed, result_head, error = run_code_against_test(problem=problem, code_submission=code_submission)
+#         return {"passed": passed, "result_head": result_head, "error": error}
+#     except Exception as e:
+#         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
+#         raise HTTPException(status_code=500, detail=str(e)) from e
+
+
 @app.post("/api/code/test_code")
 async def submit_code(code_submission: TestCodeSubmission):
     try:
@@ -68,15 +93,25 @@ async def submit_code(code_submission: TestCodeSubmission):
 
 @app.post("/api/code/check_creation_code")
 async def check_code_for_creation(code_submission: CheckCodeForCreation):
+    """Route for checking new card
+
+    Args:
+        code_submission (CheckCodeForCreation): _description_
+
+    Raises:
+        HTTPException: _description_
+
+    Returns:
+        _type_: _description_
+    """
     try:
         logger.info(code_submission)
+        datasets = {name: get_dataset(Session(engine), name) for name in code_submission.dataset_names}
         executed_df, error = run_code_to_check_results_for_card_creation(
-            code_submission.code,
-            code_submission.dataset_names,
-            code_submission.preprocessing_code,
-            code_submission.problem_type,
+            code_submission.code, datasets, code_submission.preprocessing_code, code_submission.problem_type
         )
-        return {"result_head": executed_df.head(10).to_json()}
+        logger.info(executed_df.head(10).to_pandas().to_json())
+        return {"result_head": executed_df.head(10).to_pandas().to_json()}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
@@ -97,8 +132,9 @@ async def get_available_datasets():
     logger.info("Getting all available datasets")
     try:
         # datasets = ["x"]
-        datasets = sorted([x for x in os.listdir("backend/code_execution/data") if ".csv" in x])
-        return {"datasets": datasets}
+        d = list_available_datasets(Session(engine))
+        logger.info(d)
+        return {"datasets": d}
     except Exception as e:
         logger.error(f"An error occurred adding code:\n{traceback.format_exc()}")
         raise HTTPException(status_code=500, detail=str(e)) from e
