@@ -5,3 +5,4 @@ frontend/node_modules/
 memory_backups/*
 memory:
 logs/*
+**.csv

@@ -86,6 +86,17 @@ const Study: React.FC = () => {
     }
   };
 
+  const handleBury = async () => {
+    try {
+      if (problem) {
+        await api.post(`/api/problem/bury/${problem.problem_id}`);
+        await fetchConcept();
+      }
+    } catch (error) {
+      console.error('Error burying:', error);
+    }
+  };
+
   const fetchConcept = async () => {
     fetchProblemsRemaining();
     try {
@@ -114,6 +125,13 @@ const Study: React.FC = () => {
             sx={{ mt: 2, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
           >
             Suspend
+          </Button>
+          <Button
+            variant="contained"
+            onClick={handleBury}
+            sx={{ mt: 2, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
+          >
+            Bury
           </Button>
           {(problem?.problem_type === 'polars' ||
             problem?.problem_type === 'sql' ||

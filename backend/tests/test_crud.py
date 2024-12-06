@@ -2,6 +2,9 @@ import polars as pl
 from ..core.scheduling.Scheduler import Scheduler
 from backend.crud import (
     add_code_to_problem,
+    bury_problem,
+    check_problem_buried,
+    check_problem_suspended,
     create_dataset,
     create_problem,
     create_review,
@@ -13,6 +16,9 @@ from backend.crud import (
     get_problem,
     get_reviews_for_problem,
     list_available_datasets,
+    toggle_suspend,
+    update_code,
+    update_problem,
 )
 from datetime import datetime, timedelta
 
@@ -157,3 +163,67 @@ def test_get_tables_from_problem(test_db):
 
     frames = get_dataframes_for_problem(test_db, new_prob.id)
     assert frames["academic"].equals(df)
+
+
+def test_update_problem(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    assert problem.description == "test description"
+
+    pid = problem.id
+
+    update_problem(test_db, pid, "new")
+
+    prob = get_problem(test_db, pid)
+    assert prob.description == "new"
+
+
+def test_update_code(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    code_create = add_code_to_problem(test_db, "", "academic", problem.id)
+    code = get_code_for_problem(test_db, problem.id)
+    assert code_create.to_dict() == code[0].to_dict()
+
+    update_code(test_db, "code_updated", "dataset_updated", problem.id)
+
+    updated_code = get_code_for_problem(test_db, problem.id)[0]
+    assert updated_code.code == "code_updated"
+    assert updated_code.datasets == "dataset_updated"
+
+
+def test_suspend(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    assert not check_problem_suspended(test_db, problem.id)
+
+    toggle_suspend(test_db, problem.id)
+    assert check_problem_suspended(test_db, problem.id)
+
+    toggle_suspend(test_db, problem.id)
+    assert not check_problem_suspended(test_db, problem.id)
+
+    # THIS FAILS
+    toggle_suspend(test_db, problem.id)
+    assert check_problem_suspended(test_db, problem.id)
+
+
+def test_update_code(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    assert not check_problem_buried(test_db, problem.id)
+    bury_problem(test_db, problem.id)
+    assert check_problem_buried(test_db, problem.id)
+
+
+def test_buried(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    assert not check_problem_buried(test_db, problem.id)
+    bury_problem(test_db, problem.id)
+    assert check_problem_buried(test_db, problem.id)
+
+    # Check problem unburied after day
+    problem = create_problem(test_db, description, date_created=datetime.now().date() - timedelta(days=1))
+    assert not check_problem_buried(test_db, problem.id)
+    bury_problem(test_db, problem.id, date_created=datetime.now().date() - timedelta(days=1))

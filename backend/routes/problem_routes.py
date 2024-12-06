@@ -4,13 +4,18 @@ import traceback
 from ..core.scheduling.Scheduler import Scheduler
 from ..crud import (
     add_code_to_problem,
+    bury_problem,
+    check_problem_buried,
+    check_problem_suspended,
     create_problem,
+    # get_all_non_suspended_problems,
     get_all_problems,
     get_code_for_problem,
     get_dataframes_for_problem,
     get_list_of_datasets_for_problem,
     get_problem,
     get_reviews_for_problem,
+    toggle_suspend,
 )
 from ..database import get_db
 from fastapi import APIRouter, Depends, HTTPException
@@ -48,6 +53,42 @@ def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
+# interface CodeCard {
+#   problem_id: number;
+#   dataset_name: string;
+#   dataset_headers: string;
+#   code: string;
+#   default_code: string;
+#   preprocessing_code: string;
+#   description: string;
+#   is_suspended: boolean;
+# }
+
+
+@router.get("/")
+def get_problems(db: Session = Depends(get_db)):
+    problems = get_all_problems(db)
+    result = []
+    for p in problems:
+        problem_id = p.id
+        table_name = get_list_of_datasets_for_problem(db, problem_id)[0]
+        dataframes = get_dataframes_for_problem(db, problem_id)
+        code = get_code_for_problem(db, problem_id)[0]
+        result.append(
+            {
+                "problem_id": problem_id,
+                "dataset_name": table_name,
+                "dataset_headers": "",
+                "code": code,
+                "default_code": "",
+                "preprocessing_code": "",
+                "description": p.description,
+                "is_suspended": check_problem_suspended(db, problem_id),
+            }
+        )
+    return result
+
+
 # @router.post("/")
 # def create_problem(problem: ProblemCreate):
 #     try:
@@ -79,6 +120,8 @@ def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_db)):
 def get_next_problem(db: Session = Depends(get_db)):
     try:
         problems = get_all_problems(db)
+        problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
+        # problems = get_all_non_suspended_problems(db)
         logger.info(problems)
         scheduler = Scheduler()
 
@@ -105,6 +148,7 @@ def get_next_problem(db: Session = Depends(get_db)):
 def get_problems_remaining(db: Session = Depends(get_db)):
     try:
         problems = get_all_problems(db)
+        problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
         scheduler = Scheduler()
         problems_to_review = []
         for problem in problems:
@@ -135,20 +179,26 @@ def get_problems_remaining(db: Session = Depends(get_db)):
 #         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-# # api.post(`/api/problem/suspend/${problem.problem_id}`);
-# @router.post("/suspend/{problem_id}")
-# def do_suspend(problem_id: int):
-#     logger.info(f"{problem_id} FEFEFF suspending")
-#     try:
-#         toggle_suspend_problem(problem_id)
-#         # Add some actual logic here
-#         # logger.info(f"Suspending problem with ID: {problem_id}")
-#         # For example, you might want to update the problem's status in the database
-#         # update_problem_status(problem_id, 'suspended')
-#         return {"message": f"Problem {problem_id} suspended successfully"}
-#     except Exception as e:
-#         logger.error(f"An error occurred while suspending the problem:\n{traceback.format_exc()}")
-#         raise HTTPException(status_code=500, detail=str(e)) from e
+# api.post(`/api/problem/suspend/${problem.problem_id}`);
+@router.post("/suspend/{problem_id}")
+def do_suspend(problem_id: int, db: Session = Depends(get_db)):
+    logger.info(f"{problem_id} FEFEFF suspending")
+    try:
+        toggle_suspend(db, problem_id)
+        return {"message": f"Problem {problem_id} suspended successfully"}
+    except Exception as e:
+        logger.error(f"An error occurred while suspending the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+@router.post("/bury/{problem_id}")
+def do_bury(problem_id: int, db: Session = Depends(get_db)):
+    try:
+        bury_problem(db, problem_id)
+        return {"message": f"Problem {problem_id} buried successfully"}
+    except Exception as e:
+        logger.error(f"An error occurred while burying the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 # @router.post("/{problem_id}/reviews")

@@ -1,6 +1,6 @@
 import logging
 import polars as pl
-from backend.models import Code, Dataset, Problem, Review
+from backend.models import Buried, Code, Dataset, Problem, Review, Suspended
 from datetime import datetime
 from sqlalchemy import select, text
 from sqlalchemy.orm import Session
@@ -17,6 +17,32 @@ def create_problem(session: Session, description: str, date_created: datetime = 
     session.commit()
     session.refresh(new_problem)
     return new_problem
+
+
+def update_problem(session: Session, problem_id: int, description_new: str) -> Problem:
+    problem = session.query(Problem).filter(Problem.id == problem_id).first()
+    if problem is None:
+        return None
+    problem.description = description_new
+    session.commit()
+    session.refresh(problem)
+    return problem
+
+
+def toggle_suspend(session: Session, problem_id: int) -> Suspended:
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+
+    # If no suspended record, create suspending record
+    if suspended == []:
+        value = True
+    else:
+        suspended.sort(key=lambda x: x.date_created, reverse=True)
+        value = not suspended[0].is_suspended
+    s = Suspended(is_suspended=value, problem_id=problem_id)
+    session.add(s)
+    session.commit()
+    session.refresh(s)
+    return s
 
 
 def create_review(session, problem_id: int, result: int, date_created: datetime = None):
@@ -50,6 +76,17 @@ def add_code_to_problem(session: Session, code: str, datasets: str, problem_id: 
     session.commit()
     session.refresh(new_code)
     return new_code
+
+
+def update_code(session: Session, code: str, datasets: str, problem_id: int):
+    code_obj = session.query(Code).filter(Code.problem_id == problem_id).first()
+    if code_obj is None:
+        return None
+    code_obj.code = code
+    code_obj.datasets = datasets
+    session.commit()
+    session.refresh(code_obj)
+    return code_obj
 
 
 # def get_problem(session: Session, problem_id: int) -> dict:
@@ -94,33 +131,61 @@ def get_dataset(session: Session, table_name: str) -> pl.DataFrame:
     stmt = select("*").select_from(text(table_name))
     result = session.execute(stmt)
     rows = result.fetchall()
-    # Get column names from first row
     columns = result.keys()
-    # Convert rows to list of dictionaries
     data = [dict(zip(columns, row)) for row in rows]
-    # Create polars dataframe from dictionaries
-    df = pl.DataFrame(data)
-    return df
-    for row in rows:
-        print(row)
+    return pl.DataFrame(data)
 
 
 def list_available_datasets(session: Session):
-    # Query all unique code table names from the Code model
     stmt = select(Dataset.name).distinct()
     result = session.execute(stmt)
-    unique_datasets = result.scalars().all()
-
-    # Log the actual results for debugging
-    logger.info(f"Found datasets: {unique_datasets}")
-
-    # Return empty list if no datasets found
-    if not unique_datasets:
-        logger.info("No datasets found in database")
-        return []
-
-    return unique_datasets
+    return result.scalars().all()
 
 
 def get_all_problems(session: Session):
     return session.query(Problem).all()
+
+
+def toggle_suspend(session: Session, problem_id: int) -> Suspended:
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+    value = len(suspended) % 2 != 0
+    s = Suspended(is_suspended=value, problem_id=problem_id)
+    session.add(s)
+    session.commit()
+    session.refresh(s)
+    return s
+
+
+def bury_problem(session: Session, problem_id: int, date_created: datetime = None) -> Buried:
+    b = Buried(problem_id=problem_id, date_created=date_created)
+    session.add(b)
+    session.commit()
+    session.refresh(b)
+    return b
+
+
+def check_problem_suspended(session: Session, problem_id: int) -> bool:
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+    return len(suspended) % 2 != 0
+
+
+def check_problem_buried(session: Session, problem_id: int) -> bool:
+    buried = session.query(Buried).filter(Buried.problem_id == problem_id).all()
+    if len(buried) == 0:
+        return False
+    return any(b.date_created == datetime.now().date() for b in buried)
+
+
+# def get_all_non_suspended_problems(session: Session):
+#     problems = session.query(Problem).all()
+#     suspended = session.query(Suspended).all()
+#     suspended_dict = {}
+#     for s in suspended:
+#         if s.problem_id not in suspended_dict or s.date_created > suspended_dict[s.problem_id][1]:
+#             suspended_dict[s.problem_id] = (s.is_suspended, s.date_created)
+
+#     return [p for p in problems if p.id not in suspended_dict or not suspended_dict[p.id][0]]
+
+
+def get_all_reviews(session: Session):
+    return session.query(Review).all()

@@ -60,3 +60,1133 @@
 2024-12-06 05:51:23,233 INFO backend.routes.problem_routes problems to review: []
 2024-12-06 05:51:23,234 INFO backend.routes.problem_routes []
 2024-12-06 05:51:23,239 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:06:57,116 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78ee88d8f5c0>]
+2024-12-06 07:06:57,117 INFO backend.routes.problem_routes []
+2024-12-06 07:06:57,121 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:06:57,182 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:30:00,492 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x702e2175bd40>, <backend.models.Problem object at 0x702e2175bd10>]
+2024-12-06 07:30:00,501 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x702e2175bd10>]
+2024-12-06 07:30:00,517 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x702e21758b60>]
+2024-12-06 07:30:00,624 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x702e21758b00>]
+2024-12-06 07:30:58,638 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:30:58,919 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x702e217cea80>, <backend.models.Problem object at 0x702e217cf980>]
+2024-12-06 07:30:58,923 INFO backend.routes.problem_routes []
+2024-12-06 07:31:39,715 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x73d38de67f50>, <backend.models.Problem object at 0x73d38de67f20>]
+2024-12-06 07:31:39,717 INFO backend.routes.problem_routes []
+2024-12-06 07:31:39,717 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:31:40,316 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 07:31:57,961 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x73d38dfc1880>, <backend.models.Problem object at 0x73d38dfc3560>, <backend.models.Problem object at 0x73d38dfc3500>, <backend.models.Problem object at 0x73d38dfc32c0>, <backend.models.Problem object at 0x73d38dfc0da0>, <backend.models.Problem object at 0x73d38dfc2420>, <backend.models.Problem object at 0x73d38dfc3740>, <backend.models.Problem object at 0x73d38dfc3200>, <backend.models.Problem object at 0x73d38dfc1e50>, <backend.models.Problem object at 0x73d38dfc2f30>, <backend.models.Problem object at 0x73d38dfc1a00>, <backend.models.Problem object at 0x73d38dfc1af0>, <backend.models.Problem object at 0x73d38dfc3020>, <backend.models.Problem object at 0x73d38dfc18e0>, <backend.models.Problem object at 0x73d38dfc30b0>, <backend.models.Problem object at 0x73d38dfc3110>, <backend.models.Problem object at 0x73d38dfc2390>]
+2024-12-06 07:31:57,969 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x73d38de96780>, <backend.models.Problem object at 0x73d38de961e0>, <backend.models.Problem object at 0x73d38de96840>, <backend.models.Problem object at 0x73d38de96870>, <backend.models.Problem object at 0x73d38de968a0>, <backend.models.Problem object at 0x73d38de968d0>, <backend.models.Problem object at 0x73d38de96900>, <backend.models.Problem object at 0x73d38de96930>, <backend.models.Problem object at 0x73d38de96960>, <backend.models.Problem object at 0x73d38de96990>, <backend.models.Problem object at 0x73d38de969c0>, <backend.models.Problem object at 0x73d38de969f0>, <backend.models.Problem object at 0x73d38e38d6a0>, <backend.models.Problem object at 0x73d3990da0f0>, <backend.models.Problem object at 0x73d3984ebf80>]
+2024-12-06 07:31:57,970 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x73d38dfc3500>, <backend.models.Problem object at 0x73d38dfc32c0>, <backend.models.Problem object at 0x73d38dfc0da0>, <backend.models.Problem object at 0x73d38dfc2420>, <backend.models.Problem object at 0x73d38dfc3740>, <backend.models.Problem object at 0x73d38dfc3200>, <backend.models.Problem object at 0x73d38dfc1e50>, <backend.models.Problem object at 0x73d38dfc2f30>, <backend.models.Problem object at 0x73d38dfc1a00>, <backend.models.Problem object at 0x73d38dfc1af0>, <backend.models.Problem object at 0x73d38dfc3020>, <backend.models.Problem object at 0x73d38dfc18e0>, <backend.models.Problem object at 0x73d38dfc30b0>, <backend.models.Problem object at 0x73d38dfc3110>, <backend.models.Problem object at 0x73d38dfc2390>]
+2024-12-06 07:31:58,578 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x73d38dda6ff0>, <backend.models.Problem object at 0x73d38dda6f60>, <backend.models.Problem object at 0x73d38dda6ed0>, <backend.models.Problem object at 0x73d38dda6e40>, <backend.models.Problem object at 0x73d38dda6db0>, <backend.models.Problem object at 0x73d38dda6d20>, <backend.models.Problem object at 0x73d38dda6c90>, <backend.models.Problem object at 0x73d38dda6c00>, <backend.models.Problem object at 0x73d38dda6b70>, <backend.models.Problem object at 0x73d38dda6ae0>, <backend.models.Problem object at 0x73d38dda6a50>, <backend.models.Problem object at 0x73d38dda69c0>, <backend.models.Problem object at 0x73d38dda6930>, <backend.models.Problem object at 0x73d38dda68a0>, <backend.models.Problem object at 0x73d38dda6810>]
+2024-12-06 07:42:55,127 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x790928baa930>, <backend.models.Problem object at 0x790928baa900>, <backend.models.Problem object at 0x790928baa8d0>, <backend.models.Problem object at 0x790928baa180>, <backend.models.Problem object at 0x790928baa990>, <backend.models.Problem object at 0x790928baa9c0>, <backend.models.Problem object at 0x790928baa9f0>, <backend.models.Problem object at 0x790928baaa20>, <backend.models.Problem object at 0x790928baaa80>, <backend.models.Problem object at 0x790928baab10>, <backend.models.Problem object at 0x790928baaba0>, <backend.models.Problem object at 0x790928baac30>, <backend.models.Problem object at 0x790928baacc0>, <backend.models.Problem object at 0x790928baad50>, <backend.models.Problem object at 0x790928baade0>, <backend.models.Problem object at 0x790928baae70>, <backend.models.Problem object at 0x790928baaf00>]
+2024-12-06 07:42:55,135 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x790928ba9730>, <backend.models.Problem object at 0x790928ba97f0>, <backend.models.Problem object at 0x790928ba9850>, <backend.models.Problem object at 0x790928ba98b0>, <backend.models.Problem object at 0x790928ba9910>, <backend.models.Problem object at 0x790928ba9970>, <backend.models.Problem object at 0x790928ba99d0>, <backend.models.Problem object at 0x790928ba9a30>, <backend.models.Problem object at 0x790928ba9a90>, <backend.models.Problem object at 0x790928ba9af0>, <backend.models.Problem object at 0x790928ba9b50>, <backend.models.Problem object at 0x790928ba9bb0>, <backend.models.Problem object at 0x790928ba9c10>, <backend.models.Problem object at 0x790928ba9c70>, <backend.models.Problem object at 0x790928ba9cd0>]
+2024-12-06 07:42:55,136 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x790928baa8d0>, <backend.models.Problem object at 0x790928baa180>, <backend.models.Problem object at 0x790928baa990>, <backend.models.Problem object at 0x790928baa9c0>, <backend.models.Problem object at 0x790928baa9f0>, <backend.models.Problem object at 0x790928baaa20>, <backend.models.Problem object at 0x790928baaa80>, <backend.models.Problem object at 0x790928baab10>, <backend.models.Problem object at 0x790928baaba0>, <backend.models.Problem object at 0x790928baac30>, <backend.models.Problem object at 0x790928baacc0>, <backend.models.Problem object at 0x790928baad50>, <backend.models.Problem object at 0x790928baade0>, <backend.models.Problem object at 0x790928baae70>, <backend.models.Problem object at 0x790928baaf00>]
+2024-12-06 07:42:55,747 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x790928bce7b0>, <backend.models.Problem object at 0x790928bce720>, <backend.models.Problem object at 0x790928bce690>, <backend.models.Problem object at 0x790928bce600>, <backend.models.Problem object at 0x790928bce570>, <backend.models.Problem object at 0x790928bce4e0>, <backend.models.Problem object at 0x790928bce450>, <backend.models.Problem object at 0x790928bce3c0>, <backend.models.Problem object at 0x790928bce330>, <backend.models.Problem object at 0x790928bce2a0>, <backend.models.Problem object at 0x790928bce210>, <backend.models.Problem object at 0x790928bce180>, <backend.models.Problem object at 0x790928bce0f0>, <backend.models.Problem object at 0x790928bce060>, <backend.models.Problem object at 0x790928bcdfd0>]
+2024-12-06 09:03:51,189 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:03:51,190 ERROR backend.routes.problem_routes An error occurred while suspending the problem:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 180, in do_suspend
+    toggle_suspend(problem_id)
+TypeError: toggle_suspend() missing 1 required positional argument: 'problem_id'
+
+2024-12-06 09:04:49,299 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:04:51,495 INFO backend.routes.problem_routes 2 FEFEFF suspending
+2024-12-06 09:04:52,091 INFO backend.routes.problem_routes 3 FEFEFF suspending
+2024-12-06 09:04:53,159 INFO backend.routes.problem_routes 4 FEFEFF suspending
+2024-12-06 09:04:54,323 INFO backend.routes.problem_routes 5 FEFEFF suspending
+2024-12-06 09:04:55,031 INFO backend.routes.problem_routes 6 FEFEFF suspending
+2024-12-06 09:04:55,183 INFO backend.routes.problem_routes 7 FEFEFF suspending
+2024-12-06 09:04:56,264 INFO backend.routes.problem_routes 8 FEFEFF suspending
+2024-12-06 09:04:57,254 INFO backend.routes.problem_routes 9 FEFEFF suspending
+2024-12-06 09:04:58,037 INFO backend.routes.problem_routes 10 FEFEFF suspending
+2024-12-06 09:04:58,922 INFO backend.routes.problem_routes 11 FEFEFF suspending
+2024-12-06 09:04:59,425 INFO backend.routes.problem_routes 12 FEFEFF suspending
+2024-12-06 09:05:00,532 INFO backend.routes.problem_routes 13 FEFEFF suspending
+2024-12-06 09:05:01,580 INFO backend.routes.problem_routes 14 FEFEFF suspending
+2024-12-06 09:05:02,092 INFO backend.routes.problem_routes 15 FEFEFF suspending
+2024-12-06 09:05:02,752 INFO backend.routes.problem_routes 16 FEFEFF suspending
+2024-12-06 09:05:03,325 INFO backend.routes.problem_routes 17 FEFEFF suspending
+2024-12-06 09:08:38,684 INFO backend.routes.problem_routes []
+2024-12-06 09:08:38,685 INFO backend.routes.problem_routes []
+2024-12-06 09:08:38,685 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:08:38,789 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:13:18,547 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:13:20,400 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e90c050> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 121, in get_next_problem
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e90c050>.
+
+2024-12-06 09:13:20,400 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e90ffb0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e90ffb0>.
+
+2024-12-06 09:13:20,829 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752ead2960> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752ead2960>.
+
+2024-12-06 09:13:23,059 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e57c620> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e57c620>.
+
+2024-12-06 09:13:23,060 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e57cda0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 121, in get_next_problem
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e57cda0>.
+
+2024-12-06 09:13:23,137 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e57dcd0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e57dcd0>.
+
+2024-12-06 09:13:24,392 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e5910d0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e5910d0>.
+
+2024-12-06 09:13:24,393 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e5907a0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 121, in get_next_problem
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e5907a0>.
+
+2024-12-06 09:13:24,507 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 803, in _literal_coercion
+    return expr._bind_param(operator, element, type_=bindparam_type)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 4594, in _bind_param
+    return BindParameter(
+           ^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 2031, in __init__
+    self.type = _compared_to_type.coerce_compared_value(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 1042, in coerce_compared_value
+    _coerced_type = _resolve_value_to_type(value)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/sqltypes.py", line 3808, in _resolve_value_to_type
+    raise exc.ArgumentError(
+sqlalchemy.exc.ArgumentError: Object <backend.models.Problem object at 0x7b752e57eff0> is not legal as a SQL literal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 149, in get_problems_remaining
+    problems = [p for p in problems if not check_problem_suspended(db, p)]
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/memory/backend/crud.py", line 166, in check_problem_suspended
+    suspended = session.query(Suspended).filter(Suspended.problem_id == problem_id).all()
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/attributes.py", line 453, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/properties.py", line 479, in operate
+    return op(self.__clause_element__(), *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/annotation.py", line 371, in __eq__
+    return self.__element.__class__.__eq__(self, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 1513, in operate
+    return op(self.comparator, *other, **kwargs)  # type: ignore[no-any-return]  # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/operators.py", line 582, in __eq__
+    return self.operate(eq, other)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/type_api.py", line 197, in operate
+    return op_fn(self.expr, op, *other, **addtl_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/default_comparator.py", line 121, in _boolean_compare
+    obj = coercions.expect(
+          ^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 395, in expect
+    resolved = impl._literal_coercion(
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 805, in _literal_coercion
+    self._raise_for_expected(element, err=err)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 784, in _raise_for_expected
+    return super()._raise_for_expected(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/coercions.py", line 518, in _raise_for_expected
+    raise exc.ArgumentError(msg, code=code) from err
+sqlalchemy.exc.ArgumentError: SQL expression element or literal value expected, got <backend.models.Problem object at 0x7b752e57eff0>.
+
+2024-12-06 09:14:44,100 INFO backend.routes.problem_routes []
+2024-12-06 09:14:44,100 INFO backend.routes.problem_routes []
+2024-12-06 09:14:44,112 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:14:44,242 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:14:50,622 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:14:53,280 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:14:53,693 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:14:53,694 INFO backend.routes.problem_routes []
+2024-12-06 09:14:53,695 INFO backend.routes.problem_routes []
+2024-12-06 09:14:57,392 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:14:58,498 INFO backend.routes.problem_routes []
+2024-12-06 09:14:58,499 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:14:58,499 INFO backend.routes.problem_routes []
+2024-12-06 09:14:58,613 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:16:29,110 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:16:30,722 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:17:19,183 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:17:20,050 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:26:31,162 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:29:40,744 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:29:49,591 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:32:00,518 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:32:04,520 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:32:16,571 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:32:28,764 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:33:53,214 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:33:53,421 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:33:59,859 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:34:05,057 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:35:27,509 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:35:33,882 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:35:39,632 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:38:26,212 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:38:46,278 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:38:49,644 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:38:52,141 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:38:57,155 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:39:53,233 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:39:55,852 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:40:13,858 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:40:14,700 INFO backend.routes.problem_routes 2 FEFEFF suspending
+2024-12-06 09:40:15,048 INFO backend.routes.problem_routes 3 FEFEFF suspending
+2024-12-06 09:40:16,261 INFO backend.routes.problem_routes 4 FEFEFF suspending
+2024-12-06 09:40:17,371 INFO backend.routes.problem_routes 5 FEFEFF suspending
+2024-12-06 09:40:18,309 INFO backend.routes.problem_routes 6 FEFEFF suspending
+2024-12-06 09:40:19,231 INFO backend.routes.problem_routes 7 FEFEFF suspending
+2024-12-06 09:40:19,746 INFO backend.routes.problem_routes 8 FEFEFF suspending
+2024-12-06 09:40:20,357 INFO backend.routes.problem_routes 9 FEFEFF suspending
+2024-12-06 09:40:20,869 INFO backend.routes.problem_routes 10 FEFEFF suspending
+2024-12-06 09:40:22,815 INFO backend.routes.problem_routes 11 FEFEFF suspending
+2024-12-06 09:40:23,330 INFO backend.routes.problem_routes 12 FEFEFF suspending
+2024-12-06 09:40:23,762 INFO backend.routes.problem_routes 13 FEFEFF suspending
+2024-12-06 09:40:24,583 INFO backend.routes.problem_routes 14 FEFEFF suspending
+2024-12-06 09:40:24,770 INFO backend.routes.problem_routes 15 FEFEFF suspending
+2024-12-06 09:40:25,264 INFO backend.routes.problem_routes 16 FEFEFF suspending
+2024-12-06 09:40:27,394 INFO backend.routes.problem_routes 17 FEFEFF suspending
+2024-12-06 09:40:31,014 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:40:31,305 INFO backend.routes.problem_routes []
+2024-12-06 09:40:31,305 INFO backend.routes.problem_routes []
+2024-12-06 09:40:31,452 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:40:34,186 INFO backend.routes.problem_routes 1 FEFEFF suspending
+2024-12-06 09:40:35,324 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:40:35,592 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7de9b0652cf0>]
+2024-12-06 09:40:35,592 INFO backend.routes.problem_routes []
+2024-12-06 09:40:35,687 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:40:39,056 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7de9b079bbf0>]
+2024-12-06 09:40:39,057 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:40:39,058 INFO backend.routes.problem_routes []
+2024-12-06 09:40:39,144 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:42:11,053 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:42:11,085 INFO backend.routes.problem_routes <generator object get_next_problem.<locals>.<genexpr> at 0x7cee2a32ac00>
+2024-12-06 09:42:11,090 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7cee2a327140>]
+2024-12-06 09:42:11,090 INFO backend.routes.problem_routes []
+2024-12-06 09:42:11,428 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:43:39,086 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:43:39,095 INFO backend.routes.problem_routes False
+2024-12-06 09:43:39,096 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,096 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,097 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,098 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,099 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,100 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,100 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,101 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,102 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,103 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,104 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,104 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,105 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,106 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,107 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,108 INFO backend.routes.problem_routes True
+2024-12-06 09:43:39,116 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7329f7f83590>]
+2024-12-06 09:43:39,117 INFO backend.routes.problem_routes []
+2024-12-06 09:43:39,509 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 09:43:49,054 INFO backend.routes.problem_routes 2 FEFEFF suspending
+2024-12-06 09:43:50,642 INFO backend.routes.problem_routes 3 FEFEFF suspending
+2024-12-06 09:43:52,510 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7329f7fb3290>]
+2024-12-06 09:43:52,790 INFO backend.routes.problem_routes False
+2024-12-06 09:43:52,790 INFO backend.routes.problem_routes False
+2024-12-06 09:43:52,791 INFO backend.routes.problem_routes False
+2024-12-06 09:43:52,791 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,791 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,792 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,792 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,792 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,793 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,793 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,793 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,794 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,794 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,795 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,795 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,795 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,796 INFO backend.routes.problem_routes True
+2024-12-06 09:43:52,801 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7329f7fb2840>, <backend.models.Problem object at 0x7329f7fb0590>, <backend.models.Problem object at 0x7329f7fb28d0>]
+2024-12-06 09:43:52,802 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7329f7fb28d0>]
+2024-12-06 09:43:52,965 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7329f7e7faa0>]
+2024-12-06 10:43:02,521 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fbc33d7aea0>]
+2024-12-06 10:43:02,541 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fbc33da8d40>, <backend.models.Problem object at 0x7fbc33da8d10>, <backend.models.Problem object at 0x7fbc33da8ce0>]
+2024-12-06 10:43:02,542 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fbc33da8ce0>]
+2024-12-06 10:43:03,564 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fbc339bed20>]
+2024-12-06 10:43:04,412 ERROR backend.routes.problem_routes An error occurred while burying the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (1, null, 2024-12-06, 3).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 197, in do_bury
+    bury_problem(db, problem_id)
+  File "/workspaces/memory/backend/crud.py", line 162, in bury_problem
+    session.commit()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (1, null, 2024-12-06, 3).
+
+[SQL: INSERT INTO buried (date_created, problem_id) VALUES (CURRENT_DATE, %(problem_id)s) RETURNING buried.id, buried.date_created]
+[parameters: {'problem_id': 3}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+2024-12-06 10:44:18,077 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fbc38d15ac0>, <backend.models.Problem object at 0x7fbc33e99880>, <backend.models.Problem object at 0x7fbc383fbd70>]
+2024-12-06 10:44:18,078 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fbc383fbd70>]
+2024-12-06 10:44:18,086 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fbc338a4230>]
+2024-12-06 10:44:18,162 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fbc338a4aa0>]
+2024-12-06 10:44:18,789 ERROR backend.routes.problem_routes An error occurred while burying the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (2, null, 2024-12-06, 3).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 197, in do_bury
+    bury_problem(db, problem_id)
+  File "/workspaces/memory/backend/crud.py", line 162, in bury_problem
+    session.commit()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (2, null, 2024-12-06, 3).
+
+[SQL: INSERT INTO buried (date_created, problem_id) VALUES (CURRENT_DATE, %(problem_id)s) RETURNING buried.id, buried.date_created]
+[parameters: {'problem_id': 3}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+2024-12-06 10:46:08,621 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fe1ad382ba0>]
+2024-12-06 10:46:08,645 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fe1ad3a8c80>, <backend.models.Problem object at 0x7fe1ad3a8c50>, <backend.models.Problem object at 0x7fe1ad3a8c20>]
+2024-12-06 10:46:08,646 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fe1ad3a8c20>]
+2024-12-06 10:46:09,221 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fe1ad3d2900>]
+2024-12-06 10:46:09,707 ERROR backend.routes.problem_routes An error occurred while burying the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (3, null, 2024-12-06, 3).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 197, in do_bury
+    bury_problem(db, problem_id)
+  File "/workspaces/memory/backend/crud.py", line 162, in bury_problem
+    session.commit()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (3, null, 2024-12-06, 3).
+
+[SQL: INSERT INTO buried (date_created, problem_id) VALUES (CURRENT_DATE, %(problem_id)s) RETURNING buried.id, buried.date_created]
+[parameters: {'problem_id': 3}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+2024-12-06 10:47:12,024 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb376510>]
+2024-12-06 10:47:12,049 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb39c950>, <backend.models.Problem object at 0x79eddb39c920>, <backend.models.Problem object at 0x79eddb39c8f0>]
+2024-12-06 10:47:12,050 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb39c8f0>]
+2024-12-06 10:47:12,735 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb3ca6c0>]
+2024-12-06 10:47:16,736 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb3cade0>]
+2024-12-06 10:47:16,745 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb3cbe00>, <backend.models.Problem object at 0x79eddb3cae70>, <backend.models.Problem object at 0x79eddb3cb410>]
+2024-12-06 10:47:16,746 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb3cb410>]
+2024-12-06 10:47:17,214 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb3cbce0>]
+2024-12-06 10:47:19,797 ERROR backend.routes.problem_routes An error occurred while burying the problem:
+Traceback (most recent call last):
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+psycopg2.errors.NotNullViolation: null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (4, null, 2024-12-06, 3).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 197, in do_bury
+    bury_problem(db, problem_id)
+  File "/workspaces/memory/backend/crud.py", line 162, in bury_problem
+    session.commit()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+         ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "is_suspended" of relation "buried" violates not-null constraint
+DETAIL:  Failing row contains (4, null, 2024-12-06, 3).
+
+[SQL: INSERT INTO buried (date_created, problem_id) VALUES (CURRENT_DATE, %(problem_id)s) RETURNING buried.id, buried.date_created]
+[parameters: {'problem_id': 3}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+2024-12-06 10:50:24,851 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c531edb0>, <backend.models.Problem object at 0x7fa5c531ed80>, <backend.models.Problem object at 0x7fa5c531e810>]
+2024-12-06 10:50:24,853 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c531e810>]
+2024-12-06 10:50:24,884 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fa5c534cbf0>]
+2024-12-06 10:50:25,489 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fa5c526eae0>]
+2024-12-06 10:50:27,118 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 10:50:27,123 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c534daf0>, <backend.models.Problem object at 0x7fa5c534c8c0>]
+2024-12-06 10:50:27,123 INFO backend.routes.problem_routes []
+2024-12-06 10:55:51,264 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7334b7074980>, <backend.models.Problem object at 0x7334b7074950>]
+2024-12-06 10:55:51,264 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 10:55:51,265 INFO backend.routes.problem_routes []
+2024-12-06 10:55:51,674 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 10:56:58,384 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 10:56:58,690 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7334b6f247d0>, <backend.models.Problem object at 0x7334b6f27200>]
+2024-12-06 10:56:58,693 INFO backend.routes.problem_routes []
+2024-12-06 10:56:58,713 INFO backend.routes.problem_routes problems to review: []

@@ -1,5 +1,5 @@
 from datetime import date
-from sqlalchemy import ForeignKey
+from sqlalchemy import DateTime, ForeignKey
 
 # Declarative mapping = write python objects, sql alchemy creates sql objects
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -41,6 +41,7 @@ class Code(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     datasets: Mapped[str]
     code: Mapped[str]
+    # default_code: Mapped[str | None]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
     problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
@@ -51,6 +52,21 @@ class Dataset(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
+
+
+class Suspended(Base):
+    __tablename__ = "suspended"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    is_suspended: Mapped[bool]
+    date_created: Mapped[DateTime] = mapped_column(DateTime(timezone=True), default=func.now())
+    problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
+
+
+class Buried(Base):
+    __tablename__ = "buried"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    date_created: Mapped[date] = mapped_column(default=func.current_date())
+    problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
 
 from sqlalchemy import create_engine
@@ -65,3 +81,5 @@ Problem.metadata.create_all(engine)
 Review.metadata.create_all(engine)
 Dataset.metadata.create_all(engine)
 Code.metadata.create_all(engine)
+Suspended.metadata.create_all(engine)
+Buried.metadata.create_all(engine)

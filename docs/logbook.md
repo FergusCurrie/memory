@@ -31,3 +31,8 @@
   - table in polars problem being correctly sent back to ui
   - basic polars check code working. NOTE: preprocessing is overhead. Just cook up a new dataset.
   - reviews for polars prob seem to be working
+  - basic functionality is up.
+  - added code to input old db simple polars into db
+  - browse updated to work (edits not possible)
+  - suspend added
+  - buried added

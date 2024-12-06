@@ -19,7 +19,7 @@
 
 ## Doing
 
-- [ ]
+- [ ] Queryable logs
 - [ ]
 - [ ]
 
