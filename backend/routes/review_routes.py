@@ -1,6 +1,9 @@
-from backend.db.review_model import add_review, delete_review, get_all_reviews, get_review
-from fastapi import APIRouter, HTTPException
+from ..crud import create_review
+from ..database import get_db
+from backend.db.review_model import delete_review, get_all_reviews, get_review
+from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
 
 class ReviewCreate(BaseModel):
@@ -12,11 +15,11 @@ router = APIRouter()
 
 
 @router.post("/")
-def create_review(review: ReviewCreate):
-    review_id = add_review(problem_id=review.problem_id, result=review.result)
-    if review_id is None:
+def add_a_review(review: ReviewCreate, db: Session = Depends(get_db)):
+    review = create_review(db, problem_id=review.problem_id, result=review.result)
+    if review is None:
         raise HTTPException(status_code=500, detail="Failed to create review")
-    return get_review(review_id)
+    return review.to_dict()
 
 
 @router.get("/")

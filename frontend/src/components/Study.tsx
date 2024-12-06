@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import api from '../api';
 import PolarsProblem from './problem_types/PolarsProblem';
 import CardProblem from './problem_types/CardProblem';
-import MultiChoiceProblem from './problem_types/MultiChoiceProblem'
+import MultiChoiceProblem from './problem_types/MultiChoiceProblem';
 import { Box, Button, Typography } from '@mui/material';
 
 interface Problem {
@@ -15,7 +15,6 @@ interface Problem {
   // answer: string;
   //hint: string;
 }
-
 
 const Study: React.FC = () => {
   /**
@@ -48,6 +47,7 @@ const Study: React.FC = () => {
 
   const fetchProblemsRemaining = async () => {
     const response = await api.get('/api/problem/get_number_problems_remaining');
+    console.log(response.data.remaining);
     setNumberProblemsRemaining(response.data.remaining);
   };
 
@@ -67,7 +67,7 @@ const Study: React.FC = () => {
           problem_id: problem.problem_id,
           result: result,
         });
-        
+
         fetchConcept();
       } catch (error) {
         console.error('Error submitting review:', error);
@@ -76,16 +76,15 @@ const Study: React.FC = () => {
   };
 
   const handleSuspend = async () => {
-    try{
-      if (problem){
+    try {
+      if (problem) {
         await api.post(`/api/problem/suspend/${problem.problem_id}`);
         await fetchConcept();
       }
-    }catch (error) {
+    } catch (error) {
       console.error('Error suspending:', error);
     }
-   
-  }
+  };
 
   const fetchConcept = async () => {
     fetchProblemsRemaining();
@@ -95,7 +94,7 @@ const Study: React.FC = () => {
         setProblemsRemaining(false);
       } else {
         setProblem(response.data.problems[0]);
-        console.log(response.data)
+        console.log(response.data);
       }
     } catch (error) {
       console.error('Error fetching concept', error);
@@ -104,32 +103,35 @@ const Study: React.FC = () => {
 
   return (
     <>
-      <Typography>Remaining probs = {numberProblemsRemaining}, Problem type = {problem?.problem_type}</Typography>
+      <Typography>
+        Remaining probs = {numberProblemsRemaining}, Problem type = {problem?.problem_type}
+      </Typography>
       {problemsRemaining ? (
         <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
-           <Button 
-                variant="contained" 
-                onClick={handleSuspend}
-                sx={{ mt: 2, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
-              >
-                Suspend
-              </Button>
-          {(problem?.problem_type === 'polars' || problem?.problem_type === 'sql' || problem?.problem_type === 'pyspark') && (
+          <Button
+            variant="contained"
+            onClick={handleSuspend}
+            sx={{ mt: 2, backgroundColor: 'red', '&:hover': { backgroundColor: 'darkred' } }}
+          >
+            Suspend
+          </Button>
+          {(problem?.problem_type === 'polars' ||
+            problem?.problem_type === 'sql' ||
+            problem?.problem_type === 'pyspark') && (
             <>
               <PolarsProblem problem={problem} handleScore={handleScore} />
             </>
           )}
-          {(problem?.problem_type === 'multi_choice') && (
+          {problem?.problem_type === 'multi_choice' && (
             <>
-               <MultiChoiceProblem problem={problem} handleScore={handleScore} />
+              <MultiChoiceProblem problem={problem} handleScore={handleScore} />
             </>
           )}
-          {(problem?.problem_type === 'card') && (
+          {problem?.problem_type === 'card' && (
             <>
-               <CardProblem problem={problem} handleScore={handleScore} />
+              <CardProblem problem={problem} handleScore={handleScore} />
             </>
           )}
-          
         </Box>
       ) : (
         <Typography variant="h5" sx={{ textAlign: 'center', mt: 4 }}>

@@ -1,34 +1,12 @@
-2024-12-04 08:00:05,491 INFO backend.app Getting all available datasets
-2024-12-04 08:00:05,510 INFO backend.crud Found datasets: ['academic', 'academic.csv']
-2024-12-04 08:00:05,510 INFO backend.app ['academic', 'academic.csv']
-2024-12-04 08:00:10,503 INFO backend.app code='result = (\n    academic\n)' preprocessing_code='' dataset_names=['academic'] problem_type='polars'
-2024-12-04 08:00:10,512 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 111, in check_code_for_creation
-    assert isinstance(datasets[0], pl.DataFrame)
-                      ~~~~~~~~^^^
-KeyError: 0
-
-2024-12-04 08:00:24,715 INFO backend.app Getting all available datasets
-2024-12-04 08:00:24,727 INFO backend.crud Found datasets: ['academic', 'academic.csv']
-2024-12-04 08:00:24,727 INFO backend.app ['academic', 'academic.csv']
-2024-12-04 08:00:29,132 INFO backend.app code='result = (\n    academic\n)' preprocessing_code='' dataset_names=['academic'] problem_type='polars'
-2024-12-04 08:00:29,139 INFO backend.core.code_execution.check_code (shape: (75, 7)
-┌─────────┬──────────┬─────────────┬───────────────┬──────────┬────────────┬──────────┐
-│ year    ┆ students ┆ us_students ┆ undergraduate ┆ graduate ┆ non_degree ┆ opt      │
-│ ---     ┆ ---      ┆ ---         ┆ ---           ┆ ---      ┆ ---        ┆ ---      │
-│ str     ┆ i64      ┆ f64         ┆ f64           ┆ f64      ┆ f64        ┆ f64      │
-╞═════════╪══════════╪═════════════╪═══════════════╪══════════╪════════════╪══════════╡
-│ 1948/49 ┆ 25464    ┆ 2.4034e6    ┆ null          ┆ null     ┆ null       ┆ null     │
-│ 1949/50 ┆ 26433    ┆ 2.445e6     ┆ null          ┆ null     ┆ null       ┆ null     │
-│ 1950/51 ┆ 29813    ┆ 2.281e6     ┆ null          ┆ null     ┆ null       ┆ null     │
-│ 1951/52 ┆ 30462    ┆ 2.102e6     ┆ null          ┆ null     ┆ null       ┆ null     │
-│ 1952/53 ┆ 33675    ┆ 2.134e6     ┆ null          ┆ null     ┆ null       ┆ null     │
-│ …       ┆ …        ┆ …           ┆ …             ┆ …        ┆ …          ┆ …        │
-│ 2018/19 ┆ 1095299  ┆ 1.9828e7    ┆ 431930.0      ┆ 377943.0 ┆ 62341.0    ┆ 223085.0 │
-│ 2019/20 ┆ 1075496  ┆ 1.972e7     ┆ 419321.0      ┆ 374435.0 ┆ 58201.0    ┆ 223539.0 │
-│ 2020/21 ┆ 914095   ┆ 1.9744e7    ┆ 359787.0      ┆ 329272.0 ┆ 21151.0    ┆ 203885.0 │
-│ 2021/22 ┆ 948519   ┆ 2.0327e7    ┆ 344532.0      ┆ 385097.0 ┆ 34131.0    ┆ 184759.0 │
-│ 2022/23 ┆ 1057188  ┆ 1.896128e7  ┆ 347602.0      ┆ 467027.0 ┆ 43766.0    ┆ 198793.0 │
-└─────────┴──────────┴─────────────┴───────────────┴──────────┴────────────┴──────────┘, None)
-2024-12-04 08:00:29,141 INFO backend.app {"year":{"0":"1948\/49","1":"1949\/50","2":"1950\/51","3":"1951\/52","4":"1952\/53","5":"1953\/54","6":"1954\/55","7":"1955\/56","8":"1956\/57","9":"1957\/58"},"students":{"0":25464,"1":26433,"2":29813,"3":30462,"4":33675,"5":33833,"6":34232,"7":36494,"8":40666,"9":43391},"us_students":{"0":2403400.0,"1":2445000.0,"2":2281000.0,"3":2102000.0,"4":2134000.0,"5":2231000.0,"6":2447000.0,"7":2653000.0,"8":2918000.0,"9":3324000.0},"undergraduate":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":19101.0,"7":null,"8":null,"9":null},"graduate":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":12118.0,"7":null,"8":null,"9":null},"non_degree":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null,"9":null},"opt":{"0":null,"1":null,"2":null,"3":null,"4":null,"5":null,"6":null,"7":null,"8":null,"9":null}}
+2024-12-06 05:50:38,164 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 05:50:38,198 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 05:50:38,226 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7b019b363350>]
+2024-12-06 05:50:38,226 INFO backend.routes.problem_routes []
+2024-12-06 05:51:20,440 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 05:51:20,440 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 05:51:20,453 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x792be9d3d100>]
+2024-12-06 05:51:20,453 INFO backend.routes.problem_routes []
+2024-12-06 05:51:23,233 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x792be9d59f10>]
+2024-12-06 05:51:23,233 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 05:51:23,234 INFO backend.routes.problem_routes []
+2024-12-06 05:51:23,239 INFO backend.routes.problem_routes problems to review: []

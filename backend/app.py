@@ -1,18 +1,25 @@
 import logging
 import traceback
 from .core.code_execution.check_code import run_code_against_test, run_code_to_check_results_for_card_creation
-from .crud import get_dataset, list_available_datasets
-from .db.problem_model import get_problem_for_polars
-from .db.sync import sync_db_to_azure
+from .crud import (
+    get_code_for_problem,
+    get_dataframes_for_problem,
+    get_dataset,
+    get_list_of_datasets_for_problem,
+    get_problem,
+    list_available_datasets,
+)
+from .database import get_db
 from .logging_config import LOGGING_CONFIG
 from .routes import problem_routes, review_routes
 
 # from .scheduling.basic_scheduler import get_todays_reviews
-from fastapi import BackgroundTasks, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from sqlalchemy.orm import Session
 
 logging.config.dictConfig(LOGGING_CONFIG)
 
@@ -23,12 +30,9 @@ logger = logging.getLogger(__name__)
 
 app = FastAPI()
 
-from sqlalchemy import create_engine
 
 conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
 
-engine = create_engine(conn_url)
-from sqlalchemy.orm import Session
 
 app.add_middleware(
     CORSMiddleware,
@@ -81,10 +85,19 @@ class TestCodeSubmission(BaseModel):
 
 
 @app.post("/api/code/test_code")
-async def submit_code(code_submission: TestCodeSubmission):
+async def submit_code(code_submission: TestCodeSubmission, db: Session = Depends(get_db)):
     try:
-        problem = get_problem_for_polars(code_submission.problem_id)
-        passed, result_head, error = run_code_against_test(problem=problem, code_submission=code_submission)
+        # problem = get_problem_for_polars(code_submission.problem_id)
+        problem_id = code_submission.problem_id
+        problem = get_problem(db, problem_id)
+        table_name = get_list_of_datasets_for_problem(db, problem_id)[0]
+        dataframes = get_dataframes_for_problem(db, problem_id)
+        code = get_code_for_problem(db, problem_id)[0]
+
+        problem_dict = {"preprocessing_code": "", "datasets": dataframes, "code": code.code, "type": "polars"}
+        logger.info(problem_dict)
+        passed, result_head, error = run_code_against_test(problem=problem_dict, code_submission=code_submission)
+        logger.info({"passed": passed, "result_head": result_head, "error": error})
         return {"passed": passed, "result_head": result_head, "error": error}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
@@ -92,7 +105,7 @@ async def submit_code(code_submission: TestCodeSubmission):
 
 
 @app.post("/api/code/check_creation_code")
-async def check_code_for_creation(code_submission: CheckCodeForCreation):
+async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Session = Depends(get_db)):
     """Route for checking new card
 
     Args:
@@ -106,7 +119,7 @@ async def check_code_for_creation(code_submission: CheckCodeForCreation):
     """
     try:
         logger.info(code_submission)
-        datasets = {name: get_dataset(Session(engine), name) for name in code_submission.dataset_names}
+        datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
         executed_df, error = run_code_to_check_results_for_card_creation(
             code_submission.code, datasets, code_submission.preprocessing_code, code_submission.problem_type
         )
@@ -117,22 +130,22 @@ async def check_code_for_creation(code_submission: CheckCodeForCreation):
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-@app.post("/api/sync_db")
-async def sync_db(background_tasks: BackgroundTasks):
-    try:
-        background_tasks.add_task(sync_db_to_azure)
-        return {"message": "Database sync started in the background"}
-    except Exception as e:
-        logger.error(f"Error starting database sync: {str(e)}")
-        raise HTTPException(status_code=500, detail=str(e)) from e
+# @app.post("/api/sync_db")
+# async def sync_db(background_tasks: BackgroundTasks):
+#     try:
+#         background_tasks.add_task(sync_db_to_azure)
+#         return {"message": "Database sync started in the background"}
+#     except Exception as e:
+#         logger.error(f"Error starting database sync: {str(e)}")
+#         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 @app.get("/api/available_datasets")
-async def get_available_datasets():
+async def get_available_datasets(db: Session = Depends(get_db)):
     logger.info("Getting all available datasets")
     try:
         # datasets = ["x"]
-        d = list_available_datasets(Session(engine))
+        d = list_available_datasets(db)
         logger.info(d)
         return {"datasets": d}
     except Exception as e:

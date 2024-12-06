@@ -20,6 +20,7 @@ def _clean_result_to_pandas(result):
 
 
 def _execute_code(code, local_variables):
+    logger.info(f"local vars = {local_variables}")
     output = io.StringIO()
     error = io.StringIO()
     try:
@@ -109,7 +110,8 @@ def run_code_to_check_results_for_card_creation(code, datasets, preprocessing_co
 
 def run_code_against_test(problem, code_submission):
     # Test the code
-    datasets = [x for x in list(problem["datasets"].keys()) if x != "preprocessing"]  # this is actually a list of paths
+    # datasets = [x for x in list(problem["datasets"].keys()) if x != "preprocessing"]  # this is actually a list of paths
+    datasets = problem["datasets"]
     preprocessing_code = problem["preprocessing_code"]
     solution_code = problem["code"]
     intput_code = code_submission.code

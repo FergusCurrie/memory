@@ -9,9 +9,12 @@
 
 ## Todo
 
+- [ ] sending logs back from frontend
+- [ ] code to migrate old db in (or do jsut recreate? )
+- [ ] code to add datasets in
 - [x] Improved logging. Requires research of what should be logged
-- [ ] switch to sqlalchemy, connected to local postgres
-- [ ] Move scheduling into an interface
+- [x] switch to sqlalchemy, connected to local postgres
+- [x] Move scheduling into an interface
 - [ ] Move code completition into an interface
 
 ## Doing

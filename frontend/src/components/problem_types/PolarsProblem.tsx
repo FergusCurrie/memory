@@ -40,7 +40,9 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   const fetchPolarsProblemData = async () => {
     console.log('fetching polars prbo');
     try {
+      console.log('hello');
       const response = await api.get(`/api/problem/data_wrangling/${problem.problem_id}`);
+      console.log('response:');
       console.log(response.data['problems'][0]);
       setPolarsProblemData(response.data['problems'][0]);
     } catch (error) {

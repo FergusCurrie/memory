@@ -12,21 +12,20 @@ from sqlalchemy.orm import sessionmaker
 
 @pytest.fixture(scope="function")
 def test_db():
-    
     # Create an in-memory SQLite database for testing
-    engine = create_engine(
-        "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
-    )
-    
+    # engine = create_engine(
+    #     "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
+    # )
+    engine = create_engine("sqlite:///memory:?cache=shared")
     # Create all tables
     Base.metadata.create_all(engine)
-    
+
     # Create a new session factory
     TestingSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-    
+
     # Create a new session for the test
     db = TestingSessionLocal()
-    
+
     try:
         yield db
     finally:

@@ -14,7 +14,8 @@ from sqlalchemy.sql import func
 
 
 class Base(DeclarativeBase):
-    pass
+    def to_dict(self):
+        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 
 class Problem(Base):
@@ -29,17 +30,17 @@ class Review(Base):
     __tablename__ = "review"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
     problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
+    result: Mapped[int]
 
 
 class Code(Base):
     __tablename__ = "code"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    code_table_name: Mapped[str]
-    # preprocessing_code: Mapped[str]
+    datasets: Mapped[str]
+    code: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
     problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
