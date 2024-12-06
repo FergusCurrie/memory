@@ -48,3 +48,12 @@
 - [ ] Review on complete, less work?
 - [ ] Logging from prod? Prometheus?
 - [ ] UI drop new datasets in, write to db as tables. No json please
+
+# Usability things
+
+- editing card inplace.
+- flags?
+- hotkeys
+- default code
+- first db already visualised
+- smaller databases
