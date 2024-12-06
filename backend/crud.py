@@ -22,6 +22,7 @@ def create_problem(session: Session, description: str, date_created: datetime = 
 def update_problem(session: Session, problem_id: int, description_new: str) -> Problem:
     problem = session.query(Problem).filter(Problem.id == problem_id).first()
     if problem is None:
+        raise Exception("probloem should not be none ")
         return None
     problem.description = description_new
     session.commit()
@@ -82,8 +83,10 @@ def update_code(session: Session, code: str, datasets: str, problem_id: int):
     code_obj = session.query(Code).filter(Code.problem_id == problem_id).first()
     if code_obj is None:
         return None
-    code_obj.code = code
-    code_obj.datasets = datasets
+    if code is not None:
+        code_obj.code = code
+    if datasets is not None:
+        code_obj.datasets = datasets
     session.commit()
     session.refresh(code_obj)
     return code_obj

@@ -1,99 +1,10 @@
-2024-12-06 10:47:16,736 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb3cade0>]
-2024-12-06 10:47:16,745 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb3cbe00>, <backend.models.Problem object at 0x79eddb3cae70>, <backend.models.Problem object at 0x79eddb3cb410>]
-2024-12-06 10:47:16,746 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79eddb3cb410>]
-2024-12-06 10:47:17,214 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79eddb3cbce0>]
-2024-12-06 10:47:19,797 ERROR backend.routes.problem_routes An error occurred while burying the problem:
-Traceback (most recent call last):
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-psycopg2.errors.NotNullViolation: null value in column "is_suspended" of relation "buried" violates not-null constraint
-DETAIL:  Failing row contains (4, null, 2024-12-06, 3).
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/routes/problem_routes.py", line 197, in do_bury
-    bury_problem(db, problem_id)
-  File "/workspaces/memory/backend/crud.py", line 162, in bury_problem
-    session.commit()
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
-    trans.commit(_to_root=True)
-  File "<string>", line 2, in commit
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
-    ret_value = fn(self, *arg, **kw)
-                ^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
-    self._prepare_impl()
-  File "<string>", line 2, in _prepare_impl
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
-    ret_value = fn(self, *arg, **kw)
-                ^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
-    self.session.flush()
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
-    self._flush(objects)
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
-    with util.safe_reraise():
-         ^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
-    raise exc_value.with_traceback(exc_tb)
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
-    flush_context.execute()
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
-    rec.execute(self)
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
-    util.preloaded.orm_persistence.save_obj(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
-    _emit_insert_statements(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1233, in _emit_insert_statements
-    result = connection.execute(
-             ^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
-    return meth(
-           ^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
-    return connection._execute_clauseelement(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
-    ret = self._execute_context(
-          ^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
-    return self._exec_single_context(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.IntegrityError: (psycopg2.errors.NotNullViolation) null value in column "is_suspended" of relation "buried" violates not-null constraint
-DETAIL:  Failing row contains (4, null, 2024-12-06, 3).
-
-[SQL: INSERT INTO buried (date_created, problem_id) VALUES (CURRENT_DATE, %(problem_id)s) RETURNING buried.id, buried.date_created]
-[parameters: {'problem_id': 3}]
-(Background on this error at: https://sqlalche.me/e/20/gkpj)
-
-2024-12-06 10:50:24,851 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c531edb0>, <backend.models.Problem object at 0x7fa5c531ed80>, <backend.models.Problem object at 0x7fa5c531e810>]
-2024-12-06 10:50:24,853 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c531e810>]
-2024-12-06 10:50:24,884 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fa5c534cbf0>]
-2024-12-06 10:50:25,489 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7fa5c526eae0>]
-2024-12-06 10:50:27,118 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 10:50:27,123 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7fa5c534daf0>, <backend.models.Problem object at 0x7fa5c534c8c0>]
-2024-12-06 10:50:27,123 INFO backend.routes.problem_routes []
-2024-12-06 10:55:51,264 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7334b7074980>, <backend.models.Problem object at 0x7334b7074950>]
-2024-12-06 10:55:51,264 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 10:55:51,265 INFO backend.routes.problem_routes []
-2024-12-06 10:55:51,674 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 10:55:52,548 INFO backend.app Getting all available datasets
-2024-12-06 10:55:52,553 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-06 10:56:57,277 INFO backend.app Getting all available datasets
-2024-12-06 10:56:57,280 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-06 10:56:58,384 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 10:56:58,690 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7334b6f247d0>, <backend.models.Problem object at 0x7334b6f27200>]
-2024-12-06 10:56:58,693 INFO backend.routes.problem_routes []
-2024-12-06 10:56:58,713 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 11:07:58,730 INFO backend.routes.problem_routes UPdating probl. prob id = 1, problem_update: {'description': 'Simple example problemss', 'code': 'result = (academic)'}
+2024-12-06 11:08:07,658 INFO backend.routes.problem_routes UPdating probl. prob id = 2, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
+2024-12-06 11:10:36,809 INFO backend.routes.problem_routes UPdating probl. prob id = 3, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
+2024-12-06 11:11:27,395 INFO backend.routes.problem_routes 2 FEFEFF suspending
+2024-12-06 11:12:11,451 INFO backend.app Getting all available datasets
+2024-12-06 11:12:11,460 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
+2024-12-06 11:12:21,862 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7f17ef9fc230>]
+2024-12-06 11:12:21,863 INFO backend.routes.problem_routes []
+2024-12-06 11:12:21,867 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 11:12:21,941 INFO backend.routes.problem_routes problems to review: []

@@ -16,6 +16,8 @@ from ..crud import (
     get_problem,
     get_reviews_for_problem,
     toggle_suspend,
+    update_code,
+    update_problem,
 )
 from ..database import get_db
 from fastapi import APIRouter, Depends, HTTPException
@@ -79,7 +81,7 @@ def get_problems(db: Session = Depends(get_db)):
                 "problem_id": problem_id,
                 "dataset_name": table_name,
                 "dataset_headers": "",
-                "code": code,
+                "code": code.code,
                 "default_code": "",
                 "preprocessing_code": "",
                 "description": p.description,
@@ -162,21 +164,20 @@ def get_problems_remaining(db: Session = Depends(get_db)):
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-# @router.put("/{problem_id}")
-# def update_problem(problem_id: int, problem: dict):
-#     try:
-#         # Only allow updating description and code
-#         logger.info(f"In the updates {problem_id}")
-#         update_data = {"description": problem.get("description"), "code": problem.get("code")}
-#         updated_problem = update_problem_in_db(problem_id, update_data)
-#         logger.info(problem)
-#         logger.info(updated_problem["description"])
-#         if updated_problem is None:
-#             raise HTTPException(status_code=404, detail="Problem not found")
-#         return updated_problem
-#     except Exception as e:
-#         logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
-#         raise HTTPException(status_code=500, detail=str(e)) from e
+@router.put("/{problem_id}")
+def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depends(get_db)):
+    try:
+        logger.info(f"UPdating probl. prob id = {problem_id}, problem_update: {problem_update}")
+        description = problem_update["description"]
+        code = problem_update["code"]
+        update_problem(db, problem_id, description)
+        update_code(db, code, None, problem_id)
+        # Only allow updating description and code
+
+        return {"dnoe": True}
+    except Exception as e:
+        logger.error(f"An error occurred while updating the problem:\n{traceback.format_exc()}")
+        raise HTTPException(status_code=500, detail=str(e)) from e
 
 
 # api.post(`/api/problem/suspend/${problem.problem_id}`);

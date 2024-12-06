@@ -1190,3 +1190,59 @@ DETAIL:  Failing row contains (4, null, 2024-12-06, 3).
 2024-12-06 10:56:58,690 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7334b6f247d0>, <backend.models.Problem object at 0x7334b6f27200>]
 2024-12-06 10:56:58,693 INFO backend.routes.problem_routes []
 2024-12-06 10:56:58,713 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 11:05:33,110 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 169, in update_problem
+    description = problem_update["description"]
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+
+2024-12-06 11:05:33,111 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 169, in update_problem
+    description = problem_update["description"]
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 171, in update_problem
+    update_problem(db, problem_id, description)
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 178, in update_problem
+    raise HTTPException(status_code=500, detail=str(e)) from e
+fastapi.exceptions.HTTPException: 500: 'int' object is not subscriptable
+
+2024-12-06 11:07:08,355 INFO backend.routes.problem_routes UPdating probl. prob id = 1, problem_update: {'description': 'Simple example problemsss', 'code': 'result = (academic)'}
+2024-12-06 11:07:08,355 INFO backend.routes.problem_routes UPdating probl. prob id = <sqlalchemy.orm.session.Session object at 0x7fcbfa52cf50>, problem_update: 1
+2024-12-06 11:07:08,356 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 170, in update_problem
+    description = problem_update["description"]
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+
+2024-12-06 11:07:08,356 ERROR backend.routes.problem_routes An error occurred while updating the problem:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 170, in update_problem
+    description = problem_update["description"]
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+TypeError: 'int' object is not subscriptable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 172, in update_problem
+    update_problem(db, problem_id, description)
+  File "/workspaces/memory/backend/routes/problem_routes.py", line 179, in update_problem
+    raise HTTPException(status_code=500, detail=str(e)) from e
+fastapi.exceptions.HTTPException: 500: 'int' object is not subscriptable
+
+2024-12-06 11:07:58,730 INFO backend.routes.problem_routes UPdating probl. prob id = 1, problem_update: {'description': 'Simple example problemss', 'code': 'result = (academic)'}
+2024-12-06 11:08:07,658 INFO backend.routes.problem_routes UPdating probl. prob id = 2, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
+2024-12-06 11:10:36,809 INFO backend.routes.problem_routes UPdating probl. prob id = 3, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
+2024-12-06 11:11:27,395 INFO backend.routes.problem_routes 2 FEFEFF suspending
+2024-12-06 11:12:21,862 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7f17ef9fc230>]
+2024-12-06 11:12:21,863 INFO backend.routes.problem_routes []
+2024-12-06 11:12:21,867 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 11:12:21,941 INFO backend.routes.problem_routes problems to review: []

@@ -36,3 +36,4 @@
   - browse updated to work (edits not possible)
   - suspend added
   - buried added
+  - card update from ui working
