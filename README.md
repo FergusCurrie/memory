@@ -4,6 +4,16 @@ This is a implementation of memory app. I've switched to using fastapi.
 
 poetry run pytest tests/test_crud.py
 
+## Table of Contents
+
+- [Memory](#memory)
+- [Docker](#docker)
+- [Db structure](#db-structure)
+- [UI](#ui)
+- [Setting up DevContainer](#setting-up-devcontainer)
+- [Running the Basic Server](#running-the-basic-server)
+- [Production Build](#production-build)
+
 ## Docker
 
 - docker-compose up -d
@@ -21,18 +31,14 @@ psycopg2 = adaptor for postgres on python
 
 ## Db structure
 
-![Alt text](docs/db.png)
+![Alt text](docs/memory_db.drawio.png)
 
 ## UI
 
-![Alt text](docs/ui.png)
+![Alt text](docs/memory_ui.drawio.png)
 
-## Making a card
-
-- Select any number of datasets. For code entry they will be in env by default, under name of datasets bar .csv.
-- Enter some default code which will be prepopulated in editor
-- Add whatever preprocessing code to prepare another dataframe. this can only produce 1 dataframe, preprocessed
-- Add main code. This must product a dataframe 'result'.
+- These are 'core' methods. There are a few more.
+- I've refactored the backend to not have explicit 'polars problems'. However frontend still works from old format. I use new data model to construct old response.
 
 ## Setting up DevContainer
 
@@ -80,7 +86,6 @@ To run the basic server for development purposes, follow these steps:
 2. Start the FastAPI server:
 
    ```
-   python3 -m backend.db.manage # to create dev db if not already setup
    uvicorn backend.app:app --host 0.0.0.0 --port 8000 --reload
    ```
 
