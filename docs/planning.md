@@ -11,7 +11,7 @@
 
 - [ ] env variables
 - [ ] sending logs back from frontend
-- [ ] code to migrate old db in (or do jsut recreate? )
+- [x] code to migrate old db in (or do jsut recreate? )
 - [ ] code to add datasets in
 - [x] Improved logging. Requires research of what should be logged
 - [x] switch to sqlalchemy, connected to local postgres
@@ -26,6 +26,8 @@
 
 ## Backlog
 
+- [ ] edit from study
+- [ ] edit default code
 - [ ] Interfaces frontend
 - [ ] Pydantic stuff fastapi
 - [ ] research logging best practices

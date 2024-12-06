@@ -79,7 +79,7 @@ def add_code_to_problem(session: Session, code: str, datasets: str, problem_id: 
     return new_code
 
 
-def update_code(session: Session, code: str, datasets: str, problem_id: int):
+def update_code(session: Session, code: str, datasets: str, problem_id: int, default_code: str):
     code_obj = session.query(Code).filter(Code.problem_id == problem_id).first()
     if code_obj is None:
         return None
@@ -87,6 +87,8 @@ def update_code(session: Session, code: str, datasets: str, problem_id: int):
         code_obj.code = code
     if datasets is not None:
         code_obj.datasets = datasets
+    if default_code is not None:
+        code_obj.default_code = default_code
     session.commit()
     session.refresh(code_obj)
     return code_obj

@@ -84,7 +84,7 @@ def get_problems(db: Session = Depends(get_postgres_db)):
                 "dataset_name": table_name,
                 "dataset_headers": "",
                 "code": code.code,
-                "default_code": "",
+                "default_code": code.default_code,
                 "preprocessing_code": "",
                 "description": p.description,
                 "is_suspended": check_problem_suspended(db, problem_id),
@@ -172,8 +172,9 @@ def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depen
         logger.info(f"UPdating probl. prob id = {problem_id}, problem_update: {problem_update}")
         description = problem_update["description"]
         code = problem_update["code"]
+        default_code = problem_update["default_code"]
         update_problem(db, problem_id, description)
-        update_code(db, code, None, problem_id)
+        update_code(db, code, None, problem_id, default_code)
         # Only allow updating description and code
 
         return {"dnoe": True}

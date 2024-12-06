@@ -42,3 +42,5 @@
     - would be good to streamline this to create db when required + new datasets added to both psql, tsql.
 
 - 7th december
+  - added alembic for db migrations
+  - used alembic to make type and default code columns of code

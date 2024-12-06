@@ -1250,3 +1250,5 @@ fastapi.exceptions.HTTPException: 500: 'int' object is not subscriptable
 2024-12-06 23:24:41,450 INFO backend.routes.problem_routes problems to review: []
 2024-12-06 23:24:41,450 INFO backend.routes.problem_routes []
 2024-12-06 23:24:41,840 INFO backend.routes.problem_routes problems to review: []
+2024-12-06 23:33:21,382 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity'", 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)", 'default_code': 'result = (x)'}
+2024-12-06 23:33:35,675 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity'", 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)", 'default_code': 'result = ()'}

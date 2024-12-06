@@ -185,15 +185,16 @@ def test_update_problem(test_db):
 def test_update_code(test_db):
     description = "test description"
     problem = create_problem(test_db, description)
-    code_create = add_code_to_problem(test_db, "", "academic", problem.id)
+    code_create = add_code_to_problem(test_db, "", "academic", problem.id, "", "")
     code = get_code_for_problem(test_db, problem.id)
     assert code_create.to_dict() == code[0].to_dict()
 
-    update_code(test_db, "code_updated", "dataset_updated", problem.id)
+    update_code(test_db, "code_updated", "dataset_updated", problem.id, "new default")
 
     updated_code = get_code_for_problem(test_db, problem.id)[0]
     assert updated_code.code == "code_updated"
     assert updated_code.datasets == "dataset_updated"
+    assert updated_code.default_code == "new default"
 
 
 def test_suspend(test_db):
@@ -210,14 +211,6 @@ def test_suspend(test_db):
     # THIS FAILS
     toggle_suspend(test_db, problem.id)
     assert check_problem_suspended(test_db, problem.id)
-
-
-def test_update_code(test_db):
-    description = "test description"
-    problem = create_problem(test_db, description)
-    assert not check_problem_buried(test_db, problem.id)
-    bury_problem(test_db, problem.id)
-    assert check_problem_buried(test_db, problem.id)
 
 
 def test_buried(test_db):

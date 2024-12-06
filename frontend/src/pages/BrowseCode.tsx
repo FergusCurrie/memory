@@ -92,6 +92,7 @@ const BrowseCodeCards: React.FC = () => {
         await api.put(`/api/problem/${editingCard.problem_id}`, {
           description: editingCard.description,
           code: editingCard.code,
+          default_code: editingCard.default_code,
         });
         setCodeCards(
           codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
@@ -262,6 +263,15 @@ const BrowseCodeCards: React.FC = () => {
             rows={4}
             value={editingCard?.description || ''}
             onChange={(e) => setEditingCard((prev) => ({ ...prev!, description: e.target.value }))}
+          />
+          <TextField
+            margin="dense"
+            label="Default Code"
+            fullWidth
+            multiline
+            rows={4}
+            value={editingCard?.default_code || ''}
+            onChange={(e) => setEditingCard((prev) => ({ ...prev!, default_code: e.target.value }))}
           />
           <TextField
             margin="dense"
