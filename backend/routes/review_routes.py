@@ -1,5 +1,5 @@
 from ..crud import create_review, get_all_reviews
-from ..database import get_db
+from backend.dbs.postgres_connection import get_postgres_db
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -14,7 +14,7 @@ router = APIRouter()
 
 
 @router.post("/")
-def add_a_review(review: ReviewCreate, db: Session = Depends(get_db)):
+def add_a_review(review: ReviewCreate, db: Session = Depends(get_postgres_db)):
     review = create_review(db, problem_id=review.problem_id, result=review.result)
     if review is None:
         raise HTTPException(status_code=500, detail="Failed to create review")
@@ -22,7 +22,7 @@ def add_a_review(review: ReviewCreate, db: Session = Depends(get_db)):
 
 
 @router.get("/")
-def get_reviews(db: Session = Depends(get_db)):
+def get_reviews(db: Session = Depends(get_postgres_db)):
     return [x.to_dict() for x in get_all_reviews(db)]
 
 

@@ -16,7 +16,7 @@ def test_db():
     # engine = create_engine(
     #     "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
     # )
-    engine = create_engine("sqlite:///memory:?cache=shared")
+    engine = create_engine("sqlite:///:memory:")
     # Create all tables
     Base.metadata.create_all(engine)
 

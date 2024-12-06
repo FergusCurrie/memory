@@ -9,9 +9,9 @@ from .crud import (
     get_problem,
     list_available_datasets,
 )
-from .database import get_db
 from .logging_config import LOGGING_CONFIG
 from .routes import problem_routes, review_routes
+from backend.dbs.postgres_connection import get_postgres_db
 
 # from .scheduling.basic_scheduler import get_todays_reviews
 from fastapi import Depends, FastAPI, HTTPException, Request
@@ -85,7 +85,7 @@ class TestCodeSubmission(BaseModel):
 
 
 @app.post("/api/code/test_code")
-async def submit_code(code_submission: TestCodeSubmission, db: Session = Depends(get_db)):
+async def submit_code(code_submission: TestCodeSubmission, db: Session = Depends(get_postgres_db)):
     try:
         # problem = get_problem_for_polars(code_submission.problem_id)
         problem_id = code_submission.problem_id
@@ -105,7 +105,7 @@ async def submit_code(code_submission: TestCodeSubmission, db: Session = Depends
 
 
 @app.post("/api/code/check_creation_code")
-async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Session = Depends(get_db)):
+async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Session = Depends(get_postgres_db)):
     """Route for checking new card
 
     Args:
@@ -141,7 +141,7 @@ async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Ses
 
 
 @app.get("/api/available_datasets")
-async def get_available_datasets(db: Session = Depends(get_db)):
+async def get_available_datasets(db: Session = Depends(get_postgres_db)):
     logger.info("Getting all available datasets")
     try:
         # datasets = ["x"]

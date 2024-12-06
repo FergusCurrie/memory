@@ -8,7 +8,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 # Add this dependency
-def get_db():
+def get_postgres_db():
     db = SessionLocal()
     try:
         yield db

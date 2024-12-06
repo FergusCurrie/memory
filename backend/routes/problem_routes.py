@@ -19,7 +19,7 @@ from ..crud import (
     update_code,
     update_problem,
 )
-from ..database import get_db
+from backend.dbs.postgres_connection import get_postgres_db
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -45,7 +45,7 @@ router = APIRouter()
 
 
 @router.post("/")
-def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_db)):
+def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_postgres_db)):
     try:
         new_prob = create_problem(db, problem.description)
         add_code_to_problem(db, problem.code, ",".join(problem.dataset_names), new_prob.id)
@@ -68,7 +68,7 @@ def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_db)):
 
 
 @router.get("/")
-def get_problems(db: Session = Depends(get_db)):
+def get_problems(db: Session = Depends(get_postgres_db)):
     problems = get_all_problems(db)
     result = []
     for p in problems:
@@ -119,7 +119,7 @@ def get_problems(db: Session = Depends(get_db)):
 
 
 @router.get("/get_next_problem")
-def get_next_problem(db: Session = Depends(get_db)):
+def get_next_problem(db: Session = Depends(get_postgres_db)):
     try:
         problems = get_all_problems(db)
         problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
@@ -147,7 +147,7 @@ def get_next_problem(db: Session = Depends(get_db)):
 
 
 @router.get("/get_number_problems_remaining")
-def get_problems_remaining(db: Session = Depends(get_db)):
+def get_problems_remaining(db: Session = Depends(get_postgres_db)):
     try:
         problems = get_all_problems(db)
         problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
@@ -165,7 +165,7 @@ def get_problems_remaining(db: Session = Depends(get_db)):
 
 
 @router.put("/{problem_id}")
-def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depends(get_db)):
+def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depends(get_postgres_db)):
     try:
         logger.info(f"UPdating probl. prob id = {problem_id}, problem_update: {problem_update}")
         description = problem_update["description"]
@@ -180,9 +180,8 @@ def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depen
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-# api.post(`/api/problem/suspend/${problem.problem_id}`);
 @router.post("/suspend/{problem_id}")
-def do_suspend(problem_id: int, db: Session = Depends(get_db)):
+def do_suspend(problem_id: int, db: Session = Depends(get_postgres_db)):
     logger.info(f"{problem_id} FEFEFF suspending")
     try:
         toggle_suspend(db, problem_id)
@@ -193,7 +192,7 @@ def do_suspend(problem_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/bury/{problem_id}")
-def do_bury(problem_id: int, db: Session = Depends(get_db)):
+def do_bury(problem_id: int, db: Session = Depends(get_postgres_db)):
     try:
         bury_problem(db, problem_id)
         return {"message": f"Problem {problem_id} buried successfully"}
@@ -220,7 +219,7 @@ def do_bury(problem_id: int, db: Session = Depends(get_db)):
 
 
 @router.get("/data_wrangling/{problem_id}")
-def get_data_wrangling_problem(problem_id, db: Session = Depends(get_db)):
+def get_data_wrangling_problem(problem_id, db: Session = Depends(get_postgres_db)):
     try:
         # get_problem_for_polars(problem_id)
         problem = get_problem(db, problem_id)

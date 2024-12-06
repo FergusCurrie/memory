@@ -14,6 +14,32 @@ services:
       - postgres_data:/var/lib/postgresql/data
     networks:
       - memory_default
+  tsql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: tsql_db
+    restart: always
+    environment:
+      MSSQL_SA_PASSWORD: 32rsrg5ty3t%gst42
+      ACCEPT_EULA: 1
+      MSSQL_DATABASE: memory_db 
+    ports:
+      - "1433:1433"
+    volumes:
+      - "tsql_data:/var/opt/mssql"
+    networks:
+      - memory_default
+
+  # tsql:
+  #   build: ./tsql
+  #   container_name: tsql_db
+  #   restart: always
+  #   ports:
+  #     - "1433:1433"
+  #   volumes:
+  #     - "tsql_data:/var/opt/mssql"
+  #   networks:
+  #     - memory_default
+
   # adminer:
   #   image: adminer
   #   restart: always
@@ -21,6 +47,7 @@ services:
   #     - 8088:8088
 volumes:
   postgres_data:
+  tsql_data:
 
 networks:
   memory_default:
