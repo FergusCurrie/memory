@@ -36,6 +36,7 @@ pyspark = "^3.5.3"
 setuptools = "^75.1.0"
 sqlalchemy = "^2.0.36"
 pytest = "^8.3.4"
+alembic = "^1.14.0"
 
 
 [tool.poetry.group.dev.dependencies]

@@ -32,14 +32,14 @@ def test_create_problem(test_db):
 def test_create_simple_problem(test_db):
     description = "test description"
     problem = create_problem(test_db, description)
-    code = add_code_to_problem(test_db, "", "academic", problem.id)
+    code = add_code_to_problem(test_db, "", "academic", problem.id, "", "")
     assert code.datasets == "academic"
 
 
 def test_get_problem_1(test_db):
     description = "test description"
     problem = create_problem(test_db, description)
-    code = add_code_to_problem(test_db, "", "academic", problem.id)
+    code = add_code_to_problem(test_db, "", "academic", problem.id, "", "")
     assert code.datasets == "academic"
 
     # Now try query get_problem
@@ -50,7 +50,7 @@ def test_get_problem_1(test_db):
 def test_get_code(test_db):
     description = "test description"
     problem = create_problem(test_db, description)
-    code_create = add_code_to_problem(test_db, "", "academic", problem.id)
+    code_create = add_code_to_problem(test_db, "", "academic", problem.id, "", "")
     code = get_code_for_problem(test_db, problem.id)
     assert code_create.to_dict() == code[0].to_dict()
 
@@ -79,7 +79,9 @@ def test_create_simple_code_problem(test_db):
         academic
     )
     """
-    add_code_to_problem(session=test_db, code=code, datasets="academic", problem_id=new_prob.id)
+    add_code_to_problem(
+        session=test_db, code=code, datasets="academic", problem_id=new_prob.id, type="", default_code=""
+    )
     assert 1 == 1
 
 
@@ -123,7 +125,7 @@ def test_study_problem(test_db):
     """
     description = "test description"
     problem = create_problem(test_db, description)
-    code = add_code_to_problem(test_db, "", "academic", problem.id)
+    code = add_code_to_problem(test_db, "", "academic", problem.id, "", "")
     assert code.datasets == "academic"
 
 
@@ -156,7 +158,9 @@ def test_get_tables_from_problem(test_db):
         academic
     )
     """
-    add_code_to_problem(session=test_db, code=code, datasets="academic", problem_id=new_prob.id)
+    add_code_to_problem(
+        session=test_db, code=code, datasets="academic", problem_id=new_prob.id, type="", default_code=""
+    )
 
     tables = get_list_of_datasets_for_problem(test_db, new_prob.id)
     assert tables == ["academic"]

@@ -4,8 +4,14 @@ This is a implementation of memory app. I've switched to using fastapi.
 
 poetry run pytest tests/test_crud.py
 
+## sql server
+
 https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-ver16&pivots=cs1-bash#persist
 https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver16&tabs=cli&pivots=cs1-bash
+
+## postgres
+
+Use alembic for migrations
 
 ## Table of Contents
 

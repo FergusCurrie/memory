@@ -1,8 +1,12 @@
+import os
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+load_dotenv()
+
 # Replace the raw connection URL with a more secure configuration
-conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
+conn_url = os.getenv("POSTGRES_URL")
 engine = create_engine(conn_url)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 

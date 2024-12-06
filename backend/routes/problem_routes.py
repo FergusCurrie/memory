@@ -48,7 +48,9 @@ router = APIRouter()
 def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_postgres_db)):
     try:
         new_prob = create_problem(db, problem.description)
-        add_code_to_problem(db, problem.code, ",".join(problem.dataset_names), new_prob.id)
+        add_code_to_problem(
+            db, problem.code, ",".join(problem.dataset_names), new_prob.id, problem.problem_type, problem.default_code
+        )
         return {"result": True}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")

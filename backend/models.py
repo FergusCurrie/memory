@@ -41,7 +41,8 @@ class Code(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     datasets: Mapped[str]
     code: Mapped[str]
-    # default_code: Mapped[str | None]
+    type: Mapped[str]
+    default_code: Mapped[str]
     date_created: Mapped[date] = mapped_column(default=func.current_date())
     problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
@@ -76,10 +77,11 @@ conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/mem
 engine = create_engine(conn_url)
 
 # with Session(engine) as session:
+# Create or update all tables
+Base.metadata.create_all(engine)
 
-Problem.metadata.create_all(engine)
-Review.metadata.create_all(engine)
-Dataset.metadata.create_all(engine)
-Code.metadata.create_all(engine)
-Suspended.metadata.create_all(engine)
-Buried.metadata.create_all(engine)
+# To handle schema changes (like adding columns), use alembic for migrations:
+# 1. Initialize alembic: alembic init alembic
+# 2. Edit alembic/env.py to import your models and set target_metadata
+# 3. Create migration: alembic revision --autogenerate -m "Add new column"
+# 4. Apply migration: alembic upgrade head

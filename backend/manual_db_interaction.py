@@ -65,6 +65,10 @@ def add_datasets():
         #     print("Failed to add dataset")
 
 
+def schema():
+    pass
+
+
 def check():
     for tbl in ["dataset", "problem", "code", "review"]:
         print(tbl + ":")
@@ -86,8 +90,16 @@ def delete_rows_table():
     print("dted")
 
 
+def delete_col_table():
+    session.execute(text("ALTER TABLE code DROP COLUMN type"))
+    session.commit()
+    session.execute(text("ALTER TABLE code DROP COLUMN default_code"))
+    session.commit()
+    print("Column 'type' , 'default_code'  dropped from Code table")
+
+
 def delete_table():
-    session.execute(text("DROP TABLE IF EXISTS buried"))
+    session.execute(text("DROP TABLE IF EXISTS alembic_version"))
     session.commit()
     print("Table dropped")
 
@@ -108,3 +120,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1 and sys.argv[1] == "delete":
         delete_table()
+
+    if len(sys.argv) > 1 and sys.argv[1] == "delete_col":
+        delete_col_table()

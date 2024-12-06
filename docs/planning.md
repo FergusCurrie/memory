@@ -9,6 +9,7 @@
 
 ## Todo
 
+- [ ] env variables
 - [ ] sending logs back from frontend
 - [ ] code to migrate old db in (or do jsut recreate? )
 - [ ] code to add datasets in
@@ -25,6 +26,9 @@
 
 ## Backlog
 
+- [ ] Interfaces frontend
+- [ ] Pydantic stuff fastapi
+- [ ] research logging best practices
 - [ ] Tags
 - [ ] Flags
 - [ ] Edit card in place

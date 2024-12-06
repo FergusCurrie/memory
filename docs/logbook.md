@@ -25,6 +25,7 @@
   - !!! working on creating new problem from ui. getting error on array type for dataset names (see models.py) !!!
 
 - 6th december
+
   - simple card adding available
   - NOTE: a simple approach to achieve my aims, would be to not change UI too much. Make it work similar to previously, just with clean backend. This way I could have polars/TSQL running over holidays
   - review tests, simple fetching of polars problem, following ^
@@ -37,3 +38,7 @@
   - suspend added
   - buried added
   - card update from ui working
+  - new tsql container spun up, with initial datasets added
+    - would be good to streamline this to create db when required + new datasets added to both psql, tsql.
+
+- 7th december

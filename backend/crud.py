@@ -71,8 +71,8 @@ def create_dataset(session: Session, name: str) -> Problem:
     return new_dataset
 
 
-def add_code_to_problem(session: Session, code: str, datasets: str, problem_id: int):
-    new_code = Code(code=code, datasets=datasets, problem_id=problem_id)
+def add_code_to_problem(session: Session, code: str, datasets: str, problem_id: int, type: str, default_code: str):
+    new_code = Code(code=code, datasets=datasets, problem_id=problem_id, type=type, default_code=default_code)
     session.add(new_code)
     session.commit()
     session.refresh(new_code)
