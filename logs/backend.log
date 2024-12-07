@@ -1,80 +1,90 @@
-2024-12-07 02:04:19,702 DEBUG python_multipart.multipart Calling on_part_begin with no data
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_headers_finished with no data
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_part_end with no data
-2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_end with no data
-2024-12-07 02:04:19,707 INFO backend.crud PG table already exists testing_upload
-2024-12-07 02:04:19,707 INFO backend.crud TSQL table already exists testing_upload
-2024-12-07 02:04:19,723 INFO backend.app Added new dataset testing_upload
-2024-12-07 02:15:05,934 DEBUG python_multipart.multipart Calling on_part_begin with no data
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_headers_finished with no data
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_part_end with no data
-2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_end with no data
-2024-12-07 02:15:05,986 INFO backend.dbs.postgres_upload_csv Added PG table testing_upload
-2024-12-07 02:15:05,986 INFO backend.dbs.tsql_upload_csv TSQL table already exists testing_upload... Could not parse SQLAlchemy URL from string 'DRIVER={ODBC Driver 18 for SQL Server};SERVER=tsql_db;DATABASE=master;UID=sa;PWD=32rsrg5ty3t%gst42;TrustServerCertificate=yes'
-2024-12-07 02:15:06,023 INFO backend.crud Dataset already exists testing_upload
-2024-12-07 02:15:06,023 INFO backend.app Added new dataset testing_upload
-2024-12-07 02:17:21,628 DEBUG python_multipart.multipart Calling on_part_begin with no data
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_end with no data
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_headers_finished with no data
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_part_end with no data
-2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_end with no data
-2024-12-07 02:17:21,644 INFO backend.dbs.postgres_upload_csv PG table already exists testing_upload... Table 'testing_upload' already exists.
-2024-12-07 02:17:21,743 INFO backend.dbs.tsql_upload_csv Added TSQL table testing_upload
-2024-12-07 02:17:21,757 INFO backend.crud Dataset already exists testing_upload
-2024-12-07 02:17:21,757 INFO backend.app Added new dataset testing_upload
-2024-12-07 02:21:21,681 INFO backend.app Getting all available datasets
-2024-12-07 02:21:21,691 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:22:47,962 INFO backend.app Getting all available datasets
-2024-12-07 02:22:47,980 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:22:48,576 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74112a37a600>]
-2024-12-07 02:22:48,888 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129fdbe00>, <backend.models.Problem object at 0x741129f488c0>]
-2024-12-07 02:22:48,889 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f488c0>]
-2024-12-07 02:22:48,987 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f4ae40>]
-2024-12-07 02:22:51,076 INFO backend.app Getting all available datasets
-2024-12-07 02:22:51,087 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:22:51,483 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f7c560>]
-2024-12-07 02:22:51,773 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f7e090>, <backend.models.Problem object at 0x741129f7e240>]
-2024-12-07 02:22:51,774 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f7e240>]
-2024-12-07 02:22:51,955 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74112a300170>]
-2024-12-07 02:22:55,904 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129fdba40>]
-2024-12-07 02:22:55,941 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74112a379700>, <backend.models.Problem object at 0x74112a37ba40>]
-2024-12-07 02:22:55,942 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74112a37ba40>]
-2024-12-07 02:22:56,471 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f86330>]
-2024-12-07 02:23:31,865 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f84530>]
-2024-12-07 02:23:31,910 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f85ac0>, <backend.models.Problem object at 0x741129f870b0>]
-2024-12-07 02:23:31,911 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f870b0>]
-2024-12-07 02:23:32,984 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74112a4c9820>]
-2024-12-07 02:23:34,051 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f4b2c0>, <backend.models.Problem object at 0x741129f4a9c0>]
-2024-12-07 02:23:34,052 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f49310>]
-2024-12-07 02:23:34,052 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x741129f4a9c0>]
-2024-12-07 02:23:34,133 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x741129f483e0>]
-2024-12-07 02:23:35,718 INFO backend.app Getting all available datasets
-2024-12-07 02:23:35,726 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:23:37,225 INFO backend.app Getting all available datasets
-2024-12-07 02:23:37,247 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:23:38,745 INFO backend.app Getting all available datasets
-2024-12-07 02:23:38,757 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:23:48,322 INFO backend.app Getting all available datasets
-2024-12-07 02:23:48,330 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 02:24:27,085 INFO backend.app Getting all available datasets
-2024-12-07 02:24:27,102 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
+2024-12-07 02:41:15,801 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
+2024-12-07 02:41:15,802 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:42:14,980 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
+2024-12-07 02:42:14,981 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:42:40,087 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
+2024-12-07 02:42:40,087 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:43:32,916 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'contoso_sales'. (208) (SQLExecDirectW)")
+[SQL: select top 100 *
+from contoso_sales]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-07 02:43:32,916 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:44:39,806 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'master.contoso_sales'. (208) (SQLExecDirectW)")
+[SQL: select top 100 *
+from [master].contoso_sales]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-07 02:44:39,807 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:46:53,069 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'master.contoso_sales'. (208) (SQLExecDirectW)")
+[SQL: select top 100 *
+from [master].contoso_sales]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-07 02:46:53,070 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:47:33,329 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'dbo.contoso_sales'. (208) (SQLExecDirectW)")
+[SQL: select top 100 *
+from dbo.contoso_sales]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-12-07 02:47:33,330 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
+    logger.info(executed_df.head(10).to_pandas().to_json())
+                ^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'head'
+
+2024-12-07 02:51:05,748 INFO backend.app {"Order Number":{"0":284806,"1":285506,"2":311002,"3":366307,"4":325708,"5":333705,"6":364216,"7":349400,"8":328901,"9":365408},"Line Number":{"0":1,"1":1,"2":2,"3":2,"4":3,"5":2,"6":2,"7":5,"8":0,"9":0},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07","3":"2020-01-11","4":"2018-12-01","5":"2019-02-19","6":"2019-12-21","7":"2019-07-26","8":"2019-01-02","9":"2020-01-02"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12","3":"2020-01-11","4":"2018-12-02","5":"2019-02-24","6":"2019-12-21","7":"2019-07-30","8":"2019-01-03","9":"2020-01-02"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene","3":"Isaac Siddins","4":"Mike McQueen","5":"Freddie Obryan","6":"Clifford Wagner","7":"Gertrude Franklin","8":"Maximilian Keller","9":"Lammert Kienhuis"},"Customer Gender":{"0":"Male","1":"Male","2":"Male","3":"Male","4":"Male","5":"Male","6":"Male","7":"Female","8":"Male","9":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia","3":"Australia","4":"United States","5":"United States","6":"United States","7":"United States","8":"Germany","9":"Netherlands"},"Customer Age":{"0":47,"1":30,"2":59,"3":25,"4":56,"5":82,"6":82,"7":85,"8":61,"9":56},"Store Name":{"0":"Online store","1":"Online store","2":"Online store","3":"Contoso Store Western Australia","4":"Online store","5":"Online store","6":"Contoso Store Wyoming","7":"Online store","8":"Online store","9":"Contoso Store Groningen"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver","3":"Contoso 512MB MP3 Player E51 Blue","4":"Contoso 512MB MP3 Player E51 Blue","5":"Contoso 512MB MP3 Player E51 Blue","6":"Contoso 512MB MP3 Player E51 Blue","7":"Contoso 512MB MP3 Player E51 Blue","8":"Contoso 512MB MP3 Player E51 Blue","9":"Contoso 1G MP3 Player E100 White"},"Color":{"0":"Silver","1":"Silver","2":"Silver","3":"Blue","4":"Blue","5":"Blue","6":"Blue","7":"Blue","8":"Blue","9":"White"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso","3":"Contoso","4":"Contoso","5":"Contoso","6":"Contoso","7":"Contoso","8":"Contoso","9":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio","3":"Audio","4":"Audio","5":"Audio","6":"Audio","7":"Audio","8":"Audio","9":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3","3":"MP4&MP3","4":"MP4&MP3","5":"MP4&MP3","6":"MP4&MP3","7":"MP4&MP3","8":"MP4&MP3","9":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6,"3":4,"4":2,"5":2,"6":2,"7":10,"8":6,"9":3},"Unit Price":{"0":11.691,"1":11.691,"2":12.99,"3":12.99,"4":12.99,"5":12.99,"6":12.99,"7":12.99,"8":12.99,"9":14.52},"Net Price":{"0":10.288,"1":11.691,"2":12.99,"3":12.99,"4":11.5611,"5":12.99,"6":11.3013,"7":11.4312,"8":12.99,"9":13.5036},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62,"3":6.62,"4":6.62,"5":6.62,"6":6.62,"7":6.62,"8":6.62,"9":7.4},"Currency Code":{"0":"USD","1":"AUD","2":"AUD","3":"AUD","4":"USD","5":"USD","6":"USD","7":"USD","8":"EUR","9":"EUR"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484,"3":1.4545,"4":1.0,"5":1.0,"6":1.0,"7":1.0,"8":0.8774,"9":0.8934}}
+2024-12-07 02:51:13,688 INFO backend.app {"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}
+2024-12-07 02:51:48,303 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bd64e30>, <backend.models.Problem object at 0x7d8d8bd64e90>]
+2024-12-07 02:51:48,607 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bd67b60>, <backend.models.Problem object at 0x7d8d8bd67d10>, <backend.models.Problem object at 0x7d8d8bd67da0>]
+2024-12-07 02:51:48,609 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bd67d10>, <backend.models.Problem object at 0x7d8d8bd67da0>]
+2024-12-07 02:51:48,739 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bd8dc70>, <backend.models.Problem object at 0x7d8d8bd8dd00>]
+2024-12-07 02:51:51,601 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bde4680>, <backend.models.Problem object at 0x7d8d8bde48c0>]
+2024-12-07 02:51:51,602 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bdac590>]
+2024-12-07 02:51:51,603 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bde48c0>]
+2024-12-07 02:52:11,089 ERROR backend.app An error occurred in code compleition:
+Traceback (most recent call last):
+  File "/workspaces/memory/backend/app.py", line 77, in submit_code
+    passed, error, result_head = checker.compare_code(code.code, code_submission.code, dataframes)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CheckSQLCode.compare_code() takes 3 positional arguments but 4 were given
+
+2024-12-07 02:52:32,246 INFO backend.app {'passed': True, 'result_head': '{"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}', 'error': 'e1: None, e2: None'}
+2024-12-07 02:52:37,666 INFO backend.app {'passed': False, 'result_head': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'error': 'e1: None, e2: None'}
+2024-12-07 02:52:42,037 INFO backend.app {'passed': True, 'result_head': '{"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}', 'error': 'e1: None, e2: None'}
+2024-12-07 02:52:44,370 INFO backend.routes.problem_routes problems to review: []
+2024-12-07 02:52:44,691 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x72ad37fb4410>, <backend.models.Problem object at 0x72ad37fb4650>]
+2024-12-07 02:52:44,693 INFO backend.routes.problem_routes []

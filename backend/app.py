@@ -5,6 +5,7 @@ from .crud import create_dataset, get_code_for_problem, get_dataframes_for_probl
 from .logging_config import LOGGING_CONFIG
 from .routes import problem_routes, review_routes
 from backend.core.code_execution.CheckPolarsCode import CheckPolarsCode
+from backend.core.code_execution.CheckSQLCode import CheckSQLCode
 from backend.dbs.postgres_connection import get_postgres_db
 from backend.dbs.postgres_upload_csv import add_dataset_pg
 from backend.dbs.tsql_upload_csv import add_dataset_tsql
@@ -68,8 +69,12 @@ async def submit_code(code_submission: TestCodeSubmission, db: Session = Depends
         dataframes = get_dataframes_for_problem(db, problem_id)
         code = get_code_for_problem(db, problem_id)[0]
 
-        checker = CheckPolarsCode()
-        passed, error, result_head = checker.compare_code(code.code, code_submission.code, dataframes)
+        if code.type == "polars":
+            checker = CheckPolarsCode()
+            passed, error, result_head = checker.compare_code(code.code, code_submission.code, dataframes)
+        if code.type == "sql":
+            checker = CheckSQLCode()
+            passed, error, result_head = checker.compare_code(code.code, code_submission.code)
         logger.info({"passed": passed, "result_head": result_head, "error": error})
         return {"passed": passed, "result_head": result_head, "error": error}
     except Exception as e:
@@ -93,7 +98,12 @@ async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Ses
     try:
         datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
         checker = CheckPolarsCode()
-        executed_df, error = checker.run_code(code_submission.code, datasets)
+        if code_submission.problem_type == "polars":
+            checker = CheckPolarsCode()
+            executed_df, error = checker.run_code(code_submission.code, datasets)
+        if code_submission.problem_type == "sql":
+            checker = CheckSQLCode()
+            executed_df, error = checker.run_code(code_submission.code)
         logger.info(executed_df.head(10).to_pandas().to_json())
         return {"result_head": executed_df.head(10).to_pandas().to_json()}
     except Exception as e:

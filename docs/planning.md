@@ -26,6 +26,7 @@
 
 ## Backlog
 
+- [ ] filters and search on browse
 - [ ] actual testing of routes. can be done with fixtures and stuff
 - [ ] clean up routes
 - [ ] multiple datasets
