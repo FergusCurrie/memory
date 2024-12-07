@@ -16,6 +16,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  Chip,
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
@@ -38,11 +39,13 @@ interface CodeCard {
   preprocessing_code: string;
   description: string;
   is_suspended: boolean;
+  tags: list;
 }
 interface EditProblemData {
   description: string;
   code_default: string;
   answer: string;
+  tags: list;
 }
 
 interface CodeReview {
@@ -110,6 +113,7 @@ const BrowseCodeCards: React.FC = () => {
           description: editedData.description,
           default_code: editedData.code_default,
           code: editedData.answer,
+          tags: editedData.tags,
         });
         setCodeCards(
           codeCards.map((c) =>
@@ -189,7 +193,7 @@ const BrowseCodeCards: React.FC = () => {
   return (
     <Box sx={{ maxWidth: 1200, margin: 'auto', mt: 4 }}>
       <Typography variant="h4" gutterBottom>
-        Browse Code Cards
+        Browse Code problems
       </Typography>
       <TableContainer component={Paper} sx={{ mb: 4 }}>
         <Table>
@@ -198,6 +202,7 @@ const BrowseCodeCards: React.FC = () => {
               <TableCell>ID</TableCell>
               <TableCell>Dataset Name</TableCell>
               <TableCell>Problem Description</TableCell>
+              <TableCell>Tags</TableCell>
               <TableCell>Status</TableCell>
               <TableCell>Actions</TableCell>
             </TableRow>
@@ -216,6 +221,11 @@ const BrowseCodeCards: React.FC = () => {
                 <TableCell>{card.problem_id}</TableCell>
                 <TableCell>{card.dataset_name}</TableCell>
                 <TableCell>{card.description}</TableCell>
+                <TableCell>
+                  {card.tags.map((tag, index) => (
+                    <Chip key={index} label={tag} size="small" sx={{ mr: 0.5, mb: 0.5 }} />
+                  ))}
+                </TableCell>
                 <TableCell>
                   <IconButton onClick={(e) => handleDeleteCode(card.problem_id, e)} color="error">
                     <DeleteIcon />
@@ -293,6 +303,7 @@ const BrowseCodeCards: React.FC = () => {
                 description: editingCard.description,
                 code_default: editingCard.default_code,
                 answer: editingCard.code,
+                tags: editingCard.tags,
               }
             : null
         }

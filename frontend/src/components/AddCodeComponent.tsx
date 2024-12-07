@@ -11,6 +11,8 @@ import {
   Select,
   MenuItem,
   Chip,
+  Autocomplete,
+  TextField,
 } from '@mui/material';
 import PandasJsonTable from './study_components/PandasTable';
 
@@ -23,6 +25,8 @@ const AddCode: React.FC = ({ problemType }) => {
   const [submittedResult, setSubmittedResult] = useState<any>(null);
 
   const [availableDatasets, setAvailableDatasets] = useState<string[]>([]);
+
+  const [tags, setTags] = useState<string[]>([]);
 
   const [defaultCode, setDefaultCode] = useState('');
 
@@ -68,13 +72,9 @@ const AddCode: React.FC = ({ problemType }) => {
         preprocessing_code: preprocessingCode,
         default_code: defaultCode,
         problem_type: problemType, // Add this line
+        tags: tags,
       });
       console.log('Card added:', response.data);
-      // setCode('');
-      // setPreprocessingCode('');
-      // setDescription('');
-      // setDatasetPaths([]);
-      // setDefaultCode(''); // Reset default code
       setSubmittedResult(false);
       alert('Code added successfully!');
     } catch (error) {
@@ -97,7 +97,7 @@ const AddCode: React.FC = ({ problemType }) => {
 
     fetchDatasets();
   }, []);
-
+  const suggestedTags = ['SQL', 'Polars', 'Data Analysis', 'Aggregation', 'Filtering', 'Joins'];
   return (
     <>
       <FormControl fullWidth>
@@ -139,30 +139,6 @@ const AddCode: React.FC = ({ problemType }) => {
         rows={3}
         style={{ padding: '10px', fontSize: '16px' }}
       />
-      <Typography variant="h6">Default Code</Typography>
-      <Editor
-        height="200px"
-        defaultLanguage="python"
-        value={defaultCode}
-        onChange={(value) => setDefaultCode(value || '')}
-        options={{
-          minimap: { enabled: false },
-          scrollBeyondLastLine: false,
-          fontSize: 14,
-        }}
-      />
-      {/* <Typography variant="h6">Preprocessing Code</Typography>
-      <Editor
-        height="200px"
-        defaultLanguage="python"
-        value={preprocessingCode}
-        onChange={(value) => setPreprocessingCode(value || '')}
-        options={{
-          minimap: { enabled: false },
-          scrollBeyondLastLine: false,
-          fontSize: 14,
-        }}
-      /> */}
       <Typography variant="h6">Main Code</Typography>
       <Editor
         height="400px"
@@ -175,6 +151,51 @@ const AddCode: React.FC = ({ problemType }) => {
           fontSize: 14,
         }}
       />
+      <Typography variant="h6">Default Code</Typography>
+      <Editor
+        height="200px"
+        defaultLanguage="python"
+        value={defaultCode}
+        onChange={(value) => setDefaultCode(value || '')}
+        options={{
+          minimap: { enabled: false },
+          scrollBeyondLastLine: false,
+          fontSize: 14,
+        }}
+      />
+
+      <Autocomplete
+        multiple
+        freeSolo
+        options={suggestedTags}
+        value={tags}
+        onChange={(event, newValue) => {
+          setTags(newValue);
+        }}
+        renderTags={(value, getTagProps) =>
+          value.map((option, index) => (
+            <Chip
+              {...getTagProps({ index })}
+              key={option}
+              label={option}
+              onDelete={() => {
+                setTags(tags.filter((tag) => tag !== option));
+              }}
+            />
+          ))
+        }
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            variant="outlined"
+            label="Tags"
+            placeholder="Add tags..."
+            fullWidth
+            sx={{ mt: 2, mb: 2 }}
+          />
+        )}
+      />
+
       <Button variant="contained" color="primary" onClick={handleRunCode} disabled={isLoading}>
         {isLoading ? <CircularProgress size={24} /> : 'Run Code'}
       </Button>

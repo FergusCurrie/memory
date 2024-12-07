@@ -1,6 +1,6 @@
 import logging
 import polars as pl
-from backend.models import Buried, Code, Dataset, Problem, Review, Suspended
+from backend.models import Buried, Code, Dataset, Problem, Review, Suspended, Tag
 from datetime import datetime
 from sqlalchemy import select, text
 from sqlalchemy.orm import Session
@@ -214,3 +214,33 @@ def check_problem_buried(session: Session, problem_id: int) -> bool:
 
 def get_all_reviews(session: Session):
     return session.query(Review).all()
+
+
+def create_tag(session: Session, problem_id: int, tag: str) -> Tag:
+    new_tag = Tag(tag=tag, problem_id=problem_id)
+    session.add(new_tag)
+    session.commit()
+    session.refresh(new_tag)
+    return new_tag
+
+
+def get_tags_problem(session: Session, problem_id: int) -> list[Tag]:
+    return session.query(Tag).filter(Tag.problem_id == problem_id).all()
+
+
+def update_tags(session: Session, problem_id: int, tags: list):
+    tag_objs = session.query(Tag).filter(Tag.problem_id == problem_id).all()
+    # Get current tags in database
+    current_tags = {tag.tag for tag in tag_objs}
+
+    # Remove tags that aren't in the new list
+    for tag_obj in tag_objs:
+        if tag_obj.tag not in tags:
+            session.delete(tag_obj)
+
+    # Add any new tags that aren't already in database
+    for tag in tags:
+        if tag not in current_tags:
+            create_tag(session, problem_id, tag)
+
+    session.commit()

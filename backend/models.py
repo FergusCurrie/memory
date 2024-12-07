@@ -70,6 +70,14 @@ class Buried(Base):
     problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
 
 
+class Tag(Base):
+    __tablename__ = "tags"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    date_created: Mapped[date] = mapped_column(default=func.current_date())
+    tag: Mapped[str]
+    problem_id: Mapped["Problem"] = mapped_column(ForeignKey("problem.id"))
+
+
 from sqlalchemy import create_engine
 
 conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
