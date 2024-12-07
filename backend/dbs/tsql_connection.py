@@ -1,26 +1,25 @@
-import os
 from backend.load_env_config import get_env
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 config = get_env()
 
-postgres_user = config["postgres_user"]
-postgres_password = config["postgres_password"]
-postgres_server = config["postgres_server"]
-postgres_db = config["postgres_db"]
+# Connection parameters
+server = config["tsql_server"]
+user = config["tsql_user"]
+password = config["tsql_password"]
+database = config["tsql_database"]
 
-
-conn_url = f"postgresql+psycopg2://{postgres_user}:{postgres_password}@{postgres_server}/{postgres_db}"
+# Create connection string
+conn_str = f"DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={server};DATABASE={database};UID={user};PWD={password};TrustServerCertificate=yes"
 
 # Replace the raw connection URL with a more secure configuration
-conn_url = os.getenv("POSTGRES_URL")
-engine = create_engine(conn_url)
+engine = create_engine(conn_str)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 # Add this dependency
-def get_postgres_db():
+def get_tsql_db():
     db = SessionLocal()
     try:
         yield db

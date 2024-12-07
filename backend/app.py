@@ -31,9 +31,6 @@ logger = logging.getLogger(__name__)
 app = FastAPI()
 
 
-conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
-
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
