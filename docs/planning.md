@@ -26,6 +26,8 @@
 
 ## Backlog
 
+- [ ] display table automatically
+- [ ] display problem type
 - [ ] simple way to regenerate database with example dbs
 - [ ] filters and search on browse
 - [ ] actual testing of routes. can be done with fixtures and stuff
