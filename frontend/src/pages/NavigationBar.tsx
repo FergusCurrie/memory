@@ -18,7 +18,8 @@ const NavigationBar = () => {
           <ButtonRouter name="Study  " link="/study" />
           {/* <ButtonRouter name="ADD cards  " link="/add_cards" />
           <ButtonRouter name="browse" link="/browse" /> */}
-          <ButtonRouter name="Add" link="/add_code" />
+          <ButtonRouter name="Add Code" link="/add_code" />
+          <ButtonRouter name="Add Dataset" link="/add_dataset" />
           <ButtonRouter name="Browse" link="/browse_code" />
           {/* <ButtonRouter name="MINDMAP" link="/mindmap" />
           <ButtonRouter name="TRAIN_MIND_MAP" link="/train_mindmap" />

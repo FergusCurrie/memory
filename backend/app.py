@@ -1,16 +1,20 @@
 import logging
+import pandas as pd
 import traceback
-from .crud import get_code_for_problem, get_dataframes_for_problem, get_dataset, list_available_datasets
+from .crud import create_dataset, get_code_for_problem, get_dataframes_for_problem, get_dataset, list_available_datasets
 from .logging_config import LOGGING_CONFIG
 from .routes import problem_routes, review_routes
 from backend.core.code_execution.CheckPolarsCode import CheckPolarsCode
 from backend.dbs.postgres_connection import get_postgres_db
+from backend.dbs.postgres_upload_csv import add_dataset_pg
+from backend.dbs.tsql_upload_csv import add_dataset_tsql
 
 # from .scheduling.basic_scheduler import get_todays_reviews
-from fastapi import Depends, FastAPI, HTTPException, Request
+from fastapi import Depends, FastAPI, File, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from io import StringIO
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
 
@@ -30,6 +34,7 @@ app.add_middleware(
     allow_credentials=True,
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
+    expose_headers=["*"],  # Add this line
 )
 
 # Mount the static directory
@@ -115,3 +120,44 @@ async def serve_react_or_api(request: Request, call_next):
     if response.status_code == 404:
         return FileResponse("static/index.html")
     return response
+
+
+def validate_file_extension(filename: str) -> bool:
+    return filename.lower().endswith(".csv")
+
+
+ALLOWED_EXTENSIONS = {"csv"}
+MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB limit
+
+
+@app.post("/api/upload-csv")
+async def upload_csv(
+    file: UploadFile = File(...), db: Session = Depends(get_postgres_db), db_tsql: Session = Depends(get_postgres_db)
+):
+    try:
+        # Validate file extension
+        if not validate_file_extension(file.filename):
+            raise HTTPException(status_code=400, detail="Only CSV files are allowed")
+
+        dataset_name = file.filename.replace(".csv", "")
+        # Read the file content
+        contents = await file.read()
+        # Check file size
+        if len(contents) > MAX_FILE_SIZE:
+            raise HTTPException(status_code=400, detail="File size exceeds maximum limit of 10MB")
+        # Validate CSV structure (optional)
+        try:
+            df = pd.read_csv(StringIO(contents.decode("utf-8")))
+            add_dataset_pg(dataset_name, df)
+            add_dataset_tsql(dataset_name, df)
+            create_dataset(db, dataset_name)
+            logger.info(f"Finished adding new dataset {dataset_name}")
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=f"Invalid CSV format: {str(e)}")
+
+        return {"result": True}
+
+    except HTTPException:
+        pass
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"An error occurred while processing the file: {str(e)}")

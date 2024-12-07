@@ -10,6 +10,7 @@ import Home from './pages/Home';
 //import Study from './pages/OLDSTUDY';
 import NavigationBar from './pages/NavigationBar';
 import Add from './pages/Add';
+import CsvUploader from './pages/AddDataset';
 import BrowseCodeCards from './pages/BrowseCode';
 import Study from './components/Study';
 
@@ -33,6 +34,7 @@ const App = () => {
             {/* <Route path="/add_cards" element={<AddCards />} />
             <Route path="/browse" element={<Browse />} /> */}
             <Route path="/add_code" element={<Add />} />
+            <Route path="/add_dataset" element={<CsvUploader />} />
             <Route path="/browse_code" element={<BrowseCodeCards />} />
             {/* <Route path="/mindmap" element={<Mindmap />} />
             <Route path="/train_mindmap" element={<TrainMindmap />} />

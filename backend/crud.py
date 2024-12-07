@@ -64,6 +64,12 @@ def get_reviews_for_problem(session, problem_id: int):
 
 
 def create_dataset(session: Session, name: str) -> Problem:
+    # Check if dataset already exists
+    existing_dataset = session.query(Dataset).filter(Dataset.name == name).first()
+    if existing_dataset is not None:
+        logger.info(f"Dataset already exists {name}")
+        return existing_dataset
+
     new_dataset = Dataset(name=name)
     session.add(new_dataset)
     session.commit()

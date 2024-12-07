@@ -8,6 +8,7 @@ import pandas as pd
 # SQL Server connection URL format
 conn_url = "mssql+pyodbc://sa:32rsrg5ty3t%gst42@tsql_db:1433/memory?driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes"
 
+
 engine = create_engine(conn_url)
 session = Session(engine)
 

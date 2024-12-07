@@ -1,111 +1,46 @@
-2024-12-06 11:07:58,730 INFO backend.routes.problem_routes UPdating probl. prob id = 1, problem_update: {'description': 'Simple example problemss', 'code': 'result = (academic)'}
-2024-12-06 11:08:07,658 INFO backend.routes.problem_routes UPdating probl. prob id = 2, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
-2024-12-06 11:10:36,809 INFO backend.routes.problem_routes UPdating probl. prob id = 3, problem_update: {'description': 'Sum the numeric columns ss', 'code': 'from polars import selectors as cs\nresult = (\n    contoso_sales\n    .select(cs.numeric())\n    .sum()\n)'}
-2024-12-06 11:11:27,395 INFO backend.routes.problem_routes 2 FEFEFF suspending
-2024-12-06 11:12:11,451 INFO backend.app Getting all available datasets
-2024-12-06 11:12:11,460 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-06 11:12:21,862 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7f17ef9fc230>]
-2024-12-06 11:12:21,863 INFO backend.routes.problem_routes []
-2024-12-06 11:12:21,867 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 11:12:21,941 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 23:24:41,450 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x718fd8578cb0>]
-2024-12-06 23:24:41,450 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 23:24:41,450 INFO backend.routes.problem_routes []
-2024-12-06 23:24:41,840 INFO backend.routes.problem_routes problems to review: []
-2024-12-06 23:33:21,382 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity'", 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)", 'default_code': 'result = (x)'}
-2024-12-06 23:33:35,675 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity'", 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)", 'default_code': 'result = ()'}
-2024-12-07 00:28:05,384 INFO backend.app Getting all available datasets
-2024-12-07 00:28:05,402 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:30:35,633 INFO backend.app Getting all available datasets
-2024-12-07 00:30:35,642 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:32:13,051 INFO backend.app Getting all available datasets
-2024-12-07 00:32:13,054 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:32:18,788 INFO backend.app Getting all available datasets
-2024-12-07 00:32:18,789 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:34:02,639 INFO backend.app Getting all available datasets
-2024-12-07 00:34:02,640 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:56:33,278 INFO backend.app Getting all available datasets
-2024-12-07 00:56:33,287 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 00:56:34,194 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x794921c4e6c0>, <backend.models.Problem object at 0x794921c4e780>]
-2024-12-07 00:56:34,481 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x794921c84e90>, <backend.models.Problem object at 0x794921c84fb0>]
-2024-12-07 00:56:34,485 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x794921c84e90>, <backend.models.Problem object at 0x794921c84fb0>]
-2024-12-07 00:56:34,606 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x794921cad310>, <backend.models.Problem object at 0x794921cad430>]
-2024-12-07 00:56:38,970 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 85, in submit_code
-    checker = CheckPolarsCode()
-              ^^^^^^^^^^^^^^^^^
-TypeError: 'module' object is not callable
-
-2024-12-07 00:57:04,716 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79c9adf57aa0>, <backend.models.Problem object at 0x79c9adf57b60>]
-2024-12-07 00:57:04,723 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79c9adf80c80>, <backend.models.Problem object at 0x79c9adf80da0>]
-2024-12-07 00:57:04,724 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x79c9adf57aa0>, <backend.models.Problem object at 0x79c9adf57b60>]
-2024-12-07 00:57:05,146 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x79c9adfad730>, <backend.models.Problem object at 0x79c9adfad850>]
-2024-12-07 00:57:06,233 INFO backend.core.code_execution.CheckPolarsCode Exception hit name 'df' is not defined <_io.StringIO object at 0x79c9adf590c0>
-2024-12-07 00:57:06,233 INFO backend.app {'passed': False, 'result_head': "e1: None, e2: name 'df' is not defined", 'error': shape: (0, 0)
-┌┐
-╞╡
-└┘}
-2024-12-07 00:58:06,098 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74c03f84e450>, <backend.models.Problem object at 0x74c03f84e510>]
-2024-12-07 00:58:06,126 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74c03f8789e0>, <backend.models.Problem object at 0x74c03f878b00>]
-2024-12-07 00:58:06,128 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74c03f8789e0>, <backend.models.Problem object at 0x74c03f878b00>]
-2024-12-07 00:58:06,505 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74c03f8a8e30>, <backend.models.Problem object at 0x74c03f8a8f50>]
-2024-12-07 00:58:07,572 INFO backend.core.code_execution.CheckPolarsCode Exception hit name 'df' is not defined <_io.StringIO object at 0x74c03f845000>
-2024-12-07 00:58:07,573 INFO backend.app {'passed': False, 'result_head': '{}', 'error': "e1: None, e2: name 'df' is not defined"}
-2024-12-07 00:58:25,559 INFO backend.app {'passed': True, 'result_head': '{"A":{"0":1,"1":2,"2":3},"B":{"0":4,"1":5,"2":6}}', 'error': 'e1: None, e2: None'}
-2024-12-07 00:58:32,185 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x74c03f87bd40>]
-2024-12-07 00:58:32,477 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74c03f8a8f50>, <backend.models.Problem object at 0x74c03f8a9520>]
-2024-12-07 00:58:32,478 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74c03f8a9520>]
-2024-12-07 00:58:37,249 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 00:58:37,552 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x74c03f8d0d40>]
-2024-12-07 00:58:37,552 INFO backend.routes.problem_routes []
-2024-12-07 01:00:07,796 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:00:07,859 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x73ec7f94fe90>]
-2024-12-07 01:00:07,860 INFO backend.routes.problem_routes []
-2024-12-07 01:00:08,195 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:00:08,705 INFO backend.app Getting all available datasets
-2024-12-07 01:00:08,710 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 01:00:30,680 INFO backend.app {"Order Number":{"0":284806,"1":285506,"2":311002,"3":366307,"4":325708,"5":333705,"6":364216,"7":349400,"8":328901,"9":365408},"Line Number":{"0":1,"1":1,"2":2,"3":2,"4":3,"5":2,"6":2,"7":5,"8":0,"9":0},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07","3":"2020-01-11","4":"2018-12-01","5":"2019-02-19","6":"2019-12-21","7":"2019-07-26","8":"2019-01-02","9":"2020-01-02"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12","3":"2020-01-11","4":"2018-12-02","5":"2019-02-24","6":"2019-12-21","7":"2019-07-30","8":"2019-01-03","9":"2020-01-02"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene","3":"Isaac Siddins","4":"Mike McQueen","5":"Freddie Obryan","6":"Clifford Wagner","7":"Gertrude Franklin","8":"Maximilian Keller","9":"Lammert Kienhuis"},"Customer Gender":{"0":"Male","1":"Male","2":"Male","3":"Male","4":"Male","5":"Male","6":"Male","7":"Female","8":"Male","9":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia","3":"Australia","4":"United States","5":"United States","6":"United States","7":"United States","8":"Germany","9":"Netherlands"},"Customer Age":{"0":47,"1":30,"2":59,"3":25,"4":56,"5":82,"6":82,"7":85,"8":61,"9":56},"Store Name":{"0":"Online store","1":"Online store","2":"Online store","3":"Contoso Store Western Australia","4":"Online store","5":"Online store","6":"Contoso Store Wyoming","7":"Online store","8":"Online store","9":"Contoso Store Groningen"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver","3":"Contoso 512MB MP3 Player E51 Blue","4":"Contoso 512MB MP3 Player E51 Blue","5":"Contoso 512MB MP3 Player E51 Blue","6":"Contoso 512MB MP3 Player E51 Blue","7":"Contoso 512MB MP3 Player E51 Blue","8":"Contoso 512MB MP3 Player E51 Blue","9":"Contoso 1G MP3 Player E100 White"},"Color":{"0":"Silver","1":"Silver","2":"Silver","3":"Blue","4":"Blue","5":"Blue","6":"Blue","7":"Blue","8":"Blue","9":"White"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso","3":"Contoso","4":"Contoso","5":"Contoso","6":"Contoso","7":"Contoso","8":"Contoso","9":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio","3":"Audio","4":"Audio","5":"Audio","6":"Audio","7":"Audio","8":"Audio","9":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3","3":"MP4&MP3","4":"MP4&MP3","5":"MP4&MP3","6":"MP4&MP3","7":"MP4&MP3","8":"MP4&MP3","9":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6,"3":4,"4":2,"5":2,"6":2,"7":10,"8":6,"9":3},"Unit Price":{"0":11.691,"1":11.691,"2":12.99,"3":12.99,"4":12.99,"5":12.99,"6":12.99,"7":12.99,"8":12.99,"9":14.52},"Net Price":{"0":10.288,"1":11.691,"2":12.99,"3":12.99,"4":11.5611,"5":12.99,"6":11.3013,"7":11.4312,"8":12.99,"9":13.5036},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62,"3":6.62,"4":6.62,"5":6.62,"6":6.62,"7":6.62,"8":6.62,"9":7.4},"Currency Code":{"0":"USD","1":"AUD","2":"AUD","3":"AUD","4":"USD","5":"USD","6":"USD","7":"USD","8":"EUR","9":"EUR"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484,"3":1.4545,"4":1.0,"5":1.0,"6":1.0,"7":1.0,"8":0.8774,"9":0.8934}}
-2024-12-07 01:02:09,649 INFO backend.app Getting all available datasets
-2024-12-07 01:02:09,650 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 01:02:22,072 INFO backend.app {"PassengerId":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9,"9":10},"Survived":{"0":0,"1":1,"2":1,"3":1,"4":0,"5":0,"6":0,"7":0,"8":1,"9":1},"Pclass":{"0":3,"1":1,"2":3,"3":1,"4":3,"5":3,"6":1,"7":3,"8":3,"9":2},"Name":{"0":"Braund, Mr. Owen Harris","1":"Cumings, Mrs. John Bradley (Florence Briggs Thayer)","2":"Heikkinen, Miss. Laina","3":"Futrelle, Mrs. Jacques Heath (Lily May Peel)","4":"Allen, Mr. William Henry","5":"Moran, Mr. James","6":"McCarthy, Mr. Timothy J","7":"Palsson, Master. Gosta Leonard","8":"Johnson, Mrs. Oscar W (Elisabeth Vilhelmina Berg)","9":"Nasser, Mrs. Nicholas (Adele Achem)"},"Sex":{"0":"male","1":"female","2":"female","3":"female","4":"male","5":"male","6":"male","7":"male","8":"female","9":"female"},"Age":{"0":22.0,"1":38.0,"2":26.0,"3":35.0,"4":35.0,"5":null,"6":54.0,"7":2.0,"8":27.0,"9":14.0},"SibSp":{"0":1,"1":1,"2":0,"3":1,"4":0,"5":0,"6":0,"7":3,"8":0,"9":1},"Parch":{"0":0,"1":0,"2":0,"3":0,"4":0,"5":0,"6":0,"7":1,"8":2,"9":0},"Ticket":{"0":"A\/5 21171","1":"PC 17599","2":"STON\/O2. 3101282","3":"113803","4":"373450","5":"330877","6":"17463","7":"349909","8":"347742","9":"237736"},"Fare":{"0":7.25,"1":71.2833,"2":7.925,"3":53.1,"4":8.05,"5":8.4583,"6":51.8625,"7":21.075,"8":11.1333,"9":30.0708},"Cabin":{"0":null,"1":"C85","2":null,"3":"C123","4":null,"5":null,"6":"E46","7":null,"8":null,"9":null},"Embarked":{"0":"S","1":"C","2":"S","3":"S","4":"S","5":"Q","6":"S","7":"S","8":"S","9":"C"}}
-2024-12-07 01:04:50,624 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:04:50,703 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e9b99af60>]
-2024-12-07 01:04:50,706 INFO backend.routes.problem_routes []
-2024-12-07 01:04:50,994 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:04:57,291 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e9b9b7290>]
-2024-12-07 01:04:57,291 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:04:57,292 INFO backend.routes.problem_routes []
-2024-12-07 01:04:57,680 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:06:09,837 INFO backend.app Getting all available datasets
-2024-12-07 01:06:09,840 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 01:16:07,279 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity'", 'default_code': 'result = (x)', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)"}
-2024-12-07 01:26:50,270 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:26:50,304 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6ed182d370>]
-2024-12-07 01:26:50,306 INFO backend.routes.problem_routes []
-2024-12-07 01:26:50,659 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 01:35:11,652 INFO backend.routes.problem_routes 4 FEFEFF suspending
-2024-12-07 01:35:14,463 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6ed182f710>]
-2024-12-07 01:35:14,675 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6ed182ff50>, <backend.models.Problem object at 0x7c6ed182d220>]
-2024-12-07 01:35:14,676 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6ed182ff50>]
-2024-12-07 01:35:14,847 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e9b9b6690>]
-2024-12-07 01:35:19,098 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98f36660>, <backend.models.Problem object at 0x7c6e98f373e0>]
-2024-12-07 01:35:19,099 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98f341a0>]
-2024-12-07 01:35:19,101 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98f36660>]
-2024-12-07 01:35:19,173 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98f34ce0>]
-2024-12-07 01:38:00,012 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98fbf650>]
-2024-12-07 01:38:00,013 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6ed182f3e0>, <backend.models.Problem object at 0x7c6ed182dd00>]
-2024-12-07 01:38:00,018 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6ed182f3e0>]
-2024-12-07 01:38:01,108 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98f36210>]
-2024-12-07 01:38:05,910 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity's", 'default_code': 'result = (\n\tdf\n)', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)"}
-2024-12-07 01:38:08,876 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98fbfa10>]
-2024-12-07 01:38:09,298 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98fbf0b0>, <backend.models.Problem object at 0x7c6e98fbef90>]
-2024-12-07 01:38:09,299 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98fbef90>]
-2024-12-07 01:38:09,501 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e9b9b5520>]
-2024-12-07 01:38:15,570 INFO backend.routes.problem_routes UPdating probl. prob id = 4, problem_update: {'description': "XXX Summarise the brand column as sum of the quantity column. Name the summary 'Sum of Quantity's", 'default_code': 'result = (\n\tdf\n)', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(pl.col('Quantity').sum().alias('Sum of Quantity'))\n)"}
-2024-12-07 01:38:17,362 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98fbdc70>]
-2024-12-07 01:38:17,465 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7c6e98fbda60>]
-2024-12-07 01:38:17,675 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98fbe1b0>, <backend.models.Problem object at 0x7c6e98fbe5d0>]
-2024-12-07 01:38:17,677 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7c6e98fbe5d0>]
-2024-12-07 01:38:21,603 INFO backend.app Getting all available datasets
-2024-12-07 01:38:21,604 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
+2024-12-07 02:04:19,702 DEBUG python_multipart.multipart Calling on_part_begin with no data
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_headers_finished with no data
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_part_end with no data
+2024-12-07 02:04:19,703 DEBUG python_multipart.multipart Calling on_end with no data
+2024-12-07 02:04:19,707 INFO backend.crud PG table already exists testing_upload
+2024-12-07 02:04:19,707 INFO backend.crud TSQL table already exists testing_upload
+2024-12-07 02:04:19,723 INFO backend.app Added new dataset testing_upload
+2024-12-07 02:15:05,934 DEBUG python_multipart.multipart Calling on_part_begin with no data
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_headers_finished with no data
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_part_end with no data
+2024-12-07 02:15:05,935 DEBUG python_multipart.multipart Calling on_end with no data
+2024-12-07 02:15:05,986 INFO backend.dbs.postgres_upload_csv Added PG table testing_upload
+2024-12-07 02:15:05,986 INFO backend.dbs.tsql_upload_csv TSQL table already exists testing_upload... Could not parse SQLAlchemy URL from string 'DRIVER={ODBC Driver 18 for SQL Server};SERVER=tsql_db;DATABASE=master;UID=sa;PWD=32rsrg5ty3t%gst42;TrustServerCertificate=yes'
+2024-12-07 02:15:06,023 INFO backend.crud Dataset already exists testing_upload
+2024-12-07 02:15:06,023 INFO backend.app Added new dataset testing_upload
+2024-12-07 02:17:21,628 DEBUG python_multipart.multipart Calling on_part_begin with no data
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_field with data[42:61]
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_value with data[63:116]
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_field with data[118:130]
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_value with data[132:140]
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_header_end with no data
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_headers_finished with no data
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_part_data with data[144:9905]
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_part_end with no data
+2024-12-07 02:17:21,629 DEBUG python_multipart.multipart Calling on_end with no data
+2024-12-07 02:17:21,644 INFO backend.dbs.postgres_upload_csv PG table already exists testing_upload... Table 'testing_upload' already exists.
+2024-12-07 02:17:21,743 INFO backend.dbs.tsql_upload_csv Added TSQL table testing_upload
+2024-12-07 02:17:21,757 INFO backend.crud Dataset already exists testing_upload
+2024-12-07 02:17:21,757 INFO backend.app Added new dataset testing_upload
+2024-12-07 02:21:21,681 INFO backend.app Getting all available datasets
+2024-12-07 02:21:21,691 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']

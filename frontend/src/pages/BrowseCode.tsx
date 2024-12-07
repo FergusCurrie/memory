@@ -55,6 +55,7 @@ interface CodeReview {
 const BrowseCodeCards: React.FC = () => {
   const [codeCards, setCodeCards] = useState<CodeCard[]>([]);
   const [codeReviews, setCodeReviews] = useState<CodeReview[]>([]);
+  const [datasets, setDatasets] = useState<String[]>([]);
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
   const [editingCard, setEditingCard] = useState<CodeCard | null>(null);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
@@ -62,6 +63,7 @@ const BrowseCodeCards: React.FC = () => {
   useEffect(() => {
     fetchCodeCards();
     fetchCodeReviews();
+    fetchDatasets();
   }, []);
 
   const fetchCodeCards = async () => {
@@ -69,6 +71,15 @@ const BrowseCodeCards: React.FC = () => {
       const response = await api.get('/api/problem/');
       console.log(response);
       setCodeCards(response.data);
+    } catch (error) {
+      console.error('Error fetching code cards:', error);
+    }
+  };
+  const fetchDatasets = async () => {
+    try {
+      const response = await api.get('/api/available_datasets');
+      console.log(response);
+      setDatasets(response.data.datasets);
     } catch (error) {
       console.error('Error fetching code cards:', error);
     }
@@ -286,6 +297,28 @@ const BrowseCodeCards: React.FC = () => {
             : null
         }
       />
+
+      {/* Add new Datasets table here */}
+      <Typography variant="h4" gutterBottom sx={{ mt: 4 }}>
+        Available Datasets
+      </Typography>
+      <TableContainer component={Paper} sx={{ mb: 4 }}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Dataset Name</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {(datasets || []).map((dataset, index) => (
+              <TableRow key={index}>
+                <TableCell>{dataset}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+
       {/* <Dialog open={!!editingCard} onClose={() => setEditingCard(null)}>
         <DialogTitle>Edit Code Card</DialogTitle>
         <DialogContent>
