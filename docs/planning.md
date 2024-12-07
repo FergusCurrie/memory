@@ -9,7 +9,7 @@
 
 ## Todo
 
-- [ ] env variables
+- [x] env variables
 - [ ] sending logs back from frontend
 - [x] code to migrate old db in (or do jsut recreate? )
 - [ ] code to add datasets in
@@ -26,6 +26,9 @@
 
 ## Backlog
 
+- [ ] clean up routes
+- [ ] multiple datasets
+- [ ] add code should show dataset
 - [ ] edit from study
 - [ ] edit default code
 - [ ] Interfaces frontend

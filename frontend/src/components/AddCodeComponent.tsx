@@ -151,7 +151,7 @@ const AddCode: React.FC = ({ problemType }) => {
           fontSize: 14,
         }}
       />
-      <Typography variant="h6">Preprocessing Code</Typography>
+      {/* <Typography variant="h6">Preprocessing Code</Typography>
       <Editor
         height="200px"
         defaultLanguage="python"
@@ -162,7 +162,7 @@ const AddCode: React.FC = ({ problemType }) => {
           scrollBeyondLastLine: false,
           fontSize: 14,
         }}
-      />
+      /> */}
       <Typography variant="h6">Main Code</Typography>
       <Editor
         height="400px"

@@ -13,20 +13,17 @@ import {
   Chip,
 } from '@mui/material';
 import PandasJsonTable from '../components/study_components/PandasTable';
-import AddCode from '../components/AddCodeComponent'
+import AddCode from '../components/AddCodeComponent';
 
 const Add: React.FC = () => {
   // Change datasetPath to datasetPaths and make it an array
-  const [problemType, setProblemType] = useState<'polars' | 'pyspark'| 'sql'>('polars');
+  const [problemType, setProblemType] = useState<'polars' | 'sql'>('polars');
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
-  useEffect(() => {
-  }, []);
-
-  
+  useEffect(() => {}, []);
 
   const handleProblemTypeChange = (event: React.ChangeEvent<{ value: unknown }>) => {
-    setProblemType(event.target.value as 'polars' | 'pyspark' | 'sql');
+    setProblemType(event.target.value as 'polars' | 'sql');
   };
 
   const handleSaveCard = async () => {
@@ -34,7 +31,7 @@ const Add: React.FC = () => {
     try {
       const response = await api.post('/api/problem/card/create', {
         front: front,
-        back: back
+        back: back,
       });
       console.log('Card added:', response.data);
       setFront('');
@@ -67,31 +64,29 @@ const Add: React.FC = () => {
           style={{ fontSize: '16px' }}
         >
           <MenuItem value="polars">Polars</MenuItem>
-          <MenuItem value="pyspark">PySpark</MenuItem>
+          {/* <MenuItem value="pyspark">PySpark</MenuItem> */}
           <MenuItem value="sql">SQL</MenuItem>
-          <MenuItem value="card">Card</MenuItem>
+          {/* <MenuItem value="card">Card</MenuItem> */}
         </Select>
       </FormControl>
-      {(problemType === 'polars' || problemType === 'pyspark'  || problemType === 'sql' )  && (
-        <AddCode problemType={problemType} />
-      )}
-      { (problemType === 'card') && (
+      {(problemType === 'polars' || problemType === 'sql') && <AddCode problemType={problemType} />}
+      {/* {problemType === 'card' && (
         <>
-        <textarea
-          value={front}
-          onChange={(e) => setFront(e.target.value)}
-          placeholder="Front"
-          rows={3}
-          style={{ padding: '10px', fontSize: '16px' }}
-        />
-      <textarea
-        value={back}
-        onChange={(e) => setBack(e.target.value)}
-        placeholder="Back"
-        rows={3}
-        style={{ padding: '10px', fontSize: '16px' }}
-      />
-       <Button
+          <textarea
+            value={front}
+            onChange={(e) => setFront(e.target.value)}
+            placeholder="Front"
+            rows={3}
+            style={{ padding: '10px', fontSize: '16px' }}
+          />
+          <textarea
+            value={back}
+            onChange={(e) => setBack(e.target.value)}
+            placeholder="Back"
+            rows={3}
+            style={{ padding: '10px', fontSize: '16px' }}
+          />
+          <Button
             variant="contained"
             color="secondary"
             onClick={handleSaveCard}
@@ -100,8 +95,8 @@ const Add: React.FC = () => {
           >
             Save
           </Button>
-      </>
-      )}
+        </>
+      )} */}
     </div>
   );
 };
