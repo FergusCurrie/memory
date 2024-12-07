@@ -1,13 +1,15 @@
 import os
 import pandas as pd
-from backend.crud import add_code_to_problem, create_problem
+from backend.crud import add_code_to_problem, create_problem, delete_dataset
+from backend.dbs.postgres_connection import get_postgres_conn
 from backend.models import Buried
 from sqlalchemy import create_engine, delete, select, text
 from sqlalchemy.orm import Session
 
 CSV_DIR = "/workspaces/memory/memory_backups/memory_datasets/data"
+CSV_DIR = "manual/temp_data_old_db/tsql_book/"
 
-conn_url = "postgresql+psycopg2://ferg234e1341:32rsrg5ty3t%gst42@postgres_db/memory_db"
+conn_url = get_postgres_conn()
 
 engine = create_engine(conn_url)
 
@@ -32,7 +34,7 @@ def add_datasets():
         # Copy DataFrame to PostgreSQL using to_sql()
         table_name = csv.replace(".csv", "")
         df.to_sql(
-            name=table_name,
+            name=table_name.lower(),
             con=engine,
             if_exists="replace",  # or 'append'
             index=False,
@@ -52,7 +54,7 @@ def add_datasets():
         # Base.metadata.create_all(engine)
 
         # Create and add the dataset record
-        new_dataset = Dataset(name=table_name)
+        new_dataset = Dataset(name=table_name.lower())
         session.add(new_dataset)
         session.commit()
         session.refresh(new_dataset)
@@ -66,11 +68,26 @@ def add_datasets():
 
 
 def schema():
-    pass
+    # Query to get all tables in postgres db
+    query = text("""
+        SELECT 
+            tablename 
+        FROM 
+            pg_catalog.pg_tables
+        WHERE 
+            schemaname != 'pg_catalog' 
+            AND schemaname != 'information_schema';
+    """)
+
+    result = session.execute(query)
+
+    print("Tables in PostgreSQL database:")
+    for row in result:
+        print(row.tablename)
 
 
 def check():
-    for tbl in ["dataset", "problem", "code", "review"]:
+    for tbl in ["dataset", "problem", "code", "review", "Employees"]:
         print(tbl + ":")
         stmt = select("*").select_from(text(tbl))
         result = session.execute(stmt)
@@ -99,8 +116,30 @@ def delete_col_table():
 
 
 def delete_table():
-    session.execute(text("DROP TABLE IF EXISTS alembic_version"))
-    session.commit()
+    conn_url = get_postgres_conn()
+
+    engine = create_engine(conn_url)
+
+    session = Session(engine)
+    tables_sql_book = [
+        "Categories",
+        "Customers",
+        "Employees",
+        "Nums",
+        "OrderDetails",
+        "Orders",
+        "Products",
+        "Scores",
+        "Shippers",
+        "Suppliers",
+        "Tests",
+    ]
+
+    for tbl in tables_sql_book:
+        print(f"DROP TABLE IF EXISTS {tbl}")
+        session.execute(text(f"DROP TABLE IF EXISTS {tbl} CASCADE"))
+        session.commit()
+        delete_dataset(session, tbl)
     print("Table dropped")
 
 
@@ -123,3 +162,6 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1 and sys.argv[1] == "delete_col":
         delete_col_table()
+
+    if len(sys.argv) > 1 and sys.argv[1] == "schema":
+        schema()

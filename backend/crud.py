@@ -77,6 +77,20 @@ def create_dataset(session: Session, name: str) -> Problem:
     return new_dataset
 
 
+def delete_dataset(session: Session, name: str) -> None:
+    # Check if dataset exists
+    existing_dataset = session.query(Dataset).filter(Dataset.name == name).first()
+    if existing_dataset is None:
+        logger.info(f"Dataset {name} does not exist")
+        return
+
+    # Delete the dataset
+    session.delete(existing_dataset)
+    session.commit()
+    logger.info(f"Deleted dataset {name}")
+    return
+
+
 def add_code_to_problem(session: Session, code: str, datasets: str, problem_id: int, type: str, default_code: str):
     new_code = Code(code=code, datasets=datasets, problem_id=problem_id, type=type, default_code=default_code)
     session.add(new_code)

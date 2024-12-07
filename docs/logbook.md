@@ -46,4 +46,6 @@
   - used alembic to make type and default code columns of code
   - moved secrets to env
   - cleaned up code check code
+  - added edit on study
   - added page to upload csv which gets saved to pg, tsql and datasets table
+  - added in tsql book databases (10)

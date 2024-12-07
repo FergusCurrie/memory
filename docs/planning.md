@@ -26,6 +26,7 @@
 
 ## Backlog
 
+- [ ] simple way to regenerate database with example dbs
 - [ ] filters and search on browse
 - [ ] actual testing of routes. can be done with fixtures and stuff
 - [ ] clean up routes

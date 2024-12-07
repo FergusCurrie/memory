@@ -6,3 +6,4 @@ memory_backups/*
 memory:
 logs/*
 **.csv
+**.sql

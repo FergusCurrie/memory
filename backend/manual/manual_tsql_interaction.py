@@ -2,12 +2,26 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 
+tables_sql_book = [
+    "Categories",
+    "Customers",
+    "Employees",
+    "Nums",
+    "OrderDetails",
+    "Orders",
+    "Products",
+    "Scores",
+    "Shippers",
+    "Suppliers",
+    "Tests",
+]
+
 CSV_DIR = "/workspaces/memory/memory_backups/memory_datasets/data"
 import pandas as pd
 
 # SQL Server connection URL format
 conn_url = "mssql+pyodbc://sa:32rsrg5ty3t%gst42@tsql_db:1433/memory?driver=ODBC+Driver+18+for+SQL+Server&TrustServerCertificate=yes"
-
+from backend.dbs.tsql_connection import get_tsql_conn
 
 engine = create_engine(conn_url)
 session = Session(engine)
@@ -80,6 +94,74 @@ def add_datasets():
         # session.refresh(new_dataset)
 
 
+def book():
+    print("Adding book data to TSQL database")
+
+    # Get SQL file contents
+    sql_file_path = "manual/temp_data_old_db/tsql_book.sql"
+    with open(sql_file_path, "r") as file:
+        sql_commands = file.read()
+
+    # Split into individual commands on GO statements
+    commands = sql_commands.split("GO")
+
+    # Connect to database
+    # conn_str = f"DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={config['tsql_server']};DATABASE={config['tsql_database']};UID={config['tsql_user']};PWD={config['tsql_password']};TrustServerCertificate=yes"
+    # conn = pyodbc.connect(get_tsql_conn())
+    # cursor = conn.cursor()
+    print("check")
+    print(len(commands))
+
+    engine = create_engine(get_tsql_conn())
+    with engine.connect() as conn:
+        with conn.begin():
+            for command in commands:
+                # print(command)
+                conn.execute(text(command))
+    #     result = conn.execute(text(self._add_schema(code)))
+    # # Execute each command
+    # for command in commands:
+    #     if command.strip():
+    #         try:
+    #             cursor.execute(command)
+    #             conn.commit()
+    #         except Exception as e:
+    #             print(f"Error executing command: {e}")
+    #             print(f"Failed command was: {command[:100]}...")  # Print first 100 chars of failed command
+    #             conn.rollback()
+
+    # cursor.close()
+    # conn.close()
+    # print("Finished adding book data")
+
+
+def read_sql_book_to_csv():
+    """Read all tables from TSQL book database and save to CSV files"""
+    import os
+    import pandas as pd
+    from backend.dbs.tsql_connection import get_tsql_conn
+    from sqlalchemy import create_engine
+
+    # Create output directory if it doesn't exist
+    output_dir = "manual/temp_data_old_db/tsql_book"
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Get list of all tables
+    engine = create_engine(get_tsql_conn())
+
+    # Export each table to CSV
+    for table in tables_sql_book:
+        print(f"Exporting {table}")
+        with engine.connect() as conn:
+            # Read table into pandas DataFrame
+            df = pd.read_sql(f"SELECT * FROM dbo.{table}", conn)
+
+            # Save to CSV
+            output_file = os.path.join(output_dir, f"{table}.csv")
+            df.to_csv(output_file, index=False)
+            print(f"Saved {output_file}")
+
+
 if __name__ == "__main__":
     import sys
 
@@ -88,3 +170,9 @@ if __name__ == "__main__":
 
     if len(sys.argv) > 1 and sys.argv[1] == "add":
         add_datasets()
+
+    if len(sys.argv) > 1 and sys.argv[1] == "book":
+        book()
+
+    if len(sys.argv) > 1 and sys.argv[1] == "dump":
+        read_sql_book_to_csv()

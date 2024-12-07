@@ -96,6 +96,7 @@ async def check_code_for_creation(code_submission: CheckCodeForCreation, db: Ses
         _type_: _description_
     """
     try:
+        logger.info(f"Checking code : {code_submission}")
         datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
         checker = CheckPolarsCode()
         if code_submission.problem_type == "polars":

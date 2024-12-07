@@ -7,6 +7,21 @@ import polars as pl
 from backend.dbs.tsql_connection import get_tsql_conn
 from sqlalchemy import create_engine, text
 
+tables_sql_book = [
+    "Categories",
+    "Customers",
+    "Employees",
+    "Nums",
+    "OrderDetails",
+    "Orders",
+    "Products",
+    "Scores",
+    "Shippers",
+    "Suppliers",
+    "Tests",
+]
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -25,6 +40,9 @@ class CheckSQLCode:
         if "from " in code.lower() and "dbo." not in code.lower():
             code = code.replace("from ", "from dbo.", 1)
             code = code.replace("FROM ", "FROM dbo.", 1)
+        # little work around for postgres saving databases lower case, upload script was upper case
+        for t in tables_sql_book:
+            code = code.replace(t.lower(), t)
         return code
 
     def run_code(self, code) -> [pl.DataFrame, str]:
