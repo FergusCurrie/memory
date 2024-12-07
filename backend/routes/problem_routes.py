@@ -57,18 +57,6 @@ def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_postg
         raise HTTPException(status_code=500, detail=str(e)) from e
 
 
-# interface CodeCard {
-#   problem_id: number;
-#   dataset_name: string;
-#   dataset_headers: string;
-#   code: string;
-#   default_code: string;
-#   preprocessing_code: string;
-#   description: string;
-#   is_suspended: boolean;
-# }
-
-
 @router.get("/")
 def get_problems(db: Session = Depends(get_postgres_db)):
     problems = get_all_problems(db)

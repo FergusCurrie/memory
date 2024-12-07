@@ -4,20 +4,19 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Box } from '@mui/material';
 import api from '../api';
-import ReviewHeatmap from '../components/Heatmap';
 
 // Functional Component using React Hooks
 const Home = () => {
-  const handleSyncDb = async () => {
-    try {
-      const response = await api.post('/api/sync_db');
-      console.log(response.data.message);
-      // You might want to show a success message to the user here
-    } catch (error) {
-      console.error('Error syncing database:', error);
-      // You might want to show an error message to the user here
-    }
-  };
+  // const handleSyncDb = async () => {
+  //   try {
+  //     const response = await api.post('/api/sync_db');
+  //     console.log(response.data.message);
+  //     // You might want to show a success message to the user here
+  //   } catch (error) {
+  //     console.error('Error syncing database:', error);
+  //     // You might want to show an error message to the user here
+  //   }
+  // };
   return (
     <div>
       {/* ... (existing JSX) */}
@@ -27,9 +26,7 @@ const Home = () => {
         alignItems="center"
         minHeight="100vh" // This ensures the box takes up the full height of the viewport
       >
-        <Button variant="contained" color="primary" onClick={handleSyncDb}>
-          Sync Database to Azure
-        </Button>
+        <Typography>Spaced memory</Typography>
       </Box>
       {/* ... (rest of the existing JSX) */}
     </div>
