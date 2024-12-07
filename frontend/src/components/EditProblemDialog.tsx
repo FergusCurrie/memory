@@ -6,12 +6,15 @@ import {
   DialogActions,
   Button,
   TextField,
+  Autocomplete,
+  Chip,
 } from '@mui/material';
 
 interface EditProblemData {
   description: string;
   code_default: string;
   answer: string;
+  tags: string[];
 }
 
 interface EditProblemDialogProps {
@@ -39,6 +42,9 @@ const EditProblemDialog: React.FC<EditProblemDialogProps> = ({
       onClose();
     }
   };
+
+  // Add suggested tags (you might want to pass these as props instead)
+  const suggestedTags = ['javascript', 'python', 'react', 'typescript', 'algorithms'];
 
   if (!editingData) return null;
 
@@ -72,6 +78,39 @@ const EditProblemDialog: React.FC<EditProblemDialogProps> = ({
           rows={6}
           value={editingData.answer}
           onChange={(e) => setEditingData((prev) => ({ ...prev!, answer: e.target.value }))}
+        />
+        <Autocomplete
+          multiple
+          freeSolo
+          options={suggestedTags}
+          value={editingData.tags}
+          onChange={(event, newValue) => {
+            setEditingData((prev) => ({ ...prev!, tags: newValue }));
+          }}
+          renderTags={(value, getTagProps) =>
+            value.map((option, index) => (
+              <Chip
+                {...getTagProps({ index })}
+                key={option}
+                label={option}
+                onDelete={() => {
+                  setEditingData((prev) => ({
+                    ...prev!,
+                    tags: prev!.tags.filter((tag) => tag !== option),
+                  }));
+                }}
+              />
+            ))
+          }
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              margin="dense"
+              label="Tags"
+              placeholder="Add tags..."
+              fullWidth
+            />
+          )}
         />
       </DialogContent>
       <DialogActions>

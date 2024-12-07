@@ -8,6 +8,7 @@ from ..crud import (
     check_problem_buried,
     check_problem_suspended,
     create_problem,
+    create_tag,
     # get_all_non_suspended_problems,
     get_all_problems,
     get_code_for_problem,
@@ -15,9 +16,11 @@ from ..crud import (
     get_list_of_datasets_for_problem,
     get_problem,
     get_reviews_for_problem,
+    get_tags_problem,
     toggle_suspend,
     update_code,
     update_problem,
+    update_tags,
 )
 from backend.dbs.postgres_connection import get_postgres_db
 from fastapi import APIRouter, Depends, HTTPException
@@ -34,6 +37,7 @@ class ProblemCreate(BaseModel):
     preprocessing_code: str
     default_code: str
     problem_type: str
+    tags: list
 
 
 class Card(BaseModel):
@@ -51,6 +55,8 @@ def create_a_new_problem(problem: ProblemCreate, db: Session = Depends(get_postg
         add_code_to_problem(
             db, problem.code, ",".join(problem.dataset_names), new_prob.id, problem.problem_type, problem.default_code
         )
+        for tag in problem.tags:
+            create_tag(db, new_prob.id, tag)
         return {"result": True}
     except Exception as e:
         logger.error(f"An error occurred in code compleition:\n{traceback.format_exc()}")
@@ -66,6 +72,7 @@ def get_problems(db: Session = Depends(get_postgres_db)):
         table_name = get_list_of_datasets_for_problem(db, problem_id)[0]
         dataframes = get_dataframes_for_problem(db, problem_id)
         code = get_code_for_problem(db, problem_id)[0]
+        tags = [x.tag for x in get_tags_problem(db, problem_id)]
         result.append(
             {
                 "problem_id": problem_id,
@@ -76,6 +83,7 @@ def get_problems(db: Session = Depends(get_postgres_db)):
                 "preprocessing_code": "",
                 "description": p.description,
                 "is_suspended": check_problem_suspended(db, problem_id),
+                "tags": tags,
             }
         )
     return result
@@ -161,8 +169,10 @@ def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depen
         description = problem_update["description"]
         code = problem_update["code"]
         default_code = problem_update["default_code"]
+        tags = problem_update["tags"]
         update_problem(db, problem_id, description)
         update_code(db, code, None, problem_id, default_code)
+        update_tags(db, problem_id, tags)
         # Only allow updating description and code
 
         return {"dnoe": True}

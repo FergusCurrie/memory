@@ -8,6 +8,7 @@ from backend.crud import (
     create_dataset,
     create_problem,
     create_review,
+    create_tag,
     get_all_problems,
     get_code_for_problem,
     get_dataframes_for_problem,
@@ -15,12 +16,25 @@ from backend.crud import (
     get_list_of_datasets_for_problem,
     get_problem,
     get_reviews_for_problem,
+    get_tags_problem,
     list_available_datasets,
     toggle_suspend,
     update_code,
     update_problem,
+    update_tags,
 )
 from datetime import datetime, timedelta
+
+
+def test_create_tag(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    create_tag(test_db, problem.id, "example_tag")
+    tags = get_tags_problem(test_db, problem.id)
+    assert tags[0].tag == "example_tag"
+    update_tags(test_db, problem.id, ["new_tag"])
+    tags = get_tags_problem(test_db, problem.id)
+    assert tags[0].tag == "new_tag"
 
 
 def test_create_problem(test_db):

@@ -24,3 +24,9 @@ Other
 - `alembic history`
 - `alembic stamp base`
 - `alembic current`
+
+For out of sync alembic: FAILED: Target database is not up to date.
+
+1. `alembic stamp head`
+2. `alembic revision --autogenerate -m "your_migration_message"`
+3. `alembic upgrade head`
