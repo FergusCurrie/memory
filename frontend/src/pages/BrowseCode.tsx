@@ -27,6 +27,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import HelpIcon from '@mui/icons-material/Help';
+import EditProblemDialog from '../components/EditProblemDialog';
 
 interface CodeCard {
   problem_id: number;
@@ -37,6 +38,11 @@ interface CodeCard {
   preprocessing_code: string;
   description: string;
   is_suspended: boolean;
+}
+interface EditProblemData {
+  description: string;
+  code_default: string;
+  answer: string;
 }
 
 interface CodeReview {
@@ -51,6 +57,7 @@ const BrowseCodeCards: React.FC = () => {
   const [codeReviews, setCodeReviews] = useState<CodeReview[]>([]);
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
   const [editingCard, setEditingCard] = useState<CodeCard | null>(null);
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
 
   useEffect(() => {
     fetchCodeCards();
@@ -85,17 +92,20 @@ const BrowseCodeCards: React.FC = () => {
     setEditingCard(card);
   };
 
-  const handleSaveEdit = async () => {
+  const handleSaveEdit = async (editedData: EditProblemData) => {
     if (editingCard) {
-      console.log('Saving edit');
       try {
         await api.put(`/api/problem/${editingCard.problem_id}`, {
-          description: editingCard.description,
-          code: editingCard.code,
-          default_code: editingCard.default_code,
+          description: editedData.description,
+          default_code: editedData.code_default,
+          code: editedData.answer,
         });
         setCodeCards(
-          codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
+          codeCards.map((c) =>
+            c.problem_id === editingCard.problem_id
+              ? { ...c, description: editedData.description }
+              : c,
+          ),
         );
         setEditingCard(null);
       } catch (error) {
@@ -103,6 +113,25 @@ const BrowseCodeCards: React.FC = () => {
       }
     }
   };
+
+  // const handleSaveEdit = async () => {
+  //   if (editingCard) {
+  //     console.log('Saving edit');
+  //     try {
+  //       await api.put(`/api/problem/${editingCard.problem_id}`, {
+  //         description: editingCard.description,
+  //         code: editingCard.code,
+  //         default_code: editingCard.default_code,
+  //       });
+  //       setCodeCards(
+  //         codeCards.map((c) => (c.problem_id === editingCard.problem_id ? editingCard : c)),
+  //       );
+  //       setEditingCard(null);
+  //     } catch (error) {
+  //       console.error('Error updating code card:', error);
+  //     }
+  //   }
+  // };
 
   const handleDeleteReview = async (reviewId: number, event: React.MouseEvent) => {
     event.stopPropagation();
@@ -243,7 +272,21 @@ const BrowseCodeCards: React.FC = () => {
         </Table>
       </TableContainer>
 
-      <Dialog open={!!editingCard} onClose={() => setEditingCard(null)}>
+      <EditProblemDialog
+        open={!!editingCard}
+        onClose={() => setEditingCard(null)}
+        onSave={handleSaveEdit}
+        initialData={
+          editingCard
+            ? {
+                description: editingCard.description,
+                code_default: editingCard.default_code,
+                answer: editingCard.code,
+              }
+            : null
+        }
+      />
+      {/* <Dialog open={!!editingCard} onClose={() => setEditingCard(null)}>
         <DialogTitle>Edit Code Card</DialogTitle>
         <DialogContent>
           <TextField
@@ -287,7 +330,7 @@ const BrowseCodeCards: React.FC = () => {
           <Button onClick={() => setEditingCard(null)}>Cancel</Button>
           <Button onClick={handleSaveEdit}>Save</Button>
         </DialogActions>
-      </Dialog>
+      </Dialog> */}
     </Box>
   );
 };

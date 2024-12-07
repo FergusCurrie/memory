@@ -4,7 +4,9 @@ import DatasetRenderer from '../study_components/DatasetRenderer';
 import CodeEditor from '../study_components/CodeEditor';
 import NextCardManagement from '../study_components/NextCardManagement';
 import api from '../../api';
-
+import EditProblemDialog from '../EditProblemDialog';
+import { IconButton } from '@mui/material';
+import EditIcon from '@mui/icons-material/Edit';
 interface Problem {
   problem_type: string;
   problem_id: number;
@@ -31,11 +33,17 @@ interface PolarsProblem {
   problem: Problem;
   handleScore: (result: boolean) => void;
 }
+interface EditProblemData {
+  description: string;
+  code_default: string;
+  answer: string;
+}
 
 const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
   const [selectedDataset, setSelectedDataset] = useState<string>('');
   const [testPassed, setTestPassed] = useState<boolean>(false);
   const [polarsProblemData, setPolarsProblemData] = useState<PolarsProblemData>();
+  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
 
   const fetchPolarsProblemData = async () => {
     console.log('fetching polars prbo');
@@ -50,6 +58,33 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
     }
   };
 
+  const handleSaveEdit = async (editedData: EditProblemData) => {
+    if (polarsProblemData) {
+      try {
+        await api.put(`/api/problem/${polarsProblemData.problem_id}`, {
+          description: editedData.description,
+          default_code: editedData.code_default,
+          code: editedData.answer,
+        });
+        setPolarsProblemData({
+          problem_type: polarsProblemData.problem_type,
+          problem_id: polarsProblemData.problem_id,
+          code_default: editedData.code_default,
+          datasets: polarsProblemData.datasets,
+          description: editedData.description,
+          answer: editedData.answer,
+        });
+        setIsEditDialogOpen(false);
+      } catch (error) {
+        console.error('Error updating code card:', error);
+      }
+    }
+  };
+
+  const handleEditCard = () => {
+    setIsEditDialogOpen(true);
+  };
+
   useEffect(() => {
     console.log(problem);
     if (problem) {
@@ -61,6 +96,23 @@ const PolarsProblem: React.FC<PolarsProblem> = ({ problem, handleScore }) => {
 
   return (
     <>
+      <IconButton onClick={() => handleEditCard()} color="primary">
+        <EditIcon />
+      </IconButton>
+      <EditProblemDialog
+        open={!!isEditDialogOpen}
+        onClose={() => setIsEditDialogOpen(false)}
+        onSave={handleSaveEdit}
+        initialData={
+          isEditDialogOpen && polarsProblemData
+            ? {
+                description: polarsProblemData.description || '',
+                code_default: polarsProblemData.code_default || '',
+                answer: polarsProblemData.answer || '',
+              }
+            : null
+        }
+      />
       <Description text={polarsProblemData?.description} />
       <DatasetRenderer
         {...{ selectedDataset, setSelectedDataset, datasets: polarsProblemData?.datasets }}
