@@ -44,3 +44,6 @@
 - 7th december
   - added alembic for db migrations
   - used alembic to make type and default code columns of code
+  - moved secrets to env
+  - cleaned up code check code
+  -
