@@ -9,6 +9,11 @@
 
 ## Todo
 
+Key:
+
+- [ ] move due schedule into a database, calculate on card complete
+- [ ] pull all metrics think required for good algo into save
+
 - [x] env variables
 - [ ] sending logs back from frontend
 - [x] code to migrate old db in (or do jsut recreate? )

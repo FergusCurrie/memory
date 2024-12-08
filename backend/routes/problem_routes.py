@@ -1,7 +1,6 @@
 import json
 import logging
 import traceback
-from ..core.scheduling.Scheduler import Scheduler
 from ..crud import (
     add_code_to_problem,
     bury_problem,
@@ -13,9 +12,10 @@ from ..crud import (
     get_all_problems,
     get_code_for_problem,
     get_dataframes_for_problem,
+    get_due_date,
     get_list_of_datasets_for_problem,
     get_problem,
-    get_reviews_for_problem,
+    get_problems_to_review,
     get_tags_problem,
     toggle_suspend,
     update_code,
@@ -119,20 +119,16 @@ def get_problems(db: Session = Depends(get_postgres_db)):
 @router.get("/get_next_problem")
 def get_next_problem(db: Session = Depends(get_postgres_db)):
     try:
-        problems = get_all_problems(db)
-        problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
-        # problems = get_all_non_suspended_problems(db)
-        logger.info(problems)
-        scheduler = Scheduler()
-
-        problems_to_review = []
-        for problem in problems:
-            reviews = get_reviews_for_problem(db, problem.id)
-            if scheduler.check_problem_ready_for_review(problem, reviews):
-                problems_to_review.append(problem)
-        logger.info(problems_to_review)
-        # problem_ids = [{"problem_id": x[0], "type": x[2]} for x in problem_ids if x[1] == "active"]
-        # problems = [get_problem_for_polars(pid[0]) for pid in problem_ids]
+        problems_to_review = get_problems_to_review(db)
+        logger.info("Printing problems to review:")
+        for p in problems_to_review:
+            d = get_due_date(db, p.id)
+            logger.info((p.id, d.due_date))
+        problems_to_review = [
+            p
+            for p in problems_to_review
+            if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)
+        ]
 
         if len(problems_to_review) == 0:
             return {"problems": []}
@@ -147,14 +143,12 @@ def get_next_problem(db: Session = Depends(get_postgres_db)):
 @router.get("/get_number_problems_remaining")
 def get_problems_remaining(db: Session = Depends(get_postgres_db)):
     try:
-        problems = get_all_problems(db)
-        problems = [p for p in problems if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)]
-        scheduler = Scheduler()
-        problems_to_review = []
-        for problem in problems:
-            reviews = get_reviews_for_problem(db, problem.id)
-            if scheduler.check_problem_ready_for_review(problem, reviews):
-                problems_to_review.append(problem)
+        problems_to_review = get_problems_to_review(db)
+        problems_to_review = [
+            p
+            for p in problems_to_review
+            if not check_problem_suspended(db, p.id) and not check_problem_buried(db, p.id)
+        ]
         logger.info(f"problems to review: {problems_to_review}")
         return {"remaining": len(problems_to_review)}
     except Exception as e:

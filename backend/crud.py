@@ -1,7 +1,7 @@
 import logging
 import polars as pl
-from backend.models import Buried, Code, Dataset, Problem, Review, Suspended, Tag
-from datetime import datetime
+from backend.models import Buried, Code, Dataset, Due, Problem, Review, ReviewDuration, Suspended, Tag
+from datetime import date, datetime
 from sqlalchemy import select, text
 from sqlalchemy.orm import Session
 
@@ -17,6 +17,14 @@ def create_problem(session: Session, description: str, date_created: datetime = 
     session.commit()
     session.refresh(new_problem)
     return new_problem
+
+
+def create_review_duration(session: Session, review_id: int, duration: float) -> ReviewDuration:
+    new_review_duration = ReviewDuration(review_id=review_id, duration=duration)
+    session.add(new_review_duration)
+    session.commit()
+    session.refresh(new_review_duration)
+    return new_review_duration
 
 
 def update_problem(session: Session, problem_id: int, description_new: str) -> Problem:
@@ -244,3 +252,52 @@ def update_tags(session: Session, problem_id: int, tags: list):
             create_tag(session, problem_id, tag)
 
     session.commit()
+
+
+def create_due_date(
+    session: Session, problem_id: int, due_date: date, algorithm: str, date_created: datetime = None
+) -> Due:
+    if date_created is None:
+        due = Due(problem_id=problem_id, due_date=due_date, created_by_algorithm=algorithm)
+    else:
+        due = Due(problem_id=problem_id, due_date=due_date, created_by_algorithm=algorithm, date_created=date_created)
+    session.add(due)
+    session.commit()
+    session.refresh(due)
+    logger.info(f"created due date {due}")
+    return due
+
+
+def get_due_date(session: Session, problem_id: int) -> Due:
+    due_dates = session.query(Due).filter(Due.problem_id == problem_id).all()
+    if not due_dates:
+        return None
+    return max(due_dates, key=lambda x: x.due_date)
+
+
+def get_problems_to_review(session: Session) -> list[Problem]:
+    problems = get_all_problems(session)
+    due_dates = [get_due_date(session, x.id) for x in problems]
+    result = []
+    for p, d in zip(problems, due_dates):
+        if d.due_date <= date.today():
+            result.append(p)
+
+    return result
+
+    # Get all due dates for each problem
+    due_dates = session.query(Due).all()
+
+    # Group by problem_id and get latest due date for each
+    problem_due_dates = {}
+    for due in due_dates:
+        if due.problem_id not in problem_due_dates or due.date_created > problem_due_dates[due.problem_id].date_created:
+            problem_due_dates[due.problem_id] = due
+
+    # Filter for problems due today or earlier
+    due_problems = [due for due in problem_due_dates.values() if due.due_date <= date.today()]
+
+    # Get the corresponding problems
+    problems = [session.query(Problem).filter(Problem.id == due.problem_id).first() for due in due_problems]
+    logger.info(problems)
+    return problems
