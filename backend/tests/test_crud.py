@@ -6,6 +6,7 @@ from backend.crud import (
     check_problem_buried,
     check_problem_suspended,
     create_dataset,
+    create_due_date,
     create_problem,
     create_review,
     create_tag,
@@ -13,8 +14,10 @@ from backend.crud import (
     get_code_for_problem,
     get_dataframes_for_problem,
     get_dataset,
+    get_due_date,
     get_list_of_datasets_for_problem,
     get_problem,
+    get_problems_to_review,
     get_reviews_for_problem,
     get_tags_problem,
     list_available_datasets,
@@ -23,7 +26,58 @@ from backend.crud import (
     update_problem,
     update_tags,
 )
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
+
+
+def test_create_due(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    due_date = date(2050, 1, 1)
+    create_due_date(test_db, problem.id, due_date, "")
+    due = get_due_date(test_db, problem.id)
+    assert due.due_date == due_date
+
+
+def test_create_query_problems(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    due_date = date(2050, 1, 1)
+    create_due_date(test_db, problem.id, due_date, "")
+    due = get_due_date(test_db, problem.id)
+    assert due.due_date == due_date
+    assert len(get_problems_to_review(test_db)) == 0
+
+    description = "test 2"
+    problem2 = create_problem(test_db, description)
+    due_date = date(2000, 1, 1)
+    create_due_date(test_db, problem2.id, due_date, "")
+    assert len(get_problems_to_review(test_db)) == 1
+    assert get_problems_to_review(test_db)[0].id == problem2.id
+
+
+def test_due_2(test_db):
+    problem = create_problem(test_db, "", date_created=date(2024, 1, 1))
+    create_due_date(test_db, problem.id, date(2024, 1, 10), "", date_created=date(2024, 1, 5))
+    create_due_date(test_db, problem.id, date(2024, 1, 20), "", date_created=date(2024, 1, 11))
+    due = get_due_date(test_db, problem.id)
+    assert due.due_date == date(2024, 1, 20)
+
+
+# def test_due_3(test_db):
+#     problem = create_problem(test_db, "", date_created=date(2024, 1, 1))
+#     create_due_date(test_db, problem.id, date(2024, 10, 11), "", date_created=date(2024, 12, 8))
+#     create_due_date(test_db, problem.id, date(2024, 1, 20), "", date_created=date(2024, 1, 11))
+#     due = get_due_date(test_db, problem.id)
+#     assert due.due_date == date(2024, 1, 20)
+
+
+def test_get_problems_to_review_due(test_db):
+    problem = create_problem(test_db, "", date_created=date(2024, 1, 1))
+    create_due_date(test_db, problem.id, date(2024, 1, 10), "", date_created=date(2024, 1, 5))
+    create_due_date(test_db, problem.id, date(2024, 1, 20), "", date_created=date(2024, 1, 11))
+    problems = get_problems_to_review(test_db)
+    due = get_due_date(test_db, problems[0].id)
+    assert due.due_date == date(2024, 1, 20)
 
 
 def test_create_tag(test_db):

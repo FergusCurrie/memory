@@ -87,7 +87,7 @@ def schema():
 
 
 def check():
-    for tbl in ["dataset", "problem", "code", "review", "Employees"]:
+    for tbl in ["due"]:
         print(tbl + ":")
         stmt = select("*").select_from(text(tbl))
         result = session.execute(stmt)
@@ -121,6 +121,9 @@ def delete_table():
     engine = create_engine(conn_url)
 
     session = Session(engine)
+    session.execute(text("DROP TABLE IF EXISTS due CASCADE"))
+    session.commit()
+    return
     tables_sql_book = [
         "Categories",
         "Customers",

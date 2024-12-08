@@ -1,4 +1,5 @@
-from .sm2_algorithm import sm2_check_problem
+from .sm2_algorithm import sm2_check_problem, sm2_get_next_review
+from datetime import date, datetime
 
 
 class Scheduler:
@@ -14,3 +15,11 @@ class Scheduler:
         """
         reviews_dicts = [r.to_dict() for r in reviews]
         return sm2_check_problem(problem, reviews_dicts)
+
+    def get_next_review_date(self, problem, reviews):
+        reviews_dicts = [r.to_dict() for r in reviews]
+        x = sm2_get_next_review(problem, reviews_dicts)
+        if isinstance(x, bool):
+            x = datetime.now().date()
+        assert isinstance(x, date), f"{type(x)}"
+        return x

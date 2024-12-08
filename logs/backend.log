@@ -1,473 +1,64 @@
-2024-12-07 02:41:15,801 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
-2024-12-07 02:41:15,802 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:42:14,980 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
-2024-12-07 02:42:14,981 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:42:40,087 INFO backend.core.code_execution.CheckSQLCode Not an executable object: 'select top 100 *\nfrom contoso_sales'
-2024-12-07 02:42:40,087 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:43:32,916 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'contoso_sales'. (208) (SQLExecDirectW)")
-[SQL: select top 100 *
-from contoso_sales]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 02:43:32,916 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:44:39,806 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'master.contoso_sales'. (208) (SQLExecDirectW)")
-[SQL: select top 100 *
-from [master].contoso_sales]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 02:44:39,807 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:46:53,069 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'master.contoso_sales'. (208) (SQLExecDirectW)")
-[SQL: select top 100 *
-from [master].contoso_sales]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 02:46:53,070 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:47:33,329 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'dbo.contoso_sales'. (208) (SQLExecDirectW)")
-[SQL: select top 100 *
-from dbo.contoso_sales]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 02:47:33,330 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 107, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 02:51:05,748 INFO backend.app {"Order Number":{"0":284806,"1":285506,"2":311002,"3":366307,"4":325708,"5":333705,"6":364216,"7":349400,"8":328901,"9":365408},"Line Number":{"0":1,"1":1,"2":2,"3":2,"4":3,"5":2,"6":2,"7":5,"8":0,"9":0},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07","3":"2020-01-11","4":"2018-12-01","5":"2019-02-19","6":"2019-12-21","7":"2019-07-26","8":"2019-01-02","9":"2020-01-02"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12","3":"2020-01-11","4":"2018-12-02","5":"2019-02-24","6":"2019-12-21","7":"2019-07-30","8":"2019-01-03","9":"2020-01-02"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene","3":"Isaac Siddins","4":"Mike McQueen","5":"Freddie Obryan","6":"Clifford Wagner","7":"Gertrude Franklin","8":"Maximilian Keller","9":"Lammert Kienhuis"},"Customer Gender":{"0":"Male","1":"Male","2":"Male","3":"Male","4":"Male","5":"Male","6":"Male","7":"Female","8":"Male","9":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia","3":"Australia","4":"United States","5":"United States","6":"United States","7":"United States","8":"Germany","9":"Netherlands"},"Customer Age":{"0":47,"1":30,"2":59,"3":25,"4":56,"5":82,"6":82,"7":85,"8":61,"9":56},"Store Name":{"0":"Online store","1":"Online store","2":"Online store","3":"Contoso Store Western Australia","4":"Online store","5":"Online store","6":"Contoso Store Wyoming","7":"Online store","8":"Online store","9":"Contoso Store Groningen"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver","3":"Contoso 512MB MP3 Player E51 Blue","4":"Contoso 512MB MP3 Player E51 Blue","5":"Contoso 512MB MP3 Player E51 Blue","6":"Contoso 512MB MP3 Player E51 Blue","7":"Contoso 512MB MP3 Player E51 Blue","8":"Contoso 512MB MP3 Player E51 Blue","9":"Contoso 1G MP3 Player E100 White"},"Color":{"0":"Silver","1":"Silver","2":"Silver","3":"Blue","4":"Blue","5":"Blue","6":"Blue","7":"Blue","8":"Blue","9":"White"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso","3":"Contoso","4":"Contoso","5":"Contoso","6":"Contoso","7":"Contoso","8":"Contoso","9":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio","3":"Audio","4":"Audio","5":"Audio","6":"Audio","7":"Audio","8":"Audio","9":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3","3":"MP4&MP3","4":"MP4&MP3","5":"MP4&MP3","6":"MP4&MP3","7":"MP4&MP3","8":"MP4&MP3","9":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6,"3":4,"4":2,"5":2,"6":2,"7":10,"8":6,"9":3},"Unit Price":{"0":11.691,"1":11.691,"2":12.99,"3":12.99,"4":12.99,"5":12.99,"6":12.99,"7":12.99,"8":12.99,"9":14.52},"Net Price":{"0":10.288,"1":11.691,"2":12.99,"3":12.99,"4":11.5611,"5":12.99,"6":11.3013,"7":11.4312,"8":12.99,"9":13.5036},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62,"3":6.62,"4":6.62,"5":6.62,"6":6.62,"7":6.62,"8":6.62,"9":7.4},"Currency Code":{"0":"USD","1":"AUD","2":"AUD","3":"AUD","4":"USD","5":"USD","6":"USD","7":"USD","8":"EUR","9":"EUR"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484,"3":1.4545,"4":1.0,"5":1.0,"6":1.0,"7":1.0,"8":0.8774,"9":0.8934}}
-2024-12-07 02:51:13,688 INFO backend.app {"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}
-2024-12-07 02:51:48,303 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bd64e30>, <backend.models.Problem object at 0x7d8d8bd64e90>]
-2024-12-07 02:51:48,607 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bd67b60>, <backend.models.Problem object at 0x7d8d8bd67d10>, <backend.models.Problem object at 0x7d8d8bd67da0>]
-2024-12-07 02:51:48,609 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bd67d10>, <backend.models.Problem object at 0x7d8d8bd67da0>]
-2024-12-07 02:51:48,739 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bd8dc70>, <backend.models.Problem object at 0x7d8d8bd8dd00>]
-2024-12-07 02:51:51,601 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bde4680>, <backend.models.Problem object at 0x7d8d8bde48c0>]
-2024-12-07 02:51:51,602 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7d8d8bdac590>]
-2024-12-07 02:51:51,603 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x7d8d8bde48c0>]
-2024-12-07 02:52:11,089 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 77, in submit_code
-    passed, error, result_head = checker.compare_code(code.code, code_submission.code, dataframes)
-                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: CheckSQLCode.compare_code() takes 3 positional arguments but 4 were given
-
-2024-12-07 02:52:32,246 INFO backend.app {'passed': True, 'result_head': '{"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}', 'error': 'e1: None, e2: None'}
-2024-12-07 02:52:37,666 INFO backend.app {'passed': False, 'result_head': '{"Order Number":{"0":284806,"1":285506,"2":311002},"Line Number":{"0":1,"1":1,"2":2},"Order Date":{"0":"2017-10-18","1":"2017-10-25","2":"2018-07-07"},"Delivery Date":{"0":"2017-10-20","1":"2017-10-26","2":"2018-07-12"},"Customer Name":{"0":"Eric Kennedy","1":"George Tooth","2":"Caleb Greene"},"Customer Gender":{"0":"Male","1":"Male","2":"Male"},"Customer Country":{"0":"United States","1":"Australia","2":"Australia"},"Customer Age":{"0":47,"1":30,"2":59},"Store Name":{"0":"Online store","1":"Online store","2":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver","1":"Contoso 512MB MP3 Player E51 Silver","2":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver","1":"Silver","2":"Silver"},"Brand":{"0":"Contoso","1":"Contoso","2":"Contoso"},"Category":{"0":"Audio","1":"Audio","2":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3"},"Quantity":{"0":7,"1":1,"2":6},"Unit Price":{"0":11.691,"1":11.691,"2":12.99},"Net Price":{"0":10.288,"1":11.691,"2":12.99},"Unit Cost":{"0":5.958,"1":5.958,"2":6.62},"Currency Code":{"0":"USD","1":"AUD","2":"AUD"},"Exchange Rate":{"0":1.0,"1":1.2967,"2":1.3484}}', 'error': 'e1: None, e2: None'}
-2024-12-07 02:52:42,037 INFO backend.app {'passed': True, 'result_head': '{"Order Number":{"0":284806},"Line Number":{"0":1},"Order Date":{"0":"2017-10-18"},"Delivery Date":{"0":"2017-10-20"},"Customer Name":{"0":"Eric Kennedy"},"Customer Gender":{"0":"Male"},"Customer Country":{"0":"United States"},"Customer Age":{"0":47},"Store Name":{"0":"Online store"},"Product Name":{"0":"Contoso 512MB MP3 Player E51 Silver"},"Color":{"0":"Silver"},"Brand":{"0":"Contoso"},"Category":{"0":"Audio"},"Subcategory":{"0":"MP4&MP3"},"Quantity":{"0":7},"Unit Price":{"0":11.691},"Net Price":{"0":10.288},"Unit Cost":{"0":5.958},"Currency Code":{"0":"USD"},"Exchange Rate":{"0":1.0}}', 'error': 'e1: None, e2: None'}
-2024-12-07 02:52:44,370 INFO backend.routes.problem_routes problems to review: []
-2024-12-07 02:52:44,691 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x72ad37fb4410>, <backend.models.Problem object at 0x72ad37fb4650>]
-2024-12-07 02:52:44,693 INFO backend.routes.problem_routes []
-2024-12-07 02:58:32,092 INFO backend.app Getting all available datasets
-2024-12-07 02:58:32,100 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 03:20:52,973 INFO backend.app Getting all available datasets
-2024-12-07 03:20:52,982 INFO backend.app ['academic_detail', 'Customers', 'Orders', 'Shippers', 'customer_shopping_data_no_header', 'titanic_dataset', 'Products', 'Tests', 'Nums', 'historical_temperatures', 'Employees', 'Categories', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'Suppliers', 'OrderDetails', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'Scores', 'pokemon', 'status']
-2024-12-07 03:20:55,108 INFO backend.app Getting all available datasets
-2024-12-07 03:20:55,115 INFO backend.app ['academic_detail', 'Customers', 'Orders', 'Shippers', 'customer_shopping_data_no_header', 'titanic_dataset', 'Products', 'Tests', 'Nums', 'historical_temperatures', 'Employees', 'Categories', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'Suppliers', 'OrderDetails', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'Scores', 'pokemon', 'status']
-2024-12-07 03:21:16,531 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-psycopg2.errors.UndefinedTable: relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 99, in check_code_for_creation
-    datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory/backend/crud.py", line 143, in get_dataset
-    result = session.execute(stmt)
-             ^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
-    return self._execute_internal(
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
-    result = conn.execute(
-             ^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
-    return meth(
-           ^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
-    return connection._execute_clauseelement(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
-    ret = self._execute_context(
-          ^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
-    return self._exec_single_context(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-[SQL: SELECT * 
-FROM Products]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-
-2024-12-07 03:24:09,942 INFO backend.app Checking code : code='result = (\n    Products\n)' preprocessing_code='' dataset_names=['Products'] problem_type='polars'
-2024-12-07 03:24:09,951 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-psycopg2.errors.UndefinedTable: relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 100, in check_code_for_creation
-    datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory/backend/crud.py", line 143, in get_dataset
-    result = session.execute(stmt)
-             ^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
-    return self._execute_internal(
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
-    result = conn.execute(
-             ^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
-    return meth(
-           ^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
-    return connection._execute_clauseelement(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
-    ret = self._execute_context(
-          ^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
-    return self._exec_single_context(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-[SQL: SELECT * 
-FROM Products]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-
-2024-12-07 03:24:18,624 INFO backend.app Getting all available datasets
-2024-12-07 03:24:18,643 INFO backend.app ['academic_detail', 'Customers', 'Orders', 'Shippers', 'customer_shopping_data_no_header', 'titanic_dataset', 'Products', 'Tests', 'Nums', 'historical_temperatures', 'Employees', 'Categories', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'Suppliers', 'OrderDetails', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'Scores', 'pokemon', 'status']
-2024-12-07 03:24:28,237 INFO backend.app Checking code : code='result = (\n    Products\n)' preprocessing_code='' dataset_names=['Products'] problem_type='polars'
-2024-12-07 03:24:28,245 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-psycopg2.errors.UndefinedTable: relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 100, in check_code_for_creation
-    datasets = {name: get_dataset(db, name) for name in code_submission.dataset_names}
-                      ^^^^^^^^^^^^^^^^^^^^^
-  File "/workspaces/memory/backend/crud.py", line 143, in get_dataset
-    result = session.execute(stmt)
-             ^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
-    return self._execute_internal(
-           ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2256, in _execute_internal
-    result = conn.execute(
-             ^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
-    return meth(
-           ^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
-    return connection._execute_clauseelement(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
-    ret = self._execute_context(
-          ^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
-    return self._exec_single_context(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
-    self._handle_dbapi_exception(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
-    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
-    self.dialect.do_execute(
-  File "/root/.cache/pypoetry/virtualenvs/memory-7yvjw6ke-py3.12/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.ProgrammingError: (psycopg2.errors.UndefinedTable) relation "products" does not exist
-LINE 2: FROM Products
-             ^
-
-[SQL: SELECT * 
-FROM Products]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-
-2024-12-07 03:34:02,076 INFO backend.app Getting all available datasets
-2024-12-07 03:34:02,085 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 03:35:33,570 INFO backend.app Getting all available datasets
-2024-12-07 03:35:33,583 INFO backend.app ['customer_shopping_data_no_header', 'titanic_dataset', 'historical_temperatures', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'pokemon', 'status', 'academic_detail']
-2024-12-07 03:38:21,353 INFO backend.app Getting all available datasets
-2024-12-07 03:38:21,366 INFO backend.app ['academic_detail', 'Customers', 'Orders', 'Shippers', 'customer_shopping_data_no_header', 'titanic_dataset', 'Products', 'Tests', 'Nums', 'historical_temperatures', 'Employees', 'Categories', 'temperatures', 'toronto_weather', 'us_videos', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'Suppliers', 'OrderDetails', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'Scores', 'pokemon', 'status']
-2024-12-07 03:38:47,352 INFO backend.app Getting all available datasets
-2024-12-07 03:38:47,399 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 03:39:02,801 INFO backend.app Checking code : code='result = (\n    employees\n)' preprocessing_code='' dataset_names=['employees'] problem_type='polars'
-2024-12-07 03:39:02,814 INFO backend.app {"empid":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9},"lastname":{"0":"Davis","1":"Funk","2":"Lew","3":"Peled","4":"Mortensen","5":"Suurs","6":"King","7":"Cameron","8":"Doyle"},"firstname":{"0":"Sara","1":"Don","2":"Judy","3":"Yael","4":"Sven","5":"Paul","6":"Russell","7":"Maria","8":"Patricia"},"title":{"0":"CEO","1":"Vice President, Sales","2":"Sales Manager","3":"Sales Representative","4":"Sales Manager","5":"Sales Representative","6":"Sales Representative","7":"Sales Representative","8":"Sales Representative"},"titleofcourtesy":{"0":"Ms.","1":"Dr.","2":"Ms.","3":"Mrs.","4":"Mr.","5":"Mr.","6":"Mr.","7":"Ms.","8":"Ms."},"birthdate":{"0":"1968-12-08","1":"1972-02-19","2":"1983-08-30","3":"1957-09-19","4":"1975-03-04","5":"1983-07-02","6":"1980-05-29","7":"1978-01-09","8":"1986-01-27"},"hiredate":{"0":"2020-05-01","1":"2020-08-14","2":"2020-04-01","3":"2021-05-03","4":"2021-10-17","5":"2021-10-17","6":"2022-01-02","7":"2022-03-05","8":"2022-11-15"},"address":{"0":"7890 - 20th Ave. E., Apt. 2A","1":"9012 W. Capital Way","2":"2345 Moss Bay Blvd.","3":"5678 Old Redmond Rd.","4":"8901 Garrett Hill","5":"3456 Coventry House, Miner Rd.","6":"6789 Edgeham Hollow, Winchester Way","7":"4567 - 11th Ave. N.E.","8":"1234 Houndstooth Rd."},"city":{"0":"Seattle","1":"Tacoma","2":"Kirkland","3":"Redmond","4":"London","5":"London","6":"London","7":"Seattle","8":"London"},"region":{"0":"WA","1":"WA","2":"WA","3":"WA","4":null,"5":null,"6":null,"7":"WA","8":null},"postalcode":{"0":10003,"1":10001,"2":10007,"3":10009,"4":10004,"5":10005,"6":10002,"7":10006,"8":10008},"country":{"0":"USA","1":"USA","2":"USA","3":"USA","4":"UK","5":"UK","6":"UK","7":"USA","8":"UK"},"phone":{"0":"(206) 555-0101","1":"(206) 555-0100","2":"(206) 555-0103","3":"(206) 555-0104","4":"(71) 234-5678","5":"(71) 345-6789","6":"(71) 123-4567","7":"(206) 555-0102","8":"(71) 456-7890"},"mgrid":{"0":null,"1":1.0,"2":2.0,"3":3.0,"4":2.0,"5":5.0,"6":5.0,"7":3.0,"8":5.0}}
-2024-12-07 03:40:16,199 INFO backend.app Getting all available datasets
-2024-12-07 03:40:16,246 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 03:40:29,602 INFO backend.app Checking code : code='select * from employees' preprocessing_code='' dataset_names=['employees'] problem_type='sql'
-2024-12-07 03:40:29,634 INFO backend.app {"empid":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9},"lastname":{"0":"Davis","1":"Funk","2":"Lew","3":"Peled","4":"Mortensen","5":"Suurs","6":"King","7":"Cameron","8":"Doyle"},"firstname":{"0":"Sara","1":"Don","2":"Judy","3":"Yael","4":"Sven","5":"Paul","6":"Russell","7":"Maria","8":"Patricia"},"title":{"0":"CEO","1":"Vice President, Sales","2":"Sales Manager","3":"Sales Representative","4":"Sales Manager","5":"Sales Representative","6":"Sales Representative","7":"Sales Representative","8":"Sales Representative"},"titleofcourtesy":{"0":"Ms.","1":"Dr.","2":"Ms.","3":"Mrs.","4":"Mr.","5":"Mr.","6":"Mr.","7":"Ms.","8":"Ms."},"birthdate":{"0":-33609,"1":67305,"2":431049,"3":-387676,"4":163123,"5":425952,"6":328406,"7":253152,"8":507168},"hiredate":{"0":1588291,"1":1597363,"2":1585699,"3":1620000,"4":1634428,"5":1634428,"6":1641081,"7":1646438,"8":1668470},"address":{"0":"7890 - 20th Ave. E., Apt. 2A","1":"9012 W. Capital Way","2":"2345 Moss Bay Blvd.","3":"5678 Old Redmond Rd.","4":"8901 Garrett Hill","5":"3456 Coventry House, Miner Rd.","6":"6789 Edgeham Hollow, Winchester Way","7":"4567 - 11th Ave. N.E.","8":"1234 Houndstooth Rd."},"city":{"0":"Seattle","1":"Tacoma","2":"Kirkland","3":"Redmond","4":"London","5":"London","6":"London","7":"Seattle","8":"London"},"region":{"0":"WA","1":"WA","2":"WA","3":"WA","4":null,"5":null,"6":null,"7":"WA","8":null},"postalcode":{"0":"10003","1":"10001","2":"10007","3":"10009","4":"10004","5":"10005","6":"10002","7":"10006","8":"10008"},"country":{"0":"USA","1":"USA","2":"USA","3":"USA","4":"UK","5":"UK","6":"UK","7":"USA","8":"UK"},"phone":{"0":"(206) 555-0101","1":"(206) 555-0100","2":"(206) 555-0103","3":"(206) 555-0104","4":"(71) 234-5678","5":"(71) 345-6789","6":"(71) 123-4567","7":"(206) 555-0102","8":"(71) 456-7890"},"mgrid":{"0":null,"1":1.0,"2":2.0,"3":3.0,"4":2.0,"5":5.0,"6":5.0,"7":3.0,"8":5.0}}
-2024-12-07 04:43:41,310 INFO backend.app Checking code : code='FROM orders\nWHERE custid = 71\nGROPU BY empid, YEAR(orderdate)' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:43:41,353 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near the keyword 'FROM'. (156) (SQLExecDirectW)")
-[SQL: FROM dbo.Orders
-WHERE custid = 71
-GROPU BY empid, YEAR(orderdate)]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 04:43:41,353 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 108, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 04:44:50,564 INFO backend.app Checking code : code='SELECT empid, YEAR(orderdate) AS orderyear\nFROM orders\nWHERE custid = 71\nGROPU BY empid, YEAR(orderdate)' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:44:50,599 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Incorrect syntax near 'GROPU'. (102) (SQLExecDirectW)")
-[SQL: SELECT empid, YEAR(orderdate) AS orderyear
-FROM dbo.Orders
-WHERE custid = 71
-GROPU BY empid, YEAR(orderdate)]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 04:44:50,599 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 108, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 04:45:06,840 INFO backend.app Checking code : code='SELECT empid, YEAR(orderdate) AS orderyear\nFROM orders\nWHERE custid = 71\nGROUP BY empid, YEAR(orderdate)' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:45:06,924 INFO backend.app {"empid":{"0":1,"1":1,"2":1,"3":2,"4":2,"5":2,"6":3,"7":4,"8":4,"9":5},"orderyear":{"0":2020,"1":2021,"2":2022,"3":2020,"4":2021,"5":2022,"6":2021,"7":2021,"8":2022,"9":2021}}
-2024-12-07 04:46:51,452 INFO backend.app Checking code : code='SELECT\n  empid,\n  SUM(freight) AS totalfreight,\n  COUNT(*) AS numorders\nFROM Sales.Orders\nGROUP BY empid, YEAR(orderdate);' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:46:51,471 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42S02', "[42S02] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Invalid object name 'dbo.Sales.Orders'. (208) (SQLExecDirectW)")
-[SQL: SELECT
-  empid,
-  SUM(freight) AS totalfreight,
-  COUNT(*) AS numOrders
-FROM dbo.Sales.Orders
-GROUP BY empid, YEAR(orderdate);]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 04:46:51,471 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 108, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 04:47:01,333 INFO backend.app Checking code : code='SELECT\n  empid,\n  SUM(freight) AS totalfreight,\n  COUNT(*) AS numorders\nFROM orders\nGROUP BY empid, YEAR(orderdate);' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:47:01,365 INFO backend.app {"empid":{"0":9,"1":8,"2":7,"3":3,"4":6,"5":2,"6":4,"7":5,"8":8,"9":4},"totalfreight":{"0":1046.09,"1":3294.2,"2":3240.66,"3":3086.37,"4":766.1,"5":3796.41,"6":1968.59,"7":1368.59,"8":1258.4,"9":6648.6},"numOrders":{"0":19,"1":31,"2":36,"3":38,"4":15,"5":41,"6":31,"7":13,"8":19,"9":81}}
-2024-12-07 04:48:34,622 INFO backend.app Checking code : code='SELECT\n  empid,\n  YEAR(orderdate) AS orderyear,\n  COUNT(DISTINCT custid) AS numcusts\nFROM orders\nGROUP BY empid, YEAR(orderdate);' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:48:34,656 INFO backend.app {"empid":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9,"9":1},"orderyear":{"0":2020,"1":2020,"2":2020,"3":2020,"4":2020,"5":2020,"6":2020,"7":2020,"8":2020,"9":2021},"numcusts":{"0":22,"1":15,"2":16,"3":26,"4":10,"5":15,"6":11,"7":19,"8":5,"9":40}}
-2024-12-07 04:50:51,182 INFO backend.app Checking code : code='SELECT *\nFROM orders\nGROUP BY empid, YEAR(orderdate)\nHAVING COUNT(*) > 1' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:50:51,205 INFO backend.core.code_execution.CheckSQLCode (pyodbc.ProgrammingError) ('42000', "[42000] [Microsoft][ODBC Driver 18 for SQL Server][SQL Server]Column 'dbo.Orders.orderid' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause. (8120) (SQLExecDirectW)")
-[SQL: SELECT *
-FROM dbo.Orders
-GROUP BY empid, YEAR(orderdate)
-HAVING COUNT(*) > 1]
-(Background on this error at: https://sqlalche.me/e/20/f405)
-2024-12-07 04:50:51,205 ERROR backend.app An error occurred in code compleition:
-Traceback (most recent call last):
-  File "/workspaces/memory/backend/app.py", line 108, in check_code_for_creation
-    logger.info(executed_df.head(10).to_pandas().to_json())
-                ^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'head'
-
-2024-12-07 04:51:41,403 INFO backend.app Checking code : code='SELECT empid, YEAR(orderdate) AS orderyear\nFROM orders\nGROUP BY empid, YEAR(orderdate)\nHAVING COUNT(*) > 1' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:51:41,424 INFO backend.app {"empid":{"0":9,"1":8,"2":7,"3":3,"4":6,"5":2,"6":4,"7":5,"8":8,"9":4},"orderyear":{"0":2021,"1":2022,"2":2021,"3":2022,"4":2020,"5":2021,"6":2020,"7":2022,"8":2020,"9":2021}}
-2024-12-07 04:54:37,809 INFO backend.app Checking code : code='SELECT empid, YEAR(orderdate) AS orderyear\nFROM orders\nORDER BY empid' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:54:37,868 INFO backend.app {"empid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1},"orderyear":{"0":2020,"1":2020,"2":2020,"3":2020,"4":2020,"5":2020,"6":2020,"7":2020,"8":2020,"9":2020}}
-2024-12-07 04:54:47,811 INFO backend.app Checking code : code='SELECT empid\nFROM orders\nORDER BY empid' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:54:47,840 INFO backend.app {"empid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1}}
-2024-12-07 04:57:38,998 INFO backend.app Checking code : code='SELECT orderid, orderdate, custid, empid\nFROM orders\nORDER BY orderdate, orderid\nOFFSET 50 ROWS FETCH NEXT 25 ROWS ONLY;' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 04:57:39,020 INFO backend.app {"orderid":{"0":10298,"1":10299,"2":10300,"3":10301,"4":10302,"5":10303,"6":10304,"7":10305,"8":10306,"9":10307},"orderdate":{"0":1599264,"1":1599350,"2":1599609,"3":1599609,"4":1599696,"5":1599782,"6":1599868,"7":1599955,"8":1600214,"9":1600300},"custid":{"0":37,"1":67,"2":49,"3":86,"4":76,"5":30,"6":80,"7":55,"8":69,"9":48},"empid":{"0":6,"1":4,"2":2,"3":8,"4":4,"5":7,"6":1,"7":8,"8":1,"9":2}}
-2024-12-07 05:00:28,132 INFO backend.app Checking code : code='SELECT orderid\nFROM orders\nORDER BY orderid\nOFFSET 50 ROWS FETCH NEXT 25 ROWS ONLY;' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:00:28,161 INFO backend.app {"orderid":{"0":10298,"1":10299,"2":10300,"3":10301,"4":10302,"5":10303,"6":10304,"7":10305,"8":10306,"9":10307}}
-2024-12-07 05:02:08,807 INFO backend.app Checking code : code='SELECT orderid, custid, val,\nROW_NUMBER() OVER(PARTITION BY custid\n                ORDER BY val) AS rownum\nFROM ordervalues\nORDER BY custid, val;' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:02:08,848 INFO backend.app {"orderid":{"0":10702,"1":10952,"2":10643,"3":10835,"4":10692,"5":11011,"6":10308,"7":10759,"8":10625,"9":10926},"custid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":2,"7":2,"8":2,"9":2},"val":{"0":330.0,"1":471.2,"2":814.5,"3":845.8,"4":878.0,"5":933.5,"6":88.8,"7":320.0,"8":479.75,"9":514.4},"rownum":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":1,"7":2,"8":3,"9":4}}
-2024-12-07 05:03:28,826 INFO backend.app Checking code : code='SELECT \n    orderid, \n    custid, \n    val,\n    ROW_NUMBER() OVER(PARTITION BY custid ORDER BY val) AS rownum\n\nFROM ordervalues\n' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:03:28,857 INFO backend.app {"orderid":{"0":10702,"1":10952,"2":10643,"3":10835,"4":10692,"5":11011,"6":10308,"7":10759,"8":10625,"9":10926},"custid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":2,"7":2,"8":2,"9":2},"val":{"0":330.0,"1":471.2,"2":814.5,"3":845.8,"4":878.0,"5":933.5,"6":88.8,"7":320.0,"8":479.75,"9":514.4},"rownum":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":1,"7":2,"8":3,"9":4}}
-2024-12-07 05:03:35,686 INFO backend.app Checking code : code='SELECT \n    orderid, \n    custid, \n    val,\n    ROW_NUMBER() OVER(PARTITION BY custid ORDER BY val) AS rownum\n\nFROM ordervalues\n' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:03:35,712 INFO backend.app {"orderid":{"0":10702,"1":10952,"2":10643,"3":10835,"4":10692,"5":11011,"6":10308,"7":10759,"8":10625,"9":10926},"custid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":2,"7":2,"8":2,"9":2},"val":{"0":330.0,"1":471.2,"2":814.5,"3":845.8,"4":878.0,"5":933.5,"6":88.8,"7":320.0,"8":479.75,"9":514.4},"rownum":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":1,"7":2,"8":3,"9":4}}
-2024-12-07 05:04:40,055 INFO backend.app Checking code : code='SELECT \n    orderid, \n    custid, \n    val,\n    ROW_NUMBER() OVER(PARTITION BY custid ORDER BY val) AS rownum\nFROM ordervalues\nORDER BY custid, val;' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:04:40,090 INFO backend.app {"orderid":{"0":10702,"1":10952,"2":10643,"3":10835,"4":10692,"5":11011,"6":10308,"7":10759,"8":10625,"9":10926},"custid":{"0":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":2,"7":2,"8":2,"9":2},"val":{"0":330.0,"1":471.2,"2":814.5,"3":845.8,"4":878.0,"5":933.5,"6":88.8,"7":320.0,"8":479.75,"9":514.4},"rownum":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":1,"7":2,"8":3,"9":4}}
-2024-12-07 05:06:00,640 INFO backend.app Checking code : code='SELECT orderid, empid, orderdate\nFROM orders\nWHERE orderid IN(10248, 10249);' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:06:00,661 INFO backend.app {"orderid":{"0":10248,"1":10249},"empid":{"0":5,"1":6},"orderdate":{"0":1593820,"1":1593907}}
-2024-12-07 05:06:36,283 INFO backend.app Checking code : code='SELECT orderid, empid, orderdate\nFROM orders\nWHERE orderid IN(10248, 10249);' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:06:36,303 INFO backend.app {"orderid":{"0":10248,"1":10249},"empid":{"0":5,"1":6},"orderdate":{"0":1593820,"1":1593907}}
-2024-12-07 05:07:30,878 INFO backend.app Checking code : code='SELECT orderid, empid, orderdate\nFROM orders\nWHERE orderid BETWEEN 10300 AND 10310;' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:07:30,910 INFO backend.app {"orderid":{"0":10300,"1":10301,"2":10302,"3":10303,"4":10304,"5":10305,"6":10306,"7":10307,"8":10308,"9":10309},"empid":{"0":2,"1":8,"2":4,"3":7,"4":1,"5":8,"6":1,"7":2,"8":7,"9":3},"orderdate":{"0":1599609,"1":1599609,"2":1599696,"3":1599782,"4":1599868,"5":1599955,"6":1600214,"7":1600300,"8":1600387,"9":1600473}}
-2024-12-07 05:10:03,768 INFO backend.app Checking code : code="SELECT supplierid, COUNT(*) AS numproducts,\n  CASE COUNT(*) % 2\n    WHEN 0 THEN 'Even'\n    WHEN 1 THEN 'Odd'\n    ELSE 'Unknown'\n  END AS countparity\nFROM products\nGROUP BY supplierid;" preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:10:03,805 INFO backend.app {"supplierid":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9,"9":10},"numProducts":{"0":3,"1":4,"2":3,"3":3,"4":2,"5":3,"6":5,"7":4,"8":2,"9":1},"countparity":{"0":"Odd","1":"Even","2":"Odd","3":"Odd","4":"Even","5":"Odd","6":"Odd","7":"Even","8":"Even","9":"Odd"}}
-2024-12-07 05:11:31,420 INFO backend.app Checking code : code="SELECT supplierid, COUNT(*) AS numproducts,\n  CASE COUNT(*) % 2\n    WHEN 0 THEN 'Even'\n    WHEN 1 THEN 'Odd'\n    ELSE 'Unknown'\n  END AS countparity\nFROM products\nGROUP BY supplierid;" preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:11:31,450 INFO backend.app {"supplierid":{"0":1,"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":8,"8":9,"9":10},"numProducts":{"0":3,"1":4,"2":3,"3":3,"4":2,"5":3,"6":5,"7":4,"8":2,"9":1},"countparity":{"0":"Odd","1":"Even","2":"Odd","3":"Odd","4":"Even","5":"Odd","6":"Odd","7":"Even","8":"Even","9":"Odd"}}
-2024-12-07 05:12:56,528 INFO backend.app Getting all available datasets
-2024-12-07 05:12:56,535 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 05:13:33,069 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x71ccc93ed6a0>, <backend.models.Problem object at 0x71ccc93eeae0>, <backend.models.Problem object at 0x71ccc93efec0>, <backend.models.Problem object at 0x71ccc93ed250>, <backend.models.Problem object at 0x71ccc93ed670>, <backend.models.Problem object at 0x71ccc93ecfb0>, <backend.models.Problem object at 0x71ccc93ecd70>, <backend.models.Problem object at 0x71ccc93ee420>, <backend.models.Problem object at 0x71ccc93ec6e0>, <backend.models.Problem object at 0x71ccc93ec7d0>]
-2024-12-07 05:13:33,151 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x71ccc93ef7a0>, <backend.models.Problem object at 0x71ccc93ed9a0>, <backend.models.Problem object at 0x71ccc93ef140>, <backend.models.Problem object at 0x71ccc93efa10>, <backend.models.Problem object at 0x71ccc93eef30>, <backend.models.Problem object at 0x71ccc93ee7e0>, <backend.models.Problem object at 0x71ccc93edeb0>, <backend.models.Problem object at 0x71ccc93edbe0>, <backend.models.Problem object at 0x71ccc9f840e0>, <backend.models.Problem object at 0x71ccc9360230>, <backend.models.Problem object at 0x71ccc9363fb0>, <backend.models.Problem object at 0x71ccc9361250>]
-2024-12-07 05:13:33,154 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x71ccc93ef140>, <backend.models.Problem object at 0x71ccc93efa10>, <backend.models.Problem object at 0x71ccc93eef30>, <backend.models.Problem object at 0x71ccc93ee7e0>, <backend.models.Problem object at 0x71ccc93edeb0>, <backend.models.Problem object at 0x71ccc93edbe0>, <backend.models.Problem object at 0x71ccc9f840e0>, <backend.models.Problem object at 0x71ccc9360230>, <backend.models.Problem object at 0x71ccc9363fb0>, <backend.models.Problem object at 0x71ccc9361250>]
-2024-12-07 05:13:33,628 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x71ccc938e3f0>, <backend.models.Problem object at 0x71ccc938dee0>, <backend.models.Problem object at 0x71ccc938f440>, <backend.models.Problem object at 0x71ccc938e270>, <backend.models.Problem object at 0x71ccc938f6e0>, <backend.models.Problem object at 0x71ccc938de20>, <backend.models.Problem object at 0x71ccc938fdd0>, <backend.models.Problem object at 0x71ccc938f650>, <backend.models.Problem object at 0x71ccc938ff50>, <backend.models.Problem object at 0x71ccc938e360>]
-2024-12-07 05:14:52,619 INFO backend.app {'passed': False, 'result_head': '{"empid":{"0":9,"1":1,"2":2,"3":4,"4":8,"5":6,"6":6,"7":8,"8":5,"9":1},"":{"0":2020,"1":2020,"2":2020,"3":2021,"4":2021,"5":2021,"6":2021,"7":2021,"8":2021,"9":2021}}', 'error': 'e1: None, e2: None'}
-2024-12-07 05:15:17,423 INFO backend.routes.problem_routes UPdating probl. prob id = 19, problem_update: {'description': 'Return the year of order (orderyear) for each empid, for customer 71', 'default_code': 'SELECT\nFROM orders', 'code': 'SELECT empid, YEAR(orderdate) AS orderyear\nFROM orders\nWHERE custid = 71\nGROUP BY empid, YEAR(orderdate)'}
-2024-12-07 05:15:20,473 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x71ccc92732f0>, <backend.models.Problem object at 0x71ccc9273470>, <backend.models.Problem object at 0x71ccc92734d0>, <backend.models.Problem object at 0x71ccc9273530>, <backend.models.Problem object at 0x71ccc9273590>, <backend.models.Problem object at 0x71ccc92735f0>, <backend.models.Problem object at 0x71ccc9273650>, <backend.models.Problem object at 0x71ccc92736b0>, <backend.models.Problem object at 0x71ccc9273710>, <backend.models.Problem object at 0x71ccc9273770>, <backend.models.Problem object at 0x71ccc92737d0>, <backend.models.Problem object at 0x71ccc9273830>]
-2024-12-07 05:15:20,478 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x71ccc92c0080>, <backend.models.Problem object at 0x71ccc92c00e0>, <backend.models.Problem object at 0x71ccc92c0140>, <backend.models.Problem object at 0x71ccc92c01a0>, <backend.models.Problem object at 0x71ccc92c0200>, <backend.models.Problem object at 0x71ccc92c0260>, <backend.models.Problem object at 0x71ccc92c02c0>, <backend.models.Problem object at 0x71ccc92c0320>, <backend.models.Problem object at 0x71ccc92c0380>, <backend.models.Problem object at 0x71ccc92c03e0>]
-2024-12-07 05:15:20,479 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x71ccc92734d0>, <backend.models.Problem object at 0x71ccc9273530>, <backend.models.Problem object at 0x71ccc9273590>, <backend.models.Problem object at 0x71ccc92735f0>, <backend.models.Problem object at 0x71ccc9273650>, <backend.models.Problem object at 0x71ccc92736b0>, <backend.models.Problem object at 0x71ccc9273710>, <backend.models.Problem object at 0x71ccc9273770>, <backend.models.Problem object at 0x71ccc92737d0>, <backend.models.Problem object at 0x71ccc9273830>]
-2024-12-07 05:15:21,051 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x71ccc9272090>, <backend.models.Problem object at 0x71ccc9272120>, <backend.models.Problem object at 0x71ccc92720c0>, <backend.models.Problem object at 0x71ccc92713a0>, <backend.models.Problem object at 0x71ccc92711f0>, <backend.models.Problem object at 0x71ccc9271280>, <backend.models.Problem object at 0x71ccc9270bf0>, <backend.models.Problem object at 0x71ccc9270c20>, <backend.models.Problem object at 0x71ccc9270bc0>, <backend.models.Problem object at 0x71ccc9270b60>]
-2024-12-07 05:16:54,775 INFO backend.app Getting all available datasets
-2024-12-07 05:16:54,793 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 05:19:02,742 INFO backend.app Checking code : code='SELECT \n  orderid, \n  requireddate, \n  shippeddate,\n  GREATEST(requireddate, shippeddate) AS latestdate,\n  LEAST(requireddate, shippeddate) AS earliestdate\nFROM orders' preprocessing_code='' dataset_names=['orders'] problem_type='sql'
-2024-12-07 05:19:02,768 INFO backend.app {"orderid":{"0":10248,"1":10249,"2":10250,"3":10251,"4":10252,"5":10253,"6":10254,"7":10255,"8":10256,"9":10257},"requireddate":{"0":1596240,"1":1597536,"2":1596585,"3":1596585,"4":1596672,"5":1595548,"6":1596844,"7":1596931,"8":1597190,"9":1597276},"shippeddate":{"0":1594857,"1":1594339,"2":1594512,"3":1594771,"4":1594425,"5":1594857,"6":1595462,"7":1594771,"8":1594944,"9":1595376},"latestdate":{"0":1596240,"1":1597536,"2":1596585,"3":1596585,"4":1596672,"5":1595548,"6":1596844,"7":1596931,"8":1597190,"9":1597276},"earliestdate":{"0":1594857,"1":1594339,"2":1594512,"3":1594771,"4":1594425,"5":1594857,"6":1595462,"7":1594771,"8":1594944,"9":1595376}}
-2024-12-07 06:00:26,561 INFO backend.app Getting all available datasets
-2024-12-07 06:00:26,610 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:01:47,576 INFO backend.app Getting all available datasets
-2024-12-07 06:01:47,584 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:03:18,410 INFO backend.app Getting all available datasets
-2024-12-07 06:03:18,418 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:08:02,783 INFO backend.app Getting all available datasets
-2024-12-07 06:08:02,792 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:08:04,940 INFO backend.app Getting all available datasets
-2024-12-07 06:08:04,947 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:08:11,643 INFO backend.app Getting all available datasets
-2024-12-07 06:08:11,659 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:08:40,630 INFO backend.app Checking code : code='result = (tests)' preprocessing_code='' dataset_names=['tests'] problem_type='polars'
-2024-12-07 06:08:40,641 INFO backend.app {"testid":{"0":"Test ABC","1":"Test XYZ"}}
-2024-12-07 06:08:46,151 INFO backend.app Getting all available datasets
-2024-12-07 06:08:46,159 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:10:05,568 INFO backend.app Getting all available datasets
-2024-12-07 06:10:05,576 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:11:41,708 INFO backend.app Getting all available datasets
-2024-12-07 06:11:41,717 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:17:35,619 INFO backend.app Getting all available datasets
-2024-12-07 06:17:35,627 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:17:46,614 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:17:49,221 INFO backend.app Getting all available datasets
-2024-12-07 06:17:49,228 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:18:01,196 INFO backend.routes.problem_routes UPdating probl. prob id = 30, problem_update: {'description': 'TESTING tags ', 'default_code': '', 'code': 'result = (tests)', 'tags': []}
-2024-12-07 06:18:04,200 INFO backend.app Getting all available datasets
-2024-12-07 06:18:04,214 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:18:13,331 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': ['javascript']}
-2024-12-07 06:18:18,818 INFO backend.app Getting all available datasets
-2024-12-07 06:18:18,828 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:18:26,994 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': ['javascript', 'two']}
-2024-12-07 06:18:29,513 INFO backend.app Getting all available datasets
-2024-12-07 06:18:29,521 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:18:35,750 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:18:37,848 INFO backend.app Getting all available datasets
-2024-12-07 06:18:37,855 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:20:00,437 INFO backend.app Getting all available datasets
-2024-12-07 06:20:00,455 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:20:03,304 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:20:04,283 INFO backend.app Getting all available datasets
-2024-12-07 06:20:04,291 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:20:11,257 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:20:13,027 INFO backend.app Getting all available datasets
-2024-12-07 06:20:13,052 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:20:28,155 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:20:31,984 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': ['f']}
-2024-12-07 06:20:33,544 INFO backend.app Getting all available datasets
-2024-12-07 06:20:33,551 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:20:37,344 INFO backend.routes.problem_routes UPdating probl. prob id = 5, problem_update: {'description': 'Aggregate brand column by taking the first customer name ', 'default_code': 'result = ()', 'code': "result = (\n    contoso_sales\n    .group_by('Brand')\n    .agg(\n        pl.col('Customer Name')\n        .first()\n    )\n)", 'tags': []}
-2024-12-07 06:20:39,561 INFO backend.app Getting all available datasets
-2024-12-07 06:20:39,598 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:22:25,671 INFO backend.app Getting all available datasets
-2024-12-07 06:22:25,688 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:22:27,815 INFO backend.app Getting all available datasets
-2024-12-07 06:22:27,823 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:22:28,084 INFO backend.app Getting all available datasets
-2024-12-07 06:22:28,121 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 06:22:30,566 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08fc3320>, <backend.models.Problem object at 0x78fe08fc3350>, <backend.models.Problem object at 0x78fe08fc3620>, <backend.models.Problem object at 0x78fe08fc3860>, <backend.models.Problem object at 0x78fe08fc34a0>, <backend.models.Problem object at 0x78fe08fc3740>, <backend.models.Problem object at 0x78fe08fc39e0>, <backend.models.Problem object at 0x78fe08fc3a70>, <backend.models.Problem object at 0x78fe090e6480>, <backend.models.Problem object at 0x78fe090e6ae0>, <backend.models.Problem object at 0x78fe08ff72c0>, <backend.models.Problem object at 0x78fe08ff74a0>, <backend.models.Problem object at 0x78fe08fc0410>, <backend.models.Problem object at 0x78fe08fc3e00>]
-2024-12-07 06:22:30,572 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08fc3aa0>, <backend.models.Problem object at 0x78fe08fc3920>, <backend.models.Problem object at 0x78fe08fc3cb0>, <backend.models.Problem object at 0x78fe08fc3bc0>, <backend.models.Problem object at 0x78fe08fc3ce0>, <backend.models.Problem object at 0x78fe08fc0a40>, <backend.models.Problem object at 0x78fe08fc0bf0>, <backend.models.Problem object at 0x78fe08fc00b0>, <backend.models.Problem object at 0x78fe08fc3b30>, <backend.models.Problem object at 0x78fe08fc3fe0>, <backend.models.Problem object at 0x78fe08fc0dd0>, <backend.models.Problem object at 0x78fe08fc3ef0>]
-2024-12-07 06:22:30,572 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08fc3620>, <backend.models.Problem object at 0x78fe08fc3860>, <backend.models.Problem object at 0x78fe08fc34a0>, <backend.models.Problem object at 0x78fe08fc3740>, <backend.models.Problem object at 0x78fe08fc39e0>, <backend.models.Problem object at 0x78fe08fc3a70>, <backend.models.Problem object at 0x78fe090e6480>, <backend.models.Problem object at 0x78fe090e6ae0>, <backend.models.Problem object at 0x78fe08ff72c0>, <backend.models.Problem object at 0x78fe08ff74a0>, <backend.models.Problem object at 0x78fe08fc0410>, <backend.models.Problem object at 0x78fe08fc3e00>]
-2024-12-07 06:22:30,702 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe0903a570>, <backend.models.Problem object at 0x78fe090389b0>, <backend.models.Problem object at 0x78fe0903bdd0>, <backend.models.Problem object at 0x78fe090398b0>, <backend.models.Problem object at 0x78fe09038c80>, <backend.models.Problem object at 0x78fe0903a3f0>, <backend.models.Problem object at 0x78fe0903b2f0>, <backend.models.Problem object at 0x78fe09038ec0>, <backend.models.Problem object at 0x78fe0903b500>, <backend.models.Problem object at 0x78fe09039ee0>, <backend.models.Problem object at 0x78fe09038380>, <backend.models.Problem object at 0x78fe09039d30>]
-2024-12-07 06:22:36,223 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08f5b1a0>, <backend.models.Problem object at 0x78fe08f5b140>, <backend.models.Problem object at 0x78fe08f5b0e0>, <backend.models.Problem object at 0x78fe08f5b080>, <backend.models.Problem object at 0x78fe08f5b020>, <backend.models.Problem object at 0x78fe08f5afc0>, <backend.models.Problem object at 0x78fe08f5af60>, <backend.models.Problem object at 0x78fe08f5af00>, <backend.models.Problem object at 0x78fe08f5aea0>, <backend.models.Problem object at 0x78fe08f5ae40>, <backend.models.Problem object at 0x78fe08f5ade0>, <backend.models.Problem object at 0x78fe08f5ad80>]
-2024-12-07 06:22:36,262 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08f59a60>, <backend.models.Problem object at 0x78fe08f598e0>, <backend.models.Problem object at 0x78fe08f59880>, <backend.models.Problem object at 0x78fe08f59820>, <backend.models.Problem object at 0x78fe08f597c0>, <backend.models.Problem object at 0x78fe08f59730>, <backend.models.Problem object at 0x78fe08f596a0>, <backend.models.Problem object at 0x78fe08f59610>, <backend.models.Problem object at 0x78fe08f59580>, <backend.models.Problem object at 0x78fe08f594f0>, <backend.models.Problem object at 0x78fe08f59460>, <backend.models.Problem object at 0x78fe08f593d0>, <backend.models.Problem object at 0x78fe08f59340>, <backend.models.Problem object at 0x78fe08f592b0>]
-2024-12-07 06:22:36,266 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08f59880>, <backend.models.Problem object at 0x78fe08f59820>, <backend.models.Problem object at 0x78fe08f597c0>, <backend.models.Problem object at 0x78fe08f59730>, <backend.models.Problem object at 0x78fe08f596a0>, <backend.models.Problem object at 0x78fe08f59610>, <backend.models.Problem object at 0x78fe08f59580>, <backend.models.Problem object at 0x78fe08f594f0>, <backend.models.Problem object at 0x78fe08f59460>, <backend.models.Problem object at 0x78fe08f593d0>, <backend.models.Problem object at 0x78fe08f59340>, <backend.models.Problem object at 0x78fe08f592b0>]
-2024-12-07 06:22:37,071 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe095c9af0>, <backend.models.Problem object at 0x78fe08f59340>, <backend.models.Problem object at 0x78fe08f58b60>, <backend.models.Problem object at 0x78fe08f59730>, <backend.models.Problem object at 0x78fe08f5b440>, <backend.models.Problem object at 0x78fe08f592b0>, <backend.models.Problem object at 0x78fe08f594f0>, <backend.models.Problem object at 0x78fe08f59850>, <backend.models.Problem object at 0x78fe08f59580>, <backend.models.Problem object at 0x78fe08f59700>, <backend.models.Problem object at 0x78fe08f596a0>, <backend.models.Problem object at 0x78fe08f5a8a0>]
-2024-12-07 08:18:05,118 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08ff5e80>, <backend.models.Problem object at 0x78fe08ff71d0>, <backend.models.Problem object at 0x78fe08ff5fa0>, <backend.models.Problem object at 0x78fe08ff40b0>, <backend.models.Problem object at 0x78fe08ff6960>, <backend.models.Problem object at 0x78fe08ff42f0>, <backend.models.Problem object at 0x78fe08ff72f0>, <backend.models.Problem object at 0x78fe08ff6f90>, <backend.models.Problem object at 0x78fe08ff5700>, <backend.models.Problem object at 0x78fe08ff5ac0>, <backend.models.Problem object at 0x78fe095fa690>, <backend.models.Problem object at 0x78fe08f18fe0>]
-2024-12-07 08:18:05,400 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08ff5a90>, <backend.models.Problem object at 0x78fe08ff51f0>, <backend.models.Problem object at 0x78fe08ff55b0>, <backend.models.Problem object at 0x78fe08ff6d50>, <backend.models.Problem object at 0x78fe08ff5ca0>, <backend.models.Problem object at 0x78fe08fc3710>, <backend.models.Problem object at 0x78fe08fc0800>, <backend.models.Problem object at 0x78fe08fc2390>, <backend.models.Problem object at 0x78fe08fc1e20>, <backend.models.Problem object at 0x78fe08fc1d30>, <backend.models.Problem object at 0x78fe08fc02f0>, <backend.models.Problem object at 0x78fe08fc2660>, <backend.models.Problem object at 0x78fe08fc3590>, <backend.models.Problem object at 0x78fe08fc3b00>]
-2024-12-07 08:18:05,404 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08ff55b0>, <backend.models.Problem object at 0x78fe08ff6d50>, <backend.models.Problem object at 0x78fe08ff5ca0>, <backend.models.Problem object at 0x78fe08fc3710>, <backend.models.Problem object at 0x78fe08fc0800>, <backend.models.Problem object at 0x78fe08fc2390>, <backend.models.Problem object at 0x78fe08fc1e20>, <backend.models.Problem object at 0x78fe08fc1d30>, <backend.models.Problem object at 0x78fe08fc02f0>, <backend.models.Problem object at 0x78fe08fc2660>, <backend.models.Problem object at 0x78fe08fc3590>, <backend.models.Problem object at 0x78fe08fc3b00>]
-2024-12-07 08:18:05,501 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08fc2540>, <backend.models.Problem object at 0x78fe08fc2420>, <backend.models.Problem object at 0x78fe08fc1e50>, <backend.models.Problem object at 0x78fe08fc1430>, <backend.models.Problem object at 0x78fe08fc1f40>, <backend.models.Problem object at 0x78fe0916a060>, <backend.models.Problem object at 0x78fe09168920>, <backend.models.Problem object at 0x78fe09169760>, <backend.models.Problem object at 0x78fe09077170>, <backend.models.Problem object at 0x78fe09074710>, <backend.models.Problem object at 0x78fe090775c0>, <backend.models.Problem object at 0x78fe09074fb0>]
-2024-12-07 08:18:07,670 INFO backend.app Getting all available datasets
-2024-12-07 08:18:07,724 INFO backend.app ['academic_detail', 'customer_shopping_data_no_header', 'titanic_dataset', 'employees', 'tests', 'shippers', 'historical_temperatures', 'temperatures', 'toronto_weather', 'orders', 'us_videos', 'customers', 'contoso_sales', 'pytest_expected_output', 'customer_shopping_data', 'suppliers', 'categories', 'nums', 'products', 'scores', 'testing_upload', 'google_store_reviews', 'covid_19_deaths', 'student_performance', 'orderdetails', 'pokemon', 'status']
-2024-12-07 08:18:12,225 INFO backend.routes.problem_routes 5 FEFEFF suspending
-2024-12-07 08:18:12,752 INFO backend.routes.problem_routes 6 FEFEFF suspending
-2024-12-07 08:18:13,328 INFO backend.routes.problem_routes 7 FEFEFF suspending
-2024-12-07 08:18:14,228 INFO backend.routes.problem_routes 8 FEFEFF suspending
-2024-12-07 08:18:15,009 INFO backend.routes.problem_routes 9 FEFEFF suspending
-2024-12-07 08:18:16,033 INFO backend.routes.problem_routes 10 FEFEFF suspending
-2024-12-07 08:18:17,015 INFO backend.routes.problem_routes 11 FEFEFF suspending
-2024-12-07 08:18:17,800 INFO backend.routes.problem_routes 12 FEFEFF suspending
-2024-12-07 08:18:18,354 INFO backend.routes.problem_routes 13 FEFEFF suspending
-2024-12-07 08:18:19,822 INFO backend.routes.problem_routes 14 FEFEFF suspending
-2024-12-07 08:18:20,543 INFO backend.routes.problem_routes 15 FEFEFF suspending
-2024-12-07 08:18:21,191 INFO backend.routes.problem_routes 16 FEFEFF suspending
-2024-12-07 08:18:22,662 INFO backend.routes.problem_routes 17 FEFEFF suspending
-2024-12-07 08:18:24,018 INFO backend.routes.problem_routes 2 FEFEFF suspending
-2024-12-07 08:18:28,406 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08f59640>, <backend.models.Problem object at 0x78fe08f58080>, <backend.models.Problem object at 0x78fe08f5baa0>, <backend.models.Problem object at 0x78fe08f595b0>, <backend.models.Problem object at 0x78fe08f59eb0>, <backend.models.Problem object at 0x78fe08f58e90>, <backend.models.Problem object at 0x78fe08f5a750>, <backend.models.Problem object at 0x78fe08f587a0>, <backend.models.Problem object at 0x78fe08f5ac60>, <backend.models.Problem object at 0x78fe08f5a2d0>, <backend.models.Problem object at 0x78fe08f58740>, <backend.models.Problem object at 0x78fe08f5bbc0>, <backend.models.Problem object at 0x78fe08f5a090>, <backend.models.Problem object at 0x78fe08f5afc0>, <backend.models.Problem object at 0x78fe08f5b950>, <backend.models.Problem object at 0x78fe08f58f80>, <backend.models.Problem object at 0x78fe08f5a120>, <backend.models.Problem object at 0x78fe08f5a600>, <backend.models.Problem object at 0x78fe08f58dd0>, <backend.models.Problem object at 0x78fe08f58b00>, <backend.models.Problem object at 0x78fe08f58ad0>, <backend.models.Problem object at 0x78fe08f5af30>, <backend.models.Problem object at 0x78fe08f5a420>, <backend.models.Problem object at 0x78fe08f58d70>, <backend.models.Problem object at 0x78fe08f5b890>, <backend.models.Problem object at 0x78fe08f5a690>]
-2024-12-07 08:18:28,433 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08fc3980>, <backend.models.Problem object at 0x78fe08fc0590>, <backend.models.Problem object at 0x78fe08fc3d70>, <backend.models.Problem object at 0x78fe08fc34d0>, <backend.models.Problem object at 0x78fe08fc20c0>, <backend.models.Problem object at 0x78fe08fc1940>, <backend.models.Problem object at 0x78fe08fc0740>, <backend.models.Problem object at 0x78fe08fc04a0>, <backend.models.Problem object at 0x78fe08fc2840>, <backend.models.Problem object at 0x78fe08fc0b30>, <backend.models.Problem object at 0x78fe08fc0a40>, <backend.models.Problem object at 0x78fe08fc3290>, <backend.models.Problem object at 0x78fe08fc31d0>, <backend.models.Problem object at 0x78fe08fc3b90>, <backend.models.Problem object at 0x78fe08fc1550>, <backend.models.Problem object at 0x78fe08fc26c0>, <backend.models.Problem object at 0x78fe08fc15e0>, <backend.models.Problem object at 0x78fe08fc3530>, <backend.models.Problem object at 0x78fe08fc2ed0>, <backend.models.Problem object at 0x78fe08fc2e10>, <backend.models.Problem object at 0x78fe08fc3a70>, <backend.models.Problem object at 0x78fe08fc1fd0>, <backend.models.Problem object at 0x78fe08fc0560>, <backend.models.Problem object at 0x78fe08fc36b0>, <backend.models.Problem object at 0x78fe08fc1d00>, <backend.models.Problem object at 0x78fe08fc3860>, <backend.models.Problem object at 0x78fe08fc2d50>, <backend.models.Problem object at 0x78fe08fc3650>]
-2024-12-07 08:18:28,441 INFO backend.routes.problem_routes [<backend.models.Problem object at 0x78fe08fc3980>, <backend.models.Problem object at 0x78fe08fc0590>, <backend.models.Problem object at 0x78fe08fc3d70>, <backend.models.Problem object at 0x78fe08fc34d0>, <backend.models.Problem object at 0x78fe08fc20c0>, <backend.models.Problem object at 0x78fe08fc1940>, <backend.models.Problem object at 0x78fe08fc0740>, <backend.models.Problem object at 0x78fe08fc04a0>, <backend.models.Problem object at 0x78fe08fc2840>, <backend.models.Problem object at 0x78fe08fc0b30>, <backend.models.Problem object at 0x78fe08fc0a40>, <backend.models.Problem object at 0x78fe08fc3290>, <backend.models.Problem object at 0x78fe08fc31d0>, <backend.models.Problem object at 0x78fe08fc1550>, <backend.models.Problem object at 0x78fe08fc15e0>, <backend.models.Problem object at 0x78fe08fc3530>, <backend.models.Problem object at 0x78fe08fc2ed0>, <backend.models.Problem object at 0x78fe08fc2e10>, <backend.models.Problem object at 0x78fe08fc3a70>, <backend.models.Problem object at 0x78fe08fc1fd0>, <backend.models.Problem object at 0x78fe08fc0560>, <backend.models.Problem object at 0x78fe08fc36b0>, <backend.models.Problem object at 0x78fe08fc1d00>, <backend.models.Problem object at 0x78fe08fc3860>, <backend.models.Problem object at 0x78fe08fc2d50>, <backend.models.Problem object at 0x78fe08fc3650>]
-2024-12-07 08:18:29,162 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x78fe08f194f0>, <backend.models.Problem object at 0x78fe08f19790>, <backend.models.Problem object at 0x78fe08f18f80>, <backend.models.Problem object at 0x78fe08f19d30>, <backend.models.Problem object at 0x78fe08f1bd70>, <backend.models.Problem object at 0x78fe08f18980>, <backend.models.Problem object at 0x78fe08f1af60>, <backend.models.Problem object at 0x78fe08f18230>, <backend.models.Problem object at 0x78fe08f1b7d0>, <backend.models.Problem object at 0x78fe08f19880>, <backend.models.Problem object at 0x78fe08f18710>, <backend.models.Problem object at 0x78fe08f19fa0>, <backend.models.Problem object at 0x78fe08f18b90>, <backend.models.Problem object at 0x78fe08f18260>, <backend.models.Problem object at 0x78fe08f1b620>, <backend.models.Problem object at 0x78fe08f19910>, <backend.models.Problem object at 0x78fe08f19bb0>, <backend.models.Problem object at 0x78fe08f1a030>, <backend.models.Problem object at 0x78fe08f193d0>, <backend.models.Problem object at 0x78fe08f19970>, <backend.models.Problem object at 0x78fe08f19820>, <backend.models.Problem object at 0x78fe08f1a5d0>, <backend.models.Problem object at 0x78fe08f19160>, <backend.models.Problem object at 0x78fe08f18f20>, <backend.models.Problem object at 0x78fe08f18ec0>, <backend.models.Problem object at 0x78fe08f1ab40>]
+2024-12-08 02:52:25,495 INFO backend.routes.problem_routes Printing problems to review:
+2024-12-08 02:52:25,497 INFO backend.routes.problem_routes (6, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,498 INFO backend.routes.problem_routes (7, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,499 INFO backend.routes.problem_routes (8, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,501 INFO backend.routes.problem_routes (9, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,501 INFO backend.routes.problem_routes (10, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,503 INFO backend.routes.problem_routes (11, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,505 INFO backend.routes.problem_routes (12, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,506 INFO backend.routes.problem_routes (13, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,507 INFO backend.routes.problem_routes (14, datetime.date(2024, 10, 9))
+2024-12-08 02:52:25,508 INFO backend.routes.problem_routes (15, datetime.date(2024, 10, 9))
+2024-12-08 02:52:25,508 INFO backend.routes.problem_routes (16, datetime.date(2024, 10, 9))
+2024-12-08 02:52:25,510 INFO backend.routes.problem_routes (17, datetime.date(2024, 10, 9))
+2024-12-08 02:52:25,511 INFO backend.routes.problem_routes (1, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,512 INFO backend.routes.problem_routes (2, datetime.date(2024, 12, 7))
+2024-12-08 02:52:25,513 INFO backend.routes.problem_routes (3, datetime.date(2024, 10, 11))
+2024-12-08 02:52:25,514 INFO backend.routes.problem_routes (4, datetime.date(2024, 10, 9))
+2024-12-08 02:52:25,515 INFO backend.routes.problem_routes (18, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,515 INFO backend.routes.problem_routes (20, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,516 INFO backend.routes.problem_routes (21, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,517 INFO backend.routes.problem_routes (22, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,518 INFO backend.routes.problem_routes (23, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,520 INFO backend.routes.problem_routes (24, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,521 INFO backend.routes.problem_routes (25, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,522 INFO backend.routes.problem_routes (26, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,522 INFO backend.routes.problem_routes (27, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,524 INFO backend.routes.problem_routes (28, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,524 INFO backend.routes.problem_routes (19, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,526 INFO backend.routes.problem_routes (29, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,526 INFO backend.routes.problem_routes (30, datetime.date(2024, 12, 8))
+2024-12-08 02:52:25,530 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7665c41cce90>, <backend.models.Problem object at 0x7665c41ccf50>, <backend.models.Problem object at 0x7665c41ccfe0>, <backend.models.Problem object at 0x7665c41cd070>, <backend.models.Problem object at 0x7665c41cd100>, <backend.models.Problem object at 0x7665c41cd190>, <backend.models.Problem object at 0x7665c41cd220>, <backend.models.Problem object at 0x7665c41cd2b0>, <backend.models.Problem object at 0x7665c41cd340>, <backend.models.Problem object at 0x7665c41cd3d0>, <backend.models.Problem object at 0x7665c41cd460>, <backend.models.Problem object at 0x7665c41cd4f0>, <backend.models.Problem object at 0x7665c41cd580>, <backend.models.Problem object at 0x7665c41cd610>, <backend.models.Problem object at 0x7665c41cd6a0>, <backend.models.Problem object at 0x7665c41cd730>, <backend.models.Problem object at 0x7665c41cd7c0>, <backend.models.Problem object at 0x7665c41cd850>, <backend.models.Problem object at 0x7665c41cd8e0>, <backend.models.Problem object at 0x7665c41cd970>, <backend.models.Problem object at 0x7665c41cda00>, <backend.models.Problem object at 0x7665c41cda90>, <backend.models.Problem object at 0x7665c41cdb20>, <backend.models.Problem object at 0x7665c41cdbb0>, <backend.models.Problem object at 0x7665c41cdc40>, <backend.models.Problem object at 0x7665c41cdcd0>, <backend.models.Problem object at 0x7665c41cdd60>, <backend.models.Problem object at 0x7665c41cddf0>, <backend.models.Problem object at 0x7665c41cde80>]
+2024-12-08 02:52:25,534 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7665c41ce360>, <backend.models.Problem object at 0x7665c41cfb90>, <backend.models.Problem object at 0x7665c41cfbf0>, <backend.models.Problem object at 0x7665c41cfc50>, <backend.models.Problem object at 0x7665c41cfce0>, <backend.models.Problem object at 0x7665c41cfd70>, <backend.models.Problem object at 0x7665c41cfe00>, <backend.models.Problem object at 0x7665c41cfe90>, <backend.models.Problem object at 0x7665c41cff20>, <backend.models.Problem object at 0x7665c41cffb0>, <backend.models.Problem object at 0x7665c41f4080>, <backend.models.Problem object at 0x7665c41f4110>, <backend.models.Problem object at 0x7665c41f41a0>, <backend.models.Problem object at 0x7665c41f4230>, <backend.models.Problem object at 0x7665c41f42c0>, <backend.models.Problem object at 0x7665c41f4350>, <backend.models.Problem object at 0x7665c41f43e0>, <backend.models.Problem object at 0x7665c41f4470>, <backend.models.Problem object at 0x7665c41f4500>, <backend.models.Problem object at 0x7665c41f4590>, <backend.models.Problem object at 0x7665c41f4620>, <backend.models.Problem object at 0x7665c41f46b0>, <backend.models.Problem object at 0x7665c41f4740>, <backend.models.Problem object at 0x7665c41f47d0>, <backend.models.Problem object at 0x7665c41f4860>, <backend.models.Problem object at 0x7665c41f48f0>, <backend.models.Problem object at 0x7665c41f4980>, <backend.models.Problem object at 0x7665c41f4a10>, <backend.models.Problem object at 0x7665c41f4aa0>]
+2024-12-08 02:52:35,249 INFO backend.app {'passed': True, 'result_head': '{"Category":{"0":"Audio","1":"Audio","2":"Audio","3":"Audio","4":"Audio","5":"Audio","6":"Audio","7":"Audio","8":"Audio","9":"Audio"},"Subcategory":{"0":"MP4&MP3","1":"MP4&MP3","2":"MP4&MP3","3":"MP4&MP3","4":"MP4&MP3","5":"MP4&MP3","6":"MP4&MP3","7":"MP4&MP3","8":"MP4&MP3","9":"MP4&MP3"},"QuanityByCat":{"0":1962,"1":1962,"2":1962,"3":1962,"4":1962,"5":1962,"6":1962,"7":1962,"8":1962,"9":1962}}', 'error': 'e1: None, e2: None'}
+2024-12-08 02:52:37,631 INFO backend.crud created due date <backend.models.Due object at 0x7665c4527290>
+2024-12-08 02:52:37,739 INFO backend.routes.problem_routes problems to review: [<backend.models.Problem object at 0x7665c41f6f90>, <backend.models.Problem object at 0x7665c41f5310>, <backend.models.Problem object at 0x7665c41f69c0>, <backend.models.Problem object at 0x7665c41f6db0>, <backend.models.Problem object at 0x7665c41f5ac0>, <backend.models.Problem object at 0x7665c41f5f70>, <backend.models.Problem object at 0x7665c41f7920>, <backend.models.Problem object at 0x7665c41f6840>, <backend.models.Problem object at 0x7665c41f5250>, <backend.models.Problem object at 0x7665c41f41d0>, <backend.models.Problem object at 0x7665c41f6ba0>, <backend.models.Problem object at 0x7665c41f7c80>, <backend.models.Problem object at 0x7665c41f7a10>, <backend.models.Problem object at 0x7665c41f76e0>, <backend.models.Problem object at 0x7665c41f65a0>, <backend.models.Problem object at 0x7665c41f6b10>, <backend.models.Problem object at 0x7665c41f5190>, <backend.models.Problem object at 0x7665c41f7b90>, <backend.models.Problem object at 0x7665c41f6750>, <backend.models.Problem object at 0x7665c41f75f0>, <backend.models.Problem object at 0x7665c41f49b0>, <backend.models.Problem object at 0x7665c41f5f40>, <backend.models.Problem object at 0x7665c41f4800>, <backend.models.Problem object at 0x7665c41f4aa0>, <backend.models.Problem object at 0x7665c41f4650>, <backend.models.Problem object at 0x7665c41f48f0>, <backend.models.Problem object at 0x7665c41f4470>, <backend.models.Problem object at 0x7665c41f4740>]
+2024-12-08 02:52:38,057 INFO backend.routes.problem_routes Printing problems to review:
+2024-12-08 02:52:38,057 INFO backend.routes.problem_routes (7, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,058 INFO backend.routes.problem_routes (8, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,058 INFO backend.routes.problem_routes (9, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,058 INFO backend.routes.problem_routes (10, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,059 INFO backend.routes.problem_routes (11, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,059 INFO backend.routes.problem_routes (12, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,060 INFO backend.routes.problem_routes (13, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,060 INFO backend.routes.problem_routes (14, datetime.date(2024, 10, 9))
+2024-12-08 02:52:38,060 INFO backend.routes.problem_routes (15, datetime.date(2024, 10, 9))
+2024-12-08 02:52:38,061 INFO backend.routes.problem_routes (16, datetime.date(2024, 10, 9))
+2024-12-08 02:52:38,061 INFO backend.routes.problem_routes (17, datetime.date(2024, 10, 9))
+2024-12-08 02:52:38,061 INFO backend.routes.problem_routes (1, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,062 INFO backend.routes.problem_routes (2, datetime.date(2024, 12, 7))
+2024-12-08 02:52:38,062 INFO backend.routes.problem_routes (3, datetime.date(2024, 10, 11))
+2024-12-08 02:52:38,063 INFO backend.routes.problem_routes (4, datetime.date(2024, 10, 9))
+2024-12-08 02:52:38,063 INFO backend.routes.problem_routes (18, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,063 INFO backend.routes.problem_routes (20, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,064 INFO backend.routes.problem_routes (21, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,064 INFO backend.routes.problem_routes (22, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,064 INFO backend.routes.problem_routes (23, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,065 INFO backend.routes.problem_routes (24, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,065 INFO backend.routes.problem_routes (25, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,065 INFO backend.routes.problem_routes (26, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,065 INFO backend.routes.problem_routes (27, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,066 INFO backend.routes.problem_routes (28, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,066 INFO backend.routes.problem_routes (19, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,066 INFO backend.routes.problem_routes (29, datetime.date(2024, 12, 8))
+2024-12-08 02:52:38,067 INFO backend.routes.problem_routes (30, datetime.date(2024, 12, 8))

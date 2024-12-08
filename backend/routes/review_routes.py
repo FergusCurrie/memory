@@ -1,4 +1,5 @@
-from ..crud import create_review, get_all_reviews
+from ..crud import create_due_date, create_review, get_all_reviews, get_problem, get_reviews_for_problem
+from backend.core.scheduling.Scheduler import Scheduler
 from backend.dbs.postgres_connection import get_postgres_db
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel
@@ -16,6 +17,11 @@ router = APIRouter()
 @router.post("/")
 def add_a_review(review: ReviewCreate, db: Session = Depends(get_postgres_db)):
     review = create_review(db, problem_id=review.problem_id, result=review.result)
+    scheduler = Scheduler()
+    problem = get_problem(db, review.problem_id)
+    reviews = get_reviews_for_problem(db, problem.id)
+    due = scheduler.get_next_review_date(problem, reviews)
+    create_due_date(db, problem.id, due, "sm2")
     if review is None:
         raise HTTPException(status_code=500, detail="Failed to create review")
     return review.to_dict()
