@@ -9,6 +9,7 @@ from backend.crud import (
     create_due_date,
     create_problem,
     create_review,
+    create_review_duration,
     create_tag,
     get_all_problems,
     get_code_for_problem,
@@ -292,3 +293,11 @@ def test_buried(test_db):
     problem = create_problem(test_db, description, date_created=datetime.now().date() - timedelta(days=1))
     assert not check_problem_buried(test_db, problem.id)
     bury_problem(test_db, problem.id, date_created=datetime.now().date() - timedelta(days=1))
+
+
+def test_create_problem(test_db):
+    description = "test description"
+    problem = create_problem(test_db, description)
+    review = create_review(test_db, problem.id, 1)
+    review_duration = create_review_duration(test_db, review.id, 1000)
+    assert review_duration.duration == 1000

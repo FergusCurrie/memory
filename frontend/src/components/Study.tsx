@@ -39,6 +39,7 @@ const Study: React.FC = () => {
   const [problem, setProblem] = useState<Problem>();
   const [problemsRemaining, setProblemsRemaining] = useState<boolean>(true);
   const [numberProblemsRemaining, setNumberProblemsRemaining] = useState<number>(0);
+  const [problemStartTime, setProblemStartTime] = useState<number | null>(null);
 
   useEffect(() => {
     fetchProblemsRemaining();
@@ -61,11 +62,14 @@ const Study: React.FC = () => {
      * @param {boolean} result - Whether the user's answer was correct (true) or incorrect (false)
      * @returns {Promise<void>}
      */
-    if (problem) {
+    if (problem && problemStartTime) {
+      const duration = Date.now() - problemStartTime;
+      console.log('Duration of problem', duration);
       try {
         await api.post('/api/review', {
           problem_id: problem.problem_id,
           result: result,
+          duration_ms: duration,
         });
 
         fetchConcept();
@@ -105,6 +109,7 @@ const Study: React.FC = () => {
         setProblemsRemaining(false);
       } else {
         setProblem(response.data.problems[0]);
+        setProblemStartTime(Date.now());
         console.log(response.data);
       }
     } catch (error) {

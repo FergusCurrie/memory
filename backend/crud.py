@@ -1,6 +1,6 @@
 import logging
 import polars as pl
-from backend.models import Buried, Code, Dataset, Due, Problem, Review, Suspended, Tag
+from backend.models import Buried, Code, Dataset, Due, Problem, Review, ReviewDuration, Suspended, Tag
 from datetime import date, datetime
 from sqlalchemy import select, text
 from sqlalchemy.orm import Session
@@ -17,6 +17,14 @@ def create_problem(session: Session, description: str, date_created: datetime = 
     session.commit()
     session.refresh(new_problem)
     return new_problem
+
+
+def create_review_duration(session: Session, review_id: int, duration: float) -> ReviewDuration:
+    new_review_duration = ReviewDuration(review_id=review_id, duration=duration)
+    session.add(new_review_duration)
+    session.commit()
+    session.refresh(new_review_duration)
+    return new_review_duration
 
 
 def update_problem(session: Session, problem_id: int, description_new: str) -> Problem:

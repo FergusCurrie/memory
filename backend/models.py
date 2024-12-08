@@ -35,6 +35,15 @@ class Review(Base):
     result: Mapped[int]
 
 
+class ReviewDuration(Base):
+    __tablename__ = "review_duration"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    date_created: Mapped[date] = mapped_column(default=func.current_date())
+    review_id: Mapped["Problem"] = mapped_column(ForeignKey("review.id"))
+    duration: Mapped[float]
+
+
 class Due(Base):
     __tablename__ = "due"
 
