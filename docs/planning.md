@@ -9,18 +9,23 @@
 
 ## Todo
 
+- cleaning up current questions
+- says polars when its sql
+- use default code
+- no errors logged from sql
+- default to display table
+- shift enter would be really nice
+- tracking number attempts?
+
 Key:
 
-- [ ] move due schedule into a database, calculate on card complete
 - [ ] pull all metrics think required for good algo into save
-
-- [x] env variables
+- [ ] should multiple tries be allowed?
+- [ ] default not being added to code editor
+- [ ] tsql errors not handled very well.
+- [ ] editing card should auto bury
 - [ ] sending logs back from frontend
-- [x] code to migrate old db in (or do jsut recreate? )
 - [ ] code to add datasets in
-- [x] Improved logging. Requires research of what should be logged
-- [x] switch to sqlalchemy, connected to local postgres
-- [x] Move scheduling into an interface
 - [ ] Move code completition into an interface
 
 ## Doing
@@ -31,6 +36,7 @@ Key:
 
 ## Backlog
 
+- [ ] plotly javascript integration seems pretty good
 - [ ] display table automatically
 - [ ] display problem type
 - [ ] simple way to regenerate database with example dbs
@@ -67,6 +73,15 @@ Key:
 - [ ] Review on complete, less work?
 - [ ] Logging from prod? Prometheus?
 - [ ] UI drop new datasets in, write to db as tables. No json please
+
+# done
+
+- [x] move due schedule into a database, calculate on card complete
+- [x] Improved logging. Requires research of what should be logged
+- [x] switch to sqlalchemy, connected to local postgres
+- [x] Move scheduling into an interface
+- [x] code to migrate old db in (or do jsut recreate? )
+- [x] env variables
 
 # Usability things
 

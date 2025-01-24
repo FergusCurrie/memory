@@ -42,6 +42,7 @@
     - would be good to streamline this to create db when required + new datasets added to both psql, tsql.
 
 - 7th december
+
   - added alembic for db migrations
   - used alembic to make type and default code columns of code
   - moved secrets to env
@@ -49,3 +50,7 @@
   - added edit on study
   - added page to upload csv which gets saved to pg, tsql and datasets table
   - added in tsql book databases (10)
+
+- 8th december
+  - changed to review schedule on review. this means calculating next card is jsut a db query.
+  - added record of time spent on a card

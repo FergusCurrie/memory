@@ -1,5 +1,6 @@
 import json
 import logging
+import random
 import traceback
 from ..crud import (
     add_code_to_problem,
@@ -132,7 +133,7 @@ def get_next_problem(db: Session = Depends(get_postgres_db)):
 
         if len(problems_to_review) == 0:
             return {"problems": []}
-        next_ = problems_to_review[0]
+        next_ = random.choice(problems_to_review)
 
         return {"problems": [{"problem_type": "polars", "problem_id": next_.id}]}
     except Exception as e:
@@ -163,7 +164,7 @@ def do_update_problem(problem_id: int, problem_update: dict, db: Session = Depen
         description = problem_update["description"]
         code = problem_update["code"]
         default_code = problem_update["default_code"]
-        tags = problem_update["tags"]
+        tags = problem_update["tags"] if "tags" in problem_update else ""
         update_problem(db, problem_id, description)
         update_code(db, code, None, problem_id, default_code)
         update_tags(db, problem_id, tags)
